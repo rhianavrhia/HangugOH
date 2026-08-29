@@ -74,7 +74,7 @@ const VOCAB = [
   { id: "v58", ko: "운동", rom: "undong", en: "exercise", ex: "매일 운동을 해요.", exEn: "I exercise every day.", cat: "Activities" },
   { id: "v59", ko: "여행", rom: "yeohaeng", en: "travel / trip", ex: "한국으로 여행을 가요.", exEn: "I travel to Korea.", cat: "Activities" },
   { id: "v60", ko: "사진", rom: "sajin", en: "photo", ex: "사진을 찍어요.", exEn: "I take a photo.", cat: "Objects" },
-  { id: "v61", ko: "영어", rom: "yeongeo", en: "english", ex: "영어 공부하고 있어요.", exEn: "I am learning English.", cat: "Language" },
+  { id: "v61", ko: "영어", rom: "yeongeo", en: "English language", ex: "영어 공부하고 있어요.", exEn: "I am learning English.", cat: "Language" },
 ];
 
 /* Grammar library */
