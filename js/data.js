@@ -36,7 +36,6 @@ const VOCAB = [
 
   /* Additional Vocabulary */
   { id: "v21", ko: "사과", rom: "sagwa", en: "apple", ex: "사과를 먹어요.", exEn: "I eat an apple.", cat: "Food" },
-  { id: "v22", ko: "학교", rom: "hakgyo", en: "school", ex: "학교에서 공부해요.", exEn: "I study at school.", cat: "Places" },
   { id: "v23", ko: "식당", rom: "sikdang", en: "restaurant", ex: "식당에서 밥을 먹어요.", exEn: "I eat at a restaurant.", cat: "Places" },
   { id: "v24", ko: "공원", rom: "gongwon", en: "park", ex: "공원에서 운동해요.", exEn: "I exercise at the park.", cat: "Places" },
   { id: "v25", ko: "도서관", rom: "doseogwan", en: "library", ex: "도서관에서 책을 읽어요.", exEn: "I read a book at the library.", cat: "Places" },
@@ -75,6 +74,7 @@ const VOCAB = [
   { id: "v58", ko: "운동", rom: "undong", en: "exercise", ex: "매일 운동을 해요.", exEn: "I exercise every day.", cat: "Activities" },
   { id: "v59", ko: "여행", rom: "yeohaeng", en: "travel / trip", ex: "한국으로 여행을 가요.", exEn: "I travel to Korea.", cat: "Activities" },
   { id: "v60", ko: "사진", rom: "sajin", en: "photo", ex: "사진을 찍어요.", exEn: "I take a photo.", cat: "Objects" },
+  { id: "v61", ko: "영어", rom: "yeongeo", en: "english", ex: "영어 공부하고 있어요.", exEn: "I am learning English.", cat: "Language" },
 ];
 
 /* Grammar library */
