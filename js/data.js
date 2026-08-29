@@ -33,6 +33,48 @@ const VOCAB = [
   { id: "v18", ko: "돈", rom: "don", en: "money", ex: "돈이 조금 있어요.", exEn: "I have a little money.", cat: "Objects" },
   { id: "v19", ko: "책", rom: "chaek", en: "book", ex: "저는 책을 읽어요.", exEn: "I read a book.", cat: "Objects" },
   { id: "v20", ko: "커피", rom: "keopi", en: "coffee", ex: "커피 한 잔 주세요.", exEn: "One cup of coffee, please.", cat: "Food" },
+
+  /* Additional Vocabulary */
+  { id: "v21", ko: "사과", rom: "sagwa", en: "apple", ex: "사과를 먹어요.", exEn: "I eat an apple.", cat: "Food" },
+  { id: "v22", ko: "학교", rom: "hakgyo", en: "school", ex: "학교에서 공부해요.", exEn: "I study at school.", cat: "Places" },
+  { id: "v23", ko: "식당", rom: "sikdang", en: "restaurant", ex: "식당에서 밥을 먹어요.", exEn: "I eat at a restaurant.", cat: "Places" },
+  { id: "v24", ko: "공원", rom: "gongwon", en: "park", ex: "공원에서 운동해요.", exEn: "I exercise at the park.", cat: "Places" },
+  { id: "v25", ko: "도서관", rom: "doseogwan", en: "library", ex: "도서관에서 책을 읽어요.", exEn: "I read a book at the library.", cat: "Places" },
+  { id: "v26", ko: "병원", rom: "byeongwon", en: "hospital", ex: "병원에 가요.", exEn: "I go to the hospital.", cat: "Places" },
+  { id: "v27", ko: "시장", rom: "sijang", en: "market", ex: "시장에서 과일을 사요.", exEn: "I buy fruit at the market.", cat: "Places" },
+  { id: "v28", ko: "가족", rom: "gajok", en: "family", ex: "우리 가족은 네 명이에요.", exEn: "There are four people in my family.", cat: "People" },
+  { id: "v29", ko: "선생님", rom: "seonsaengnim", en: "teacher", ex: "선생님께 질문해요.", exEn: "I ask the teacher a question.", cat: "People" },
+  { id: "v30", ko: "학생", rom: "haksaeng", en: "student", ex: "저는 학생이에요.", exEn: "I am a student.", cat: "People" },
+  { id: "v31", ko: "한국", rom: "hanguk", en: "Korea", ex: "저는 한국에 가고 싶어요.", exEn: "I want to go to Korea.", cat: "Places" },
+  { id: "v32", ko: "한국어", rom: "hangugeo", en: "Korean language", ex: "한국어를 공부해요.", exEn: "I study Korean.", cat: "Language" },
+  { id: "v33", ko: "공부하다", rom: "gongbuhada", en: "to study", ex: "매일 한국어를 공부해요.", exEn: "I study Korean every day.", cat: "Verbs" },
+  { id: "v34", ko: "읽다", rom: "ikda", en: "to read", ex: "책을 읽어요.", exEn: "I read a book.", cat: "Verbs" },
+  { id: "v35", ko: "마시다", rom: "masida", en: "to drink", ex: "물을 마셔요.", exEn: "I drink water.", cat: "Verbs" },
+  { id: "v36", ko: "보다", rom: "boda", en: "to see / watch", ex: "영화를 봐요.", exEn: "I watch a movie.", cat: "Verbs" },
+  { id: "v37", ko: "듣다", rom: "deutda", en: "to listen / hear", ex: "음악을 들어요.", exEn: "I listen to music.", cat: "Verbs" },
+  { id: "v38", ko: "만나다", rom: "mannada", en: "to meet", ex: "친구를 만나요.", exEn: "I meet a friend.", cat: "Verbs" },
+  { id: "v39", ko: "자다", rom: "jada", en: "to sleep", ex: "밤에 자요.", exEn: "I sleep at night.", cat: "Verbs" },
+  { id: "v40", ko: "일어나다", rom: "ireonada", en: "to get up", ex: "아침에 일어나요.", exEn: "I get up in the morning.", cat: "Verbs" },
+  { id: "v41", ko: "빠르다", rom: "ppareuda", en: "to be fast", ex: "기차가 빨라요.", exEn: "The train is fast.", cat: "Adjectives" },
+  { id: "v42", ko: "느리다", rom: "neurida", en: "to be slow", ex: "인터넷이 느려요.", exEn: "The internet is slow.", cat: "Adjectives" },
+  { id: "v43", ko: "크다", rom: "keuda", en: "to be big", ex: "집이 커요.", exEn: "The house is big.", cat: "Adjectives" },
+  { id: "v44", ko: "작다", rom: "jakda", en: "to be small", ex: "방이 작아요.", exEn: "The room is small.", cat: "Adjectives" },
+  { id: "v45", ko: "예쁘다", rom: "yeppeuda", en: "to be pretty", ex: "꽃이 예뻐요.", exEn: "The flower is pretty.", cat: "Adjectives" },
+  { id: "v46", ko: "맛있다", rom: "masitda", en: "to be delicious", ex: "김치가 맛있어요.", exEn: "The kimchi is delicious.", cat: "Adjectives" },
+  { id: "v47", ko: "어제", rom: "eoje", en: "yesterday", ex: "어제는 비가 왔어요.", exEn: "It rained yesterday.", cat: "Time" },
+  { id: "v48", ko: "지금", rom: "jigeum", en: "now", ex: "지금 뭐 해요?", exEn: "What are you doing now?", cat: "Time" },
+  { id: "v49", ko: "아침", rom: "achim", en: "morning", ex: "아침에 일어나요.", exEn: "I get up in the morning.", cat: "Time" },
+  { id: "v50", ko: "저녁", rom: "jeonyeok", en: "evening / dinner", ex: "저녁에 친구를 만나요.", exEn: "I meet my friend in the evening.", cat: "Time" },
+  { id: "v51", ko: "주말", rom: "jumal", en: "weekend", ex: "주말에 쉬어요.", exEn: "I rest on the weekend.", cat: "Time" },
+  { id: "v52", ko: "월요일", rom: "woryoil", en: "Monday", ex: "월요일에 학교에 가요.", exEn: "I go to school on Monday.", cat: "Time" },
+  { id: "v53", ko: "날씨", rom: "nalssi", en: "weather", ex: "오늘 날씨가 좋아요.", exEn: "The weather is good today.", cat: "Nature" },
+  { id: "v54", ko: "비", rom: "bi", en: "rain", ex: "비가 와요.", exEn: "It is raining.", cat: "Nature" },
+  { id: "v55", ko: "눈", rom: "nun", en: "snow", ex: "겨울에 눈이 와요.", exEn: "It snows in winter.", cat: "Nature" },
+  { id: "v56", ko: "음악", rom: "eumak", en: "music", ex: "음악을 들어요.", exEn: "I listen to music.", cat: "Entertainment" },
+  { id: "v57", ko: "영화", rom: "yeonghwa", en: "movie", ex: "주말에 영화를 봐요.", exEn: "I watch a movie on the weekend.", cat: "Entertainment" },
+  { id: "v58", ko: "운동", rom: "undong", en: "exercise", ex: "매일 운동을 해요.", exEn: "I exercise every day.", cat: "Activities" },
+  { id: "v59", ko: "여행", rom: "yeohaeng", en: "travel / trip", ex: "한국으로 여행을 가요.", exEn: "I travel to Korea.", cat: "Activities" },
+  { id: "v60", ko: "사진", rom: "sajin", en: "photo", ex: "사진을 찍어요.", exEn: "I take a photo.", cat: "Objects" },
 ];
 
 /* Grammar library */
@@ -116,6 +158,129 @@ const GRAMMAR = [
       { ko: "여기 있습니다.", en: "Here it is. (formal)" },
     ],
     practice: { type: "mc", prompt: "Formal version of '가요' is:", answer: "갑니다", options: ["갑니다", "가습니다", "가ㅂ니다", "가답니다"] },
+  },
+
+  /* Additional Grammar */
+
+  {
+    id: "g9", level: "Beginner", pattern: "에 (location / destination)",
+    meaning: "marks a destination, location, or specific time",
+    explanation: "에 is commonly used after a place to show where someone goes or is, and after a time expression.",
+    examples: [
+      { ko: "학교에 가요.", en: "I go to school." },
+      { ko: "집에 있어요.", en: "I am at home." },
+    ],
+    practice: { type: "fill", prompt: "학교___ 가요.", answer: "에", options: ["에", "에서", "을", "는"] },
+  },
+  {
+    id: "g10", level: "Beginner", pattern: "에서 (place of action)",
+    meaning: "marks the place where an action occurs",
+    explanation: "에서 is used after a location where an activity or action takes place.",
+    examples: [
+      { ko: "학교에서 공부해요.", en: "I study at school." },
+      { ko: "공원에서 운동해요.", en: "I exercise at the park." },
+    ],
+    practice: { type: "fill", prompt: "도서관___ 책을 읽어요.", answer: "에서", options: ["에서", "에", "을", "가"] },
+  },
+  {
+    id: "g11", level: "Beginner", pattern: "도 (also / too)",
+    meaning: "means also, too, or as well",
+    explanation: "도 replaces particles such as 은/는, 이/가, and 을/를 when expressing the meaning 'also' or 'too'.",
+    examples: [
+      { ko: "저도 학생이에요.", en: "I am also a student." },
+      { ko: "커피도 마셔요.", en: "I also drink coffee." },
+    ],
+    practice: { type: "fill", prompt: "저___ 한국어를 공부해요. (also)", answer: "도", options: ["도", "는", "가", "를"] },
+  },
+  {
+    id: "g12", level: "Beginner", pattern: "와/과, 하고, (이)랑",
+    meaning: "and / with",
+    explanation: "These forms can connect nouns or express doing something with someone. 와/과 is more formal, while 하고 and 이랑/랑 are common in conversation.",
+    examples: [
+      { ko: "친구와 영화를 봐요.", en: "I watch a movie with a friend." },
+      { ko: "밥하고 김치를 먹어요.", en: "I eat rice and kimchi." },
+    ],
+    practice: { type: "mc", prompt: "Which can mean 'with a friend'?", answer: "친구와", options: ["친구와", "친구를", "친구가", "친구에"] },
+  },
+  {
+    id: "g13", level: "Beginner", pattern: "있다 / 없다",
+    meaning: "to have / exist and to not have / not exist",
+    explanation: "있다 expresses existence or possession, while 없다 expresses non-existence or lack of something.",
+    examples: [
+      { ko: "시간이 있어요.", en: "I have time." },
+      { ko: "돈이 없어요.", en: "I don't have money." },
+    ],
+    practice: { type: "mc", prompt: "'I don't have time' is:", answer: "시간이 없어요.", options: ["시간이 없어요.", "시간이 있어요.", "시간을 없어요.", "시간은 가요."] },
+  },
+  {
+    id: "g14", level: "Beginner", pattern: "안 + Verb/Adjective",
+    meaning: "simple negation",
+    explanation: "Place 안 before a verb or adjective to make a simple negative statement.",
+    examples: [
+      { ko: "학교에 안 가요.", en: "I don't go to school." },
+      { ko: "커피를 안 마셔요.", en: "I don't drink coffee." },
+    ],
+    practice: { type: "fill", prompt: "저는 커피를 ___ 마셔요.", answer: "안", options: ["안", "못", "도", "더"] },
+  },
+  {
+    id: "g15", level: "Beginner", pattern: "못 + Verb",
+    meaning: "cannot / be unable to",
+    explanation: "못 is placed before a verb to express inability or inability due to circumstances.",
+    examples: [
+      { ko: "한국어를 못 해요.", en: "I can't speak Korean." },
+      { ko: "오늘 못 가요.", en: "I can't go today." },
+    ],
+    practice: { type: "mc", prompt: "'I can't go today' is:", answer: "오늘 못 가요.", options: ["오늘 못 가요.", "오늘 안 가요.", "오늘도 가요.", "오늘 가고 싶어요."] },
+  },
+  {
+    id: "g16", level: "Intermediate", pattern: "~아/어서",
+    meaning: "because / so / and then",
+    explanation: "아/어서 connects related clauses and can express a reason, result, or sequence of actions.",
+    examples: [
+      { ko: "배가 아파서 병원에 가요.", en: "My stomach hurts, so I go to the hospital." },
+      { ko: "집에 와서 숙제를 해요.", en: "I come home and then do homework." },
+    ],
+    practice: { type: "mc", prompt: "'because I am tired' is:", answer: "피곤해서", options: ["피곤해서", "피곤하면", "피곤하지만", "피곤하고"] },
+  },
+  {
+    id: "g17", level: "Intermediate", pattern: "~지만",
+    meaning: "but / although",
+    explanation: "지만 connects two contrasting ideas and can be translated as 'but' or 'although'.",
+    examples: [
+      { ko: "비가 오지만 학교에 가요.", en: "It is raining, but I go to school." },
+      { ko: "작지만 예뻐요.", en: "It is small, but pretty." },
+    ],
+    practice: { type: "fill", prompt: "비가 오___ 학교에 가요.", answer: "지만", options: ["지만", "고", "면", "서"] },
+  },
+  {
+    id: "g18", level: "Intermediate", pattern: "~기 때문에",
+    meaning: "because / due to",
+    explanation: "기 때문에 gives a clear reason for an action or situation. It is common in writing and more formal explanations.",
+    examples: [
+      { ko: "비가 오기 때문에 집에 있어요.", en: "I stay home because it is raining." },
+      { ko: "시험이 있기 때문에 공부해요.", en: "I study because I have an exam." },
+    ],
+    practice: { type: "mc", prompt: "'because I have an exam' is:", answer: "시험이 있기 때문에", options: ["시험이 있기 때문에", "시험이 있으면", "시험이 있지만", "시험이 있고"] },
+  },
+  {
+    id: "g19", level: "Intermediate", pattern: "~(으)ㄹ 수 있다/없다",
+    meaning: "can / cannot",
+    explanation: "This pattern expresses ability or possibility. Use 을 수 after a consonant and ㄹ 수 after a vowel.",
+    examples: [
+      { ko: "한국어를 읽을 수 있어요.", en: "I can read Korean." },
+      { ko: "오늘 만날 수 없어요.", en: "I cannot meet today." },
+    ],
+    practice: { type: "mc", prompt: "'I can go' is:", answer: "갈 수 있어요", options: ["갈 수 있어요", "가고 싶어요", "가야 해요", "가면 돼요"] },
+  },
+  {
+    id: "g20", level: "Intermediate", pattern: "~아/어야 하다",
+    meaning: "must / have to",
+    explanation: "This grammar pattern expresses obligation or necessity, meaning that someone must or has to do something.",
+    examples: [
+      { ko: "숙제를 해야 해요.", en: "I have to do my homework." },
+      { ko: "학교에 가야 해요.", en: "I have to go to school." },
+    ],
+    practice: { type: "mc", prompt: "'I have to study' is:", answer: "공부해야 해요", options: ["공부해야 해요", "공부하고 싶어요", "공부할 수 있어요", "공부하지 않아요"] },
   },
 ];
 
@@ -366,8 +531,4 @@ function levelFromXP(xp) {
   const level = Math.floor(xp / perLevel) + 1;
   const into = xp % perLevel;
   return { level, into, need: perLevel };
-}
-
-/* ===================== 한국OH! Content Data ===================== */ 
-/* * ADDITIONAL VOCABULARY * Continue from v21 after the original vocabulary bank. */ 
-const VOCAB_ADDITIONAL = [ { id: "v21", ko: "학교", rom: "hakgyo", en: "school", ex: "학교에서 공부해요.", exEn: "I study at school.", cat: "Places" }, { id: "v22", ko: "대학교", rom: "daehakgyo", en: "university", ex: "대학교에 다녀요.", exEn: "I attend university.", cat: "Places" }, { id: "v23", ko: "도서관", rom: "doseogwan", en: "library", ex: "도서관에서 책을 읽어요.", exEn: "I read a book at the library.", cat: "Places" }, { id: "v24", ko: "식당", rom: "sikdang", en: "restaurant", ex: "식당에서 밥을 먹어요.", exEn: "I eat at a restaurant.", cat: "Places" }, { id: "v25", ko: "카페", rom: "kape", en: "cafe", ex: "카페에서 커피를 마셔요.", exEn: "I drink coffee at a cafe.", cat: "Places" }, { id: "v26", ko: "선생님", rom: "seonsaengnim", en: "teacher", ex: "선생님이 한국어를 가르쳐요.", exEn: "The teacher teaches Korean.", cat: "People" }, { id: "v27", ko: "학생", rom: "haksaeng", en: "student", ex: "저는 학생이에요.", exEn: "I am a student.", cat: "People" }, { id: "v28", ko: "가족", rom: "gajok", en: "family", ex: "우리 가족은 다섯 명이에요.", exEn: "There are five people in my family.", cat: "People" }, { id: "v29", ko: "어머니", rom: "eomeoni", en: "mother", ex: "어머니는 요리를 해요.", exEn: "My mother cooks.", cat: "People" }, { id: "v30", ko: "아버지", rom: "abeoji", en: "father", ex: "아버지는 회사원이에요.", exEn: "My father is an office worker.", cat: "People" }, { id: "v31", ko: "음식", rom: "eumsik", en: "food", ex: "한국 음식이 맛있어요.", exEn: "Korean food is delicious.", cat: "Food" }, { id: "v32", ko: "김치", rom: "gimchi", en: "kimchi", ex: "김치를 좋아해요.", exEn: "I like kimchi.", cat: "Food" }, { id: "v33", ko: "빵", rom: "ppang", en: "bread", ex: "아침에 빵을 먹어요.", exEn: "I eat bread in the morning.", cat: "Food" }, { id: "v34", ko: "과일", rom: "gwail", en: "fruit", ex: "과일을 많이 먹어요.", exEn: "I eat a lot of fruit.", cat: "Food" }, { id: "v35", ko: "맛있다", rom: "masitda", en: "to be delicious", ex: "이 음식은 맛있어요.", exEn: "This food is delicious.", cat: "Adjectives" }, { id: "v36", ko: "어제", rom: "eoje", en: "yesterday", ex: "어제 친구를 만났어요.", exEn: "I met a friend yesterday.", cat: "Time" }, { id: "v37", ko: "지금", rom: "jigeum", en: "now", ex: "지금 공부하고 있어요.", exEn: "I am studying now.", cat: "Time" }, { id: "v38", ko: "아침", rom: "achim", en: "morning", ex: "아침에 일어나요.", exEn: "I wake up in the morning.", cat: "Time" }, { id: "v39", ko: "저녁", rom: "jeonyeok", en: "evening / dinner", ex: "저녁에 친구를 만나요.", exEn: "I meet my friend in the evening.", cat: "Time" }, { id: "v40", ko: "주말", rom: "jumal", en: "weekend", ex: "주말에 쉬어요.", exEn: "I rest on the weekend.", cat: "Time" }, { id: "v41", ko: "공부하다", rom: "gongbuhada", en: "to study", ex: "한국어를 공부해요.", exEn: "I study Korean.", cat: "Verbs" }, { id: "v42", ko: "읽다", rom: "ikda", en: "to read", ex: "책을 읽어요.", exEn: "I read a book.", cat: "Verbs" }, { id: "v43", ko: "쓰다", rom: "sseuda", en: "to write / use", ex: "편지를 써요.", exEn: "I write a letter.", cat: "Verbs" }, { id: "v44", ko: "듣다", rom: "deutda", en: "to listen / hear", ex: "음악을 들어요.", exEn: "I listen to music.", cat: "Verbs" }, { id: "v45", ko: "보다", rom: "boda", en: "to see / watch", ex: "영화를 봐요.", exEn: "I watch a movie.", cat: "Verbs" }, { id: "v46", ko: "만나다", rom: "mannada", en: "to meet", ex: "친구를 만나요.", exEn: "I meet a friend.", cat: "Verbs" }, { id: "v47", ko: "마시다", rom: "masida", en: "to drink", ex: "물을 마셔요.", exEn: "I drink water.", cat: "Verbs" }, { id: "v48", ko: "자다", rom: "jada", en: "to sleep", ex: "밤에 자요.", exEn: "I sleep at night.", cat: "Verbs" }, { id: "v49", ko: "일어나다", rom: "ireonada", en: "to get up", ex: "7시에 일어나요.", exEn: "I get up at 7.", cat: "Verbs" }, { id: "v50", ko: "살다", rom: "salda", en: "to live", ex: "서울에 살아요.", exEn: "I live in Seoul.", cat: "Verbs" }, { id: "v51", ko: "크다", rom: "keuda", en: "to be big", ex: "집이 커요.", exEn: "The house is big.", cat: "Adjectives" }, { id: "v52", ko: "작다", rom: "jakda", en: "to be small", ex: "방이 작아요.", exEn: "The room is small.", cat: "Adjectives" }, { id: "v53", ko: "많다", rom: "manta", en: "to be many / much", ex: "사람이 많아요.", exEn: "There are many people.", cat: "Adjectives" }, { id: "v54", ko: "없다", rom: "eopda", en: "to not have / not exist", ex: "시간이 없어요.", exEn: "I don't have time.", cat: "Adjectives" }, { id: "v55", ko: "쉽다", rom: "swipda", en: "to be easy", ex: "한국어가 쉬워요.", exEn: "Korean is easy.", cat: "Adjectives" }, { id: "v56", ko: "어렵다", rom: "eoryeopda", en: "to be difficult", ex: "이 문제는 어려워요.", exEn: "This problem is difficult.", cat: "Adjectives" }, { id: "v57", ko: "빠르다", rom: "ppareuda", en: "to be fast", ex: "버스가 빨라요.", exEn: "The bus is fast.", cat: "Adjectives" }, { id: "v58", ko: "느리다", rom: "neurida", en: "to be slow", ex: "인터넷이 느려요.", exEn: "The internet is slow.", cat: "Adjectives" }, { id: "v59", ko: "좋아하다", rom: "joahada", en: "to like", ex: "한국 음악을 좋아해요.", exEn: "I like Korean music.", cat: "Verbs" }, { id: "v60", ko: "싫어하다", rom: "sileohada", en: "to dislike", ex: "매운 음식을 싫어해요.", exEn: "I dislike spicy food.", cat: "Verbs" }, { id: "v61", ko: "날씨", rom: "nalssi", en: "weather", ex: "오늘 날씨가 좋아요.", exEn: "The weather is good today.", cat: "Nature" }, { id: "v62", ko: "비", rom: "bi", en: "rain", ex: "비가 와요.", exEn: "It is raining.", cat: "Nature" }, { id: "v63", ko: "눈", rom: "nun", en: "snow", ex: "겨울에 눈이 와요.", exEn: "It snows in winter.", cat: "Nature" }, { id: "v64", ko: "공원", rom: "gongwon", en: "park", ex: "공원에서 운동해요.", exEn: "I exercise at the park.", cat: "Places" }, { id: "v65", ko: "회사", rom: "hoesa", en: "company / workplace", ex: "회사에 가요.", exEn: "I go to work.", cat: "Places" }, { id: "v66", ko: "버스", rom: "beoseu", en: "bus", ex: "버스를 타요.", exEn: "I take the bus.", cat: "Transportation" }, { id: "v67", ko: "지하철", rom: "jihacheol", en: "subway", ex: "지하철을 타요.", exEn: "I take the subway.", cat: "Transportation" }, { id: "v68", ko: "자동차", rom: "jadongcha", en: "car", ex: "자동차가 있어요.", exEn: "I have a car.", cat: "Transportation" }, { id: "v69", ko: "길", rom: "gil", en: "road / way", ex: "길을 물어봐요.", exEn: "I ask for directions.", cat: "Places" }, { id: "v70", ko: "왼쪽", rom: "oenjjok", en: "left", ex: "왼쪽으로 가세요.", exEn: "Please go to the left.", cat: "Directions" }, { id: "v71", ko: "오른쪽", rom: "oreunjjok", en: "right", ex: "오른쪽에 있어요.", exEn: "It is on the right.", cat: "Directions" }, { id: "v72", ko: "앞", rom: "ap", en: "front", ex: "학교 앞에 있어요.", exEn: "It is in front of the school.", cat: "Directions" }, { id: "v73", ko: "뒤", rom: "dwi", en: "behind / back", ex: "집 뒤에 공원이 있어요.", exEn: "There is a park behind the house.", cat: "Directions" }, { id: "v74", ko: "안", rom: "an", en: "inside", ex: "집 안에 있어요.", exEn: "It is inside the house.", cat: "Directions" }, { id: "v75", ko: "밖", rom: "bak", en: "outside", ex: "밖에 사람이 있어요.", exEn: "There is a person outside.", cat: "Directions" }, { id: "v76", ko: "생각하다", rom: "saenggakhada", en: "to think", ex: "한국어가 재미있다고 생각해요.", exEn: "I think Korean is interesting.", cat: "Verbs" }, { id: "v77", ko: "배우다", rom: "baeuda", en: "to learn", ex: "한국어를 배워요.", exEn: "I learn Korean.", cat: "Verbs" }, { id: "v78", ko: "가르치다", rom: "gareuchida", en: "to teach", ex: "선생님이 한국어를 가르쳐요.", exEn: "The teacher teaches Korean.", cat: "Verbs" }, { id: "v79", ko: "연습하다", rom: "yeonseuphada", en: "to practice", ex: "매일 한국어를 연습해요.", exEn: "I practice Korean every day.", cat: "Verbs" }, { id: "v80", ko: "준비하다", rom: "junbihada", en: "to prepare", ex: "시험을 준비해요.", exEn: "I prepare for the exam.", cat: "Verbs" }, ]; /* Grammar library — additional grammar topics */ const GRAMMAR_ADDITIONAL = [ { id: "g9", level: "Beginner", pattern: "에 (time / destination)", meaning: "marks a time or destination", explanation: "에 can mark a specific time or destination. It is commonly used with 가다, 오다, and time expressions.", examples: [ { ko: "학교에 가요.", en: "I go to school." }, { ko: "7시에 만나요.", en: "We meet at 7." }, ], practice: { type: "fill", prompt: "7시___ 만나요.", answer: "에", options: ["에", "에서", "을", "는"] }, }, { id: "g10", level: "Beginner", pattern: "에서 (place of action)", meaning: "marks where an action happens", explanation: "에서 marks the place where an action takes place.", examples: [ { ko: "학교에서 공부해요.", en: "I study at school." }, { ko: "집에서 밥을 먹어요.", en: "I eat at home." }, ], practice: { type: "fill", prompt: "도서관___ 책을 읽어요.", answer: "에서", options: ["에서", "에", "을", "는"] }, }, { id: "g11", level: "Beginner", pattern: "도 (also / too)", meaning: "means also or too", explanation: "도 replaces particles such as 은/는, 이/가, and 을/를 to express 'also' or 'too'.", examples: [ { ko: "저도 학생이에요.", en: "I am also a student." }, { ko: "커피도 마셔요.", en: "I also drink coffee." }, ], practice: { type: "mc", prompt: "'저도 학생이에요.' means:", answer: "I am also a student.", options: [ "I am also a student.", "I am not a student.", "I was a student.", "I like students." ] }, }, { id: "g12", level: "Beginner", pattern: "와/과, 하고 (and / with)", meaning: "connects nouns or means with", explanation: "와/과 and 하고 can connect nouns. They can also express doing something with another person.", examples: [ { ko: "친구와 학교에 가요.", en: "I go to school with a friend." }, { ko: "밥하고 김치를 먹어요.", en: "I eat rice and kimchi." }, ], practice: { type: "fill", prompt: "친구___ 같이 가요.", answer: "와", options: ["와", "을", "는", "에"] }, }, { id: "g13", level: "Beginner", pattern: "안 + Verb", meaning: "simple negation", explanation: "Place 안 before a verb or adjective to express 'not'.", examples: [ { ko: "학교에 안 가요.", en: "I don't go to school." }, { ko: "커피를 안 마셔요.", en: "I don't drink coffee." }, ], practice: { type: "mc", prompt: "How do you say 'I don't eat rice'?", answer: "밥을 안 먹어요.", options: [ "밥을 안 먹어요.", "밥을 못 먹어요.", "밥을 먹어요.", "밥이 안이에요." ] }, }, { id: "g14", level: "Beginner", pattern: "못 + Verb", meaning: "cannot / be unable to", explanation: "못 is placed before a verb when someone cannot do something because of inability or circumstances.", examples: [ { ko: "한국어를 못 해요.", en: "I can't speak Korean." }, { ko: "오늘 못 만나요.", en: "I can't meet today." }, ], practice: { type: "mc", prompt: "'못 가요' means:", answer: "I can't go.", options: [ "I can't go.", "I don't go.", "I went.", "I want to go." ] }, }, { id: "g15", level: "Beginner", pattern: "있다 / 없다", meaning: "to have / exist or not have / not exist", explanation: "있다 expresses existence or possession. 없다 expresses non-existence or lack of possession.", examples: [ { ko: "시간이 있어요.", en: "I have time." }, { ko: "돈이 없어요.", en: "I don't have money." }, ], practice: { type: "fill", prompt: "시간이 ___어요.", answer: "있", options: ["있", "없", "안", "못"] }, }, { id: "g16", level: "Beginner", pattern: "~고 있다", meaning: "be doing something", explanation: "Attach 고 있다 to a verb stem to express an action that is currently in progress.", examples: [ { ko: "공부하고 있어요.", en: "I am studying." }, { ko: "밥을 먹고 있어요.", en: "I am eating." }, ], practice: { type: "mc", prompt: "'공부하고 있어요' means:", answer: "I am studying.", options: [ "I am studying.", "I studied.", "I will study.", "I don't study." ] }, }, { id: "g17", level: "Beginner", pattern: "~았/었어요", meaning: "past tense", explanation: "The polite past tense describes an action or state that happened in the past.", examples: [ { ko: "밥을 먹었어요.", en: "I ate." }, { ko: "학교에 갔어요.", en: "I went to school." }, ], practice: { type: "mc", prompt: "'가다' in polite past tense is:", answer: "갔어요", options: ["갔어요", "가요", "갈 거예요", "가고 있어요"] }, }, { id: "g18", level: "Beginner", pattern: "~(으)ㄹ 거예요", meaning: "future intention / prediction", explanation: "This pattern is commonly used to express a future plan, intention, or prediction.", examples: [ { ko: "내일 학교에 갈 거예요.", en: "I will go to school tomorrow." }, { ko: "주말에 쉴 거예요.", en: "I will rest on the weekend." }, ], practice: { type: "fill", prompt: "내일 한국에 ___ 거예요.", answer: "갈", options: ["갈", "가", "갔", "가는"] }, }, { id: "g19", level: "Intermediate", pattern: "~아/어서", meaning: "because / so / and then", explanation: "아/어서 connects clauses and can express a reason, result, or sequence of actions.", examples: [ { ko: "비가 와서 집에 있어요.", en: "Because it is raining, I stay home." }, { ko: "배가 고파서 밥을 먹어요.", en: "I am hungry, so I eat." }, ], practice: { type: "mc", prompt: "'비가 와서 집에 있어요.' means:", answer: "Because it is raining, I stay home.", options: [ "Because it is raining, I stay home.", "I go home after it rains.", "I like rainy weather.", "I don't stay home." ] }, }, { id: "g20", level: "Intermediate", pattern: "~지만", meaning: "but / although", explanation: "지만 connects two contrasting ideas and means 'but' or 'although'.", examples: [ { ko: "비가 오지만 학교에 가요.", en: "It is raining, but I go to school." }, { ko: "어렵지만 재미있어요.", en: "It is difficult, but it is fun." }, ], practice: { type: "fill", prompt: "어렵___ 재미있어요.", answer: "지만", options: ["지만", "고", "면", "어서"] }, }, { id: "g21", level: "Intermediate", pattern: "~기 때문에", meaning: "because", explanation: "기 때문에 gives a clear reason for an action or situation.", examples: [ { ko: "비가 오기 때문에 집에 있어요.", en: "Because it is raining, I stay home." }, { ko: "시험이 있기 때문에 공부해요.", en: "I study because I have an exam." }, ], practice: { type: "mc", prompt: "'~기 때문에' means:", answer: "because", options: ["because", "but", "if", "after"] }, }, { id: "g22", level: "Intermediate", pattern: "~(으)ㄹ 수 있다/없다", meaning: "can / cannot", explanation: "This pattern expresses ability or possibility. It can mean 'can' or 'cannot' depending on whether 있다 or 없다 is used.", examples: [ { ko: "한국어를 읽을 수 있어요.", en: "I can read Korean." }, { ko: "오늘 만날 수 없어요.", en: "I cannot meet today." }, ], practice: { type: "mc", prompt: "'할 수 있어요' means:", answer: "I can do it.", options: [ "I can do it.", "I want to do it.", "I did it.", "I don't do it." ] }, }, { id: "g23", level: "Intermediate", pattern: "~기 전에", meaning: "before doing something", explanation: "기 전에 is attached to a verb stem to express that something happens before another action.", examples: [ { ko: "자기 전에 책을 읽어요.", en: "I read a book before sleeping." }, { ko: "먹기 전에 손을 씻어요.", en: "I wash my hands before eating." }, ], practice: { type: "fill", prompt: "자___ 전에 책을 읽어요.", answer: "기", options: ["기", "고", "면", "은"] }, }, { id: "g24", level: "Intermediate", pattern: "~(으)ㄴ 후에", meaning: "after doing something", explanation: "This pattern indicates that one action happens after another action has finished.", examples: [ { ko: "숙제를 한 후에 자요.", en: "I sleep after doing homework." }, { ko: "밥을 먹은 후에 공부해요.", en: "I study after eating." }, ], practice: { type: "mc", prompt: "'먹은 후에' means:", answer: "after eating", options: [ "after eating", "before eating", "while eating", "without eating" ] }, }, { id: "g25", level: "Intermediate", pattern: "~아/어야 하다", meaning: "must / have to", explanation: "This pattern expresses obligation or necessity: something that must be done.", examples: [ { ko: "공부해야 해요.", en: "I have to study." }, { ko: "학교에 가야 해요.", en: "I have to go to school." }, ], practice: { type: "mc", prompt: "'공부해야 해요' means:", answer: "I have to study.", options: [ "I have to study.", "I want to study.", "I studied.", "I can study." ] }, }, { id: "g26", level: "Intermediate", pattern: "~아/어도 되다", meaning: "may / it is okay to", explanation: "This pattern is used to ask for or give permission.", examples: [ { ko: "여기 앉아도 돼요?", en: "May I sit here?" }, { ko: "사진을 찍어도 돼요.", en: "It is okay to take pictures." }, ], practice: { type: "mc", prompt: "'가도 돼요?' means:", answer: "May I go?", options: [ "May I go?", "Must I go?", "Did I go?", "I don't want to go." ] }, }, { id: "g27", level: "Intermediate", pattern: "~(으)려고 하다", meaning: "intend / plan to", explanation: "This pattern expresses an intention or plan to do something.", examples: [ { ko: "한국에 가려고 해요.", en: "I plan to go to Korea." }, { ko: "공부하려고 해요.", en: "I intend to study." }, ], practice: { type: "fill", prompt: "한국에 가___고 해요.", answer: "려고", options: ["려고", "지만", "면", "어서"] }, }, { id: "g28", level: "Intermediate", pattern: "~(으)면서", meaning: "while doing", explanation: "This pattern connects two actions that happen at the same time.", examples: [ { ko: "음악을 들으면서 공부해요.", en: "I study while listening to music." }, { ko: "걸으면서 이야기해요.", en: "I talk while walking." }, ], practice: { type: "mc", prompt: "'들으면서' means:", answer: "while listening", options: [ "while listening", "after listening", "before listening", "because of listening" ] }, }, { id: "g29", level: "Intermediate", pattern: "~(으)ㄴ/는 것 같다", meaning: "seems / appears to be", explanation: "것 같다 is used when making an assumption or expressing that something seems a certain way.", examples: [ { ko: "비가 오는 것 같아요.", en: "It seems like it is raining." }, { ko: "그 사람이 학생인 것 같아요.", en: "That person seems to be a student." }, ], practice: { type: "mc", prompt: "'것 같아요' expresses:", answer: "an assumption or impression", options: [ "an assumption or impression", "a command", "a past action", "a prohibition" ] }, }, { id: "g30", level: "Intermediate", pattern: "~다고 하다", meaning: "say that / report", explanation: "This pattern is used to report what someone said or to quote a statement indirectly.", examples: [ { ko: "민수가 학생이라고 했어요.", en: "Minsu said that he is a student." }, { ko: "친구가 내일 온다고 했어요.", en: "My friend said they would come tomorrow." }, ], practice: { type: "mc", prompt: "'~다고 하다' is used to:", answer: "report what someone said", options: [ "report what someone said", "ask for permission", "express ability", "give a command" ] }, }, ]; /* * If your existing app uses VOCAB and GRAMMAR directly, * combine the original arrays with these additional entries. * * Replace your original declarations with: */ const ALL_VOCAB = [ ...VOCAB, ...VOCAB_ADDITIONAL ]; const ALL_GRAMMAR = [ ...GRAMMAR, ...GRAMMAR_ADDITIONAL ]; 
+    }
