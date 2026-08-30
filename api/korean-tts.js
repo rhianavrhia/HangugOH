@@ -73,20 +73,31 @@ export default async function handler(req, res) {
       process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
 
     if (!credentialsJSON) {
-      console.error(
-        "GOOGLE_APPLICATION_CREDENTIALS_JSON is missing"
-      );
+      console.error("Missing Google credentials");
 
       return res.status(500).json({
         error: "Google credentials are not configured"
       });
     }
 
-    const credentials = JSON.parse(credentialsJSON);
+    let credentials;
+
+    try {
+      credentials = JSON.parse(credentialsJSON);
+    } catch (error) {
+      console.error("Invalid Google credentials JSON:", error);
+
+      return res.status(500).json({
+        error: "Google credentials JSON is invalid"
+      });
+    }
 
     /*
-     * Create Google access token.
+     * ==============================
+     * STEP 1 — Get Google access token
+     * ==============================
      */
+
     const jwt = createJWT(credentials);
 
     const tokenResponse = await fetch(
@@ -112,19 +123,22 @@ export default async function handler(req, res) {
 
     if (!tokenResponse.ok || !tokenData.access_token) {
       console.error(
-        "Google authentication error:",
+        "GOOGLE AUTHENTICATION ERROR:",
         tokenData
       );
 
       return res.status(500).json({
-        error: "Unable to authenticate with Google"
+        error: "Google authentication failed",
+        details: tokenData
       });
     }
 
     /*
-     * Ask Google Cloud Text-to-Speech
-     * to generate Korean audio.
+     * ==============================
+     * STEP 2 — Generate Korean speech
+     * ==============================
      */
+
     const speechResponse = await fetch(
       "https://texttospeech.googleapis.com/v1/text:synthesize",
       {
@@ -144,9 +158,16 @@ export default async function handler(req, res) {
 
           voice: {
             languageCode: "ko-KR",
+
+            /*
+             * High-quality Korean female voice.
+             */
             name: "ko-KR-Chirp3-HD-Aoede"
           },
 
+          /*
+           * THIS IS THE AUDIO CONFIG.
+           */
           audioConfig: {
             audioEncoding: "MP3",
             speakingRate: 0.82,
@@ -159,22 +180,40 @@ export default async function handler(req, res) {
     const speechData =
       await speechResponse.json();
 
+    /*
+     * IMPORTANT:
+     * Return Google's actual error so we can
+     * see what is wrong instead of simply saying
+     * "Korean TTS failed".
+     */
     if (!speechResponse.ok) {
       console.error(
-        "Google TTS error:",
-        speechData
+        "GOOGLE TTS ERROR:",
+        JSON.stringify(speechData, null, 2)
       );
 
-      return res.status(500).json({
-        error: "Google TTS request failed"
+      return res.status(speechResponse.status).json({
+        error: "Google TTS request failed",
+        googleError: speechData
       });
     }
 
     if (!speechData.audioContent) {
+      console.error(
+        "Google returned no audio:",
+        speechData
+      );
+
       return res.status(500).json({
         error: "Google returned no audio"
       });
     }
+
+    /*
+     * ==============================
+     * STEP 3 — Send MP3 to browser
+     * ==============================
+     */
 
     const audioBuffer = Buffer.from(
       speechData.audioContent,
@@ -194,13 +233,15 @@ export default async function handler(req, res) {
     return res.status(200).send(audioBuffer);
 
   } catch (error) {
+
     console.error(
-      "Korean TTS error:",
+      "KOREAN TTS SERVER ERROR:",
       error
     );
 
     return res.status(500).json({
-      error: "Korean TTS failed"
+      error: "Korean TTS failed",
+      details: error.message
     });
   }
 }
