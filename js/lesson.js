@@ -346,15 +346,163 @@ function renderListening(card, q) {
   };
 }
 
+/* ===================== Korean Voice System ===================== */
+
+let koreanVoice = null;
+
+/*
+ * Find the best Korean voice available on the user's device.
+ *
+ * The browser may not have its voices ready immediately,
+ * so this function can be called multiple times safely.
+ */
+function loadKoreanVoice() {
+  if (!("speechSynthesis" in window)) return null;
+
+  const voices = window.speechSynthesis.getVoices();
+
+  if (!voices.length) {
+    koreanVoice = null;
+    return null;
+  }
+
+  /*
+   * Find voices whose language is Korean.
+   *
+   * This accepts:
+   * ko-KR
+   * ko_KR
+   * ko
+   * etc.
+   */
+  const koreanVoices = voices.filter((voice) => {
+    const lang = (voice.lang || "").toLowerCase();
+    return lang === "ko-kr" || lang.startsWith("ko-");
+  });
+
+  if (!koreanVoices.length) {
+    koreanVoice = null;
+    return null;
+  }
+
+  /*
+   * Try to choose a higher-quality voice first.
+   *
+   * Different devices give voices different names, so
+   * these keywords are only preferences — not requirements.
+   */
+  const preferredVoice =
+    koreanVoices.find((voice) =>
+      /neural|natural|premium|enhanced|wavenet/i.test(voice.name)
+    ) ||
+
+    /*
+     * Prefer voices installed locally on the device.
+     */
+    koreanVoices.find((voice) => voice.localService) ||
+
+    /*
+     * Otherwise use the first Korean voice available.
+     */
+    koreanVoices[0];
+
+  koreanVoice = preferredVoice;
+
+  return koreanVoice;
+}
+
+
+/*
+ * Voices can load after the page has already loaded.
+ *
+ * This event tells us when the browser has finished
+ * loading its available voices.
+ */
+if ("speechSynthesis" in window) {
+  loadKoreanVoice();
+
+  window.speechSynthesis.addEventListener(
+    "voiceschanged",
+    loadKoreanVoice
+  );
+}
+
+
+/*
+ * Speak Korean text.
+ *
+ * This is the function your listening questions
+ * already call:
+ *
+ * speakKorean(q.audioText)
+ */
 function speakKorean(text) {
-  if (!("speechSynthesis" in window)) return;
+  if (!("speechSynthesis" in window)) {
+    toast(
+      "Korean audio is not supported on this device.",
+      "info"
+    );
+    return;
+  }
+
   try {
+    /*
+     * Try loading the voice again in case the browser
+     * loaded its voices after the page started.
+     */
+    const voice = loadKoreanVoice();
+
     const utter = new SpeechSynthesisUtterance(text);
+
+    /*
+     * Tell the browser this is Korean.
+     */
     utter.lang = "ko-KR";
-    utter.rate = 0.9;
+
+    /*
+     * Use the Korean voice we found.
+     */
+    if (voice) {
+      utter.voice = voice;
+    }
+
+    /*
+     * Slightly slower than normal conversation.
+     *
+     * This makes pronunciation easier to understand
+     * for Korean learners.
+     */
+    utter.rate = 0.82;
+
+    /*
+     * Natural pitch.
+     */
+    utter.pitch = 1.0;
+
+    /*
+     * Full volume.
+     */
+    utter.volume = 1.0;
+
+    /*
+     * Stop anything currently speaking before
+     * starting the new sentence.
+     */
     window.speechSynthesis.cancel();
+
+    /*
+     * Speak the sentence.
+     */
     window.speechSynthesis.speak(utter);
-  } catch (e) { /* audio not available */ }
+
+  } catch (error) {
+    console.error("Korean speech error:", error);
+
+    toast(
+      "Unable to play Korean audio.",
+      "info"
+    );
+  }
 }
 
 function normalize(s) {
