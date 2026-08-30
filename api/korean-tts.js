@@ -24,15 +24,20 @@ export default async function handler(req, res) {
 
     /*
      * ==========================================
-     * GOOGLE CREDENTIALS
+     * GET GOOGLE CREDENTIALS
      * ==========================================
      */
 
-    const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
-    const privateKey = process.env.GOOGLE_PRIVATE_KEY;
+    const clientEmail =
+      process.env.GOOGLE_CLIENT_EMAIL;
+
+    let privateKey =
+      process.env.GOOGLE_PRIVATE_KEY;
 
     if (!clientEmail || !privateKey) {
-      console.error("Missing Google environment variables.");
+      console.error(
+        "Missing GOOGLE_CLIENT_EMAIL or GOOGLE_PRIVATE_KEY"
+      );
 
       return res.status(500).json({
         error: "Google credentials are not configured"
@@ -40,13 +45,60 @@ export default async function handler(req, res) {
     }
 
     /*
-     * Vercel may store the private key with
-     * literal \n characters.
+     * ==========================================
+     * FIX PRIVATE KEY FORMATTING
+     * ==========================================
      *
-     * Convert them into real line breaks.
+     * Vercel may contain:
+     *
+     * -----BEGIN PRIVATE KEY-----\nABC...\n-----END PRIVATE KEY-----
+     *
+     * We need to turn the literal \n into
+     * real line breaks.
      */
-    const formattedPrivateKey =
-      privateKey.replace(/\\n/g, "\n");
+
+    privateKey = privateKey.trim();
+
+    /*
+     * If the entire value was pasted with
+     * quotation marks, remove them.
+     */
+    if (
+      privateKey.startsWith('"') &&
+      privateKey.endsWith('"')
+    ) {
+      privateKey = privateKey.slice(1, -1);
+    }
+
+    /*
+     * Convert escaped newlines into real newlines.
+     */
+    privateKey = privateKey.replace(/\\n/g, "\n");
+
+    /*
+     * Remove Windows carriage returns.
+     */
+    privateKey = privateKey.replace(/\r/g, "");
+
+    /*
+     * Make sure the key has the correct PEM structure.
+     */
+    if (
+      !privateKey.includes("-----BEGIN PRIVATE KEY-----") &&
+      !privateKey.includes("-----BEGIN RSA PRIVATE KEY-----")
+    ) {
+      console.error(
+        "GOOGLE_PRIVATE_KEY does not appear to be a valid PEM private key."
+      );
+
+      return res.status(500).json({
+        error: "Google private key format is invalid"
+      });
+    }
+
+    console.log(
+      "Google credentials found. Private key format appears valid."
+    );
 
     /*
      * ==========================================
@@ -57,7 +109,7 @@ export default async function handler(req, res) {
     const auth = new GoogleAuth({
       credentials: {
         client_email: clientEmail,
-        private_key: formattedPrivateKey
+        private_key: privateKey
       },
 
       scopes: [
@@ -67,13 +119,13 @@ export default async function handler(req, res) {
 
     const client = await auth.getClient();
 
-    const accessTokenResponse =
+    const tokenResponse =
       await client.getAccessToken();
 
     const accessToken =
-      typeof accessTokenResponse === "string"
-        ? accessTokenResponse
-        : accessTokenResponse?.token;
+      typeof tokenResponse === "string"
+        ? tokenResponse
+        : tokenResponse?.token;
 
     if (!accessToken) {
       console.error(
@@ -84,6 +136,10 @@ export default async function handler(req, res) {
         error: "Google authentication failed"
       });
     }
+
+    console.log(
+      "Google authentication successful."
+    );
 
     /*
      * ==========================================
@@ -123,14 +179,18 @@ export default async function handler(req, res) {
 
     /*
      * ==========================================
-     * HANDLE GOOGLE ERRORS
+     * GOOGLE TTS ERROR
      * ==========================================
      */
 
     if (!speechResponse.ok) {
       console.error(
         "Google TTS API error:",
-        JSON.stringify(speechData, null, 2)
+        JSON.stringify(
+          speechData,
+          null,
+          2
+        )
       );
 
       return res.status(500).json({
@@ -142,7 +202,7 @@ export default async function handler(req, res) {
 
     if (!speechData.audioContent) {
       console.error(
-        "Google returned no audio content."
+        "Google returned no audio."
       );
 
       return res.status(500).json({
