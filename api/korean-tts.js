@@ -221,14 +221,12 @@ export default async function handler(req, res) {
       .status(200)
       .send(audioBuffer);
 
-  } catch (error) {
-    console.error(
-      "Korean TTS error:",
-      error
-    );
+    } catch (error) {
+    console.error("Korean TTS error:", error);
 
     return res.status(500).json({
-      error: "Korean TTS failed"
+      error: "Korean TTS failed",
+      details: error.message || String(error)
     });
   }
 }
