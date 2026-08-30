@@ -30,6 +30,7 @@ function createJWT(credentials) {
     base64url(JSON.stringify(payload));
 
   const signer = crypto.createSign("RSA-SHA256");
+
   signer.update(unsignedToken);
 
   const signature = signer.sign(
@@ -69,39 +70,39 @@ export default async function handler(req, res) {
       });
     }
 
-    const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
-const privateKey = process.env.GOOGLE_PRIVATE_KEY;
+    /* ================================
+       GOOGLE CREDENTIALS
+       ================================ */
 
-if (!clientEmail || !privateKey) {
-  console.error("Google credentials are missing.");
+    const clientEmail =
+      process.env.GOOGLE_CLIENT_EMAIL;
 
-  return res.status(500).json({
-    error: "Google credentials are not configured"
-  });
-}
+    const privateKey =
+      process.env.GOOGLE_PRIVATE_KEY;
 
-const credentials = {
-  client_email: clientEmail,
-  private_key: privateKey.replace(/\\n/g, "\n")
-};
-
-    let credentials;
-
-    try {
-      credentials = JSON.parse(credentialsJSON);
-    } catch (error) {
-      console.error("Invalid Google credentials JSON:", error);
+    if (!clientEmail || !privateKey) {
+      console.error(
+        "Google credentials are missing."
+      );
 
       return res.status(500).json({
-        error: "Google credentials JSON is invalid"
+        error: "Google credentials are not configured"
       });
     }
 
-    /*
-     * ==============================
-     * STEP 1 — Get Google access token
-     * ==============================
-     */
+    const credentials = {
+      client_email: clientEmail,
+
+      /*
+       * Vercel may store \n as literal characters.
+       * Convert them into real line breaks.
+       */
+      private_key: privateKey.replace(/\\n/g, "\n")
+    };
+
+    /* ================================
+       CREATE GOOGLE ACCESS TOKEN
+       ================================ */
 
     const jwt = createJWT(credentials);
 
@@ -124,25 +125,26 @@ const credentials = {
       }
     );
 
-    const tokenData = await tokenResponse.json();
+    const tokenData =
+      await tokenResponse.json();
 
-    if (!tokenResponse.ok || !tokenData.access_token) {
+    if (
+      !tokenResponse.ok ||
+      !tokenData.access_token
+    ) {
       console.error(
-        "GOOGLE AUTHENTICATION ERROR:",
+        "Google authentication error:",
         tokenData
       );
 
       return res.status(500).json({
-        error: "Google authentication failed",
-        details: tokenData
+        error: "Unable to authenticate with Google"
       });
     }
 
-    /*
-     * ==============================
-     * STEP 2 — Generate Korean speech
-     * ==============================
-     */
+    /* ================================
+       GOOGLE TEXT-TO-SPEECH
+       ================================ */
 
     const speechResponse = await fetch(
       "https://texttospeech.googleapis.com/v1/text:synthesize",
@@ -153,7 +155,8 @@ const credentials = {
           Authorization:
             `Bearer ${tokenData.access_token}`,
 
-          "Content-Type": "application/json"
+          "Content-Type":
+            "application/json"
         },
 
         body: JSON.stringify({
@@ -163,16 +166,9 @@ const credentials = {
 
           voice: {
             languageCode: "ko-KR",
-
-            /*
-             * High-quality Korean female voice.
-             */
             name: "ko-KR-Chirp3-HD-Aoede"
           },
 
-          /*
-           * THIS IS THE AUDIO CONFIG.
-           */
           audioConfig: {
             audioEncoding: "MP3",
             speakingRate: 0.82,
@@ -185,40 +181,26 @@ const credentials = {
     const speechData =
       await speechResponse.json();
 
-    /*
-     * IMPORTANT:
-     * Return Google's actual error so we can
-     * see what is wrong instead of simply saying
-     * "Korean TTS failed".
-     */
     if (!speechResponse.ok) {
       console.error(
-        "GOOGLE TTS ERROR:",
-        JSON.stringify(speechData, null, 2)
+        "Google TTS error:",
+        speechData
       );
 
-      return res.status(speechResponse.status).json({
-        error: "Google TTS request failed",
-        googleError: speechData
+      return res.status(500).json({
+        error: "Google TTS request failed"
       });
     }
 
     if (!speechData.audioContent) {
-      console.error(
-        "Google returned no audio:",
-        speechData
-      );
-
       return res.status(500).json({
         error: "Google returned no audio"
       });
     }
 
-    /*
-     * ==============================
-     * STEP 3 — Send MP3 to browser
-     * ==============================
-     */
+    /* ================================
+       RETURN AUDIO
+       ================================ */
 
     const audioBuffer = Buffer.from(
       speechData.audioContent,
@@ -235,18 +217,18 @@ const credentials = {
       "public, max-age=86400"
     );
 
-    return res.status(200).send(audioBuffer);
+    return res
+      .status(200)
+      .send(audioBuffer);
 
   } catch (error) {
-
     console.error(
-      "KOREAN TTS SERVER ERROR:",
+      "Korean TTS error:",
       error
     );
 
     return res.status(500).json({
-      error: "Korean TTS failed",
-      details: error.message
+      error: "Korean TTS failed"
     });
   }
 }
