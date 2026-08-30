@@ -322,26 +322,63 @@ function renderReading(card, q) {
 
 function renderListening(card, q) {
   questionPrompt(card, q.prompt);
-  const playBtn = el("button", { class: "btn btn-secondary listen-btn" }, "🔊 Play Audio");
-  playBtn.addEventListener("click", () => speakKorean(q.audioText));
+
+  const playBtn = el(
+    "button",
+    { class: "btn btn-secondary listen-btn" },
+    "🔊 Play Audio"
+  );
+
+  playBtn.addEventListener("click", () => {
+    speakKorean(q.audioText);
+  });
+
   card.appendChild(playBtn);
+
   const optWrap = el("div", { class: "option-grid" });
+
   let selected = null;
+
   q.options.forEach((opt) => {
-    const btn = el("button", { class: "option-btn ko-option" }, opt);
+    const btn = el(
+      "button",
+      { class: "option-btn ko-option" },
+      opt
+    );
+
     btn.addEventListener("click", () => {
-      optWrap.querySelectorAll(".option-btn").forEach((b) => b.classList.remove("selected"));
+      optWrap
+        .querySelectorAll(".option-btn")
+        .forEach((b) =>
+          b.classList.remove("selected")
+        );
+
       btn.classList.add("selected");
       selected = opt;
     });
+
     optWrap.appendChild(btn);
   });
+
   card.appendChild(optWrap);
-  speakKorean(q.audioText);
+
   return () => {
-    if (selected === null) { toast("Choose an answer first", "info"); return null; }
+    if (selected === null) {
+      toast(
+        "Choose an answer first",
+        "info"
+      );
+      return null;
+    }
+
     const correct = selected === q.answer;
-    markOptionResult(optWrap, selected, q.answer);
+
+    markOptionResult(
+      optWrap,
+      selected,
+      q.answer
+    );
+
     return correct;
   };
 }
