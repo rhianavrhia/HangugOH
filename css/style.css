@@ -978,6 +978,10 @@ input { font-family: inherit; }
   gap: 18px;
 }
 
+.card topik-progress-card {
+  margin-top: 24px;
+}
+
 .topik-card {
   background: #fff;
   border-radius: var(--radius-md);
