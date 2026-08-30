@@ -33,8 +33,6 @@ const VOCAB = [
   { id: "v18", ko: "돈", rom: "don", en: "money", ex: "돈이 조금 있어요.", exEn: "I have a little money.", cat: "Objects" },
   { id: "v19", ko: "책", rom: "chaek", en: "book", ex: "저는 책을 읽어요.", exEn: "I read a book.", cat: "Objects" },
   { id: "v20", ko: "커피", rom: "keopi", en: "coffee", ex: "커피 한 잔 주세요.", exEn: "One cup of coffee, please.", cat: "Food" },
-
-  /* Additional Vocabulary */
   { id: "v21", ko: "사과", rom: "sagwa", en: "apple", ex: "사과를 먹어요.", exEn: "I eat an apple.", cat: "Food" },
   { id: "v22", ko: "셋", rom: "set", en: "three (native)", ex: "고양이 셋이 있습니다.", exEn: "There are three cats.", cat: "Numbers" },
   { id: "v23", ko: "식당", rom: "sikdang", en: "restaurant", ex: "식당에서 밥을 먹어요.", exEn: "I eat at a restaurant.", cat: "Places" },
@@ -216,8 +214,8 @@ const VOCAB = [
   { id: "v200", ko: "대화", rom: "daehwa", en: "conversation", ex: "한국어로 대화해요.", exEn: "I have a conversation in Korean.", cat: "Language" },
   { id: "v201", ko: "소리", rom: "sori", en: "sound", ex: "큰 소리가 들려요.", exEn: "I hear a loud sound.", cat: "Language" },
   { id: "v202", ko: "글", rom: "geul", en: "writing / text", ex: "글을 읽어요.", exEn: "I read the text.", cat: "Language" },
-  { id: "v203", ko: "한국어로", rom: "hangugeoro", en: "in Korean", ex: "한국어로 말해 주세요.", exEn: "Please speak in Korean.", cat: "Language" },
-  { id: "v204", ko: "영어로", rom: "yeongeoro", en: "in English", ex: "영어로 설명해 주세요.", exEn: "Please explain it in English.", cat: "Language" },
+  { id: "v203", ko: "일본어", rom: "ilboneo", en: "Japanese language", ex: "일본어로 말해 주세요.", exEn: "Please speak in Japanese.", cat: "Language" },
+  { id: "v204", ko: "중국어", rom: "junggugeo", en: "Chinese language", ex: "중국어로 설명해 주세요.", exEn: "Please explain it in Chinese.", cat: "Language" },
   { id: "v205", ko: "번역", rom: "beonyeok", en: "translation", ex: "이 문장을 번역해 주세요.", exEn: "Please translate this sentence.", cat: "Language" },
   { id: "v206", ko: "설명", rom: "seolmyeong", en: "explanation", ex: "문법을 설명해 주세요.", exEn: "Please explain the grammar.", cat: "Language" },
   { id: "v207", ko: "표현", rom: "pyohyeon", en: "expression / phrase", ex: "새로운 표현을 배웠어요.", exEn: "I learned a new expression.", cat: "Language" },
