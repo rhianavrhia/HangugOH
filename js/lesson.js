@@ -464,15 +464,6 @@ if ("speechSynthesis" in window) {
   );
 }
 
-
-/*
- * Speak Korean text.
- *
- * This is the function your listening questions
- * already call:
- *
- * speakKorean(q.audioText)
- */
 function speakKorean(text) {
   if (!("speechSynthesis" in window)) {
     toast(
