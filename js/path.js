@@ -48,48 +48,88 @@ function renderPath(root) {
   root.appendChild(container);
 }
 
+function getUnitProgress(unit) {
+  const lessonIds = unit.lessonIds || [];
 
-/* ===================== Unit Status ===================== */
+  if (!lessonIds.length) {
+    return {
+      completed: 0,
+      total: 5,
+      percent: 0,
+    };
+  }
+
+  /*
+   * A unit currently contains one lesson.
+   *
+   * If more lessons are added to a unit later,
+   * their progress will be averaged into the unit.
+   */
+  let totalProgress = 0;
+
+  lessonIds.forEach((lessonId) => {
+    /*
+     * Completed lessons are always 5/5.
+     */
+    if (STATE.lessonsCompleted.includes(lessonId)) {
+      totalProgress += 5;
+      return;
+    }
+
+    /*
+     * Otherwise use the saved partial progress.
+     */
+    const savedProgress =
+      STATE.lessonPathProgress &&
+      STATE.lessonPathProgress[lessonId]
+        ? STATE.lessonPathProgress[lessonId]
+        : 0;
+
+    totalProgress += Math.min(5, savedProgress);
+  });
+
+  /*
+   * Convert multiple lessons into a single 5-step unit.
+   */
+  const averageProgress =
+    totalProgress / lessonIds.length;
+
+  const completed = Math.round(averageProgress);
+
+  return {
+    completed: Math.min(5, completed),
+    total: 5,
+    percent: Math.min(
+      100,
+      Math.round((averageProgress / 5) * 100)
+    ),
+  };
+}
+
 
 function unitStatus(unit) {
-
   const lessonIds = unit.lessonIds || [];
 
   if (!lessonIds.length) {
     return "locked";
   }
 
-  const completedCount =
-    lessonIds.filter((id) =>
-      STATE.lessonsCompleted.includes(id)
-    ).length;
-
+  const progress = getUnitProgress(unit);
 
   /*
-   * Every lesson in this unit has been completed.
+   * Completely finished.
    */
-  if (completedCount === lessonIds.length) {
+  if (progress.completed >= 5) {
     return "completed";
   }
 
-
   /*
-   * At least one lesson has been completed,
-   * but the unit is not finished yet.
-   */
-  if (completedCount > 0) {
-    return "available";
-  }
-
-
-  /*
-   * No lessons completed yet.
-   *
    * Check whether the first lesson is unlocked.
    */
   const firstLessonId = lessonIds[0];
+  const locked = isLessonLocked(firstLessonId);
 
-  if (isLessonLocked(firstLessonId)) {
+  if (locked && progress.completed === 0) {
     return "locked";
   }
 
@@ -97,47 +137,20 @@ function unitStatus(unit) {
 }
 
 
-/* ===================== Unit Node ===================== */
-
 function renderUnitNode(unit) {
-
+  const status = unitStatus(unit);
   const lessonIds = unit.lessonIds || [];
 
-  const status = unitStatus(unit);
-
-
-  /*
-   * Count completed lessons.
-   */
-  const completedCount =
-    lessonIds.filter((id) =>
-      STATE.lessonsCompleted.includes(id)
-    ).length;
-
+  const progress = getUnitProgress(unit);
 
   /*
-   * Total number of lessons in this unit.
-   *
-   * If the unit contains 5 lesson IDs,
-   * this will automatically display 0/5,
-   * 1/5, 2/5, etc.
-   */
-  const totalLessons = lessonIds.length;
-
-
-  /*
-   * Find the next unfinished lesson.
+   * Find the first unfinished lesson.
    */
   const nextLessonId =
     lessonIds.find(
-      (id) =>
-        !STATE.lessonsCompleted.includes(id)
-    );
+      (id) => !STATE.lessonsCompleted.includes(id)
+    ) || lessonIds[0];
 
-
-  /*
-   * Choose the icon.
-   */
   const icon =
     status === "completed"
       ? "✓"
@@ -145,67 +158,60 @@ function renderUnitNode(unit) {
       ? "🔒"
       : unit.icon;
 
-
-  /*
-   * Create the Learning Path card.
-   */
   const node = el(
     "button",
     {
       class: `path-node path-node-${status}`,
-
-      disabled:
-        status === "locked"
-          ? "true"
-          : null
+      disabled: status === "locked" ? "true" : null,
     },
-
     [
-
       el(
         "div",
-        {
-          class: "path-node-icon"
-        },
+        { class: "path-node-icon" },
         icon
       ),
 
-
       el(
         "div",
-        {
-          class: "path-node-title"
-        },
+        { class: "path-node-title" },
         unit.title
       ),
 
+      el(
+        "div",
+        { class: "path-node-progress" },
+        `${progress.completed}/5`
+      ),
 
       /*
-       * THIS is the progress display.
-       *
-       * Example:
-       * 0/5 lessons
-       * 1/5 lessons
-       * 2/5 lessons
-       * ...
-       * 5/5 lessons
+       * Visual progress bar inside the node.
        */
       el(
         "div",
-        {
-          class: "path-node-progress"
-        },
-        `${completedCount}/${totalLessons} lessons`
-      )
-
+        { class: "path-node-progress-bar" },
+        [
+          el(
+            "div",
+            {
+              class: "path-node-progress-fill",
+              style: `width:${progress.percent}%`,
+            }
+          ),
+        ]
+      ),
     ]
   );
 
+  if (status !== "locked" && nextLessonId) {
+    node.addEventListener("click", () => {
+      startLesson(nextLessonId);
+    });
+  }
 
-  /*
-   * Clicking a unit starts the NEXT
-   * unfinished lesson.
-   */
+  return node;
+}
+
+
   if (
     status !== "locked" &&
     nextLessonId
