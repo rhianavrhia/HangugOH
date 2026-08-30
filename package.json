@@ -1,9 +1,0 @@
-{
-  "name": "hangug-oh",
-  "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "google-auth-library": "^10.0.0"
-  }
-}
