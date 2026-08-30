@@ -1,3 +1,52 @@
+import crypto from "crypto";
+
+function base64url(input) {
+  return Buffer.from(input)
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
+
+function createJWT(credentials) {
+  const header = {
+    alg: "RS256",
+    typ: "JWT"
+  };
+
+  const now = Math.floor(Date.now() / 1000);
+
+  const payload = {
+    iss: credentials.client_email,
+    scope: "https://www.googleapis.com/auth/cloud-platform",
+    aud: "https://oauth2.googleapis.com/token",
+    iat: now,
+    exp: now + 3600
+  };
+
+  const unsignedToken =
+    base64url(JSON.stringify(header)) +
+    "." +
+    base64url(JSON.stringify(payload));
+
+  const signer = crypto.createSign("RSA-SHA256");
+  signer.update(unsignedToken);
+
+  const signature = signer.sign(
+    credentials.private_key,
+    "base64"
+  );
+
+  return (
+    unsignedToken +
+    "." +
+    signature
+      .replace(/\+/g, "-")
+      .replace(/\//g, "_")
+      .replace(/=+$/, "")
+  );
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -20,37 +69,52 @@ export default async function handler(req, res) {
       });
     }
 
-    const credentials = JSON.parse(
-      process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON
-    );
+    const credentialsJSON =
+      process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+
+    if (!credentialsJSON) {
+      console.error(
+        "GOOGLE_APPLICATION_CREDENTIALS_JSON is missing"
+      );
+
+      return res.status(500).json({
+        error: "Google credentials are not configured"
+      });
+    }
+
+    const credentials = JSON.parse(credentialsJSON);
 
     /*
-     * Create a Google OAuth access token
-     * using the service account.
+     * Create Google access token.
      */
+    const jwt = createJWT(credentials);
 
     const tokenResponse = await fetch(
-      `https://oauth2.googleapis.com/token`,
+      "https://oauth2.googleapis.com/token",
       {
         method: "POST",
 
         headers: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type":
+            "application/x-www-form-urlencoded"
         },
 
         body: new URLSearchParams({
           grant_type:
             "urn:ietf:params:oauth:grant-type:jwt-bearer",
 
-          assertion: createJWT(credentials)
+          assertion: jwt
         })
       }
     );
 
     const tokenData = await tokenResponse.json();
 
-    if (!tokenData.access_token) {
-      console.error(tokenData);
+    if (!tokenResponse.ok || !tokenData.access_token) {
+      console.error(
+        "Google authentication error:",
+        tokenData
+      );
 
       return res.status(500).json({
         error: "Unable to authenticate with Google"
@@ -58,16 +122,16 @@ export default async function handler(req, res) {
     }
 
     /*
-     * Request Korean speech.
+     * Ask Google Cloud Text-to-Speech
+     * to generate Korean audio.
      */
-
     const speechResponse = await fetch(
       "https://texttospeech.googleapis.com/v1/text:synthesize",
       {
         method: "POST",
 
         headers: {
-          "Authorization":
+          Authorization:
             `Bearer ${tokenData.access_token}`,
 
           "Content-Type": "application/json"
@@ -75,7 +139,7 @@ export default async function handler(req, res) {
 
         body: JSON.stringify({
           input: {
-            text
+            text: text
           },
 
           voice: {
@@ -85,20 +149,30 @@ export default async function handler(req, res) {
 
           audioConfig: {
             audioEncoding: "MP3",
-            speakingRate: 0.85,
+            speakingRate: 0.82,
             pitch: 0
           }
         })
       }
     );
 
-    const speechData = await speechResponse.json();
+    const speechData =
+      await speechResponse.json();
 
     if (!speechResponse.ok) {
-      console.error(speechData);
+      console.error(
+        "Google TTS error:",
+        speechData
+      );
 
       return res.status(500).json({
         error: "Google TTS request failed"
+      });
+    }
+
+    if (!speechData.audioContent) {
+      return res.status(500).json({
+        error: "Google returned no audio"
       });
     }
 
@@ -120,8 +194,10 @@ export default async function handler(req, res) {
     return res.status(200).send(audioBuffer);
 
   } catch (error) {
-
-    console.error(error);
+    console.error(
+      "Korean TTS error:",
+      error
+    );
 
     return res.status(500).json({
       error: "Korean TTS failed"
