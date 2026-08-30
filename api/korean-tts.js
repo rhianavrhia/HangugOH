@@ -9,6 +9,7 @@ function base64url(input) {
 }
 
 function createJWT(clientEmail, privateKey) {
+
   const header = {
     alg: "RS256",
     typ: "JWT"
@@ -29,14 +30,16 @@ function createJWT(clientEmail, privateKey) {
     "." +
     base64url(JSON.stringify(payload));
 
-  const signer = crypto.createSign("RSA-SHA256");
+  const signer =
+    crypto.createSign("RSA-SHA256");
 
   signer.update(unsignedToken);
 
-  const signature = signer.sign(
-    privateKey,
-    "base64"
-  );
+  const signature =
+    signer.sign(
+      privateKey,
+      "base64"
+    );
 
   return (
     unsignedToken +
@@ -48,42 +51,59 @@ function createJWT(clientEmail, privateKey) {
   );
 }
 
+
 export default async function handler(req, res) {
 
-  /*
-   * Only allow POST requests.
-   */
-
-  if (req.method !== "POST") {
-    return res.status(405).json({
-      error: "Method not allowed"
-    });
-  }
+  console.log("========== KOREAN TTS START ==========");
 
   try {
 
     /*
-     * Get Korean text from lesson.js.
+     * STEP 1
+     * Check request.
      */
 
-    const { text } = req.body || {};
+    console.log("STEP 1: Request received");
 
-    if (!text || typeof text !== "string") {
-      return res.status(400).json({
-        error: "Missing Korean text"
+    if (req.method !== "POST") {
+
+      return res.status(405).json({
+        error: "Method not allowed"
       });
+
     }
 
-    if (text.length > 500) {
+
+    const { text } =
+      req.body || {};
+
+    console.log(
+      "STEP 1: Text:",
+      text
+    );
+
+
+    if (
+      !text ||
+      typeof text !== "string"
+    ) {
+
       return res.status(400).json({
-        error: "Text is too long"
+        error:
+          "Missing Korean text"
       });
+
     }
 
 
     /*
-     * Get Google credentials from Vercel.
+     * STEP 2
+     * Read environment variables.
      */
+
+    console.log(
+      "STEP 2: Checking Google credentials"
+    );
 
     const clientEmail =
       process.env.GOOGLE_CLIENT_EMAIL;
@@ -92,78 +112,141 @@ export default async function handler(req, res) {
       process.env.GOOGLE_PRIVATE_KEY;
 
 
-    /*
-     * Make sure the credentials exist.
-     */
+    console.log(
+      "Client email exists:",
+      !!clientEmail
+    );
 
-    if (!clientEmail || !privateKey) {
+    console.log(
+      "Private key exists:",
+      !!privateKey
+    );
 
-      console.error(
-        "Missing Google environment variables",
-        {
-          clientEmailExists: !!clientEmail,
-          privateKeyExists: !!privateKey
-        }
-      );
+
+    if (!clientEmail) {
 
       return res.status(500).json({
         error:
-          "Google credentials are not configured"
+          "GOOGLE_CLIENT_EMAIL is missing"
       });
+
+    }
+
+
+    if (!privateKey) {
+
+      return res.status(500).json({
+        error:
+          "GOOGLE_PRIVATE_KEY is missing"
+      });
+
     }
 
 
     /*
-     * Vercel may store \n as literal characters.
-     *
-     * Convert them into real line breaks.
+     * STEP 3
+     * Format private key.
      */
+
+    console.log(
+      "STEP 3: Formatting private key"
+    );
 
     const formattedPrivateKey =
-      privateKey.replace(/\\n/g, "\n");
+      privateKey.replace(
+        /\\n/g,
+        "\n"
+      );
 
 
     /*
-     * Create Google OAuth JWT.
+     * STEP 4
+     * Create JWT.
      */
 
-    const jwt = createJWT(
-      clientEmail,
-      formattedPrivateKey
+    console.log(
+      "STEP 4: Creating Google JWT"
+    );
+
+    let jwt;
+
+    try {
+
+      jwt = createJWT(
+        clientEmail,
+        formattedPrivateKey
+      );
+
+    } catch (error) {
+
+      console.error(
+        "JWT CREATION ERROR:",
+        error
+      );
+
+      return res.status(500).json({
+
+        error:
+          "Google JWT creation failed",
+
+        details:
+          error.message
+
+      });
+
+    }
+
+
+    console.log(
+      "STEP 4: JWT created successfully"
     );
 
 
     /*
-     * Exchange JWT for an access token.
+     * STEP 5
+     * Get Google access token.
      */
 
-    const tokenResponse = await fetch(
-      "https://oauth2.googleapis.com/token",
-      {
-        method: "POST",
-
-        headers: {
-          "Content-Type":
-            "application/x-www-form-urlencoded"
-        },
-
-        body: new URLSearchParams({
-          grant_type:
-            "urn:ietf:params:oauth:grant-type:jwt-bearer",
-
-          assertion: jwt
-        })
-      }
+    console.log(
+      "STEP 5: Requesting Google access token"
     );
+
+    const tokenResponse =
+      await fetch(
+        "https://oauth2.googleapis.com/token",
+        {
+
+          method: "POST",
+
+          headers: {
+            "Content-Type":
+              "application/x-www-form-urlencoded"
+          },
+
+          body:
+            new URLSearchParams({
+
+              grant_type:
+                "urn:ietf:params:oauth:grant-type:jwt-bearer",
+
+              assertion:
+                jwt
+
+            })
+
+        }
+      );
 
 
     const tokenData =
       await tokenResponse.json();
 
 
-    /*
-     * Check authentication.
-     */
+    console.log(
+      "STEP 5: Google token status:",
+      tokenResponse.status
+    );
+
 
     if (
       !tokenResponse.ok ||
@@ -176,6 +259,7 @@ export default async function handler(req, res) {
       );
 
       return res.status(500).json({
+
         error:
           "Google authentication failed",
 
@@ -183,67 +267,95 @@ export default async function handler(req, res) {
           tokenData.error_description ||
           tokenData.error ||
           "Unknown authentication error"
+
       });
+
     }
 
 
-    /*
-     * Ask Google Cloud Text-to-Speech
-     * to generate Korean speech.
-     */
-
-    const speechResponse = await fetch(
-      "https://texttospeech.googleapis.com/v1/text:synthesize",
-      {
-        method: "POST",
-
-        headers: {
-          Authorization:
-            `Bearer ${tokenData.access_token}`,
-
-          "Content-Type":
-            "application/json"
-        },
-
-        body: JSON.stringify({
-
-          input: {
-            text: text
-          },
-
-          voice: {
-            languageCode: "ko-KR",
-
-            name:
-              "ko-KR-Chirp3-HD-Aoede"
-          },
-
-          audioConfig: {
-            audioEncoding: "MP3",
-
-            speakingRate: 0.82,
-
-            pitch: 0
-          }
-        })
-      }
+    console.log(
+      "STEP 5: Google authentication successful"
     );
 
 
     /*
-     * Read Google's response.
+     * STEP 6
+     * Request Korean speech.
      */
+
+    console.log(
+      "STEP 6: Sending text to Google TTS"
+    );
+
+
+    const speechResponse =
+      await fetch(
+
+        "https://texttospeech.googleapis.com/v1/text:synthesize",
+
+        {
+
+          method: "POST",
+
+          headers: {
+
+            Authorization:
+              `Bearer ${tokenData.access_token}`,
+
+            "Content-Type":
+              "application/json"
+
+          },
+
+          body:
+            JSON.stringify({
+
+              input: {
+                text: text
+              },
+
+              voice: {
+
+                languageCode:
+                  "ko-KR",
+
+                name:
+                  "ko-KR-Chirp3-HD-Aoede"
+
+              },
+
+              audioConfig: {
+
+                audioEncoding:
+                  "MP3",
+
+                speakingRate:
+                  0.82,
+
+                pitch:
+                  0
+
+              }
+
+            })
+
+        }
+
+      );
+
 
     const speechData =
       await speechResponse.json();
 
 
+    console.log(
+      "STEP 6: Google TTS status:",
+      speechResponse.status
+    );
+
+
     /*
-     * IMPORTANT:
-     *
-     * Instead of simply saying
-     * "Korean TTS failed",
-     * show us Google's actual error.
+     * THIS IS THE MOST IMPORTANT PART.
      */
 
     if (!speechResponse.ok) {
@@ -253,43 +365,60 @@ export default async function handler(req, res) {
         speechData
       );
 
-      return res.status(
-        speechResponse.status
-      ).json({
+      return res.status(500).json({
 
         error:
           "Google TTS request failed",
+
+        googleStatus:
+          speechResponse.status,
 
         details:
           speechData.error?.message ||
           "Unknown Google TTS error",
 
-        code:
+        googleCode:
           speechData.error?.code ||
           null
 
       });
+
     }
 
 
     /*
-     * Make sure Google actually
-     * returned audio.
+     * STEP 7
+     * Check audio.
      */
 
-    if (!speechData.audioContent) {
+    console.log(
+      "STEP 7: Checking audio"
+    );
+
+
+    if (
+      !speechData.audioContent
+    ) {
 
       return res.status(500).json({
+
         error:
           "Google returned no audio"
+
       });
+
     }
 
 
     /*
-     * Convert Google's base64 audio
-     * into an MP3 buffer.
+     * STEP 8
+     * Convert audio.
      */
+
+    console.log(
+      "STEP 8: Converting audio"
+    );
+
 
     const audioBuffer =
       Buffer.from(
@@ -299,8 +428,14 @@ export default async function handler(req, res) {
 
 
     /*
-     * Return MP3 to the browser.
+     * STEP 9
+     * Send MP3 to browser.
      */
+
+    console.log(
+      "STEP 9: Sending MP3"
+    );
+
 
     res.setHeader(
       "Content-Type",
@@ -313,26 +448,40 @@ export default async function handler(req, res) {
     );
 
 
+    console.log(
+      "========== KOREAN TTS SUCCESS =========="
+    );
+
+
     return res
       .status(200)
       .send(audioBuffer);
 
 
- } catch (error) {
+  } catch (error) {
 
-  console.error(
-    "KOREAN TTS SERVER ERROR:",
-    error
-  );
+    console.error(
+      "========== KOREAN TTS CRASH =========="
+    );
 
-  return res.status(500).json({
+    console.error(error);
 
-    error: "Korean TTS failed",
 
-    details: error.message || "Unknown server error",
+    return res.status(500).json({
 
-    stack: error.stack || null
+      error:
+        "Korean TTS failed",
 
-  });
-}
+      details:
+        error.message ||
+        "Unknown server error",
+
+      stack:
+        error.stack ||
+        null
+
+    });
+
+  }
+
 }
