@@ -851,8 +851,6 @@ const GRAMMAR = [
     practice: { type: "mc", prompt: "Formal version of '가요' is:", answer: "갑니다", options: ["갑니다", "가습니다", "가ㅂ니다", "가답니다"] },
   },
 
-  /* Additional Grammar */
-
   {
     id: "g9", level: "Beginner", pattern: "에 (location / destination)",
     meaning: "marks a destination, location, or specific time",
@@ -972,6 +970,406 @@ const GRAMMAR = [
       { ko: "학교에 가야 해요.", en: "I have to go to school." },
     ],
     practice: { type: "mc", prompt: "'I have to study' is:", answer: "공부해야 해요", options: ["공부해야 해요", "공부하고 싶어요", "공부할 수 있어요", "공부하지 않아요"] },
+  },
+  {
+    id: "g21", level: "Beginner", pattern: "부터",
+    meaning: "from / starting from",
+    explanation: "부터 marks the starting point of an action, time, or place.",
+    examples: [
+      { ko: "아침부터 공부해요.", en: "I study from the morning." },
+      { ko: "월요일부터 시작해요.", en: "I start from Monday." },
+    ],
+    practice: { type: "fill", prompt: "오늘___ 운동해요.", answer: "부터", options: ["부터", "까지", "에서", "에게"] },
+  },
+  {
+    id: "g22", level: "Beginner", pattern: "까지",
+    meaning: "until / up to / as far as",
+    explanation: "까지 marks the endpoint of a time, place, or range.",
+    examples: [
+      { ko: "밤까지 공부해요.", en: "I study until night." },
+      { ko: "학교까지 걸어가요.", en: "I walk as far as the school." },
+    ],
+    practice: { type: "fill", prompt: "5시___ 일해요.", answer: "까지", options: ["까지", "부터", "에서", "으로"] },
+  },
+  {
+    id: "g23", level: "Beginner", pattern: "만",
+    meaning: "only / just",
+    explanation: "만 is attached to a noun to express the meaning 'only' or 'just'.",
+    examples: [
+      { ko: "물만 마셔요.", en: "I only drink water." },
+      { ko: "오늘만 쉬어요.", en: "I rest only today." },
+    ],
+    practice: { type: "fill", prompt: "커피___ 마셔요.", answer: "만", options: ["만", "도", "는", "가"] },
+  },
+  {
+    id: "g24", level: "Beginner", pattern: "의",
+    meaning: "possessive / of",
+    explanation: "의 connects two nouns to show possession or a relationship, similar to 'of' or apostrophe-s in English.",
+    examples: [
+      { ko: "제 친구의 책이에요.", en: "It is my friend's book." },
+      { ko: "한국의 음식이에요.", en: "It is Korean food." },
+    ],
+    practice: { type: "fill", prompt: "민수___ 책이에요.", answer: "의", options: ["의", "가", "를", "에"] },
+  },
+  {
+    id: "g25", level: "Beginner", pattern: "에게/한테",
+    meaning: "to / from a person",
+    explanation: "에게 and 한테 indicate the person who receives something or is the target of an action. 한테 is more conversational.",
+    examples: [
+      { ko: "친구에게 편지를 써요.", en: "I write a letter to my friend." },
+      { ko: "선생님한테 질문해요.", en: "I ask the teacher a question." },
+    ],
+    practice: { type: "mc", prompt: "'to my friend' is:", answer: "친구에게", options: ["친구에게", "친구를", "친구가", "친구에서"] },
+  },
+  {
+    id: "g26", level: "Beginner", pattern: "하고",
+    meaning: "and / with",
+    explanation: "하고 can connect nouns or indicate the person someone does something with. It is common in everyday Korean.",
+    examples: [
+      { ko: "친구하고 영화 봐요.", en: "I watch a movie with a friend." },
+      { ko: "사과하고 바나나를 먹어요.", en: "I eat an apple and a banana." },
+    ],
+    practice: { type: "fill", prompt: "친구___ 같이 가요.", answer: "하고", options: ["하고", "에게", "에서", "까지"] },
+  },
+  {
+    id: "g27", level: "Beginner", pattern: "~고 있다",
+    meaning: "be doing / currently doing",
+    explanation: "Attach 고 있다 to a verb stem to describe an action that is currently in progress.",
+    examples: [
+      { ko: "한국어를 공부하고 있어요.", en: "I am studying Korean." },
+      { ko: "지금 책을 읽고 있어요.", en: "I am reading a book now." },
+    ],
+    practice: { type: "mc", prompt: "'I am eating' is:", answer: "먹고 있어요", options: ["먹고 있어요", "먹어 있어요", "먹고 싶어요", "먹을 거예요"] },
+  },
+  {
+    id: "g28", level: "Beginner", pattern: "~(으)ㄹ 거예요",
+    meaning: "will / be going to",
+    explanation: "This pattern expresses a future plan, intention, or expectation. Use ㄹ 거예요 after a vowel and 을 거예요 after a consonant.",
+    examples: [
+      { ko: "내일 학교에 갈 거예요.", en: "I will go to school tomorrow." },
+      { ko: "주말에 영화를 볼 거예요.", en: "I will watch a movie on the weekend." },
+    ],
+    practice: { type: "mc", prompt: "'I will study' is:", answer: "공부할 거예요", options: ["공부할 거예요", "공부하고 있어요", "공부해야 해요", "공부하고 싶어요"] },
+  },
+  {
+    id: "g29", level: "Beginner", pattern: "그리고",
+    meaning: "and / and then",
+    explanation: "그리고 connects sentences or ideas and is commonly used to mean 'and' or 'and then'.",
+    examples: [
+      { ko: "밥을 먹어요. 그리고 커피를 마셔요.", en: "I eat a meal. And then I drink coffee." },
+      { ko: "학교에 가요. 그리고 공부해요.", en: "I go to school. And then I study." },
+    ],
+    practice: { type: "mc", prompt: "Which word means 'and / and then'?", answer: "그리고", options: ["그리고", "하지만", "그래서", "왜"] },
+  },
+    {
+    id: "g30", level: "Intermediate", pattern: "~(으)ㄴ/는 것 같다",
+    meaning: "seem / appear / think that",
+    explanation: "This pattern expresses an impression, guess, or uncertainty about something. The form changes depending on whether it follows a noun, adjective, or verb.",
+    examples: [
+      { ko: "비가 오는 것 같아요.", en: "It seems like it is raining." },
+      { ko: "이 음식은 맛있는 것 같아요.", en: "I think this food is delicious." },
+    ],
+    practice: { type: "mc", prompt: "'It seems like it is raining' is:", answer: "비가 오는 것 같아요.", options: ["비가 오는 것 같아요.", "비가 오고 싶어요.", "비가 와야 해요.", "비가 오면 돼요."] },
+  },
+  {
+    id: "g31", level: "Intermediate", pattern: "~(으)ㄹ 때",
+    meaning: "when / while",
+    explanation: "This pattern is attached to a verb or adjective to describe the time when something happens.",
+    examples: [
+      { ko: "학교에 갈 때 친구를 만나요.", en: "I meet my friend when I go to school." },
+      { ko: "시간이 있을 때 운동해요.", en: "I exercise when I have time." },
+    ],
+    practice: { type: "fill", prompt: "밥을 먹___ 음악을 들어요.", answer: "을 때", options: ["을 때", "으면", "어서", "지만"] },
+  },
+  {
+    id: "g32", level: "Intermediate", pattern: "~기 전에",
+    meaning: "before doing something",
+    explanation: "Attach 기 전에 to a verb stem to say that one action happens before another.",
+    examples: [
+      { ko: "자기 전에 책을 읽어요.", en: "I read a book before sleeping." },
+      { ko: "학교에 가기 전에 밥을 먹어요.", en: "I eat before going to school." },
+    ],
+    practice: { type: "mc", prompt: "'before sleeping' is:", answer: "자기 전에", options: ["자기 전에", "자는 후에", "자고 싶어요", "자면"] },
+  },
+  {
+    id: "g33", level: "Intermediate", pattern: "~면서",
+    meaning: "while doing / simultaneously",
+    explanation: "Attach 면서 to a verb stem when two actions happen at the same time.",
+    examples: [
+      { ko: "음악을 들으면서 공부해요.", en: "I study while listening to music." },
+      { ko: "걸으면서 이야기해요.", en: "I talk while walking." },
+    ],
+    practice: { type: "fill", prompt: "음악을 들으___ 공부해요.", answer: "면서", options: ["면서", "지만", "으면", "어서"] },
+  },
+  {
+    id: "g34", level: "Intermediate", pattern: "~아/어 보다",
+    meaning: "try doing something",
+    explanation: "Attach 아/어 보다 to a verb stem to express trying an action or experiencing something.",
+    examples: [
+      { ko: "김치를 먹어 봤어요.", en: "I have tried eating kimchi." },
+      { ko: "한국어로 말해 보세요.", en: "Please try speaking in Korean." },
+    ],
+    practice: { type: "mc", prompt: "'Try eating it' is:", answer: "먹어 보세요", options: ["먹어 보세요", "먹어 주세요", "먹어야 해요", "먹고 있어요"] },
+  },
+  {
+    id: "g35", level: "Intermediate", pattern: "~아/어 주다",
+    meaning: "do something for someone",
+    explanation: "Attach 아/어 주다 to a verb to express doing something as a favor for another person.",
+    examples: [
+      { ko: "도와 주세요.", en: "Please help me." },
+      { ko: "친구가 책을 빌려 줬어요.", en: "My friend lent me a book." },
+    ],
+    practice: { type: "mc", prompt: "'Please help me' is:", answer: "도와 주세요.", options: ["도와 주세요.", "도와 봐요.", "도와야 해요.", "도와 싶어요."] },
+  },
+  {
+    id: "g36", level: "Intermediate", pattern: "~(으)려고 하다",
+    meaning: "intend / plan to do",
+    explanation: "This pattern expresses an intention or plan to do something.",
+    examples: [
+      { ko: "한국에 가려고 해요.", en: "I intend to go to Korea." },
+      { ko: "주말에 쉬려고 해요.", en: "I plan to rest on the weekend." },
+    ],
+    practice: { type: "mc", prompt: "'I plan to study' is:", answer: "공부하려고 해요", options: ["공부하려고 해요", "공부하고 있어요", "공부할 수 있어요", "공부한 후에"] },
+  },
+  {
+    id: "g37", level: "Intermediate", pattern: "~(으)러 가다/오다",
+    meaning: "go / come in order to do",
+    explanation: "This pattern expresses going or coming somewhere for the purpose of doing an action.",
+    examples: [
+      { ko: "도서관에 책을 읽으러 가요.", en: "I go to the library to read a book." },
+      { ko: "친구를 만나러 학교에 와요.", en: "I come to school to meet my friend." },
+    ],
+    practice: { type: "mc", prompt: "'I go to study' is:", answer: "공부하러 가요", options: ["공부하러 가요", "공부하고 가요", "공부하면 가요", "공부해야 가요"] },
+  },
+  {
+    id: "g38", level: "Intermediate", pattern: "~(으)ㄹ까요?",
+    meaning: "shall we? / shall I? / do you think?",
+    explanation: "This ending is used to suggest an action, ask for someone's opinion, or wonder about a possibility.",
+    examples: [
+      { ko: "같이 갈까요?", en: "Shall we go together?" },
+      { ko: "커피를 마실까요?", en: "Shall we drink coffee?" },
+    ],
+    practice: { type: "mc", prompt: "'Shall we go?' is:", answer: "갈까요?", options: ["갈까요?", "가세요.", "가고 싶어요.", "갔어요."] },
+  },
+  {
+    id: "g39", level: "Intermediate", pattern: "~(으)ㄴ 적이 있다/없다",
+    meaning: "have / have not experienced",
+    explanation: "This pattern describes whether someone has had an experience at least once in the past.",
+    examples: [
+      { ko: "한국에 가 본 적이 있어요.", en: "I have been to Korea before." },
+      { ko: "김치를 먹은 적이 없어요.", en: "I have never eaten kimchi." },
+    ],
+    practice: { type: "mc", prompt: "'I have been to Korea before' is:", answer: "한국에 가 본 적이 있어요.", options: ["한국에 가 본 적이 있어요.", "한국에 가고 있어요.", "한국에 가야 해요.", "한국에 가려고 해요."] },
+  },
+  {
+    id: "g40", level: "Intermediate", pattern: "~는 동안",
+    meaning: "while / during",
+    explanation: "는 동안 indicates that something happens throughout the period when another action or situation is taking place.",
+    examples: [
+      { ko: "공부하는 동안 음악을 들었어요.", en: "I listened to music while studying." },
+      { ko: "여행하는 동안 사진을 많이 찍었어요.", en: "I took many photos during the trip." },
+    ],
+    practice: { type: "fill", prompt: "여행하___ 동안 사진을 찍었어요.", answer: "는", options: ["는", "면", "고", "서"] },
+  },
+  {
+    id: "g41", level: "Intermediate", pattern: "~도록 하다",
+    meaning: "make sure to / arrange for",
+    explanation: "This pattern is used to express a goal, instruction, or intention to make sure that something happens.",
+    examples: [
+      { ko: "매일 운동하도록 해요.", en: "I make sure to exercise every day." },
+      { ko: "늦지 않도록 하세요.", en: "Please make sure not to be late." },
+    ],
+    practice: { type: "mc", prompt: "'Make sure to study' is:", answer: "공부하도록 하세요.", options: ["공부하도록 하세요.", "공부하고 싶어요.", "공부할 수 있어요.", "공부한 후에요."] },
+  },
+    {
+    id: "g42", level: "Formal", pattern: "~습니까/ㅂ니까?",
+    meaning: "formal question ending",
+    explanation: "This ending forms formal and polite questions, commonly used in presentations, interviews, announcements, and official situations.",
+    examples: [
+      { ko: "어디에 갑니까?", en: "Where are you going? (formal)" },
+      { ko: "학생입니까?", en: "Are you a student? (formal)" },
+    ],
+    practice: { type: "mc", prompt: "Formal question form of '가요?' is:", answer: "갑니까?", options: ["갑니까?", "가요?", "가세요?", "가는가요?"] },
+  },
+  {
+    id: "g43", level: "Formal", pattern: "~(으)십시오",
+    meaning: "please do / formal command",
+    explanation: "This is a highly polite and formal command or request, frequently seen in announcements, instructions, signs, and official situations.",
+    examples: [
+      { ko: "여기에 앉으십시오.", en: "Please sit here. (formal)" },
+      { ko: "잠시 기다리십시오.", en: "Please wait a moment. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "Formal 'Please wait' is:", answer: "기다리십시오.", options: ["기다리십시오.", "기다려요.", "기다리고 싶어요.", "기다릴까요?"] },
+  },
+  {
+    id: "g44", level: "Formal", pattern: "~(으)ㅂ시다",
+    meaning: "let's do",
+    explanation: "This formal-polite ending is used to make a suggestion or proposal to do something together.",
+    examples: [
+      { ko: "같이 갑시다.", en: "Let's go together. (formal)" },
+      { ko: "시작합시다.", en: "Let's begin. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "Formal 'Let's study' is:", answer: "공부합시다.", options: ["공부합시다.", "공부하세요.", "공부합니다.", "공부하고 있습니다."] },
+  },
+  {
+    id: "g45", level: "Formal", pattern: "~(으)시~",
+    meaning: "honorific subject marker",
+    explanation: "The honorific marker 시 is inserted into a verb or adjective when the subject is someone deserving respect.",
+    examples: [
+      { ko: "선생님이 오세요.", en: "The teacher is coming. (honorific)" },
+      { ko: "어머니가 주무세요.", en: "Mother is sleeping. (honorific)" },
+    ],
+    practice: { type: "mc", prompt: "The honorific form of '가요' is:", answer: "가세요", options: ["가세요", "갑니다", "가요요", "가십시오요"] },
+  },
+  {
+    id: "g46", level: "Formal", pattern: "께서",
+    meaning: "honorific subject marker",
+    explanation: "께서 is the honorific form of the subject marker 이/가 and is used when the subject deserves respect.",
+    examples: [
+      { ko: "선생님께서 말씀하셨어요.", en: "The teacher spoke. (honorific)" },
+      { ko: "부모님께서 오셨어요.", en: "My parents came. (honorific)" },
+    ],
+    practice: { type: "fill", prompt: "선생님___ 오셨어요.", answer: "께서", options: ["께서", "이", "가", "은"] },
+  },
+  {
+    id: "g47", level: "Formal", pattern: "께",
+    meaning: "to / for someone deserving respect",
+    explanation: "께 is the honorific form of 에게/한테 and is used when referring to someone who deserves respect.",
+    examples: [
+      { ko: "선생님께 질문을 드려요.", en: "I ask the teacher a question. (honorific)" },
+      { ko: "부모님께 편지를 썼어요.", en: "I wrote a letter to my parents." },
+    ],
+    practice: { type: "fill", prompt: "선생님___ 질문해요.", answer: "께", options: ["께", "에게", "한테", "에서"] },
+  },
+  {
+    id: "g48", level: "Formal", pattern: "드리다",
+    meaning: "to give / do for someone respectfully",
+    explanation: "드리다 is the humble form of 주다 and is used when the speaker gives something or does something for someone deserving respect.",
+    examples: [
+      { ko: "선생님께 선물을 드렸어요.", en: "I gave a gift to the teacher." },
+      { ko: "부모님께 말씀을 드려요.", en: "I speak to my parents respectfully." },
+    ],
+    practice: { type: "mc", prompt: "The respectful form of 'give' to a teacher is:", answer: "드리다", options: ["드리다", "주다", "받다", "보내다"] },
+  },
+  {
+    id: "g49", level: "Formal", pattern: "주시다",
+    meaning: "to give / do for someone respectfully",
+    explanation: "주시다 is an honorific form used when someone respected gives something or does something for another person.",
+    examples: [
+      { ko: "선생님이 책을 주셨어요.", en: "The teacher gave me a book." },
+      { ko: "도와주셔서 감사합니다.", en: "Thank you for helping me." },
+    ],
+    practice: { type: "mc", prompt: "Which is the honorific form of 주다?", answer: "주시다", options: ["주시다", "드리다", "받으시다", "주무시다"] },
+  },
+  {
+    id: "g50", level: "Formal", pattern: "말씀하시다",
+    meaning: "to speak / say respectfully",
+    explanation: "말씀하시다 is the honorific form used for saying or speaking when referring respectfully to another person.",
+    examples: [
+      { ko: "선생님께서 말씀하셨어요.", en: "The teacher spoke." },
+      { ko: "무슨 말씀을 하셨어요?", en: "What did you say? (respectful)" },
+    ],
+    practice: { type: "mc", prompt: "The respectful expression for 'to speak' is:", answer: "말씀하시다", options: ["말씀하시다", "말하다", "이야기하다", "듣다"] },
+  },
+  {
+    id: "g51", level: "Formal", pattern: "계시다",
+    meaning: "to be / exist respectfully",
+    explanation: "계시다 is the honorific form of 있다 when referring to a respected person's presence or location.",
+    examples: [
+      { ko: "선생님이 교실에 계세요.", en: "The teacher is in the classroom." },
+      { ko: "부모님은 집에 계십니다.", en: "My parents are at home. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "The honorific form of 있다 is:", answer: "계시다", options: ["계시다", "있으시다", "있다", "가시다"] },
+  },
+  {
+    id: "g52", level: "Formal", pattern: "드시다",
+    meaning: "to eat / drink respectfully",
+    explanation: "드시다 is an honorific expression used instead of 먹다 or 마시다 when referring respectfully to another person's eating or drinking.",
+    examples: [
+      { ko: "선생님께서 식사를 드세요.", en: "The teacher is eating a meal." },
+      { ko: "어르신께서 물을 드십니다.", en: "The elderly person drinks water. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "A respectful form of 먹다 is:", answer: "드시다", options: ["드시다", "먹으시다", "잡수다", "마시다"] },
+  },
+  {
+    id: "g53", level: "Formal", pattern: "주무시다",
+    meaning: "to sleep respectfully",
+    explanation: "주무시다 is the honorific form of 자다 and is used when respectfully referring to someone sleeping.",
+    examples: [
+      { ko: "할머니께서 주무세요.", en: "Grandmother is sleeping." },
+      { ko: "아버지께서 주무십니다.", en: "Father is sleeping. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "The respectful form of 자다 is:", answer: "주무시다", options: ["주무시다", "자시다", "자다", "쉬시다"] },
+  },
+  {
+    id: "g54", level: "Formal", pattern: "여쭈다",
+    meaning: "to ask respectfully",
+    explanation: "여쭈다 is a humble expression used when the speaker respectfully asks someone of higher status a question.",
+    examples: [
+      { ko: "선생님께 여쭤봤어요.", en: "I asked the teacher." },
+      { ko: "한 가지 여쭤봐도 될까요?", en: "May I ask you one thing?" },
+    ],
+    practice: { type: "mc", prompt: "A humble form of 묻다/질문하다 is:", answer: "여쭈다", options: ["여쭈다", "주시다", "계시다", "말씀하시다"] },
+  },
+  {
+    id: "g55", level: "Formal", pattern: "뵙다",
+    meaning: "to meet / see respectfully",
+    explanation: "뵙다 is a humble form of 보다 used when the speaker meets or sees someone deserving respect.",
+    examples: [
+      { ko: "내일 선생님을 뵙겠습니다.", en: "I will see the teacher tomorrow." },
+      { ko: "처음 뵙겠습니다.", en: "It is a pleasure to meet you. (formal)" },
+    ],
+    practice: { type: "mc", prompt: "A humble form of 'to meet/see' is:", answer: "뵙다", options: ["뵙다", "보다", "만나다", "보이다"] },
+  },
+  {
+    id: "g56", level: "Formal", pattern: "~겠습니다",
+    meaning: "I will / I intend to / I suppose",
+    explanation: "겠습니다 expresses a formal intention, promise, willingness, or prediction and is common in official speech and announcements.",
+    examples: [
+      { ko: "열심히 공부하겠습니다.", en: "I will study hard." },
+      { ko: "다시 연락하겠습니다.", en: "I will contact you again." },
+    ],
+    practice: { type: "mc", prompt: "Formal 'I will do my best' is:", answer: "최선을 다하겠습니다.", options: ["최선을 다하겠습니다.", "최선을 다해요.", "최선을 다하고 싶어요.", "최선을 다할까요?"] },
+  },
+  {
+    id: "g57", level: "Formal", pattern: "~(으)시겠습니까?",
+    meaning: "would you / will you?",
+    explanation: "This highly polite question form is used to ask about someone's intention, preference, or willingness in formal situations.",
+    examples: [
+      { ko: "어디로 가시겠습니까?", en: "Where would you like to go?" },
+      { ko: "커피를 드시겠습니까?", en: "Would you like coffee?" },
+    ],
+    practice: { type: "mc", prompt: "Formal 'Would you like coffee?' is:", answer: "커피를 드시겠습니까?", options: ["커피를 드시겠습니까?", "커피를 마셔요?", "커피를 마실까요?", "커피를 드세요?"] },
+  },
+  {
+    id: "g58", level: "Formal", pattern: "~(으)시기 바랍니다",
+    meaning: "please / we ask that you",
+    explanation: "This formal expression is commonly used in announcements, notices, instructions, and official communication to politely request an action.",
+    examples: [
+      { ko: "안전벨트를 착용하시기 바랍니다.", en: "Please fasten your seat belt." },
+      { ko: "조용히 해주시기 바랍니다.", en: "Please remain quiet." },
+    ],
+    practice: { type: "mc", prompt: "Which is an appropriate formal request?", answer: "기다리시기 바랍니다.", options: ["기다리시기 바랍니다.", "기다려!", "기다려요.", "기다릴까요?"] },
+  },
+  {
+    id: "g59", level: "Formal", pattern: "~에 따르면",
+    meaning: "according to",
+    explanation: "에 따르면 is used in formal speech and writing to introduce information or a statement based on a source.",
+    examples: [
+      { ko: "뉴스에 따르면 내일 비가 온다고 합니다.", en: "According to the news, it will rain tomorrow." },
+      { ko: "선생님 말씀에 따르면 시험은 다음 주입니다.", en: "According to the teacher, the exam is next week." },
+    ],
+    practice: { type: "fill", prompt: "뉴스___ 따르면 내일 비가 와요.", answer: "에", options: ["에", "에서", "을", "으로"] },
+  },
+  {
+    id: "g60", level: "Formal", pattern: "~에 의하면",
+    meaning: "according to / based on",
+    explanation: "에 의하면 is a formal expression meaning 'according to' and is especially common in formal writing, reports, and presentations.",
+    examples: [
+      { ko: "연구에 의하면 운동은 건강에 좋습니다.", en: "According to research, exercise is good for health." },
+      { ko: "보고서에 의하면 문제가 해결되었습니다.", en: "According to the report, the problem has been resolved." },
+    ],
+    practice: { type: "mc", prompt: "'According to the report' is:", answer: "보고서에 의하면", options: ["보고서에 의하면", "보고서를 의하면", "보고서가 의하면", "보고서에서 의하면"] },
   },
 ];
 
