@@ -1,14 +1,321 @@
 /* ===================== 한국OH! Content Data ===================== */
 
 const ACHIEVEMENTS = [
-  { id: "first_steps", icon: "🏆", name: "First Steps", desc: "Complete your first lesson", check: (s) => s.lessonsCompleted.length >= 1 },
-  { id: "streak_7", icon: "🔥", name: "7-Day Learner", desc: "Maintain a 7-day streak", check: (s) => s.streak >= 7 },
-  { id: "word_collector", icon: "📖", name: "Word Collector", desc: "Learn 100 Korean words", check: (s) => Object.keys(s.vocabProgress).length >= 100 },
-  { id: "good_listener", icon: "🎧", name: "Good Listener", desc: "Complete 20 listening exercises", check: (s) => s.listeningDone >= 20 },
-  { id: "topik_challenger", icon: "✍️", name: "TOPIK Challenger", desc: "Complete your first TOPIK practice set", check: (s) => s.topikSetsCompleted >= 1 },
-  { id: "level_5", icon: "⭐", name: "Rising Star", desc: "Reach Level 5", check: (s) => levelFromXP(s.xp).level >= 5 },
-  { id: "grammar_5", icon: "📐", name: "Grammar Geek", desc: "Complete 5 grammar topics", check: (s) => s.grammarCompleted.length >= 5 },
-  { id: "perfect_lesson", icon: "💯", name: "Perfectionist", desc: "Finish a lesson with 100% accuracy", check: (s) => s.perfectLessons >= 1 },
+  // ──────────────── LESSONS ────────────────
+  {
+    id: "first_steps",
+    icon: "🏆",
+    name: "First Steps",
+    desc: "Complete your first lesson",
+    check: (s) => s.lessonsCompleted.length >= 1
+  },
+  {
+    id: "lesson_5",
+    icon: "📚",
+    name: "Getting Started",
+    desc: "Complete 5 lessons",
+    check: (s) => s.lessonsCompleted.length >= 5
+  },
+  {
+    id: "lesson_10",
+    icon: "🎓",
+    name: "Dedicated Learner",
+    desc: "Complete 10 lessons",
+    check: (s) => s.lessonsCompleted.length >= 10
+  },
+  {
+    id: "lesson_25",
+    icon: "🏅",
+    name: "Committed Student",
+    desc: "Complete 25 lessons",
+    check: (s) => s.lessonsCompleted.length >= 25
+  },
+  {
+    id: "lesson_50",
+    icon: "👑",
+    name: "Korean Master",
+    desc: "Complete 50 lessons",
+    check: (s) => s.lessonsCompleted.length >= 50
+  },
+
+  // ──────────────── STREAKS ────────────────
+  {
+    id: "streak_3",
+    icon: "🔥",
+    name: "On a Roll",
+    desc: "Maintain a 3-day streak",
+    check: (s) => s.streak >= 3
+  },
+  {
+    id: "streak_7",
+    icon: "🔥",
+    name: "7-Day Learner",
+    desc: "Maintain a 7-day streak",
+    check: (s) => s.streak >= 7
+  },
+  {
+    id: "streak_14",
+    icon: "🔥",
+    name: "Two-Week Warrior",
+    desc: "Maintain a 14-day streak",
+    check: (s) => s.streak >= 14
+  },
+  {
+    id: "streak_30",
+    icon: "🔥",
+    name: "Monthly Master",
+    desc: "Maintain a 30-day streak",
+    check: (s) => s.streak >= 30
+  },
+  {
+    id: "streak_100",
+    icon: "💎",
+    name: "Unstoppable",
+    desc: "Maintain a 100-day streak",
+    check: (s) => s.streak >= 100
+  },
+
+  // ──────────────── VOCABULARY ────────────────
+  {
+    id: "word_collector",
+    icon: "📖",
+    name: "Word Collector",
+    desc: "Learn 100 Korean words",
+    check: (s) => Object.keys(s.vocabProgress).length >= 100
+  },
+  {
+    id: "vocab_25",
+    icon: "📝",
+    name: "Word Explorer",
+    desc: "Learn 25 Korean words",
+    check: (s) => Object.keys(s.vocabProgress).length >= 25
+  },
+  {
+    id: "vocab_50",
+    icon: "📚",
+    name: "Vocabulary Builder",
+    desc: "Learn 50 Korean words",
+    check: (s) => Object.keys(s.vocabProgress).length >= 50
+  },
+  {
+    id: "vocab_250",
+    icon: "📚",
+    name: "Vocabulary Expert",
+    desc: "Learn 250 Korean words",
+    check: (s) => Object.keys(s.vocabProgress).length >= 250
+  },
+  {
+    id: "vocab_500",
+    icon: "🧠",
+    name: "Korean Word Bank",
+    desc: "Learn 500 Korean words",
+    check: (s) => Object.keys(s.vocabProgress).length >= 500
+  },
+
+  // ──────────────── LISTENING ────────────────
+  {
+    id: "first_listener",
+    icon: "🎧",
+    name: "First Listen",
+    desc: "Complete your first listening exercise",
+    check: (s) => s.listeningDone >= 1
+  },
+  {
+    id: "good_listener",
+    icon: "🎧",
+    name: "Good Listener",
+    desc: "Complete 20 listening exercises",
+    check: (s) => s.listeningDone >= 20
+  },
+  {
+    id: "listening_50",
+    icon: "🎵",
+    name: "Sharp Ears",
+    desc: "Complete 50 listening exercises",
+    check: (s) => s.listeningDone >= 50
+  },
+  {
+    id: "listening_100",
+    icon: "🎧",
+    name: "Listening Pro",
+    desc: "Complete 100 listening exercises",
+    check: (s) => s.listeningDone >= 100
+  },
+
+  // ──────────────── TOPIK ────────────────
+  {
+    id: "topik_challenger",
+    icon: "✍️",
+    name: "TOPIK Challenger",
+    desc: "Complete your first TOPIK practice set",
+    check: (s) => s.topikSetsCompleted >= 1
+  },
+  {
+    id: "topik_5",
+    icon: "📄",
+    name: "TOPIK Trainee",
+    desc: "Complete 5 TOPIK practice sets",
+    check: (s) => s.topikSetsCompleted >= 5
+  },
+  {
+    id: "topik_10",
+    icon: "🎯",
+    name: "TOPIK Regular",
+    desc: "Complete 10 TOPIK practice sets",
+    check: (s) => s.topikSetsCompleted >= 10
+  },
+  {
+    id: "topik_25",
+    icon: "🏆",
+    name: "TOPIK Veteran",
+    desc: "Complete 25 TOPIK practice sets",
+    check: (s) => s.topikSetsCompleted >= 25
+  },
+
+  // ──────────────── LEVEL / XP ────────────────
+  {
+    id: "level_2",
+    icon: "⭐",
+    name: "Level Up!",
+    desc: "Reach Level 2",
+    check: (s) => levelFromXP(s.xp).level >= 2
+  },
+  {
+    id: "level_5",
+    icon: "⭐",
+    name: "Rising Star",
+    desc: "Reach Level 5",
+    check: (s) => levelFromXP(s.xp).level >= 5
+  },
+  {
+    id: "level_10",
+    icon: "🌟",
+    name: "Korean Learner",
+    desc: "Reach Level 10",
+    check: (s) => levelFromXP(s.xp).level >= 10
+  },
+  {
+    id: "level_20",
+    icon: "💫",
+    name: "Korean Scholar",
+    desc: "Reach Level 20",
+    check: (s) => levelFromXP(s.xp).level >= 20
+  },
+
+  // ──────────────── GRAMMAR ────────────────
+  {
+    id: "grammar_first",
+    icon: "📐",
+    name: "Grammar Beginner",
+    desc: "Complete your first grammar topic",
+    check: (s) => s.grammarCompleted.length >= 1
+  },
+  {
+    id: "grammar_5",
+    icon: "📐",
+    name: "Grammar Geek",
+    desc: "Complete 5 grammar topics",
+    check: (s) => s.grammarCompleted.length >= 5
+  },
+  {
+    id: "grammar_10",
+    icon: "📖",
+    name: "Grammar Pro",
+    desc: "Complete 10 grammar topics",
+    check: (s) => s.grammarCompleted.length >= 10
+  },
+  {
+    id: "grammar_20",
+    icon: "🧠",
+    name: "Grammar Master",
+    desc: "Complete 20 grammar topics",
+    check: (s) => s.grammarCompleted.length >= 20
+  },
+
+  // ──────────────── ACCURACY ────────────────
+  {
+    id: "perfect_lesson",
+    icon: "💯",
+    name: "Perfectionist",
+    desc: "Finish a lesson with 100% accuracy",
+    check: (s) => s.perfectLessons >= 1
+  },
+  {
+    id: "perfect_5",
+    icon: "💯",
+    name: "Perfect Streak",
+    desc: "Finish 5 lessons with 100% accuracy",
+    check: (s) => s.perfectLessons >= 5
+  },
+  {
+    id: "perfect_10",
+    icon: "🏆",
+    name: "Flawless",
+    desc: "Finish 10 lessons with 100% accuracy",
+    check: (s) => s.perfectLessons >= 10
+  },
+
+  // ──────────────── XP MILESTONES ────────────────
+  {
+    id: "xp_100",
+    icon: "✨",
+    name: "First Hundred",
+    desc: "Earn 100 XP",
+    check: (s) => s.xp >= 100
+  },
+  {
+    id: "xp_500",
+    icon: "💖",
+    name: "XP Collector",
+    desc: "Earn 500 XP",
+    check: (s) => s.xp >= 500
+  },
+  {
+    id: "xp_1000",
+    icon: "💎",
+    name: "XP Master",
+    desc: "Earn 1,000 XP",
+    check: (s) => s.xp >= 1000
+  },
+  {
+    id: "xp_5000",
+    icon: "👑",
+    name: "XP Legend",
+    desc: "Earn 5,000 XP",
+    check: (s) => s.xp >= 5000
+  },
+
+  // ──────────────── SPECIAL ────────────────
+  {
+    id: "all_rounder",
+    icon: "🌸",
+    name: "All-Rounder",
+    desc: "Complete a lesson, grammar topic, and TOPIK practice set",
+    check: (s) =>
+      s.lessonsCompleted.length >= 1 &&
+      s.grammarCompleted.length >= 1 &&
+      s.topikSetsCompleted >= 1
+  },
+
+  {
+    id: "language_lover",
+    icon: "💗",
+    name: "Language Lover",
+    desc: "Learn 100 Korean words and complete 10 lessons",
+    check: (s) =>
+      Object.keys(s.vocabProgress).length >= 100 &&
+      s.lessonsCompleted.length >= 10
+  },
+
+  {
+    id: "dedication",
+    icon: "🌷",
+    name: "Pure Dedication",
+    desc: "Maintain a 30-day streak and complete 25 lessons",
+    check: (s) =>
+      s.streak >= 30 &&
+      s.lessonsCompleted.length >= 25
+  }
 ];
 
 /* Vocabulary bank: word, romanization, meaning, example, category */
