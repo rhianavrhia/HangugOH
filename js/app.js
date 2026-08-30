@@ -19,21 +19,44 @@ function currentRoute() {
 function render() {
   touchDailyState();
   const route = currentRoute();
+
   document.querySelectorAll(".nav-item").forEach((el) => {
     el.classList.toggle("active", el.dataset.route === route);
   });
 
   switch (route) {
-    case "dashboard": renderDashboard(app); break;
-    case "path": renderPath(app); break;
-    case "hangul": renderHangul(app); break;
-    case "vocab": renderVocab(app); break;
-    case "grammar": renderGrammar(app); break;
-    case "topik": renderTopik(app); break;
-    case "stats": renderStats(app); break;
-    default: renderDashboard(app);
-}
+    case "dashboard":
+      renderDashboard(app);
+      break;
+
+    case "path":
+      renderPath(app);
+      break;
+
+    case "hangul":
+      renderHangul(app);
+      break;
+
+    case "vocab":
+      renderVocab(app);
+      break;
+
+    case "grammar":
+      renderGrammar(app);
+      break;
+
+    case "topik":
+      renderTopik(app);
+      break;
+
+    case "stats":
+      renderStats(app);
+      break;
+
+    default:
+      renderDashboard(app);
   }
+
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 
