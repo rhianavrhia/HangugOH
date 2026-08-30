@@ -69,16 +69,21 @@ export default async function handler(req, res) {
       });
     }
 
-    const credentialsJSON =
-      process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+    const clientEmail = process.env.GOOGLE_CLIENT_EMAIL;
+const privateKey = process.env.GOOGLE_PRIVATE_KEY;
 
-    if (!credentialsJSON) {
-      console.error("Missing Google credentials");
+if (!clientEmail || !privateKey) {
+  console.error("Google credentials are missing.");
 
-      return res.status(500).json({
-        error: "Google credentials are not configured"
-      });
-    }
+  return res.status(500).json({
+    error: "Google credentials are not configured"
+  });
+}
+
+const credentials = {
+  client_email: clientEmail,
+  private_key: privateKey.replace(/\\n/g, "\n")
+};
 
     let credentials;
 
