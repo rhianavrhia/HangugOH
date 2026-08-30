@@ -3,7 +3,7 @@
 const app = document.getElementById("app");
 const navEl = document.getElementById("nav");
 
-const ROUTES = ["dashboard", "path", "vocab", "grammar", "topik", "stats"];
+const ROUTES = ["dashboard", "path", "hangul", "vocab", "grammar", "topik", "stats"];
 
 function navigate(route) {
   if (!ROUTES.includes(route)) route = "dashboard";
@@ -26,11 +26,13 @@ function render() {
   switch (route) {
     case "dashboard": renderDashboard(app); break;
     case "path": renderPath(app); break;
+    case "hangul": renderHangul(app); break;
     case "vocab": renderVocab(app); break;
     case "grammar": renderGrammar(app); break;
     case "topik": renderTopik(app); break;
     case "stats": renderStats(app); break;
     default: renderDashboard(app);
+}
   }
   window.scrollTo({ top: 0, behavior: "instant" });
 }
