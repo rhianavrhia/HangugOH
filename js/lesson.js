@@ -385,146 +385,168 @@ function renderListening(card, q) {
 
 /* ===================== Korean Voice System ===================== */
 
-let koreanVoice = null;
-
 /*
- * Find the best Korean voice available on the user's device.
+ * Google Cloud Korean TTS
  *
- * The browser may not have its voices ready immediately,
- * so this function can be called multiple times safely.
- */
-function loadKoreanVoice() {
-  if (!("speechSynthesis" in window)) return null;
-
-  const voices = window.speechSynthesis.getVoices();
-
-  if (!voices.length) {
-    koreanVoice = null;
-    return null;
-  }
-
-  /*
-   * Find voices whose language is Korean.
-   *
-   * This accepts:
-   * ko-KR
-   * ko_KR
-   * ko
-   * etc.
-   */
-  const koreanVoices = voices.filter((voice) => {
-    const lang = (voice.lang || "").toLowerCase();
-    return lang === "ko-kr" || lang.startsWith("ko-");
-  });
-
-  if (!koreanVoices.length) {
-    koreanVoice = null;
-    return null;
-  }
-
-  /*
-   * Try to choose a higher-quality voice first.
-   *
-   * Different devices give voices different names, so
-   * these keywords are only preferences — not requirements.
-   */
-  const preferredVoice =
-    koreanVoices.find((voice) =>
-      /neural|natural|premium|enhanced|wavenet/i.test(voice.name)
-    ) ||
-
-    /*
-     * Prefer voices installed locally on the device.
-     */
-    koreanVoices.find((voice) => voice.localService) ||
-
-    /*
-     * Otherwise use the first Korean voice available.
-     */
-    koreanVoices[0];
-
-  koreanVoice = preferredVoice;
-
-  return koreanVoice;
-}
-
-
-/*
- * Voices can load after the page has already loaded.
+ * The browser sends Korean text to our Vercel API:
  *
- * This event tells us when the browser has finished
- * loading its available voices.
+ * lesson.js
+ *     ↓
+ * /api/korean-tts.js
+ *     ↓
+ * Google Cloud Text-to-Speech
+ *     ↓
+ * MP3 audio
+ *     ↓
+ * Browser
  */
-if ("speechSynthesis" in window) {
-  loadKoreanVoice();
 
-  window.speechSynthesis.addEventListener(
-    "voiceschanged",
-    loadKoreanVoice
-  );
-}
+let currentKoreanAudio = null;
+let koreanAudioCache = new Map();
 
-function speakKorean(text) {
-  if (!("speechSynthesis" in window)) {
-    toast(
-      "Korean audio is not supported on this device.",
-      "info"
-    );
+
+async function speakKorean(text) {
+
+  if (!text || typeof text !== "string") {
     return;
   }
 
   try {
-    /*
-     * Try loading the voice again in case the browser
-     * loaded its voices after the page started.
-     */
-    const voice = loadKoreanVoice();
-
-    const utter = new SpeechSynthesisUtterance(text);
 
     /*
-     * Tell the browser this is Korean.
+     * Stop currently playing audio.
      */
-    utter.lang = "ko-KR";
-
-    /*
-     * Use the Korean voice we found.
-     */
-    if (voice) {
-      utter.voice = voice;
+    if (currentKoreanAudio) {
+      currentKoreanAudio.pause();
+      currentKoreanAudio.currentTime = 0;
     }
 
+
     /*
-     * Slightly slower than normal conversation.
+     * If we already generated this sentence before,
+     * use the cached audio instead of calling Google again.
      *
-     * This makes pronunciation easier to understand
-     * for Korean learners.
+     * This saves time and API usage.
      */
-    utter.rate = 0.82;
+    if (koreanAudioCache.has(text)) {
+
+      const cachedAudio =
+        koreanAudioCache.get(text);
+
+      currentKoreanAudio =
+        new Audio(cachedAudio);
+
+      await currentKoreanAudio.play();
+
+      return;
+    }
+
 
     /*
-     * Natural pitch.
+     * Show a small loading message.
      */
-    utter.pitch = 1.0;
+    toast(
+      "Preparing Korean audio…",
+      "info"
+    );
+
 
     /*
-     * Full volume.
+     * Send the Korean sentence to our
+     * Vercel serverless function.
      */
-    utter.volume = 1.0;
+    const response = await fetch(
+      "/api/korean-tts",
+      {
+        method: "POST",
+
+        headers: {
+          "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+          text: text
+        })
+      }
+    );
+
 
     /*
-     * Stop anything currently speaking before
-     * starting the new sentence.
+     * If the server returned an error,
+     * stop here.
      */
-    window.speechSynthesis.cancel();
+    if (!response.ok) {
+
+      let errorMessage =
+        "Unable to generate Korean audio.";
+
+      try {
+        const errorData =
+          await response.json();
+
+        if (errorData.error) {
+          errorMessage = errorData.error;
+        }
+
+      } catch (e) {
+        // Ignore JSON parsing error.
+      }
+
+      console.error(
+        "Korean TTS server error:",
+        errorMessage
+      );
+
+      toast(
+        errorMessage,
+        "info"
+      );
+
+      return;
+    }
+
 
     /*
-     * Speak the sentence.
+     * Convert Google's MP3 response
+     * into a browser audio URL.
      */
-    window.speechSynthesis.speak(utter);
+    const audioBlob =
+      await response.blob();
+
+    const audioUrl =
+      URL.createObjectURL(audioBlob);
+
+
+    /*
+     * Save it in memory.
+     *
+     * If the learner presses Play again,
+     * Google does NOT need to generate it again.
+     */
+    koreanAudioCache.set(
+      text,
+      audioUrl
+    );
+
+
+    /*
+     * Create the audio player.
+     */
+    currentKoreanAudio =
+      new Audio(audioUrl);
+
+
+    /*
+     * Play the Korean sentence.
+     */
+    await currentKoreanAudio.play();
 
   } catch (error) {
-    console.error("Korean speech error:", error);
+
+    console.error(
+      "Korean audio error:",
+      error
+    );
 
     toast(
       "Unable to play Korean audio.",
