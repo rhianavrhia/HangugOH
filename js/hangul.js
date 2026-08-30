@@ -1,427 +1,411 @@
-/* ===================== HANGUL LEARNING ===================== */
+/* ===================== Hangul View ===================== */
 
-let hangulMode = "cards";
-let hangulFilter = "all";
-let hangulFlashIndex = 0;
-let hangulFlashRevealed = false;
+let hangulFilter = "All";
+let hangulFlashcardMode = false;
+let hangulFlashcardIndex = 0;
+let hangulFlashcardFlipped = false;
 
+function renderHangul(root) {
+  root.innerHTML = "";
 
-/* ============================================================
-   GET FILTERED HANGUL
-============================================================ */
+  root.appendChild(
+    el("h1", { class: "page-title" }, "Hangul")
+  );
 
-function getHangulItems() {
-  if (hangulFilter === "all") {
-    return HANGUL;
-  }
+  root.appendChild(
+    el(
+      "p",
+      { class: "page-sub" },
+      "Learn the Korean alphabet through sounds, shapes, and memory stories."
+    )
+  );
 
-  return HANGUL.filter(item => item.type === hangulFilter);
-}
+  /* ==================== TOOLBAR ==================== */
 
+  const toolbar = el("div", { class: "toolbar" });
 
-/* ============================================================
-   RENDER HANGUL TAB
-============================================================ */
+  const categories = ["All", "Consonant", "Vowel"];
 
-function renderHangul() {
-  const container = document.getElementById("hangul-content");
+  const filterWrap = el(
+    "div",
+    { class: "filter-chips" },
+    categories.map((category) => {
+      const chip = el(
+        "button",
+        {
+          class: `chip ${
+            hangulFilter === category ? "active" : ""
+          }`
+        },
+        category === "All"
+          ? "All"
+          : category === "Consonant"
+          ? "Consonants"
+          : "Vowels"
+      );
 
-  if (!container) {
-    console.warn("Hangul container #hangul-content was not found.");
+      chip.addEventListener("click", () => {
+        hangulFilter = category;
+        hangulFlashcardMode = false;
+        hangulFlashcardIndex = 0;
+        hangulFlashcardFlipped = false;
+        renderHangul(root);
+      });
+
+      return chip;
+    })
+  );
+
+  const flashBtn = el(
+    "button",
+    { class: "btn btn-secondary" },
+    "🗂️ Flashcard Mode"
+  );
+
+  flashBtn.addEventListener("click", () => {
+    hangulFlashcardMode = true;
+    hangulFlashcardIndex = 0;
+    hangulFlashcardFlipped = false;
+    renderHangul(root);
+  });
+
+  toolbar.append(filterWrap, flashBtn);
+
+  root.appendChild(toolbar);
+
+  /* ==================== FLASHCARD MODE ==================== */
+
+  if (hangulFlashcardMode) {
+    renderHangulFlashcards(root);
     return;
   }
 
-  if (hangulMode === "flashcards") {
-    renderHangulFlashcards(container);
-  } else {
-    renderHangulCards(container);
+  /* ==================== CARD MODE ==================== */
+
+  const list = HANGUL.filter(
+    (h) =>
+      hangulFilter === "All" ||
+      h.type === hangulFilter
+  );
+
+  const grid = el(
+    "div",
+    { class: "vocab-grid" },
+    list.map((h) => hangulCard(h))
+  );
+
+  root.appendChild(grid);
+}
+
+
+/* ===================== Hangul Card ===================== */
+
+function hangulCard(h) {
+  return el("div", { class: "vocab-card hangul-card" }, [
+    el("div", { class: "vocab-cat" }, h.type),
+
+    el(
+      "div",
+      { class: "vocab-ko hangul-character" },
+      h.character
+    ),
+
+    el(
+      "div",
+      { class: "vocab-rom" },
+      `${h.name} · ${h.rom}`
+    ),
+
+    el(
+      "div",
+      { class: "vocab-en" },
+      h.sound
+    ),
+
+    el(
+      "div",
+      { class: "vocab-example" },
+      [
+        el(
+          "div",
+          { class: "vocab-example-ko" },
+          `Example: ${h.example}`
+        ),
+
+        el(
+          "div",
+          { class: "vocab-example-en" },
+          h.exampleMeaning
+        )
+      ]
+    ),
+
+    el(
+      "div",
+      { class: "hangul-memory" },
+      [
+        el(
+          "div",
+          { class: "hangul-memory-title" },
+          h.memory
+        ),
+
+        el(
+          "div",
+          { class: "hangul-memory-story" },
+          h.story
+        )
+      ]
+    )
+  ]);
+}
+
+
+/* ===================== Flashcards ===================== */
+
+function renderHangulFlashcards(root) {
+  const list = HANGUL.filter(
+    (h) =>
+      hangulFilter === "All" ||
+      h.type === hangulFilter
+  );
+
+  /*
+   * Safety check in case the filter ever produces
+   * an empty list.
+   */
+  if (!list.length) {
+    hangulFlashcardMode = false;
+    renderHangul(root);
+    return;
   }
-}
 
+  if (hangulFlashcardIndex >= list.length) {
+    hangulFlashcardIndex = 0;
+  }
 
-/* ============================================================
-   NORMAL CARD MODE
-============================================================ */
+  const h = list[hangulFlashcardIndex];
 
-function renderHangulCards(container) {
-  const items = getHangulItems();
+  const wrap = el("div", { class: "flashcard-wrap" });
 
-  container.innerHTML = `
-    <div class="hangul-toolbar">
+  /* ==================== FLASHCARD ==================== */
 
-      <div class="hangul-filters">
-        <button
-          class="hangul-filter ${hangulFilter === "all" ? "active" : ""}"
-          data-filter="all"
-        >
-          All
-        </button>
+  const card = el(
+    "div",
+    {
+      class: `flashcard ${
+        hangulFlashcardFlipped ? "flipped" : ""
+      } hangul-flashcard`
+    },
+    [
+      /* FRONT */
 
-        <button
-          class="hangul-filter ${hangulFilter === "consonant" ? "active" : ""}"
-          data-filter="consonant"
-        >
-          Consonants
-        </button>
+      el(
+        "div",
+        {
+          class:
+            "flashcard-face flashcard-front"
+        },
+        [
+          el(
+            "div",
+            { class: "vocab-cat" },
+            h.type
+          ),
 
-        <button
-          class="hangul-filter ${hangulFilter === "vowel" ? "active" : ""}"
-          data-filter="vowel"
-        >
-          Vowels
-        </button>
-      </div>
+          el(
+            "div",
+            {
+              class:
+                "vocab-ko big hangul-flash-character"
+            },
+            h.character
+          ),
 
-      <button id="hangul-flashcard-btn" class="hangul-mode-btn">
-        🃏 Flashcard Mode
-      </button>
+          el(
+            "div",
+            { class: "vocab-rom" },
+            h.name
+          ),
 
-    </div>
+          el(
+            "div",
+            { class: "flip-hint" },
+            "Tap to reveal"
+          )
+        ]
+      ),
 
-    <div class="hangul-grid">
-      ${items.map(item => createHangulCard(item)).join("")}
-    </div>
-  `;
+      /* BACK */
 
-  attachHangulCardEvents();
-}
+      el(
+        "div",
+        {
+          class:
+            "flashcard-face flashcard-back"
+        },
+        [
+          el(
+            "div",
+            {
+              class:
+                "vocab-en big"
+            },
+            h.sound
+          ),
 
+          el(
+            "div",
+            { class: "vocab-rom" },
+            h.rom
+          ),
 
-/* ============================================================
-   CREATE NORMAL CARD
-============================================================ */
+          el(
+            "div",
+            {
+              class:
+                "vocab-example-ko"
+            },
+            `Example: ${h.example}`
+          ),
 
-function createHangulCard(item) {
-  return `
-    <div class="hangul-card" data-id="${item.id}">
+          el(
+            "div",
+            {
+              class:
+                "vocab-example-en"
+            },
+            h.exampleMeaning
+          ),
 
-      <div class="hangul-card-character">
-        ${item.char}
-      </div>
+          el(
+            "div",
+            {
+              class:
+                "hangul-memory"
+            },
+            [
+              el(
+                "div",
+                {
+                  class:
+                    "hangul-memory-title"
+                },
+                h.memory
+              ),
 
-      <div class="hangul-card-name">
-        ${item.name}
-      </div>
+              el(
+                "div",
+                {
+                  class:
+                    "hangul-memory-story"
+                },
+                h.story
+              )
+            ]
+          )
+        ]
+      )
+    ]
+  );
 
-      <div class="hangul-card-sound">
-        ${item.sound}
-      </div>
+  card.addEventListener("click", () => {
+    hangulFlashcardFlipped =
+      !hangulFlashcardFlipped;
 
-      <div class="hangul-card-divider"></div>
-
-      <div class="hangul-card-mnemonic">
-        <strong>💡 ${item.mnemonic}</strong>
-      </div>
-
-      <div class="hangul-card-story">
-        ${item.story}
-      </div>
-
-    </div>
-  `;
-}
-
-
-/* ============================================================
-   CARD EVENTS
-============================================================ */
-
-function attachHangulCardEvents() {
-
-  document.querySelectorAll(".hangul-filter").forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      hangulFilter = button.dataset.filter;
-
-      renderHangul();
-
-    });
-
+    renderHangulRoot();
   });
 
 
-  const flashcardButton =
-    document.getElementById("hangul-flashcard-btn");
+  /* ==================== CONTROLS ==================== */
 
-  if (flashcardButton) {
+  const previousBtn = el(
+    "button",
+    { class: "btn btn-secondary" },
+    "← Previous"
+  );
 
-    flashcardButton.addEventListener("click", () => {
+  previousBtn.addEventListener("click", () => {
+    hangulFlashcardFlipped = false;
 
-      hangulMode = "flashcards";
-      hangulFlashIndex = 0;
-      hangulFlashRevealed = false;
+    hangulFlashcardIndex =
+      (hangulFlashcardIndex - 1 + list.length) %
+      list.length;
 
-      renderHangul();
+    renderHangulRoot();
+  });
 
-    });
 
-  }
+  const nextBtn = el(
+    "button",
+    { class: "btn btn-primary" },
+    "Next →"
+  );
 
+  nextBtn.addEventListener("click", () => {
+    hangulFlashcardFlipped = false;
+
+    hangulFlashcardIndex =
+      (hangulFlashcardIndex + 1) %
+      list.length;
+
+    renderHangulRoot();
+  });
+
+
+  const controlRow = el(
+    "div",
+    { class: "flashcard-controls" },
+    [
+      previousBtn,
+      nextBtn
+    ]
+  );
+
+
+  /* ==================== EXIT ==================== */
+
+  const exitBtn = el(
+    "button",
+    { class: "btn btn-ghost" },
+    "Exit Flashcards"
+  );
+
+  exitBtn.addEventListener("click", () => {
+    hangulFlashcardMode = false;
+    hangulFlashcardIndex = 0;
+    hangulFlashcardFlipped = false;
+
+    renderHangulRoot();
+  });
+
+
+  /* ==================== APPEND ==================== */
+
+  wrap.append(
+    el(
+      "div",
+      { class: "flashcard-progress" },
+      `${hangulFlashcardIndex + 1} / ${list.length}`
+    ),
+
+    card,
+
+    controlRow,
+
+    exitBtn
+  );
+
+  root.appendChild(wrap);
 }
 
 
-/* ============================================================
-   FLASHCARD MODE
-============================================================ */
+/* ===================== Re-render Helper ===================== */
 
-function renderHangulFlashcards(container) {
+function renderHangulRoot() {
+  const root = document.getElementById("app");
 
-  const items = getHangulItems();
-
-  if (!items.length) {
-    container.innerHTML = `
-      <p>No Hangul items found.</p>
-    `;
-    return;
+  if (root) {
+    renderHangul(root);
   }
-
-  const item = items[hangulFlashIndex];
-
-  container.innerHTML = `
-
-    <div class="hangul-flashcard-wrapper">
-
-      <div class="hangul-flashcard-progress">
-        ${hangulFlashIndex + 1} / ${items.length}
-      </div>
-
-      <div
-        class="hangul-flashcard ${hangulFlashRevealed ? "revealed" : ""}"
-        id="hangul-flashcard"
-      >
-
-        ${
-          hangulFlashRevealed
-            ? `
-              <div class="hangul-flashcard-character">
-                ${item.char}
-              </div>
-
-              <div class="hangul-flashcard-name">
-                ${item.name}
-              </div>
-
-              <div class="hangul-flashcard-sound">
-                ${item.sound}
-              </div>
-
-              <div class="hangul-flashcard-mnemonic">
-                💡 ${item.mnemonic}
-              </div>
-
-              <div class="hangul-flashcard-story">
-                ${item.story}
-              </div>
-            `
-            : `
-              <div class="hangul-flashcard-question">
-                <div class="hangul-flashcard-hidden">
-                  ?
-                </div>
-
-                <p>What Hangul character is this?</p>
-
-                <small>
-                  Click the card to reveal
-                </small>
-              </div>
-            `
-        }
-
-      </div>
-
-
-      <div class="hangul-flashcard-controls">
-
-        <button
-          id="hangul-prev"
-          class="hangul-nav-btn"
-          ${hangulFlashIndex === 0 ? "disabled" : ""}
-        >
-          ← Previous
-        </button>
-
-        <button
-          id="hangul-reveal"
-          class="hangul-reveal-btn"
-        >
-          ${hangulFlashRevealed ? "Hide Answer" : "Reveal Answer"}
-        </button>
-
-        <button
-          id="hangul-next"
-          class="hangul-nav-btn"
-          ${hangulFlashIndex === items.length - 1 ? "disabled" : ""}
-        >
-          Next →
-        </button>
-
-      </div>
-
-
-      <div class="hangul-flashcard-footer">
-
-        <button
-          id="hangul-exit-flashcards"
-          class="hangul-exit-btn"
-        >
-          ← Back to Hangul Cards
-        </button>
-
-      </div>
-
-    </div>
-  `;
-
-  attachHangulFlashcardEvents();
 }
-
-
-/* ============================================================
-   FLASHCARD EVENTS
-============================================================ */
-
-function attachHangulFlashcardEvents() {
-
-  const card =
-    document.getElementById("hangul-flashcard");
-
-  const revealButton =
-    document.getElementById("hangul-reveal");
-
-  const previousButton =
-    document.getElementById("hangul-prev");
-
-  const nextButton =
-    document.getElementById("hangul-next");
-
-  const exitButton =
-    document.getElementById("hangul-exit-flashcards");
-
-
-  /* Click card to reveal */
-
-  if (card) {
-
-    card.addEventListener("click", () => {
-
-      hangulFlashRevealed =
-        !hangulFlashRevealed;
-
-      renderHangul();
-
-    });
-
-  }
-
-
-  /* Reveal button */
-
-  if (revealButton) {
-
-    revealButton.addEventListener("click", () => {
-
-      hangulFlashRevealed =
-        !hangulFlashRevealed;
-
-      renderHangul();
-
-    });
-
-  }
-
-
-  /* Previous */
-
-  if (previousButton) {
-
-    previousButton.addEventListener("click", () => {
-
-      if (hangulFlashIndex > 0) {
-
-        hangulFlashIndex--;
-
-        hangulFlashRevealed = false;
-
-        renderHangul();
-
-      }
-
-    });
-
-  }
-
-
-  /* Next */
-
-  if (nextButton) {
-
-    nextButton.addEventListener("click", () => {
-
-      const items = getHangulItems();
-
-      if (hangulFlashIndex < items.length - 1) {
-
-        hangulFlashIndex++;
-
-        hangulFlashRevealed = false;
-
-        renderHangul();
-
-      }
-
-    });
-
-  }
-
-
-  /* Exit */
-
-  if (exitButton) {
-
-    exitButton.addEventListener("click", () => {
-
-      hangulMode = "cards";
-
-      hangulFlashIndex = 0;
-
-      hangulFlashRevealed = false;
-
-      renderHangul();
-
-    });
-
-  }
-
-}
-
-
-/* ============================================================
-   PUBLIC INITIALIZER
-============================================================ */
-
-function initHangul() {
-
-  const container =
-    document.getElementById("hangul-content");
-
-  if (!container) {
-    console.warn(
-      "Hangul tab exists, but #hangul-content was not found."
-    );
-
-    return;
-  }
-
-  renderHangul();
-
-}
-
-
-/* ============================================================
-   EXPOSE FUNCTIONS
-============================================================ */
-
-window.initHangul = initHangul;
-window.renderHangul = renderHangul;
