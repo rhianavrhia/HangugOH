@@ -424,7 +424,7 @@ const HANGUL = [
     name: "키읔",
     sound: "K",
     mnemonic: "Kill / Trigger",
-    story: "You go back for a rematch and pull the K trigger of your GUN.",
+    story: "You go back and pull the trigger of your gun for a rematch.",
   },
 
   {
