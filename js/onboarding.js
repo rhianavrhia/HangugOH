@@ -3,7 +3,7 @@
 function maybeShowOnboarding() {
   if (STATE.onboarded) return;
   const overlay = el("div", { class: "modal-overlay" });
-  const input = el("input", { class: "text-input", type: "text", placeholder: "e.g. 지나 or Jina" });
+  const input = el("input", { class: "text-input", type: "text", placeholder: "e.g. 건호 or Keonho" });
   const startBtn = el("button", { class: "btn btn-primary btn-block" }, "Start Learning");
   startBtn.addEventListener("click", () => {
     setUserName(input.value.trim());
