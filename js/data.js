@@ -295,6 +295,7 @@ const VOCAB = [
   { id: "v279", ko: "비밀번호", rom: "bimilbeonho", en: "password", ex: "비밀번호를 입력하세요.", exEn: "Please enter your password.", cat: "Software & Technology" },
   { id: "v280", ko: "로그인", rom: "rogeuin", en: "login", ex: "웹사이트에 로그인해요.", exEn: "I log in to the website.", cat: "Software & Technology" },
   { id: "v281", ko: "버그", rom: "beogeu", en: "bug", ex: "프로그램에서 버그를 찾았어요.", exEn: "I found a bug in the program.", cat: "Software & Technology" },
+  { id: "v282", ko: "십", rom: "ship", en: "ten (Sino-Korean)", ex: "십분 남았습니다.", exEn: "Ten minutes left.", cat: "Numbers" },
 ];
 
 /* Grammar library */
