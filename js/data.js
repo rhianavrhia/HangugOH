@@ -296,363 +296,476 @@ const VOCAB = [
   { id: "v282", ko: "십", rom: "ship", en: "ten (Sino-Korean)", ex: "십분 남았습니다.", exEn: "Ten minutes left.", cat: "Numbers" },
 ];
 
-/* ===================== HANGUL LEARNING DATA ===================== */
-
-/*
- * Hangul learning bank
- *
- * type:
- * - consonant
- * - vowel
- *
- * Each card contains:
- * - char       = Hangul character
- * - name       = Korean letter name
- * - sound      = approximate sound
- * - mnemonic   = memory keyword
- * - story      = visual/memory story
- */
+/* ===================== Hangul Learning Data ===================== */
 
 const HANGUL = [
-
   /* ==================== CONSONANTS ==================== */
 
   {
-    id: "h1",
-    type: "consonant",
-    char: "ㄱ",
+    id: "h_giyeok",
+    character: "ㄱ",
+    type: "Consonant",
     name: "기역",
     sound: "G / K",
-    mnemonic: "Gun",
+    rom: "g / k",
+    memory: "🔫 Gun",
     story: "You start the story by pointing a GUN.",
+    example: "가",
+    exampleRom: "ga",
+    exampleMeaning: "go / syllable example"
   },
 
   {
-    id: "h2",
-    type: "consonant",
-    char: "ㄴ",
+    id: "h_nieun",
+    character: "ㄴ",
+    type: "Consonant",
     name: "니은",
     sound: "N",
-    mnemonic: "Nose",
+    rom: "n",
+    memory: "👃 Nose",
     story: "You smell something bad with your NOSE.",
+    example: "나",
+    exampleRom: "na",
+    exampleMeaning: "I / me (informal)"
   },
 
   {
-    id: "h3",
-    type: "consonant",
-    char: "ㄷ",
+    id: "h_digeut",
+    character: "ㄷ",
+    type: "Consonant",
     name: "디귿",
     sound: "D / T",
-    mnemonic: "Door",
-    story: "You open a DOOR to see what is making the smell.",
+    rom: "d / t",
+    memory: "🚪 Door",
+    story: "You open a DOOR to see what is making the strange smell.",
+    example: "다",
+    exampleRom: "da",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h4",
-    type: "consonant",
-    char: "ㄹ",
+    id: "h_rieul",
+    character: "ㄹ",
+    type: "Consonant",
     name: "리을",
     sound: "R / L",
-    mnemonic: "Rattlesnake",
-    story: "Behind the door, you find a RATTLESNAKE slithering toward you.",
+    rom: "r / l",
+    memory: "🐍 Rattlesnake",
+    story: "Behind the door, you find a slithering RATTLESNAKE.",
+    example: "라",
+    exampleRom: "ra",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h5",
-    type: "consonant",
-    char: "ㅁ",
+    id: "h_mieum",
+    character: "ㅁ",
+    type: "Consonant",
     name: "미음",
     sound: "M",
-    mnemonic: "Mouth",
+    rom: "m",
+    memory: "👄 Mouth",
     story: "Your MOUTH opens wide in shock when you see the snake.",
+    example: "마",
+    exampleRom: "ma",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h6",
-    type: "consonant",
-    char: "ㅂ",
+    id: "h_bieup",
+    character: "ㅂ",
+    type: "Consonant",
     name: "비읍",
     sound: "B / P",
-    mnemonic: "Bucket",
+    rom: "b / p",
+    memory: "🪣 Bucket",
     story: "You grab a BUCKET and try to trap the snake.",
+    example: "바",
+    exampleRom: "ba",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h7",
-    type: "consonant",
-    char: "ㅅ",
+    id: "h_siot",
+    character: "ㅅ",
+    type: "Consonant",
     name: "시옷",
     sound: "S",
-    mnemonic: "Summit",
-    story: "The snake escapes, so you panic and run to a mountain SUMMIT.",
+    rom: "s",
+    memory: "⛰️ Summit",
+    story: "You fail to catch the snake, panic, and run to a mountain SUMMIT.",
+    example: "사",
+    exampleRom: "sa",
+    exampleMeaning: "four / syllable example"
   },
 
   {
-    id: "h8",
-    type: "consonant",
-    char: "ㅇ",
+    id: "h_ieung",
+    character: "ㅇ",
+    type: "Consonant",
     name: "이응",
     sound: "NG / silent",
-    mnemonic: "Nothing",
+    rom: "ng",
+    memory: "⭕ Nothing",
     story: "At the top of the mountain, you look around and find NOTHING.",
+    example: "아",
+    exampleRom: "a",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h9",
-    type: "consonant",
-    char: "ㅈ",
+    id: "h_jieut",
+    character: "ㅈ",
+    type: "Consonant",
     name: "지읒",
     sound: "J",
-    mnemonic: "Jump",
-    story: "You see the snake again and JUMP off the mountain.",
+    rom: "j",
+    memory: "🦘 Jump",
+    story: "You panic and decide to JUMP off the mountain.",
+    example: "자",
+    exampleRom: "ja",
+    exampleMeaning: "sleep / syllable example"
   },
 
   {
-    id: "h10",
-    type: "consonant",
-    char: "ㅊ",
+    id: "h_chieut",
+    character: "ㅊ",
+    type: "Consonant",
     name: "치읓",
     sound: "CH",
-    mnemonic: "Champion",
-    story: "You land safely and become a CHAMPION for surviving the adventure.",
+    rom: "ch",
+    memory: "🏆 Champion",
+    story: "You land safely and become a triumphant CHAMPION.",
+    example: "차",
+    exampleRom: "cha",
+    exampleMeaning: "car / tea"
   },
 
   {
-    id: "h11",
-    type: "consonant",
-    char: "ㅋ",
+    id: "h_kieuk",
+    character: "ㅋ",
+    type: "Consonant",
     name: "키읔",
     sound: "K",
-    mnemonic: "Kill / Trigger",
-    story: "You go back and pull the trigger of your gun for a rematch.",
+    rom: "k",
+    memory: "🔫 Kill / Trigger",
+    story: "You go back and pull the trigger of your GUN for a rematch.",
+    example: "카",
+    exampleRom: "ka",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h12",
-    type: "consonant",
-    char: "ㅌ",
+    id: "h_tigeut",
+    character: "ㅌ",
+    type: "Consonant",
     name: "티읕",
     sound: "T",
-    mnemonic: "Two",
-    story: "You miss the snake and hit the DOOR, splitting it into TWO pieces.",
+    rom: "t",
+    memory: "2️⃣ Two",
+    story: "You miss and hit the DOOR, splitting it into TWO pieces.",
+    example: "타",
+    exampleRom: "ta",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h13",
-    type: "consonant",
-    char: "ㅍ",
+    id: "h_pieup",
+    character: "ㅍ",
+    type: "Consonant",
     name: "피읖",
     sound: "P",
-    mnemonic: "Pillars",
-    story: "You become super strong and push down the house PILLARS.",
+    rom: "p",
+    memory: "🏛️ Pillars",
+    story: "You try to pull a Samson and push down the house PILLARS.",
+    example: "파",
+    exampleRom: "pa",
+    exampleMeaning: "green onion / syllable example"
   },
 
   {
-    id: "h14",
-    type: "consonant",
-    char: "ㅎ",
+    id: "h_hieuh",
+    character: "ㅎ",
+    type: "Consonant",
     name: "히읗",
     sound: "H",
-    mnemonic: "Hat",
+    rom: "h",
+    memory: "🎩 Hat",
     story: "A mysterious man wearing a HAT appears to congratulate you.",
+    example: "하",
+    exampleRom: "ha",
+    exampleMeaning: "syllable example"
   },
-
 
   /* ==================== VOWELS ==================== */
 
   {
-    id: "h15",
-    type: "vowel",
-    char: "ㅏ",
+    id: "h_a",
+    character: "ㅏ",
+    type: "Vowel",
     name: "아",
     sound: "A",
-    mnemonic: "Arm",
-    story: "Imagine a person with an ARM pointing to the right: ㅏ. Remember A = ARM.",
+    rom: "a",
+    memory: "👉 A / Right",
+    story: "Imagine a person standing straight. The short line points RIGHT — ㅏ is A.",
+    example: "아",
+    exampleRom: "a",
+    exampleMeaning: "ah!"
   },
 
   {
-    id: "h16",
-    type: "vowel",
-    char: "ㅑ",
+    id: "h_ae",
+    character: "ㅐ",
+    type: "Vowel",
+    name: "애",
+    sound: "AE",
+    rom: "ae",
+    memory: "👉👉 A + E",
+    story: "ㅐ looks like ㅏ with an extra line. Think A + E.",
+    example: "애",
+    exampleRom: "ae",
+    exampleMeaning: "child (애)"
+  },
+
+  {
+    id: "h_ya",
+    character: "ㅑ",
+    type: "Vowel",
     name: "야",
     sound: "YA",
-    mnemonic: "Two Arms",
-    story: "The person now has TWO ARMS pointing to the right: ㅑ. Two arms = YA.",
+    rom: "ya",
+    memory: "👉👉 YA",
+    story: "ㅑ is ㅏ with TWO short lines. Think: A becomes YA.",
+    example: "야",
+    exampleRom: "ya",
+    exampleMeaning: "hey! / informal calling"
   },
 
   {
-    id: "h17",
-    type: "vowel",
-    char: "ㅓ",
+    id: "h_yae",
+    character: "ㅒ",
+    type: "Vowel",
+    name: "얘",
+    sound: "YAE",
+    rom: "yae",
+    memory: "👉👉👉 YA + E",
+    story: "ㅒ is ㅐ with two short lines, giving it the Y sound: YAE.",
+    example: "얘",
+    exampleRom: "yae",
+    exampleMeaning: "this child / this person"
+  },
+
+  {
+    id: "h_eo",
+    character: "ㅓ",
+    type: "Vowel",
     name: "어",
     sound: "EO",
-    mnemonic: "Other Arm",
-    story: "The person turns around and points an ARM to the left: ㅓ. Think 'EO' = the OTHER side.",
+    rom: "eo",
+    memory: "👈 EO / Left",
+    story: "The short line points LEFT. Think of ㅓ as the opposite direction of ㅏ.",
+    example: "어",
+    exampleRom: "eo",
+    exampleMeaning: "uh!"
   },
 
   {
-    id: "h18",
-    type: "vowel",
-    char: "ㅕ",
+    id: "h_e",
+    character: "ㅔ",
+    type: "Vowel",
+    name: "에",
+    sound: "E",
+    rom: "e",
+    memory: "👈 E",
+    story: "ㅔ is ㅓ with an extra line. Think E.",
+    example: "에",
+    exampleRom: "e",
+    exampleMeaning: "at / to"
+  },
+
+  {
+    id: "h_yeo",
+    character: "ㅕ",
+    type: "Vowel",
     name: "여",
     sound: "YEO",
-    mnemonic: "Two Other Arms",
-    story: "Now there are TWO ARMS pointing to the left: ㅕ. Two on the other side = YEO.",
+    rom: "yeo",
+    memory: "👈👈 YEO",
+    story: "ㅕ is ㅓ with TWO short lines. Add Y to EO → YEO.",
+    example: "여",
+    exampleRom: "yeo",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h19",
-    type: "vowel",
-    char: "ㅗ",
+    id: "h_ye",
+    character: "ㅖ",
+    type: "Vowel",
+    name: "예",
+    sound: "YE",
+    rom: "ye",
+    memory: "👈👈 YE",
+    story: "ㅖ is ㅔ with TWO short lines. Add Y to E → YE.",
+    example: "예",
+    exampleRom: "ye",
+    exampleMeaning: "yes / example syllable"
+  },
+
+  {
+    id: "h_o",
+    character: "ㅗ",
+    type: "Vowel",
     name: "오",
     sound: "O",
-    mnemonic: "Over",
-    story: "The small line points OVER the horizontal line: ㅗ. Think O = OVER.",
+    rom: "o",
+    memory: "⬆️ O / Up",
+    story: "The short line points UP. Remember: ㅗ = O goes UP.",
+    example: "오",
+    exampleRom: "o",
+    exampleMeaning: "five / syllable example"
   },
 
   {
-    id: "h20",
-    type: "vowel",
-    char: "ㅛ",
-    name: "요",
-    sound: "YO",
-    mnemonic: "Two Over",
-    story: "There are TWO small lines pointing OVER the main line: ㅛ. Two = YO.",
-  },
-
-  {
-    id: "h21",
-    type: "vowel",
-    char: "ㅜ",
+    id: "h_u",
+    character: "ㅜ",
+    type: "Vowel",
     name: "우",
     sound: "U",
-    mnemonic: "Under",
-    story: "The small line is UNDER the horizontal line: ㅜ. U = UNDER.",
+    rom: "u",
+    memory: "⬇️ U / Down",
+    story: "The short line points DOWN. Remember: ㅜ = U goes DOWN.",
+    example: "우",
+    exampleRom: "u",
+    exampleMeaning: "milk / syllable example"
   },
 
   {
-    id: "h22",
-    type: "vowel",
-    char: "ㅠ",
-    name: "유",
-    sound: "YU",
-    mnemonic: "Two Under",
-    story: "There are TWO small lines UNDER the main line: ㅠ. Two under = YU.",
-  },
-
-  {
-    id: "h23",
-    type: "vowel",
-    char: "ㅡ",
+    id: "h_eu",
+    character: "ㅡ",
+    type: "Vowel",
     name: "으",
     sound: "EU",
-    mnemonic: "Equal",
-    story: "It looks like an EQUAL sign with only one line remaining: ㅡ. Think EU.",
+    rom: "eu",
+    memory: "➖ Flat",
+    story: "ㅡ is completely flat. Keep your mouth relaxed and think of a flat EU sound.",
+    example: "으",
+    exampleRom: "eu",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h24",
-    type: "vowel",
-    char: "ㅣ",
+    id: "h_i",
+    character: "ㅣ",
+    type: "Vowel",
     name: "이",
     sound: "I",
-    mnemonic: "I",
-    story: "It is a single straight line. Imagine the letter I standing upright: ㅣ.",
+    rom: "i",
+    memory: "🧍 Standing",
+    story: "ㅣ looks like a person standing straight. Think I = standing.",
+    example: "이",
+    exampleRom: "i",
+    exampleMeaning: "this / tooth / two (depending on context)"
   },
-
 
   /* ==================== COMPOUND VOWELS ==================== */
 
   {
-    id: "h25",
-    type: "vowel",
-    char: "ㅐ",
-    name: "애",
-    sound: "AE",
-    mnemonic: "A + E",
-    story: "Think of ㅏ and ㅣ standing together to make the AE sound: ㅐ.",
-  },
-
-  {
-    id: "h26",
-    type: "vowel",
-    char: "ㅔ",
-    name: "에",
-    sound: "E",
-    mnemonic: "EO + I",
-    story: "Think of ㅓ and ㅣ combining into a simple E sound: ㅔ.",
-  },
-
-  {
-    id: "h27",
-    type: "vowel",
-    char: "ㅚ",
-    name: "외",
-    sound: "OE / WE",
-    mnemonic: "O + E",
-    story: "Combine O and E together: ㅚ.",
-  },
-
-  {
-    id: "h28",
-    type: "vowel",
-    char: "ㅟ",
-    name: "위",
-    sound: "WI",
-    mnemonic: "U + I",
-    story: "Combine U and I together: ㅟ. Think WE = U + I.",
-  },
-
-  {
-    id: "h29",
-    type: "vowel",
-    char: "ㅢ",
-    name: "의",
-    sound: "UI",
-    mnemonic: "EU + I",
-    story: "Combine EU and I together: ㅢ.",
-  },
-
-  {
-    id: "h30",
-    type: "vowel",
-    char: "ㅘ",
+    id: "h_wa",
+    character: "ㅘ",
+    type: "Vowel",
     name: "와",
     sound: "WA",
-    mnemonic: "O + A",
-    story: "O and A join together: ㅘ. O + A = WA.",
+    rom: "wa",
+    memory: "ㅗ + ㅏ",
+    story: "Combine O (ㅗ) + A (ㅏ) → WA.",
+    example: "와",
+    exampleRom: "wa",
+    exampleMeaning: "wow! / and"
   },
 
   {
-    id: "h31",
-    type: "vowel",
-    char: "ㅙ",
+    id: "h_wae",
+    character: "ㅙ",
+    type: "Vowel",
     name: "왜",
     sound: "WAE",
-    mnemonic: "WA + E",
-    story: "WA joins E together: ㅙ. Think WAE.",
+    rom: "wae",
+    memory: "ㅗ + ㅐ",
+    story: "Combine O (ㅗ) + AE (ㅐ) → WAE.",
+    example: "왜",
+    exampleRom: "wae",
+    exampleMeaning: "why"
   },
 
   {
-    id: "h32",
-    type: "vowel",
-    char: "ㅝ",
+    id: "h_oe",
+    character: "ㅚ",
+    type: "Vowel",
+    name: "외",
+    sound: "OE / WE",
+    rom: "oe / we",
+    memory: "ㅗ + ㅣ",
+    story: "Combine O (ㅗ) + I (ㅣ) → OE, commonly pronounced close to WE.",
+    example: "외",
+    exampleRom: "oe",
+    exampleMeaning: "outside / example syllable"
+  },
+
+  {
+    id: "h_wo",
+    character: "ㅝ",
+    type: "Vowel",
     name: "워",
     sound: "WO",
-    mnemonic: "U + EO",
-    story: "U and EO join together: ㅝ. U + EO = WO.",
+    rom: "wo",
+    memory: "ㅜ + ㅓ",
+    story: "Combine U (ㅜ) + EO (ㅓ) → WO.",
+    example: "워",
+    exampleRom: "wo",
+    exampleMeaning: "syllable example"
   },
 
   {
-    id: "h33",
-    type: "vowel",
-    char: "ㅞ",
+    id: "h_we",
+    character: "ㅞ",
+    type: "Vowel",
     name: "웨",
     sound: "WE",
-    mnemonic: "U + E",
-    story: "U and E join together: ㅞ. U + E = WE.",
+    rom: "we",
+    memory: "ㅜ + ㅔ",
+    story: "Combine U (ㅜ) + E (ㅔ) → WE.",
+    example: "웨",
+    exampleRom: "we",
+    exampleMeaning: "syllable example"
   },
 
+  {
+    id: "h_wi",
+    character: "ㅟ",
+    type: "Vowel",
+    name: "위",
+    sound: "WI",
+    rom: "wi",
+    memory: "ㅜ + ㅣ",
+    story: "Combine U (ㅜ) + I (ㅣ) → WI.",
+    example: "위",
+    exampleRom: "wi",
+    exampleMeaning: "above / on"
+  },
+
+  {
+    id: "h_ui",
+    character: "ㅢ",
+    type: "Vowel",
+    name: "의",
+    sound: "UI",
+    rom: "ui",
+    memory: "ㅡ + ㅣ",
+    story: "Combine EU (ㅡ) + I (ㅣ) → UI.",
+    example: "의",
+    exampleRom: "ui",
+    exampleMeaning: "of / possessive marker"
+  }
 ];
 
 /* Grammar library */
