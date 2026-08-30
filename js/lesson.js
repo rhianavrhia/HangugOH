@@ -5,14 +5,33 @@ let lessonSession = null;
 function startLesson(lessonId) {
   const lesson = LESSONS[lessonId];
   if (!lesson) return;
+
   lessonSession = {
     lesson,
     index: 0,
     correctCount: 0,
     total: lesson.questions.length,
-    listeningCount: lesson.questions.filter((q) => q.type === "listening").length,
+    listeningCount: lesson.questions.filter(
+      (q) => q.type === "listening"
+    ).length,
     answers: [],
   };
+
+  /*
+   * Restore previously reached Learning Path progress.
+   *
+   * This is stored separately from lessonsCompleted because
+   * the lesson itself may contain more than 5 questions.
+   */
+  STATE.lessonPathProgress = STATE.lessonPathProgress || {};
+
+  /*
+   * If the lesson was already completed, it is automatically 5/5.
+   */
+  if (STATE.lessonsCompleted.includes(lessonId)) {
+    STATE.lessonPathProgress[lessonId] = 5;
+  }
+
   renderLessonOverlay();
 }
 
@@ -104,15 +123,85 @@ function showFeedback(correct) {
   zone.appendChild(el("span", {}, correct ? "정답이에요! 🎉" : "아쉬워요! Try again next time."));
 }
 
+function getLessonPathStep() {
+  if (!lessonSession) return 0;
+
+  const { lesson, index, total } = lessonSession;
+
+  /*
+   * Five Learning Path stages for every lesson,
+   * regardless of the actual number of questions.
+   */
+  if (total <= 0) return 0;
+
+  const completedQuestions = Math.min(index + 1, total);
+
+  return Math.min(
+    5,
+    Math.ceil((completedQuestions / total) * 5)
+  );
+}
+
 function advanceQuestion(body) {
   lessonSession.index += 1;
+
+  /*
+   * Update Learning Path progress.
+   *
+   * Example:
+   * 5 questions  → 1 question = 1/5
+   * 10 questions → 2 questions = 1/5
+   * 30 questions → 6 questions = 1/5
+   */
+  STATE.lessonPathProgress = STATE.lessonPathProgress || {};
+
+  const progress = Math.min(
+    5,
+    Math.ceil(
+      (lessonSession.index / lessonSession.total) * 5
+    )
+  );
+
+  const lessonId = lessonSession.lesson.id;
+
+  STATE.lessonPathProgress[lessonId] = Math.max(
+    STATE.lessonPathProgress[lessonId] || 0,
+    progress
+  );
+
+  /*
+   * If all questions have been completed,
+   * the lesson is automatically 5/5.
+   */
   if (lessonSession.index >= lessonSession.total) {
+    STATE.lessonPathProgress[lessonId] = 5;
     finishLesson();
-  } else {
-    const overlay = document.getElementById("lesson-overlay");
-    const header = overlay.querySelector(".progress-fill");
-    header.style.width = Math.round((lessonSession.index / lessonSession.total) * 100) + "%";
-    renderQuestion(body);
+    return;
+  }
+
+  /*
+   * Update the lesson's internal progress bar.
+   */
+  const overlay = document.getElementById("lesson-overlay");
+  const header = overlay.querySelector(".progress-fill");
+
+  if (header) {
+    header.style.width =
+      Math.round(
+        (lessonSession.index / lessonSession.total) * 100
+      ) + "%";
+  }
+
+  renderQuestion(body);
+
+  /*
+   * Save state if your app provides a saveState() function.
+   *
+   * This check prevents an error if your project uses
+   * a different persistence function.
+   */
+  if (typeof saveState === "function") {
+    saveState();
   }
 }
 
@@ -593,6 +682,14 @@ function shuffle(arr) {
 
 function finishLesson() {
   const { lesson, correctCount, total, listeningCount } = lessonSession;
+
+  /*
+   * Completing every question means the Learning Path
+   * is completely finished.
+   */
+  STATE.lessonPathProgress = STATE.lessonPathProgress || {};
+  STATE.lessonPathProgress[lesson.id] = 5;
+
   const accuracy = Math.round((correctCount / total) * 100);
   const xpEarned = Math.round(lesson.xp * (accuracy / 100)) || Math.round(lesson.xp * 0.5);
 
