@@ -448,8 +448,8 @@ const HANGUL = [
     name: "키읔",
     sound: "K",
     rom: "k",
-    memory: "🔫 Kill / Trigger",
-    story: "You go back and pull the trigger of your GUN for a rematch.",
+    memory: "🔫 Kill",
+    story: "You go back and pull the trigger of your gun to KILL the snake",
     example: "카",
     exampleRom: "ka",
     exampleMeaning: "syllable example"
