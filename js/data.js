@@ -538,7 +538,7 @@ const PATH = [
   {
     section: "TOPIK Preparation",
     units: [
-      { id: "u_topikvocab", title: "Vocabulary", icon: "🈺", lessonIds: ["l16"] },
+      { id: "u_topikvocab", title: "Vocabulary", icon: "📝", lessonIds: ["l16"] },
       { id: "u_topikread", title: "Reading", icon: "📖", lessonIds: ["l17"] },
       { id: "u_topiklisten", title: "Listening", icon: "🔊", lessonIds: ["l18"] },
       { id: "u_topikwrite", title: "Writing", icon: "✍️", lessonIds: ["l19"] },
