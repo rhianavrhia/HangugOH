@@ -1685,43 +1685,146 @@ const PATH = [
   {
     section: "Foundation",
     units: [
-      { id: "u_hangul", title: "Hangul", icon: "가", lessonIds: ["l1"] },
-      { id: "u_basicvocab", title: "Basic Vocabulary", icon: "📚", lessonIds: ["l2"] },
-      { id: "u_greetings", title: "Greetings", icon: "🙏", lessonIds: ["l3"] },
-      { id: "u_numbers", title: "Numbers", icon: "🔢", lessonIds: ["l4"] },
-      { id: "u_sentence", title: "Basic Sentence Structure", icon: "📐", lessonIds: ["l5"] },
-    ],
+      {
+        id: "u_hangul",
+        title: "Hangul",
+        icon: "가",
+        lessonIds: ["l1", "l2", "l3", "l4", "l5"]
+      },
+      {
+        id: "u_basicvocab",
+        title: "Basic Vocabulary",
+        icon: "📚",
+        lessonIds: ["l6", "l7", "l8", "l9", "l10"]
+      },
+      {
+        id: "u_greetings",
+        title: "Greetings",
+        icon: "🙏",
+        lessonIds: ["l11", "l12", "l13", "l14", "l15"]
+      },
+      {
+        id: "u_numbers",
+        title: "Numbers",
+        icon: "🔢",
+        lessonIds: ["l16", "l17", "l18", "l19", "l20"]
+      },
+      {
+        id: "u_sentence",
+        title: "Basic Sentence Structure",
+        icon: "📐",
+        lessonIds: ["l21", "l22", "l23", "l24", "l25"]
+      }
+    ]
   },
+
   {
     section: "Beginner Korean",
     units: [
-      { id: "u_particles", title: "Particles", icon: "🔗", lessonIds: ["l6"] },
-      { id: "u_verbconj", title: "Verb Conjugation", icon: "🔄", lessonIds: ["l7"] },
-      { id: "u_daily", title: "Daily Activities", icon: "☀️", lessonIds: ["l8"] },
-      { id: "u_time", title: "Time & Dates", icon: "🕐", lessonIds: ["l9"] },
-      { id: "u_places", title: "Places & Directions", icon: "🗺️", lessonIds: ["l10"] },
-    ],
+      {
+        id: "u_particles",
+        title: "Particles",
+        icon: "🔗",
+        lessonIds: ["l26", "l27", "l28", "l29", "l30"]
+      },
+      {
+        id: "u_verbconj",
+        title: "Verb Conjugation",
+        icon: "🔄",
+        lessonIds: ["l31", "l32", "l33", "l34", "l35"]
+      },
+      {
+        id: "u_daily",
+        title: "Daily Activities",
+        icon: "☀️",
+        lessonIds: ["l36", "l37", "l38", "l39", "l40"]
+      },
+      {
+        id: "u_time",
+        title: "Time & Dates",
+        icon: "🕐",
+        lessonIds: ["l41", "l42", "l43", "l44", "l45"]
+      },
+      {
+        id: "u_places",
+        title: "Places & Directions",
+        icon: "🗺️",
+        lessonIds: ["l46", "l47", "l48", "l49", "l50"]
+      }
+    ]
   },
+
   {
     section: "Intermediate Korean",
     units: [
-      { id: "u_intgram", title: "Intermediate Grammar", icon: "🧩", lessonIds: ["l11"] },
-      { id: "u_formal", title: "Formal Speech", icon: "🎩", lessonIds: ["l12"] },
-      { id: "u_connect", title: "Connecting Sentences", icon: "➰", lessonIds: ["l13"] },
-      { id: "u_reading", title: "Reading Practice", icon: "📰", lessonIds: ["l14"] },
-      { id: "u_listening", title: "Listening Practice", icon: "🎧", lessonIds: ["l15"] },
-    ],
+      {
+        id: "u_intgram",
+        title: "Intermediate Grammar",
+        icon: "🧩",
+        lessonIds: ["l51", "l52", "l53", "l54", "l55"]
+      },
+      {
+        id: "u_formal",
+        title: "Formal Speech",
+        icon: "🎩",
+        lessonIds: ["l56", "l57", "l58", "l59", "l60"]
+      },
+      {
+        id: "u_connect",
+        title: "Connecting Sentences",
+        icon: "➰",
+        lessonIds: ["l61", "l62", "l63", "l64", "l65"]
+      },
+      {
+        id: "u_reading",
+        title: "Reading Practice",
+        icon: "📰",
+        lessonIds: ["l66", "l67", "l68", "l69", "l70"]
+      },
+      {
+        id: "u_listening",
+        title: "Listening Practice",
+        icon: "🎧",
+        lessonIds: ["l71", "l72", "l73", "l74", "l75"]
+      }
+    ]
   },
+
   {
     section: "TOPIK Preparation",
     units: [
-      { id: "u_topikvocab", title: "Vocabulary", icon: "📝", lessonIds: ["l16"] },
-      { id: "u_topikread", title: "Reading", icon: "📖", lessonIds: ["l17"] },
-      { id: "u_topiklisten", title: "Listening", icon: "🔊", lessonIds: ["l18"] },
-      { id: "u_topikwrite", title: "Writing", icon: "✍️", lessonIds: ["l19"] },
-      { id: "u_topikmock", title: "Mock Questions", icon: "🧪", lessonIds: ["l20"] },
-    ],
-  },
+      {
+        id: "u_topikvocab",
+        title: "Vocabulary",
+        icon: "📝",
+        lessonIds: ["l76", "l77", "l78", "l79", "l80"]
+      },
+      {
+        id: "u_topikread",
+        title: "Reading",
+        icon: "📖",
+        lessonIds: ["l81", "l82", "l83", "l84", "l85"]
+      },
+      {
+        id: "u_topiklisten",
+        title: "Listening",
+        icon: "🔊",
+        lessonIds: ["l86", "l87", "l88", "l89", "l90"]
+      },
+      {
+        id: "u_topikwrite",
+        title: "Writing",
+        icon: "✍️",
+        lessonIds: ["l91", "l92", "l93", "l94", "l95"]
+      },
+      {
+        id: "u_topikmock",
+        title: "Mock Questions",
+        icon: "🧪",
+        lessonIds: ["l96", "l97", "l98", "l99", "l100"]
+      }
+    ]
+  }
 ];
 
 /* Full lesson definitions — at least 3 complete with rich question variety */
