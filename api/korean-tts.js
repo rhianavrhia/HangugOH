@@ -318,22 +318,21 @@ export default async function handler(req, res) {
       .send(audioBuffer);
 
 
-  } catch (error) {
+ } catch (error) {
 
-    console.error(
-      "KOREAN TTS SERVER ERROR:",
-      error
-    );
+  console.error(
+    "KOREAN TTS SERVER ERROR:",
+    error
+  );
 
-    return res.status(500).json({
+  return res.status(500).json({
 
-      error:
-        "Korean TTS failed",
+    error: "Korean TTS failed",
 
-      details:
-        error.message ||
-        "Unknown server error"
+    details: error.message || "Unknown server error",
 
-    });
-  }
+    stack: error.stack || null
+
+  });
+}
 }
