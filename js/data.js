@@ -1861,14 +1861,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'g/k' sound?",
-        options: ["ㄱ", "ㄴ", "ㄷ", "ㅁ"],
+        options: ["ㄷ", "ㄴ", "ㄱ", "ㅁ"],
         answer: "ㄱ"
       },
 
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'n' sound?",
-        options: ["ㄹ", "ㄴ", "ㅂ", "ㅅ"],
+        options: ["ㄹ", "ㅅ", "ㅂ", "ㄴ"],
         answer: "ㄴ"
       },
 
@@ -1882,7 +1882,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'm' sound?",
-        options: ["ㅁ", "ㅂ", "ㅅ", "ㅇ"],
+        options: ["ㅂ", "ㅁ", "ㅅ", "ㅇ"],
         answer: "ㅁ"
       },
 
@@ -1898,21 +1898,21 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which character represents the 's' sound?",
-        options: ["ㅅ", "ㅈ", "ㅊ", "ㅎ"],
+        options: ["ㅊ", "ㅈ", "ㅅ", "ㅎ"],
         answer: "ㅅ"
       },
 
       {
         type: "mc",
         prompt: "Which character represents the 'j' sound?",
-        options: ["ㅈ", "ㄱ", "ㄷ", "ㅂ"],
+        options: ["ㅅ", "ㄱ", "ㄷ", "ㅈ"],
         answer: "ㅈ"
       },
 
       {
         type: "mc",
         prompt: "Which character represents the 'h' sound?",
-        options: ["ㅎ", "ㅅ", "ㅇ", "ㄹ"],
+        options: ["ㅈ", "ㅎ", "ㅇ", "ㄹ"],
         answer: "ㅎ"
       },
 
@@ -1926,7 +1926,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which character represents the 'ng' sound when used as a final consonant?",
-        options: ["ㅇ", "ㅎ", "ㅁ", "ㄴ"],
+        options: ["ㄴ", "ㅎ", "ㅁ", "ㅇ"],
         answer: "ㅇ"
       },
 
@@ -1942,14 +1942,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'eo' sound?",
-        options: ["ㅓ", "ㅏ", "ㅗ", "ㅡ"],
+        options: ["ㅣ", "ㅏ", "ㅗ", "ㅓ"],
         answer: "ㅓ"
       },
 
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'o' sound?",
-        options: ["ㅗ", "ㅜ", "ㅏ", "ㅣ"],
+        options: ["ㅓ", "ㅜ", "ㅏ", "ㅗ"],
         answer: "ㅗ"
       },
 
@@ -1963,7 +1963,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'eu' sound?",
-        options: ["ㅡ", "ㅣ", "ㅓ", "ㅏ"],
+        options: ["ㅣ", "ㅓ", "ㅡ", "ㅏ"],
         answer: "ㅡ"
       },
 
@@ -1972,7 +1972,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which Hangul character represents the 'i' sound?",
-        options: ["ㅣ", "ㅡ", "ㅏ", "ㅓ"],
+        options: ["ㅏ", "ㅡ", "ㅣ", "ㅓ"],
         answer: "ㅣ"
       },
 
@@ -2076,14 +2076,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which character represents the stronger 't' sound?",
-        options: ["ㅌ", "ㄷ", "ㅋ", "ㅍ"],
+        options: ["ㅋ", "ㄷ", "ㅌ", "ㅍ"],
         answer: "ㅌ"
       },
 
       {
         type: "mc",
         prompt: "Which character represents the stronger 'p' sound?",
-        options: ["ㅍ", "ㅂ", "ㅌ", "ㅋ"],
+        options: ["ㅂ", "ㅍ", "ㅌ", "ㅋ"],
         answer: "ㅍ"
       },
 
@@ -2092,7 +2092,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which character represents the 'ch' sound?",
-        options: ["ㅊ", "ㅈ", "ㅅ", "ㅋ"],
+        options: ["ㅈ", "ㅁ", "ㅅ", "ㅊ"],
         answer: "ㅊ"
       },
 
@@ -2112,7 +2112,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents the 'ya' sound?",
-        options: ["ㅑ", "ㅕ", "ㅛ", "ㅠ"],
+        options: ["ㅛ", "ㅕ", "ㅑ", "ㅠ"],
         answer: "ㅑ"
       },
 
@@ -2133,7 +2133,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents the 'yu' sound?",
-        options: ["ㅠ", "ㅛ", "ㅕ", "ㅑ"],
+        options: ["ㅛ", "ㅠ", "ㅕ", "ㅑ"],
         answer: "ㅠ"
       },
 
@@ -2183,21 +2183,21 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which character is ㄲ?",
-        options: ["ㄲ", "ㅋ", "ㄱ", "ㄸ"],
+        options: ["ㅋ", "ㄲ", "ㄱ", "ㄸ"],
         answer: "ㄲ"
       },
 
       {
         type: "mc",
         prompt: "Which character is the tense form of ㄷ?",
-        options: ["ㄸ", "ㅌ", "ㄷ", "ㅃ"],
+        options: ["ㅃ", "ㅌ", "ㄷ","ㄸ"],
         answer: "ㄸ"
       },
 
       {
         type: "mc",
         prompt: "Which character is the tense form of ㅂ?",
-        options: ["ㅃ", "ㅍ", "ㅂ", "ㅉ"],
+        options: ["ㅂ", "ㅍ", "ㅃ", "ㅉ"],
         answer: "ㅃ"
       },
 
@@ -2234,14 +2234,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents 'ae'?",
-        options: ["ㅐ", "ㅔ", "ㅏ", "ㅓ"],
+        options: ["ㅏ", "ㅔ", "ㅐ", "ㅓ"],
         answer: "ㅐ"
       },
 
       {
         type: "mc",
         prompt: "Which vowel represents 'e'?",
-        options: ["ㅔ", "ㅐ", "ㅣ", "ㅏ"],
+        options: ["ㅓ", "ㅐ", "ㅣ","ㅔ"],
         answer: "ㅔ"
       },
 
@@ -2257,14 +2257,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents 'wo'?",
-        options: ["ㅝ", "ㅘ", "ㅚ", "ㅟ"],
+        options: ["ㅘ", "ㅝ", "ㅚ", "ㅟ"],
         answer: "ㅝ"
       },
 
       {
         type: "mc",
         prompt: "Which vowel represents 'we'?",
-        options: ["ㅞ", "ㅙ", "ㅚ", "ㅟ"],
+        options: ["ㅚ", "ㅙ", "ㅞ", "ㅟ"],
         answer: "ㅞ"
       },
 
@@ -2292,7 +2292,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which one is a tense consonant?",
-        options: ["ㅆ", "ㅊ", "ㅌ", "ㅋ"],
+        options: ["ㅌ", "ㅊ", "ㅆ,", "ㅋ"],
         answer: "ㅆ"
       }
     ]
@@ -2322,7 +2322,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents 'oe'?",
-        options: ["ㅚ", "ㅙ", "ㅞ", "ㅟ"],
+        options: ["ㅞ", "ㅙ", "ㅚ", "ㅟ"],
         answer: "ㅚ"
       },
 
@@ -2345,14 +2345,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which vowel represents 'ui'?",
-        options: ["ㅢ", "ㅟ", "ㅚ", "ㅡ"],
+        options: ["ㅟ", "ㅢ", "ㅚ", "ㅡ"],
         answer: "ㅢ"
       },
 
       {
         type: "mc",
         prompt: "Which vowel represents 'ae'?",
-        options: ["ㅐ", "ㅔ", "ㅒ", "ㅖ"],
+        options: ["ㅖ", "ㅔ", "ㅒ", "ㅐ"],
         answer: "ㅐ"
       },
 
@@ -2373,14 +2373,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 가 represent?",
-        options: ["ga", "na", "da", "ma"],
+        options: ["da", "na", "ga", "ma"],
         answer: "ga"
       },
 
       {
         type: "mc",
         prompt: "What does 나 represent?",
-        options: ["ga", "na", "da", "ra"],
+        options: ["ga", "da", "na", "ra"],
         answer: "na"
       },
 
@@ -2396,7 +2396,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which syllable is made from ㄴ + ㅏ?",
-        options: ["나", "다", "마", "라"],
+        options: ["가", "나", "마", "라"],
         answer: "나"
       },
 
@@ -2409,9 +2409,9 @@ const LESSONS = {
 
       {
         type: "mc",
-        prompt: "Which syllable is made from ㅁ + ㅏ?",
-        options: ["마", "바", "나", "다"],
-        answer: "마"
+        prompt: "Which syllable is made from ㅁ + ㅏ + ㅅ?",
+        options: ["가", "바", "나", "맛"],
+        answer: "맛"
       },
 
       /* Set 5 — Recognition */
@@ -2431,8 +2431,8 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which one is a complete Hangul syllable block?",
-        options: ["가", "ㄱ", "ㅏ", "ㅁ"],
-        answer: "가"
+        options: ["ㅅ", "ㄱ", "ㅏ", "값"],
+        answer: "값"
       }
     ]
   },
@@ -2583,29 +2583,29 @@ const LESSONS = {
 
       {
         type: "mc",
-        prompt: "Which Korean syllable is pronounced 'ba'?",
-        options: ["바", "마", "사", "자"],
-        answer: "바"
+        prompt: "Which Korean syllable is pronounced 'bam'?",
+        options: ["밤", "마", "사", "자"],
+        answer: "밤"
       },
 
       {
         type: "mc",
-        prompt: "Which Korean syllable is pronounced 'ja'?",
-        options: ["자", "차", "사", "다"],
-        answer: "자"
+        prompt: "Which Korean syllable is pronounced 'jam'?",
+        options: ["사", "참", "잠", "다"],
+        answer: "잠"
       },
 
       {
         type: "mc",
-        prompt: "Which Korean syllable is pronounced 'sa'?",
-        options: ["사", "자", "차", "바"],
-        answer: "사"
+        prompt: "Which Korean syllable is pronounced 'sam'?",
+        options: ["자", "삼", "차", "밤"],
+        answer: "삼"
       },
 
       {
         type: "mc",
         prompt: "Which of the following contains only Hangul characters?",
-        options: ["한국", "hello", "Korea", "123"],
+        options: ["한국", "hello", "Korea", "한국OH"],
         answer: "한국"
       }
     ]
@@ -2668,21 +2668,21 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "book",
         answer: "책",
-        options: ["책", "집", "돈", "커피"]
+        options: ["돈", "집", "책", "커피"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "house",
         answer: "집",
-        options: ["책", "집", "돈", "커피"]
+        options: ["집", "책", "돈", "커피"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "money",
         answer: "돈",
-        options: ["책", "집", "돈", "커피"]
+        options: ["책", "집", "커피", "돈"]
       },
 
       {
