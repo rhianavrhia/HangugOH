@@ -2000,7 +2000,1874 @@ const LESSONS = {
 
       {
         type: "mc",
-        prompt
+        prompt: "Which of these is a Korean consonant?",
+        options: ["ㅗ", "ㅜ", "ㅣ", "ㄱ"],
+        answer: "ㄱ"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the character to its pronunciation.",
+        pairs: [
+          ["ㄱ", "g/k"],
+          ["ㄴ", "n"],
+          ["ㄷ", "d/t"],
+          ["ㅁ", "m"],
+          ["ㅂ", "b/p"]
+        ]
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     HANGUL — LESSON 2
+     Remaining basic consonants + vowels
+     ------------------------------------------------------- */
+
+  l2: {
+    id: "l2",
+    title: "Hangul 2 — More Characters",
+    unit: "u_hangul",
+    xp: 20,
+
+    description:
+      "Learn the remaining basic consonants and vowel combinations.",
+
+    vocabIds: [],
+
+    questions: [
+
+      /* Set 1 — Basic consonant review */
+
+      {
+        type: "match",
+        prompt: "Match the consonant to its pronunciation.",
+        pairs: [
+          ["ㄱ", "g/k"],
+          ["ㄴ", "n"],
+          ["ㄷ", "d/t"],
+          ["ㄹ", "r/l"],
+          ["ㅁ", "m"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match the consonant to its pronunciation.",
+        pairs: [
+          ["ㅂ", "b/p"],
+          ["ㅅ", "s"],
+          ["ㅇ", "ng"],
+          ["ㅈ", "j"],
+          ["ㅎ", "h"]
+        ]
+      },
+
+      /* Set 2 — Aspirated consonants */
+
+      {
+        type: "mc",
+        prompt: "Which character represents the stronger 'k' sound?",
+        options: ["ㅋ", "ㄱ", "ㄷ", "ㅌ"],
+        answer: "ㅋ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character represents the stronger 't' sound?",
+        options: ["ㅌ", "ㄷ", "ㅋ", "ㅍ"],
+        answer: "ㅌ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character represents the stronger 'p' sound?",
+        options: ["ㅍ", "ㅂ", "ㅌ", "ㅋ"],
+        answer: "ㅍ"
+      },
+
+      /* Set 3 — ㅊ and aspirated sounds */
+
+      {
+        type: "mc",
+        prompt: "Which character represents the 'ch' sound?",
+        options: ["ㅊ", "ㅈ", "ㅅ", "ㅋ"],
+        answer: "ㅊ"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the aspirated consonants.",
+        pairs: [
+          ["ㅋ", "k"],
+          ["ㅌ", "t"],
+          ["ㅍ", "p"],
+          ["ㅊ", "ch"]
+        ]
+      },
+
+      /* Set 4 — Compound vowels */
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents the 'ya' sound?",
+        options: ["ㅑ", "ㅕ", "ㅛ", "ㅠ"],
+        answer: "ㅑ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents the 'yeo' sound?",
+        options: ["ㅕ", "ㅑ", "ㅛ", "ㅒ"],
+        answer: "ㅕ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents the 'yo' sound?",
+        options: ["ㅛ", "ㅠ", "ㅕ", "ㅑ"],
+        answer: "ㅛ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents the 'yu' sound?",
+        options: ["ㅠ", "ㅛ", "ㅕ", "ㅑ"],
+        answer: "ㅠ"
+      },
+
+      /* Set 5 — Recognition */
+
+      {
+        type: "match",
+        prompt: "Match the vowels with their sounds.",
+        pairs: [
+          ["ㅑ", "ya"],
+          ["ㅕ", "yeo"],
+          ["ㅛ", "yo"],
+          ["ㅠ", "yu"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character is NOT a consonant?",
+        options: ["ㅋ", "ㅊ", "ㅌ", "ㅕ"],
+        answer: "ㅕ"
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     HANGUL — LESSON 3
+     Double consonants + additional vowels
+     ------------------------------------------------------- */
+
+  l3: {
+    id: "l3",
+    title: "Hangul 3 — Double Consonants & Vowels",
+    unit: "u_hangul",
+    xp: 20,
+
+    description:
+      "Learn tense consonants and additional Korean vowel combinations.",
+
+    vocabIds: [],
+
+    questions: [
+
+      /* Set 1 — Double consonants */
+
+      {
+        type: "mc",
+        prompt: "Which character is ㄲ?",
+        options: ["ㄲ", "ㅋ", "ㄱ", "ㄸ"],
+        answer: "ㄲ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character is the tense form of ㄷ?",
+        options: ["ㄸ", "ㅌ", "ㄷ", "ㅃ"],
+        answer: "ㄸ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character is the tense form of ㅂ?",
+        options: ["ㅃ", "ㅍ", "ㅂ", "ㅉ"],
+        answer: "ㅃ"
+      },
+
+      /* Set 2 — More double consonants */
+
+      {
+        type: "mc",
+        prompt: "Which character is the tense form of ㅅ?",
+        options: ["ㅆ", "ㅈ", "ㅊ", "ㅅ"],
+        answer: "ㅆ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character is the tense form of ㅈ?",
+        options: ["ㅉ", "ㅊ", "ㅈ", "ㅆ"],
+        answer: "ㅉ"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the tense consonants.",
+        pairs: [
+          ["ㄲ", "kk"],
+          ["ㄸ", "tt"],
+          ["ㅃ", "pp"],
+          ["ㅆ", "ss"],
+          ["ㅉ", "jj"]
+        ]
+      },
+
+      /* Set 3 — Compound vowels */
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'ae'?",
+        options: ["ㅐ", "ㅔ", "ㅏ", "ㅓ"],
+        answer: "ㅐ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'e'?",
+        options: ["ㅔ", "ㅐ", "ㅣ", "ㅏ"],
+        answer: "ㅔ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'wa'?",
+        options: ["ㅘ", "ㅙ", "ㅚ", "ㅝ"],
+        answer: "ㅘ"
+      },
+
+      /* Set 4 — More compound vowels */
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'wo'?",
+        options: ["ㅝ", "ㅘ", "ㅚ", "ㅟ"],
+        answer: "ㅝ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'we'?",
+        options: ["ㅞ", "ㅙ", "ㅚ", "ㅟ"],
+        answer: "ㅞ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'wi'?",
+        options: ["ㅟ", "ㅞ", "ㅝ", "ㅚ"],
+        answer: "ㅟ"
+      },
+
+      /* Set 5 — Recognition */
+
+      {
+        type: "match",
+        prompt: "Match the compound vowels.",
+        pairs: [
+          ["ㅐ", "ae"],
+          ["ㅔ", "e"],
+          ["ㅘ", "wa"],
+          ["ㅝ", "wo"],
+          ["ㅟ", "wi"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which one is a tense consonant?",
+        options: ["ㅆ", "ㅊ", "ㅌ", "ㅋ"],
+        answer: "ㅆ"
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     HANGUL — LESSON 4
+     Remaining vowels + syllable blocks
+     ------------------------------------------------------- */
+
+  l4: {
+    id: "l4",
+    title: "Hangul 4 — Syllable Blocks",
+    unit: "u_hangul",
+    xp: 20,
+
+    description:
+      "Learn the remaining vowels and how Korean characters combine into syllable blocks.",
+
+    vocabIds: [],
+
+    questions: [
+
+      /* Set 1 — Remaining vowels */
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'oe'?",
+        options: ["ㅚ", "ㅙ", "ㅞ", "ㅟ"],
+        answer: "ㅚ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'yae'?",
+        options: ["ㅒ", "ㅖ", "ㅐ", "ㅔ"],
+        answer: "ㅒ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'ye'?",
+        options: ["ㅖ", "ㅒ", "ㅔ", "ㅕ"],
+        answer: "ㅖ"
+      },
+
+      /* Set 2 — Final vowel combinations */
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'ui'?",
+        options: ["ㅢ", "ㅟ", "ㅚ", "ㅡ"],
+        answer: "ㅢ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which vowel represents 'ae'?",
+        options: ["ㅐ", "ㅔ", "ㅒ", "ㅖ"],
+        answer: "ㅐ"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the vowels with their common romanization.",
+        pairs: [
+          ["ㅚ", "oe"],
+          ["ㅙ", "wae"],
+          ["ㅞ", "we"],
+          ["ㅒ", "yae"],
+          ["ㅖ", "ye"]
+        ]
+      },
+
+      /* Set 3 — Syllable blocks */
+
+      {
+        type: "mc",
+        prompt: "What does 가 represent?",
+        options: ["ga", "na", "da", "ma"],
+        answer: "ga"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 나 represent?",
+        options: ["ga", "na", "da", "ra"],
+        answer: "na"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 다 represent?",
+        options: ["da", "ma", "ba", "sa"],
+        answer: "da"
+      },
+
+      /* Set 4 — Building syllables */
+
+      {
+        type: "mc",
+        prompt: "Which syllable is made from ㄴ + ㅏ?",
+        options: ["나", "다", "마", "라"],
+        answer: "나"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which syllable is made from ㄱ + ㅏ?",
+        options: ["가", "나", "사", "자"],
+        answer: "가"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which syllable is made from ㅁ + ㅏ?",
+        options: ["마", "바", "나", "다"],
+        answer: "마"
+      },
+
+      /* Set 5 — Recognition */
+
+      {
+        type: "match",
+        prompt: "Match the syllable block to its pronunciation.",
+        pairs: [
+          ["가", "ga"],
+          ["나", "na"],
+          ["다", "da"],
+          ["라", "ra"],
+          ["마", "ma"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which one is a complete Hangul syllable block?",
+        options: ["가", "ㄱ", "ㅏ", "ㅁ"],
+        answer: "가"
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     HANGUL — LESSON 5
+     Full Hangul review
+     IMPORTANT: No vocabulary assumptions.
+     This lesson completes the Hangul unit.
+     ------------------------------------------------------- */
+
+  l5: {
+    id: "l5",
+    title: "Hangul 5 — Full Review",
+    unit: "u_hangul",
+    xp: 25,
+
+    description:
+      "Review Korean consonants, vowels, syllable blocks, and character recognition before moving to vocabulary.",
+
+    vocabIds: [],
+
+    questions: [
+
+      /* Set 1 — Basic consonants */
+
+      {
+        type: "match",
+        prompt: "Match the basic consonants to their sounds.",
+        pairs: [
+          ["ㄱ", "g/k"],
+          ["ㄴ", "n"],
+          ["ㄷ", "d/t"],
+          ["ㄹ", "r/l"],
+          ["ㅁ", "m"]
+        ]
+      },
+
+      /* Set 2 — Remaining consonants */
+
+      {
+        type: "match",
+        prompt: "Match the consonants to their sounds.",
+        pairs: [
+          ["ㅂ", "b/p"],
+          ["ㅅ", "s"],
+          ["ㅇ", "ng"],
+          ["ㅈ", "j"],
+          ["ㅎ", "h"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match the aspirated consonants.",
+        pairs: [
+          ["ㅋ", "k"],
+          ["ㅌ", "t"],
+          ["ㅍ", "p"],
+          ["ㅊ", "ch"]
+        ]
+      },
+
+      /* Set 3 — Tense consonants */
+
+      {
+        type: "match",
+        prompt: "Match the tense consonants.",
+        pairs: [
+          ["ㄲ", "kk"],
+          ["ㄸ", "tt"],
+          ["ㅃ", "pp"],
+          ["ㅆ", "ss"],
+          ["ㅉ", "jj"]
+        ]
+      },
+
+      /* Set 4 — Vowels */
+
+      {
+        type: "match",
+        prompt: "Match the basic vowels.",
+        pairs: [
+          ["ㅏ", "a"],
+          ["ㅓ", "eo"],
+          ["ㅗ", "o"],
+          ["ㅜ", "u"],
+          ["ㅡ", "eu"],
+          ["ㅣ", "i"]
+        ]
+      },
+
+      /* Set 5 — Compound vowels */
+
+      {
+        type: "match",
+        prompt: "Match the compound vowels.",
+        pairs: [
+          ["ㅑ", "ya"],
+          ["ㅕ", "yeo"],
+          ["ㅛ", "yo"],
+          ["ㅠ", "yu"],
+          ["ㅐ", "ae"],
+          ["ㅔ", "e"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match the remaining compound vowels.",
+        pairs: [
+          ["ㅘ", "wa"],
+          ["ㅙ", "wae"],
+          ["ㅚ", "oe"],
+          ["ㅝ", "wo"],
+          ["ㅞ", "we"],
+          ["ㅟ", "wi"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match the final vowel combinations.",
+        pairs: [
+          ["ㅒ", "yae"],
+          ["ㅖ", "ye"],
+          ["ㅢ", "ui"]
+        ]
+      },
+
+      /* Set 5 — Final syllable review */
+
+      {
+        type: "match",
+        prompt: "Match the Hangul syllables to their pronunciation.",
+        pairs: [
+          ["가", "ga"],
+          ["나", "na"],
+          ["다", "da"],
+          ["라", "ra"],
+          ["마", "ma"],
+          ["바", "ba"],
+          ["사", "sa"],
+          ["자", "ja"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Korean syllable is pronounced 'ba'?",
+        options: ["바", "마", "사", "자"],
+        answer: "바"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Korean syllable is pronounced 'ja'?",
+        options: ["자", "차", "사", "다"],
+        answer: "자"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Korean syllable is pronounced 'sa'?",
+        options: ["사", "자", "차", "바"],
+        answer: "사"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which of the following contains only Hangul characters?",
+        options: ["한국", "hello", "Korea", "123"],
+        answer: "한국"
+      }
+    ]
+  },
+
+
+  /* =========================================================
+     BASIC VOCABULARY
+     Only vocabulary from this unit is tested here.
+     ========================================================= */
+
+  /* -------------------------------------------------------
+     BASIC VOCAB — LESSON 6
+     Everyday Objects
+     ------------------------------------------------------- */
+
+  l6: {
+    id: "l6",
+    title: "Basic Vocabulary 1 — Everyday Objects",
+    unit: "u_basicvocab",
+    xp: 20,
+
+    description:
+      "Learn common Korean words for everyday objects.",
+
+    vocabIds: [
+      "v10",
+      "v18",
+      "v19",
+      "v20"
+    ],
+
+    questions: [
+
+      {
+        type: "translate_ko_en",
+        prompt: "책",
+        answer: "book"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "집",
+        answer: "house"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "돈",
+        answer: "money"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "커피",
+        answer: "coffee"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "book",
+        answer: "책",
+        options: ["책", "집", "돈", "커피"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "house",
+        answer: "집",
+        options: ["책", "집", "돈", "커피"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "money",
+        answer: "돈",
+        options: ["책", "집", "돈", "커피"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "coffee",
+        answer: "커피",
+        options: ["책", "집", "돈", "커피"]
+      },
+
+      {
+        type: "match",
+        prompt: "Match each Korean word with its meaning.",
+        pairs: [
+          ["책", "book"],
+          ["집", "house"],
+          ["돈", "money"],
+          ["커피", "coffee"]
+        ]
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     BASIC VOCAB — LESSON 7
+     People
+     ------------------------------------------------------- */
+
+  l7: {
+    id: "l7",
+    title: "Basic Vocabulary 2 — People",
+    unit: "u_basicvocab",
+    xp: 20,
+
+    description:
+      "Learn common Korean words for people and relationships.",
+
+    vocabIds: [
+      "v1",
+      "v6",
+      "v7"
+    ],
+
+    questions: [
+
+      {
+        type: "translate_ko_en",
+        prompt: "사람",
+        answer: "person"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "친구",
+        answer: "friend"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "person",
+        answer: "사람",
+        options: ["사람", "친구", "학교", "집"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "friend",
+        answer: "친구",
+        options: ["사람", "친구", "학교", "책"]
+      },
+
+      {
+        type: "mc",
+        prompt: "'친구' means:",
+        options: ["friend", "person", "school", "book"],
+        answer: "friend"
+      },
+
+      {
+        type: "mc",
+        prompt: "'사람' means:",
+        options: ["person", "friend", "house", "coffee"],
+        answer: "person"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the Korean words to their meanings.",
+        pairs: [
+          ["사람", "person"],
+          ["친구", "friend"]
+        ]
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     BASIC VOCAB — LESSON 8
+     Places
+     ------------------------------------------------------- */
+
+  l8: {
+    id: "l8",
+    title: "Basic Vocabulary 3 — Places",
+    unit: "u_basicvocab",
+    xp: 20,
+
+    description:
+      "Learn common Korean words for places.",
+
+    vocabIds: [
+      "v1",
+      "v10"
+    ],
+
+    questions: [
+
+      {
+        type: "translate_ko_en",
+        prompt: "학교",
+        answer: "school"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "집",
+        answer: "house"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "school",
+        answer: "학교",
+        options: ["학교", "집", "책", "친구"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "house",
+        answer: "집",
+        options: ["학교", "집", "돈", "커피"]
+      },
+
+      {
+        type: "mc",
+        prompt: "'학교' means:",
+        options: ["school", "house", "book", "friend"],
+        answer: "school"
+      },
+
+      {
+        type: "mc",
+        prompt: "'집' means:",
+        options: ["house", "school", "coffee", "money"],
+        answer: "house"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the places to their meanings.",
+        pairs: [
+          ["학교", "school"],
+          ["집", "house"]
+        ]
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     BASIC VOCAB — LESSON 9
+     Food & Drinks
+     ------------------------------------------------------- */
+
+  l9: {
+    id: "l9",
+    title: "Basic Vocabulary 4 — Food & Drinks",
+    unit: "u_basicvocab",
+    xp: 20,
+
+    description:
+      "Learn basic Korean vocabulary related to food and drinks.",
+
+    vocabIds: [
+      "v5",
+      "v18",
+      "v20"
+    ],
+
+    questions: [
+
+      {
+        type: "translate_ko_en",
+        prompt: "밥",
+        answer: "rice / meal"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "커피",
+        answer: "coffee"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "rice / meal",
+        answer: "밥",
+        options: ["밥", "커피", "책", "집"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "coffee",
+        answer: "커피",
+        options: ["커피", "밥", "물", "책"]
+      },
+
+      {
+        type: "mc",
+        prompt: "'밥' commonly refers to:",
+        options: ["rice / meal", "book", "house", "friend"],
+        answer: "rice / meal"
+      },
+
+      {
+        type: "mc",
+        prompt: "'커피' means:",
+        options: ["coffee", "water", "rice", "milk"],
+        answer: "coffee"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the food and drink words.",
+        pairs: [
+          ["밥", "rice / meal"],
+          ["커피", "coffee"]
+        ]
+      }
+    ]
+  },
+
+
+  /* -------------------------------------------------------
+     BASIC VOCAB — LESSON 10
+     Core Everyday Words
+     ------------------------------------------------------- */
+
+  l10: {
+    id: "l10",
+    title: "Basic Vocabulary 5 — Everyday Words Review",
+    unit: "u_basicvocab",
+    xp: 25,
+
+    description:
+      "Review the essential everyday vocabulary learned in the Basic Vocabulary unit.",
+
+    vocabIds: [
+      "v1",
+      "v5",
+      "v6",
+      "v10",
+      "v18",
+      "v19",
+      "v20"
+    ],
+
+    questions: [
+
+      {
+        type: "match",
+        prompt: "Match the Korean word to its meaning.",
+        pairs: [
+          ["학교", "school"],
+          ["친구", "friend"],
+          ["책", "book"],
+          ["집", "house"],
+          ["돈", "money"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match the Korean word to its meaning.",
+        pairs: [
+          ["밥", "rice / meal"],
+          ["커피", "coffee"],
+          ["사람", "person"]
+        ]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "school",
+        answer: "학교",
+        options: ["학교", "친구", "책", "집"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "friend",
+        answer: "친구",
+        options: ["친구", "학교", "돈", "밥"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "book",
+        answer: "책",
+        options: ["책", "집", "커피", "사람"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "house",
+        answer: "집",
+        options: ["집", "학교", "돈", "친구"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "money",
+        answer: "돈",
+        options: ["돈", "책", "밥", "커피"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "rice / meal",
+        answer: "밥",
+        options: ["밥", "집", "사람", "학교"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "coffee",
+        answer: "커피",
+        options: ["커피", "책", "친구", "돈"]
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "친구",
+        answer: "friend"
+      }
+    ]
+  },
+
+
+  /* =========================================================
+     GREETINGS
+     ========================================================= */
+
+  l11: {
+    id: "l11",
+    title: "Greetings 1 — Hello & Goodbye",
+    unit: "u_greetings",
+    xp: 20,
+
+    vocabIds: ["v2"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "안녕하세요",
+        answer: "hello"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "hello",
+        answer: "안녕하세요",
+        options: ["안녕하세요", "감사합니다", "죄송합니다", "괜찮아요"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which phrase is used to politely greet someone?",
+        options: ["안녕하세요", "감사합니다", "미안해요", "괜찮아요"],
+        answer: "안녕하세요"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and choose what you hear.",
+        audioText: "안녕하세요",
+        options: [
+          "안녕하세요",
+          "감사합니다",
+          "죄송합니다",
+          "괜찮아요"
+        ],
+        answer: "안녕하세요"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the greeting.",
+        pairs: [
+          ["안녕하세요", "hello"]
+        ]
+      }
+    ]
+  },
+
+
+  l12: {
+    id: "l12",
+    title: "Greetings 2 — Thank You",
+    unit: "u_greetings",
+    xp: 20,
+
+    vocabIds: ["v3"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "감사합니다",
+        answer: "thank you"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "thank you",
+        answer: "감사합니다",
+        options: ["감사합니다", "안녕하세요", "죄송합니다", "괜찮아요"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which phrase means 'thank you'?",
+        options: ["감사합니다", "안녕하세요", "괜찮아요", "친구"],
+        answer: "감사합니다"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and choose what you hear.",
+        audioText: "감사합니다",
+        options: [
+          "감사합니다",
+          "안녕하세요",
+          "죄송합니다",
+          "괜찮아요"
+        ],
+        answer: "감사합니다"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the phrase to its meaning.",
+        pairs: [
+          ["감사합니다", "thank you"]
+        ]
+      }
+    ]
+  },
+
+
+  l13: {
+    id: "l13",
+    title: "Greetings 3 — Apologies",
+    unit: "u_greetings",
+    xp: 20,
+
+    vocabIds: ["v6"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "죄송합니다",
+        answer: "I'm sorry"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "I'm sorry",
+        answer: "죄송합니다",
+        options: ["죄송합니다", "감사합니다", "안녕하세요", "괜찮아요"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which phrase is used to apologize politely?",
+        options: ["죄송합니다", "감사합니다", "안녕하세요", "친구"],
+        answer: "죄송합니다"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and choose what you hear.",
+        audioText: "죄송합니다",
+        options: [
+          "죄송합니다",
+          "감사합니다",
+          "안녕하세요",
+          "괜찮아요"
+        ],
+        answer: "죄송합니다"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the phrase to its meaning.",
+        pairs: [
+          ["죄송합니다", "I'm sorry"]
+        ]
+      }
+    ]
+  },
+
+
+  l14: {
+    id: "l14",
+    title: "Greetings 4 — Responses",
+    unit: "u_greetings",
+    xp: 20,
+
+    vocabIds: ["v6"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "괜찮아요",
+        answer: "It's okay"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "It's okay",
+        answer: "괜찮아요",
+        options: ["괜찮아요", "죄송합니다", "감사합니다", "안녕하세요"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What can you say in response to an apology to mean 'It's okay'?",
+        options: ["괜찮아요", "감사합니다", "안녕하세요", "친구"],
+        answer: "괜찮아요"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and choose what you hear.",
+        audioText: "괜찮아요",
+        options: [
+          "괜찮아요",
+          "죄송합니다",
+          "감사합니다",
+          "안녕하세요"
+        ],
+        answer: "괜찮아요"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the response.",
+        pairs: [
+          ["괜찮아요", "It's okay"]
+        ]
+      }
+    ]
+  },
+
+
+  l15: {
+    id: "l15",
+    title: "Greetings 5 — Conversation Review",
+    unit: "u_greetings",
+    xp: 25,
+
+    vocabIds: ["v2", "v3", "v6"],
+
+    questions: [
+
+      {
+        type: "match",
+        prompt: "Match each greeting expression with its meaning.",
+        pairs: [
+          ["안녕하세요", "hello"],
+          ["감사합니다", "thank you"],
+          ["죄송합니다", "I'm sorry"],
+          ["괜찮아요", "It's okay"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "Someone says 감사합니다. What does it mean?",
+        options: ["Thank you", "Hello", "I'm sorry", "It's okay"],
+        answer: "Thank you"
+      },
+
+      {
+        type: "mc",
+        prompt: "Someone says 죄송합니다. What does it mean?",
+        options: ["I'm sorry", "Thank you", "Hello", "Goodbye"],
+        answer: "I'm sorry"
+      },
+
+      {
+        type: "mc",
+        prompt: "Someone apologizes. Which response means 'It's okay'?",
+        options: ["괜찮아요", "감사합니다", "안녕하세요", "죄송합니다"],
+        answer: "괜찮아요"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and identify the phrase.",
+        audioText: "감사합니다",
+        options: [
+          "안녕하세요",
+          "감사합니다",
+          "죄송합니다",
+          "괜찮아요"
+        ],
+        answer: "감사합니다"
+      },
+
+      {
+        type: "listening",
+        prompt: "Listen and identify the phrase.",
+        audioText: "안녕하세요",
+        options: [
+          "안녕하세요",
+          "감사합니다",
+          "죄송합니다",
+          "괜찮아요"
+        ],
+        answer: "안녕하세요"
+      }
+    ]
+  },
+
+
+  /* =========================================================
+     NUMBERS
+     ========================================================= */
+
+  l16: {
+    id: "l16",
+    title: "Numbers 1 — 하나 to 다섯",
+    unit: "u_numbers",
+    xp: 20,
+
+    vocabIds: ["v8"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "하나",
+        answer: "one"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "둘",
+        answer: "two"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "셋",
+        answer: "three"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "넷",
+        answer: "four"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "다섯",
+        answer: "five"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the numbers.",
+        pairs: [
+          ["1", "하나"],
+          ["2", "둘"],
+          ["3", "셋"],
+          ["4", "넷"],
+          ["5", "다섯"]
+        ]
+      }
+    ]
+  },
+
+
+  l17: {
+    id: "l17",
+    title: "Numbers 2 — Six to Ten",
+    unit: "u_numbers",
+    xp: 20,
+
+    vocabIds: ["v9"],
+
+    questions: [
+      {
+        type: "translate_ko_en",
+        prompt: "여섯",
+        answer: "six"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "일곱",
+        answer: "seven"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "여덟",
+        answer: "eight"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "아홉",
+        answer: "nine"
+      },
+      {
+        type: "translate_ko_en",
+        prompt: "열",
+        answer: "ten"
+      },
+
+      {
+        type: "match",
+        prompt: "Match the numbers.",
+        pairs: [
+          ["6", "여섯"],
+          ["7", "일곱"],
+          ["8", "여덟"],
+          ["9", "아홉"],
+          ["10", "열"]
+        ]
+      }
+    ]
+  },
+
+
+  l18: {
+    id: "l18",
+    title: "Numbers 3 — Counting Practice",
+    unit: "u_numbers",
+    xp: 20,
+
+    vocabIds: ["v8", "v9"],
+
+    questions: [
+      {
+        type: "mc",
+        prompt: "Which Korean number means 3?",
+        options: ["셋", "둘", "넷", "다섯"],
+        answer: "셋"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Korean number means 7?",
+        options: ["여섯", "일곱", "여덟", "아홉"],
+        answer: "일곱"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Korean number means 10?",
+        options: ["아홉", "열", "여덟", "일곱"],
+        answer: "열"
+      },
+
+      {
+        type: "fill",
+        prompt: "사과 ___ 주세요. (one)",
+        answer: "하나",
+        options: ["하나", "둘", "셋", "넷"]
+      },
+
+      {
+        type: "fill",
+        prompt: "사과 ___ 주세요. (two)",
+        answer: "둘",
+        options: ["하나", "둘", "셋", "넷"]
+      }
+    ]
+  },
+
+
+  l19: {
+    id: "l19",
+    title: "Numbers 4 — Native Korean Numbers",
+    unit: "u_numbers",
+    xp: 20,
+
+    vocabIds: ["v8", "v9"],
+
+    questions: [
+      {
+        type: "match",
+        prompt: "Match each number.",
+        pairs: [
+          ["1", "하나"],
+          ["2", "둘"],
+          ["3", "셋"],
+          ["4", "넷"],
+          ["5", "다섯"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match each number.",
+        pairs: [
+          ["6", "여섯"],
+          ["7", "일곱"],
+          ["8", "여덟"],
+          ["9", "아홉"],
+          ["10", "열"]
+        ]
+      },
+
+      {
+        type: "mc",
+        prompt: "What is 5 in Korean?",
+        options: ["다섯", "넷", "여섯", "셋"],
+        answer: "다섯"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is 8 in Korean?",
+        options: ["여덟", "일곱", "아홉", "여섯"],
+        answer: "여덟"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is 9 in Korean?",
+        options: ["아홉", "여덟", "열", "일곱"],
+        answer: "아홉"
+      }
+    ]
+  },
+
+
+  l20: {
+    id: "l20",
+    title: "Numbers 5 — Numbers Review",
+    unit: "u_numbers",
+    xp: 25,
+
+    vocabIds: ["v8", "v9"],
+
+    questions: [
+
+      {
+        type: "match",
+        prompt: "Match 1–5.",
+        pairs: [
+          ["1", "하나"],
+          ["2", "둘"],
+          ["3", "셋"],
+          ["4", "넷"],
+          ["5", "다섯"]
+        ]
+      },
+
+      {
+        type: "match",
+        prompt: "Match 6–10.",
+        pairs: [
+          ["6", "여섯"],
+          ["7", "일곱"],
+          ["8", "여덟"],
+          ["9", "아홉"],
+          ["10", "열"]
+        ]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "one",
+        answer: "하나",
+        options: ["하나", "둘", "셋", "넷"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "five",
+        answer: "다섯",
+        options: ["다섯", "여섯", "일곱", "넷"]
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "ten",
+        answer: "열",
+        options: ["열", "아홉", "여덟", "일곱"]
+      },
+
+      {
+        type: "fill",
+        prompt: "사과 ___ 주세요. (three)",
+        answer: "셋",
+        options: ["하나", "둘", "셋", "넷"]
+      },
+
+      {
+        type: "fill",
+        prompt: "사과 ___ 주세요. (four)",
+        answer: "넷",
+        options: ["하나", "둘", "셋", "넷"]
+      }
+    ]
+  },
+
+
+  /* =========================================================
+     BASIC SENTENCE STRUCTURE
+     ========================================================= */
+
+  l21: {
+    id: "l21",
+    title: "Sentence Structure 1 — Korean Word Order",
+    unit: "u_sentence",
+    xp: 25,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the basic Korean sentence order?",
+        options: [
+          "Subject-Object-Verb",
+          "Subject-Verb-Object",
+          "Verb-Subject-Object",
+          "Object-Subject-Verb"
+        ],
+        answer: "Subject-Object-Verb"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I eat rice.'",
+        words: ["저는", "밥을", "먹어요"],
+        answer: "저는 밥을 먹어요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I drink coffee.'",
+        words: ["저는", "커피를", "마셔요"],
+        answer: "저는 커피를 마셔요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Where does the verb normally appear in a basic Korean sentence?",
+        options: ["At the end", "At the beginning", "In the middle", "It can never appear"],
+        answer: "At the end"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school.'",
+        words: ["저는", "학교에", "가요"],
+        answer: "저는 학교에 가요"
+      }
+    ]
+  },
+
+
+  l22: {
+    id: "l22",
+    title: "Sentence Structure 2 — Subject & Topic",
+    unit: "u_sentence",
+    xp: 25,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle commonly marks the topic?",
+        options: ["은/는", "을/를", "에", "에서"],
+        answer: "은/는"
+      },
+
+      {
+        type: "fill",
+        prompt: "저___ 학생이에요.",
+        answer: "는",
+        options: ["는", "를", "에", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "친구___ 와요.",
+        answer: "가",
+        options: ["가", "를", "는", "에"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle commonly marks the subject?",
+        options: ["이/가", "은/는", "을/를", "에"],
+        answer: "이/가"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'The friend comes.'",
+        words: ["친구가", "와요"],
+        answer: "친구가 와요"
+      }
+    ]
+  },
+
+
+  l23: {
+    id: "l23",
+    title: "Sentence Structure 3 — Objects",
+    unit: "u_sentence",
+    xp: 25,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle marks the object?",
+        options: ["을/를", "은/는", "이/가", "에"],
+        answer: "을/를"
+      },
+
+      {
+        type: "fill",
+        prompt: "밥___ 먹어요.",
+        answer: "을",
+        options: ["을", "가", "는", "에"]
+      },
+
+      {
+        type: "fill",
+        prompt: "커피___ 마셔요.",
+        answer: "를",
+        options: ["를", "가", "에", "는"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I eat rice.'",
+        words: ["저는", "밥을", "먹어요"],
+        answer: "저는 밥을 먹어요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I drink coffee.'",
+        words: ["저는", "커피를", "마셔요"],
+        answer: "저는 커피를 마셔요"
+      }
+    ]
+  },
+
+
+  l24: {
+    id: "l24",
+    title: "Sentence Structure 4 — Locations",
+    unit: "u_sentence",
+    xp: 25,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle commonly marks a destination or location?",
+        options: ["에", "을/를", "은/는", "이/가"],
+        answer: "에"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 가요.",
+        answer: "에",
+        options: ["에", "를", "는", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "집___ 있어요.",
+        answer: "에",
+        options: ["에", "를", "는", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school.'",
+        words: ["저는", "학교에", "가요"],
+        answer: "저는 학교에 가요"
+      },
+
+      {
+        type: "mc",
+        prompt: "In '학교에 가요', what does 에 indicate?",
+        options: ["destination", "object", "topic", "subject"],
+        answer: "destination"
+      }
+    ]
+  },
+
+
+  l25: {
+    id: "l25",
+    title: "Sentence Structure 5 — Full Review",
+    unit: "u_sentence",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the basic Korean word order?",
+        options: [
+          "Subject-Object-Verb",
+          "Subject-Verb-Object",
+          "Object-Verb-Subject",
+          "Verb-Object-Subject"
+        ],
+        answer: "Subject-Object-Verb"
+      },
+
+      {
+        type: "fill",
+        prompt: "저___ 학생이에요.",
+        answer: "는",
+        options: ["는", "를", "에", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "밥___ 먹어요.",
+        answer: "을",
+        options: ["을", "는", "에", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 가요.",
+        answer: "에",
+        options: ["에", "를", "는", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school.'",
+        words: ["저는", "학교에", "가요"],
+        answer: "저는 학교에 가요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I eat rice.'",
+        words: ["저는", "밥을", "먹어요"],
+        answer: "저는 밥을 먹어요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I drink coffee.'",
+        words: ["저는", "커피를", "마셔요"],
+        answer: "저는 커피를 마셔요"
+      }
+    ]
+  }
+
+};
 
 /* ===================== TOPIK PRACTICE SETS ===================== */
 
