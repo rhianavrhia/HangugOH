@@ -410,57 +410,109 @@ function renderReading(card, q) {
 }
 
 function renderListening(card, q) {
+
+  /*
+   * LISTENING QUESTION
+   *
+   * q.prompt     = question shown to the learner
+   * q.audioText  = Korean sentence/dialogue to speak
+   * q.options    = answer choices
+   * q.answer     = correct answer
+   */
+
   questionPrompt(card, q.prompt);
+
+  // ==============================
+  // AUDIO BUTTON
+  // ==============================
 
   const playBtn = el(
     "button",
-    { class: "btn btn-secondary listen-btn" },
+    {
+      class: "btn btn-secondary listen-btn",
+      type: "button"
+    },
     "🔊 Play Audio"
   );
 
   playBtn.addEventListener("click", () => {
+
+    if (!q.audioText) {
+      toast("No audio is available for this question.", "info");
+      return;
+    }
+
     speakKorean(q.audioText);
+
   });
 
   card.appendChild(playBtn);
 
-  const optWrap = el("div", { class: "option-grid" });
+
+  // ==============================
+  // ANSWER OPTIONS
+  // ==============================
+
+  const optWrap = el(
+    "div",
+    {
+      class: "option-grid"
+    }
+  );
 
   let selected = null;
 
   q.options.forEach((opt) => {
+
     const btn = el(
       "button",
-      { class: "option-btn ko-option" },
+      {
+        class: "option-btn ko-option",
+        type: "button"
+      },
       opt
     );
 
     btn.addEventListener("click", () => {
+
       optWrap
         .querySelectorAll(".option-btn")
-        .forEach((b) =>
-          b.classList.remove("selected")
-        );
+        .forEach((b) => {
+          b.classList.remove("selected");
+        });
 
       btn.classList.add("selected");
+
       selected = opt;
+
     });
 
     optWrap.appendChild(btn);
+
   });
 
   card.appendChild(optWrap);
 
+
+  // ==============================
+  // CHECK ANSWER
+  // ==============================
+
   return () => {
+
     if (selected === null) {
+
       toast(
         "Choose an answer first",
         "info"
       );
+
       return null;
+
     }
 
-    const correct = selected === q.answer;
+    const correct =
+      selected === q.answer;
 
     markOptionResult(
       optWrap,
@@ -469,7 +521,9 @@ function renderListening(card, q) {
     );
 
     return correct;
+
   };
+
 }
 
 /* ===================== Korean Voice System ===================== */
