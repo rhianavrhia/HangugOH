@@ -2757,14 +2757,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "'친구' means:",
-        options: ["friend", "person", "school", "book"],
+        options: ["book", "person", "school", "friend"],
         answer: "friend"
       },
 
       {
         type: "mc",
         prompt: "'사람' means:",
-        options: ["person", "friend", "house", "coffee"],
+        options: ["friend", "person", "house", "coffee"],
         answer: "person"
       },
 
@@ -2824,13 +2824,13 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "house",
         answer: "집",
-        options: ["학교", "집", "돈", "커피"]
+        options: ["학교", "돈", "집", "커피"]
       },
 
       {
         type: "mc",
         prompt: "'학교' means:",
-        options: ["school", "house", "book", "friend"],
+        options: ["coffee", "house", "school", "friend"],
         answer: "school"
       },
 
@@ -2891,14 +2891,14 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "rice / meal",
         answer: "밥",
-        options: ["밥", "커피", "책", "집"]
+        options: ["돈", "커피", "밥", "집"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "coffee",
         answer: "커피",
-        options: ["커피", "밥", "물", "책"]
+        options: ["밥", "커피", "물", "책"]
       },
 
       {
@@ -2911,7 +2911,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "'커피' means:",
-        options: ["coffee", "water", "rice", "milk"],
+        options: ["milk", "water", "rice", "coffee"],
         answer: "coffee"
       },
 
@@ -2986,21 +2986,21 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "friend",
         answer: "친구",
-        options: ["친구", "학교", "돈", "밥"]
+        options: ["사람", "학교", "돈", "친구"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "book",
         answer: "책",
-        options: ["책", "집", "커피", "사람"]
+        options: ["책", "돈", "집", "사람"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "house",
         answer: "집",
-        options: ["집", "학교", "돈", "친구"]
+        options: ["학교", "집", "돈", "친구"]
       },
 
       {
@@ -3014,14 +3014,14 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "rice / meal",
         answer: "밥",
-        options: ["밥", "집", "사람", "학교"]
+        options: ["학교", "집", "사람", "밥"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "coffee",
         answer: "커피",
-        options: ["커피", "책", "친구", "돈"]
+        options: ["돈", "책", "친구", "커피"]
       },
 
       {
@@ -3062,7 +3062,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which phrase is used to politely greet someone?",
-        options: ["안녕하세요", "감사합니다", "미안해요", "괜찮아요"],
+        options: ["미안해요", "감사합니다", "안녕하세요", "괜찮아요"],
         answer: "안녕하세요"
       },
 
@@ -3071,10 +3071,10 @@ const LESSONS = {
         prompt: "Listen and choose what you hear.",
         audioText: "안녕하세요",
         options: [
-          "안녕하세요",
+          "괜찮아요",
           "감사합니다",
           "죄송합니다",
-          "괜찮아요"
+          "안녕하세요"
         ],
         answer: "안녕하세요"
       },
@@ -3115,7 +3115,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which phrase means 'thank you'?",
-        options: ["감사합니다", "안녕하세요", "괜찮아요", "친구"],
+        options: ["안녕하세요", "감사합니다", "괜찮아요", "친구"],
         answer: "감사합니다"
       },
 
@@ -3124,10 +3124,10 @@ const LESSONS = {
         prompt: "Listen and choose what you hear.",
         audioText: "감사합니다",
         options: [
-          "감사합니다",
+          "괜찮아요",
           "안녕하세요",
           "죄송합니다",
-          "괜찮아요"
+          "감사합니다"
         ],
         answer: "감사합니다"
       },
@@ -3162,13 +3162,13 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "I'm sorry",
         answer: "죄송합니다",
-        options: ["죄송합니다", "감사합니다", "안녕하세요", "괜찮아요"]
+        options: ["괜찮아요", "감사합니다", "안녕하세요", "죄송합니다"]
       },
 
       {
         type: "mc",
         prompt: "Which phrase is used to apologize politely?",
-        options: ["죄송합니다", "감사합니다", "안녕하세요", "친구"],
+        options: ["안녕하세요", "감사합니다", "죄송합니다", "친구"],
         answer: "죄송합니다"
       },
 
@@ -3215,7 +3215,7 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "It's okay",
         answer: "괜찮아요",
-        options: ["괜찮아요", "죄송합니다", "감사합니다", "안녕하세요"]
+        options: ["죄송합니다", "괜찮아요", "감사합니다", "안녕하세요"]
       },
 
       {
@@ -3230,10 +3230,10 @@ const LESSONS = {
         prompt: "Listen and choose what you hear.",
         audioText: "괜찮아요",
         options: [
-          "괜찮아요",
+          "안녕하세요",
           "죄송합니다",
           "감사합니다",
-          "안녕하세요"
+          "괜찮아요"
         ],
         answer: "괜찮아요"
       },
@@ -3273,7 +3273,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Someone says 감사합니다. What does it mean?",
-        options: ["Thank you", "Hello", "I'm sorry", "It's okay"],
+        options: ["I'm sorry", "Hello", "Thank you", "It's okay"],
         answer: "Thank you"
       },
 
@@ -3287,7 +3287,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Someone apologizes. Which response means 'It's okay'?",
-        options: ["괜찮아요", "감사합니다", "안녕하세요", "죄송합니다"],
+        options: ["죄송합니다", "감사합니다", "안녕하세요", "괜찮아요"],
         answer: "괜찮아요"
       },
 
@@ -3458,14 +3458,14 @@ const LESSONS = {
         type: "fill",
         prompt: "사과 ___ 주세요. (one)",
         answer: "하나",
-        options: ["하나", "둘", "셋", "넷"]
+        options: ["넷", "둘", "셋", "하나"]
       },
 
       {
         type: "fill",
         prompt: "사과 ___ 주세요. (two)",
         answer: "둘",
-        options: ["하나", "둘", "셋", "넷"]
+        options: ["하나", "셋", "둘", "넷"]
       }
     ]
   },
@@ -3507,14 +3507,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What is 5 in Korean?",
-        options: ["다섯", "넷", "여섯", "셋"],
+        options: ["넷", "다섯", "여섯", "셋"],
         answer: "다섯"
       },
 
       {
         type: "mc",
         prompt: "What is 8 in Korean?",
-        options: ["여덟", "일곱", "아홉", "여섯"],
+        options: ["여섯", "일곱", "아홉", "여덟"],
         answer: "여덟"
       },
 
@@ -3566,14 +3566,14 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "one",
         answer: "하나",
-        options: ["하나", "둘", "셋", "넷"]
+        options: ["셋", "둘", "하나", "넷"]
       },
 
       {
         type: "translate_en_ko",
         prompt: "five",
         answer: "다섯",
-        options: ["다섯", "여섯", "일곱", "넷"]
+        options: ["넷", "여섯", "일곱", "다섯"]
       },
 
       {
@@ -3618,9 +3618,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What is the basic Korean sentence order?",
         options: [
-          "Subject-Object-Verb",
-          "Subject-Verb-Object",
           "Verb-Subject-Object",
+          "Subject-Verb-Object",
+          "Subject-Object-Verb",
           "Object-Subject-Verb"
         ],
         answer: "Subject-Object-Verb"
@@ -3670,7 +3670,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle commonly marks the topic?",
-        options: ["은/는", "을/를", "에", "에서"],
+        options: ["을/를", "은/는", "에", "에서"],
         answer: "은/는"
       },
 
@@ -3678,7 +3678,7 @@ const LESSONS = {
         type: "fill",
         prompt: "저___ 학생이에요.",
         answer: "는",
-        options: ["는", "를", "에", "가"]
+        options: ["가", "를", "에", "는"]
       },
 
       {
@@ -3691,7 +3691,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle commonly marks the subject?",
-        options: ["이/가", "은/는", "을/를", "에"],
+        options: ["은/는", "이/가", "을/를", "에"],
         answer: "이/가"
       },
 
@@ -3718,7 +3718,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle marks the object?",
-        options: ["을/를", "은/는", "이/가", "에"],
+        options: ["에", "은/는", "이/가", "을/를"],
         answer: "을/를"
       },
 
@@ -3733,7 +3733,7 @@ const LESSONS = {
         type: "fill",
         prompt: "커피___ 마셔요.",
         answer: "를",
-        options: ["를", "가", "에", "는"]
+        options: ["가", "를", "에", "는"]
       },
 
       {
@@ -3766,7 +3766,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle commonly marks a destination or location?",
-        options: ["에", "을/를", "은/는", "이/가"],
+        options: ["은/는", "을/를", "에", "이/가"],
         answer: "에"
       },
 
@@ -3794,7 +3794,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "In '학교에 가요', what does 에 indicate?",
-        options: ["destination", "object", "topic", "subject"],
+        options: ["subject", "object", "topic", "destination"],
         answer: "destination"
       }
     ]
@@ -3827,21 +3827,21 @@ const LESSONS = {
         type: "fill",
         prompt: "저___ 학생이에요.",
         answer: "는",
-        options: ["는", "를", "에", "가"]
+        options: ["를", "는", "에", "가"]
       },
 
       {
         type: "fill",
         prompt: "밥___ 먹어요.",
         answer: "을",
-        options: ["을", "는", "에", "가"]
+        options: ["는", "을", "에", "가"]
       },
 
       {
         type: "fill",
         prompt: "학교___ 가요.",
         answer: "에",
-        options: ["에", "를", "는", "가"]
+        options: ["가", "를", "는", "에"]
       },
 
       {
@@ -3893,24 +3893,24 @@ const LESSONS = {
         type: "fill",
         prompt: "저___ 학생이에요.",
         answer: "는",
-        options: ["는", "를", "에", "가"]
+        options: ["에", "를", "는", "가"]
       },
 
       {
         type: "fill",
         prompt: "민수___ 친구예요.",
         answer: "는",
-        options: ["는", "을", "에", "가"]
+        options: ["에", "을", "는", "가"]
       },
 
       {
         type: "mc",
         prompt: "Which sentence correctly uses 는?",
         options: [
-          "저는 학생이에요.",
+          "저가 학생이에요.",
           "저를 학생이에요.",
           "저에 학생이에요.",
-          "저가 학생이에요."
+          "저는 학생이에요."
         ],
         answer: "저는 학생이에요."
       },
@@ -3938,8 +3938,8 @@ const LESSONS = {
         type: "mc",
         prompt: "What does 이/가 mainly mark?",
         options: [
-          "The subject",
           "The topic",
+          "The subject",
           "The object",
           "The destination"
         ],
@@ -3950,14 +3950,14 @@ const LESSONS = {
         type: "fill",
         prompt: "친구___ 와요.",
         answer: "가",
-        options: ["가", "를", "는", "에"]
+        options: ["를", "가", "는", "에"]
       },
 
       {
         type: "fill",
         prompt: "학생___ 많아요.",
         answer: "이",
-        options: ["이", "는", "을", "에"]
+        options: ["에", "는", "을", "이"]
       },
 
       {
@@ -4007,7 +4007,7 @@ const LESSONS = {
         type: "fill",
         prompt: "밥___ 먹어요.",
         answer: "을",
-        options: ["을", "는", "에", "가"]
+        options: ["에", "는", "을", "가"]
       },
 
       {
@@ -4021,8 +4021,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which sentence correctly uses 를?",
         options: [
-          "커피를 마셔요.",
           "커피가 마셔요.",
+          "커피를 마셔요.",
           "커피에 마셔요.",
           "커피는 마셔요."
         ],
@@ -4064,14 +4064,14 @@ const LESSONS = {
         type: "fill",
         prompt: "학교___ 가요.",
         answer: "에",
-        options: ["에", "를", "는", "가"]
+        options: ["는", "를", "에", "가"]
       },
 
       {
         type: "fill",
         prompt: "세 시___ 만나요.",
         answer: "에",
-        options: ["에", "를", "가", "는"]
+        options: ["가", "를", "에", "는"]
       },
 
       {
@@ -4089,8 +4089,8 @@ const LESSONS = {
       {
         type: "arrange",
         prompt: "Arrange: 'I go to school at 8.'",
-        words: ["저는", "8시에", "학교에", "가요"],
-        answer: "저는 8시에 학교에 가요"
+        words: ["저는", "8", "시에", "학교에", "가요"],
+        answer: "저는 8 시에 학교에 가요"
       }
     ]
   },
@@ -4108,7 +4108,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle marks the topic?",
-        options: ["은/는", "이/가", "을/를", "에"],
+        options: ["에", "이/가", "을/를", "은/는"],
         answer: "은/는"
       },
 
@@ -4143,10 +4143,10 @@ const LESSONS = {
         prompt: "친구___ 학교___ 가요.",
         answer: "가, 에",
         options: [
-          "가, 에",
+          "에, 가",
           "를, 는",
           "는, 를",
-          "에, 가"
+          "가, 에"
         ]
       },
 
@@ -4182,14 +4182,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What is the dictionary form of '가요'?",
-        options: ["가다", "오다", "먹다", "보다"],
+        options: ["보다", "오다", "먹다", "가다"],
         answer: "가다"
       },
 
       {
         type: "mc",
         prompt: "What is the polite present form of 가다?",
-        options: ["가요", "가다요", "갑요", "가어요"],
+        options: ["가어요", "가다요", "갑요", "가요"],
         answer: "가요"
       },
 
@@ -4197,13 +4197,13 @@ const LESSONS = {
         type: "fill",
         prompt: "학교에 ___요. (go)",
         answer: "가",
-        options: ["가", "오", "먹", "보"]
+        options: ["오", "가", "먹", "보"]
       },
 
       {
         type: "mc",
         prompt: "What is the polite present form of 오다?",
-        options: ["와요", "오요", "옵니다", "오아요"],
+        options: ["옵니다", "오요", "와요", "오아요"],
         answer: "와요"
       },
 
@@ -4244,14 +4244,14 @@ const LESSONS = {
         type: "fill",
         prompt: "밥을 ___요. (eat)",
         answer: "먹어",
-        options: ["먹어", "마셔", "가", "와"]
+        options: ["와", "마셔", "가", "먹어"]
       },
 
       {
         type: "fill",
         prompt: "물을 ___요. (drink)",
         answer: "마셔",
-        options: ["마셔", "먹어", "가", "봐"]
+        options: ["먹어", "마셔", "가", "봐"]
       },
 
       {
@@ -4276,7 +4276,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What is the polite present form of 보다?",
-        options: ["봐요", "보어요", "보요", "봅니다요"],
+        options: ["봅니다요", "보어요", "보요", "봐요"],
         answer: "봐요"
       },
 
@@ -4291,7 +4291,7 @@ const LESSONS = {
         type: "fill",
         prompt: "영화를 ___요. (watch)",
         answer: "봐",
-        options: ["봐", "해", "먹어", "가"]
+        options: ["해", "봐", "먹어", "가"]
       },
 
       {
@@ -4323,7 +4323,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 먹었어요 mean?",
-        options: ["ate", "eat", "will eat", "am eating"],
+        options: ["will eat", "eat", "ate", "am eating"],
         answer: "ate"
       },
 
@@ -4345,7 +4345,7 @@ const LESSONS = {
         type: "fill",
         prompt: "어제 학교에 ___어요. (go)",
         answer: "갔",
-        options: ["갔", "가", "갈", "가는"]
+        options: ["가는", "가", "갈", "갔"]
       },
 
       {
@@ -4370,21 +4370,21 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What is the polite present form of 가다?",
-        options: ["가요", "갔어요", "갈 거예요", "가세요"],
+        options: ["갈 거예요", "갔어요", "가요", "가세요"],
         answer: "가요"
       },
 
       {
         type: "mc",
         prompt: "What is the polite present form of 먹다?",
-        options: ["먹어요", "먹었어요", "먹을 거예요", "먹습니다만"],
+        options: ["먹었어요", "먹어요", "먹을 거예요", "먹습니다만"],
         answer: "먹어요"
       },
 
       {
         type: "mc",
         prompt: "What is the past form of 보다?",
-        options: ["봤어요", "봐요", "볼 거예요", "보세요"],
+        options: ["보세요", "봐요", "볼 거예요", "봤어요"],
         answer: "봤어요"
       },
 
@@ -4399,7 +4399,7 @@ const LESSONS = {
         type: "fill",
         prompt: "어제 친구를 만났___요.",
         answer: "어요",
-        options: ["어요", "아요", "을", "는"]
+        options: ["는", "아요", "을", "어요"]
       },
 
       {
@@ -4448,14 +4448,14 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "wake up",
         answer: "일어나다",
-        options: ["일어나다", "자다", "먹다", "가다"]
+        options: ["먹다", "자다", "일어나다", "가다"]
       },
 
       {
         type: "fill",
         prompt: "아침 7시에 ___요. (wake up)",
         answer: "일어나",
-        options: ["일어나", "자", "먹어", "가"]
+        options: ["자", "일어나", "먹어", "가"]
       },
 
       {
@@ -4481,8 +4481,8 @@ const LESSONS = {
         type: "mc",
         prompt: "What does 아침을 먹다 mean?",
         options: [
-          "to eat breakfast",
           "to eat lunch",
+          "to eat breakfast",
           "to eat dinner",
           "to drink breakfast"
         ],
@@ -4492,7 +4492,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which verb means 'to drink'?",
-        options: ["마시다", "먹다", "자다", "읽다"],
+        options: ["읽다", "먹다", "자다", "마시다"],
         answer: "마시다"
       },
 
@@ -4500,14 +4500,14 @@ const LESSONS = {
         type: "fill",
         prompt: "아침에 밥을 ___요.",
         answer: "먹어",
-        options: ["먹어", "자", "읽어", "가"]
+        options: ["가", "자", "읽어", "먹어"]
       },
 
       {
         type: "fill",
         prompt: "커피를 ___요.",
         answer: "마셔",
-        options: ["마셔", "먹어", "자", "가"]
+        options: ["먹어", "마셔", "자", "가"]
       },
 
       {
@@ -4552,7 +4552,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Where does the person study in this sentence? '학교에서 공부해요.'",
-        options: ["At school", "At home", "At a restaurant", "At a park"],
+        options: ["At restaurant", "At home", "At a school", "At a park"],
         answer: "At school"
       },
 
@@ -4578,14 +4578,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 운동하다 mean?",
-        options: ["to exercise", "to study", "to sleep", "to eat"],
+        options: ["to sleep", "to study", "to exercise", "to eat"],
         answer: "to exercise"
       },
 
       {
         type: "mc",
         prompt: "What does 일하다 mean?",
-        options: ["to work", "to rest", "to read", "to watch"],
+        options: ["to rest", "to work", "to read", "to watch"],
         answer: "to work"
       },
 
@@ -4633,7 +4633,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 공부하다 mean?",
-        options: ["to study", "to drink", "to sleep", "to exercise"],
+        options: ["to drink", "to study", "to sleep", "to exercise"],
         answer: "to study"
       },
 
@@ -4642,8 +4642,8 @@ const LESSONS = {
         prompt: "저는 아침 7시에 일어납니다. 아침을 먹고 학교에 갑니다. 학교에서 한국어를 공부합니다. 저녁에는 운동을 합니다.",
         question: "What does the person do after eating breakfast?",
         options: [
-          "Goes to school",
           "Goes to sleep",
+          "Goes to school",
           "Drinks coffee",
           "Exercises"
         ],
@@ -4690,7 +4690,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 시간 mean?",
-        options: ["time", "day", "week", "month"],
+        options: ["month", "day", "week", "time"],
         answer: "time"
       },
 
@@ -4698,14 +4698,14 @@ const LESSONS = {
         type: "translate_en_ko",
         prompt: "time",
         answer: "시간",
-        options: ["시간", "오늘", "내일", "날짜"]
+        options: ["내일", "오늘", "시간", "날짜"]
       },
 
       {
         type: "fill",
         prompt: "지금 몇 ___예요?",
         answer: "시",
-        options: ["시", "일", "월", "년"]
+        options: ["일", "시", "월", "년"]
       },
 
       {
@@ -4743,9 +4743,9 @@ const LESSONS = {
 
       {
         type: "fill",
-        prompt: "3시 ___분",
-        answer: "30",
-        options: ["30", "3", "13", "300"]
+        prompt: "3시 30__",
+        answer: "분",
+        options: ["30", "몇", "시", "분"]
       },
 
       {
@@ -4761,12 +4761,12 @@ const LESSONS = {
       },
 
       {
-        type: "fill",
-        prompt: "두 시 ___분에 만나요.",
-        answer: "30",
-        options: ["30", "2", "20", "12"]
+        type: "mc",
+        prompt: "두 시 삼십분에 만나요. What time?",    
+        options: ["08:18", "02:00", "11:30", "02:30"],
+        answer: "2:30"
       },
-
+      
       {
         type: "arrange",
         prompt: "Arrange: 'I meet at 7:30.'",
@@ -4789,7 +4789,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 월요일 mean?",
-        options: ["Monday", "Tuesday", "Wednesday", "Sunday"],
+        options: ["Wednesday", "Tuesday", "Monday", "Sunday"],
         answer: "Monday"
       },
 
@@ -4810,7 +4810,7 @@ const LESSONS = {
         type: "fill",
         prompt: "___에 학교에 가요. (Monday)",
         answer: "월요일",
-        options: ["월요일", "일요일", "토요일", "금요일"]
+        options: ["금요일", "일요일", "토요일", "월요일"]
       },
 
       {
@@ -4857,7 +4857,7 @@ const LESSONS = {
         type: "fill",
         prompt: "___ 친구를 만나요. (tomorrow)",
         answer: "내일",
-        options: ["내일", "어제", "오늘", "지금"]
+        options: ["지금", "어제", "오늘", "내일"]
       },
 
       {
@@ -4910,7 +4910,7 @@ const LESSONS = {
         type: "fill",
         prompt: "토요일 ___ 오후 2시에 만나요.",
         answer: "에",
-        options: ["에", "를", "가", "는"]
+        options: ["가", "를", "에", "는"]
       },
 
       {
@@ -4945,7 +4945,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 학교 mean?",
-        options: ["school", "hospital", "library", "restaurant"],
+        options: ["hospital", "school", "library", "restaurant"],
         answer: "school"
       },
 
@@ -4965,7 +4965,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 식당 mean?",
-        options: ["restaurant", "school", "library", "bank"],
+        options: ["bank", "school", "library", "restaurant"],
         answer: "restaurant"
       },
 
@@ -4995,7 +4995,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "What does 앞 mean?",
-        options: ["front", "behind", "inside", "outside"],
+        options: ["inside", "behind", "front", "outside"],
         answer: "front"
       },
 
@@ -5017,7 +5017,7 @@ const LESSONS = {
         type: "fill",
         prompt: "학교 ___에 집이 있어요. (next to)",
         answer: "옆",
-        options: ["옆", "뒤", "앞", "안"]
+        options: ["앞", "뒤", "옆", "안"]
       },
 
       {
@@ -5048,7 +5048,7 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle is commonly used for the place where an action happens?",
-        options: ["에서", "에", "를", "은"],
+        options: ["은", "에", "를", "에서"],
         answer: "에서"
       },
 
@@ -5070,7 +5070,7 @@ const LESSONS = {
         type: "fill",
         prompt: "학교___ 가요.",
         answer: "에",
-        options: ["에", "에서", "를", "는"]
+        options: ["에서", "에", "를", "는"]
       },
 
       {
@@ -5121,7 +5121,7 @@ const LESSONS = {
         type: "fill",
         prompt: "화장실이 ___예요?",
         answer: "어디",
-        options: ["어디", "누구", "무엇", "언제"]
+        options: ["무엇", "누구", "어디", "언제"]
       },
 
       {
@@ -5146,14 +5146,14 @@ const LESSONS = {
       {
         type: "mc",
         prompt: "Which particle is used for a destination?",
-        options: ["에", "에서", "를", "는"],
+        options: ["에서", "에", "를", "는"],
         answer: "에"
       },
 
       {
         type: "mc",
         prompt: "Which particle is used for the place where an action happens?",
-        options: ["에서", "에", "를", "가"],
+        options: ["를", "에", "에서", "가"],
         answer: "에서"
       },
 
@@ -5225,9 +5225,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does -(으)ㄴ/는 것 generally do?",
         options: [
-          "Turns a verb or adjective into a noun-like expression",
-          "Marks the location of an action",
           "Shows possession",
+          "Marks the location of an action",
+          "Turns a verb or adjective into a noun-like expression",
           "Marks the subject"
         ],
         answer: "Turns a verb or adjective into a noun-like expression"
@@ -5237,7 +5237,7 @@ const LESSONS = {
         type: "fill",
         prompt: "한국어를 배우___ 재미있어요.",
         answer: "는 것이",
-        options: ["는 것이", "을 에", "가 를", "에 는"]
+        options: ["을 에", "는 것이", "가 를", "에 는"]
       },
 
       {
@@ -5287,10 +5287,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What does -(으)ㄹ 것 같다 commonly express?",
         options: [
-          "A guess or expectation",
+          "A location",
           "A past experience",
           "A command",
-          "A location"
+          "A guess or expectation"
         ],
         answer: "A guess or expectation"
       },
@@ -5299,7 +5299,7 @@ const LESSONS = {
         type: "fill",
         prompt: "내일 비가 올 ___ 같아요.",
         answer: "것",
-        options: ["것", "는", "을", "에"]
+        options: ["을", "는", "것", "에"]
       },
 
       {
@@ -5325,8 +5325,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which sentence expresses a prediction?",
         options: [
-          "친구가 올 것 같아요.",
           "친구가 왔어요.",
+          "친구가 올 것 같아요.",
           "친구가 와요.",
           "친구가 오세요."
         ],
@@ -5368,9 +5368,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does '걸으면서 전화해요' mean?",
         options: [
-          "I make a phone call while walking.",
-          "I walk after making a phone call.",
           "I cannot walk and call.",
+          "I walk after making a phone call.",
+          "I make a phone call while walking.",
           "I called before walking."
         ],
         answer: "I make a phone call while walking."
@@ -5387,7 +5387,7 @@ const LESSONS = {
         type: "fill",
         prompt: "밥을 먹으___ 이야기를 했어요.",
         answer: "면서",
-        options: ["면서", "니까", "지만", "으면"]
+        options: ["으면", "니까", "지만", "면서"]
       }
     ]
   },
@@ -5406,10 +5406,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What does -(으)려고 하다 express?",
         options: [
-          "An intention or plan",
+          "A past habit",
           "A completed action",
           "A comparison",
-          "A past habit"
+          "An intention or plan"
         ],
         answer: "An intention or plan"
       },
@@ -5418,7 +5418,7 @@ const LESSONS = {
         type: "fill",
         prompt: "주말에 영화를 보___ 해요.",
         answer: "려고",
-        options: ["려고", "지만", "면서", "니까"]
+        options: ["면서", "지만", "려고", "니까"]
       },
 
       {
@@ -5444,9 +5444,9 @@ const LESSONS = {
         type: "mc",
         prompt: "Which sentence expresses intention?",
         options: [
-          "친구를 만나려고 해요.",
-          "친구를 만났어요.",
           "친구를 만나요.",
+          "친구를 만났어요.",
+          "친구를 만나려고 해요.",
           "친구를 만나지 않았어요."
         ],
         answer: "친구를 만나려고 해요."
@@ -5480,10 +5480,10 @@ const LESSONS = {
         type: "mc",
         prompt: "Which grammar connects two simultaneous actions?",
         options: [
-          "-(으)면서",
+          "-는 것",
           "-(으)ㄹ 것 같다",
           "-(으)려고 하다",
-          "-는 것"
+          "-(으)면서"
         ],
         answer: "-(으)면서"
       },
@@ -5492,7 +5492,7 @@ const LESSONS = {
         type: "fill",
         prompt: "내일 친구를 만나___ 해요.",
         answer: "려고",
-        options: ["려고", "면서", "것", "지만"]
+        options: ["면서", "려고", "것", "지만"]
       },
 
       {
@@ -5530,10 +5530,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What is -(스)ㅂ니다 used for?",
         options: [
-          "Formal and polite speech",
+          "Only past tense",
           "Casual speech with friends",
           "Only questions",
-          "Only past tense"
+          "Formal and polite speeche"
         ],
         answer: "Formal and polite speech"
       },
@@ -5542,7 +5542,7 @@ const LESSONS = {
         type: "fill",
         prompt: "저는 학생___.",
         answer: "입니다",
-        options: ["입니다", "이에요", "있어요", "합니다"]
+        options: ["있어요", "이에요", "입니다", "합니다"]
       },
 
       {
@@ -5556,8 +5556,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which is the formal version of '먹어요'?",
         options: [
-          "먹습니다",
           "먹어요요",
+          "먹습니다",
           "먹이습니다",
           "먹습니다요"
         ],
@@ -5606,16 +5606,16 @@ const LESSONS = {
         type: "fill",
         prompt: "어디에 갑___?",
         answer: "니까",
-        options: ["니까", "어요", "니다", "세요"]
+        options: ["니다", "어요", "니까", "세요"]
       },
 
       {
         type: "mc",
         prompt: "What is the formal question '어디에 갑니까?' asking?",
         options: [
-          "Where are you going?",
-          "Where did you eat?",
           "What are you studying?",
+          "Where did you eat?",
+          "Where are you going?",
           "Who are you meeting?"
         ],
         answer: "Where are you going?"
@@ -5644,10 +5644,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What is the formal past form of '갔어요'?",
         options: [
-          "갔습니다",
+          "갔습니까요",
           "갑니다",
           "가겠습니다",
-          "갔습니까요"
+          "갔습니다"
         ],
         answer: "갔습니다"
       },
@@ -5656,8 +5656,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which form can express a formal future intention?",
         options: [
-          "-겠습니다",
           "-았어요",
+          "-겠습니다",
           "-는 것",
           "-면서"
         ],
@@ -5668,14 +5668,14 @@ const LESSONS = {
         type: "fill",
         prompt: "내일 다시 오___.",
         answer: "겠습니다",
-        options: ["겠습니다", "았습니다", "어요", "는"]
+        options: ["어요", "았습니다", "겠습니다", "는"]
       },
 
       {
         type: "fill",
         prompt: "어제 학교에 갔___.",
         answer: "습니다",
-        options: ["습니다", "어요", "겠습니다", "니까"]
+        options: ["겠습니다", "어요", "습니다", "니까"]
       },
 
       {
@@ -5706,10 +5706,10 @@ const LESSONS = {
         type: "mc",
         prompt: "Which verb is the honorific form of '먹다'?",
         options: [
-          "드시다",
+          "먹는다",
           "먹으시다요",
           "먹이다",
-          "먹는다"
+          "드시다"
         ],
         answer: "드시다"
       },
@@ -5718,10 +5718,10 @@ const LESSONS = {
         type: "mc",
         prompt: "Which is a polite honorific expression for 'to be'?",
         options: [
-          "계시다",
+          "하다",
           "먹다",
           "가다",
-          "하다"
+          "계시다"
         ],
         answer: "계시다"
       },
@@ -5768,9 +5768,9 @@ const LESSONS = {
         type: "mc",
         prompt: "Which sentence is formal?",
         options: [
-          "저는 학생입니다.",
-          "나는 학생이야.",
           "저 학생이야.",
+          "나는 학생이야.",
+          "저는 학생입니다.",
           "학생이에요?"
         ],
         answer: "저는 학생입니다."
@@ -5780,16 +5780,16 @@ const LESSONS = {
         type: "fill",
         prompt: "저는 매일 운동합___.",
         answer: "니다",
-        options: ["니다", "어요", "니까", "시다"]
+        options: ["어요", "니다", "니까", "시다"]
       },
 
       {
         type: "mc",
         prompt: "Which ending is used in formal questions?",
         options: [
-          "-ㅂ니까/습니까?",
-          "-자!",
           "-어!",
+          "-자!",
+          "-ㅂ니까/습니까?",
           "-지?"
         ],
         answer: "-ㅂ니까/습니까?"
@@ -5799,7 +5799,7 @@ const LESSONS = {
         type: "fill",
         prompt: "내일 다시 만나___!",
         answer: "겠습니다",
-        options: ["겠습니다", "았어요", "면서", "는 것"]
+        options: ["았어요", "겠습니다", "면서", "는 것"]
       },
 
       {
@@ -5825,10 +5825,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What does 그리고 mean?",
         options: [
-          "And / and then",
+          "If",
           "But",
           "Because",
-          "If"
+          "And / and then"
         ],
         answer: "And / and then"
       },
@@ -5856,8 +5856,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which word connects two similar or sequential ideas?",
         options: [
-          "그리고",
           "하지만",
+          "그리고",
           "그래서",
           "왜냐하면"
         ],
@@ -5868,7 +5868,7 @@ const LESSONS = {
         type: "fill",
         prompt: "친구를 만났어요. ___ 같이 밥을 먹었어요.",
         answer: "그리고",
-        options: ["그리고", "하지만", "그래서", "만약"]
+        options: ["그래서", "하지만", "그리고", "만약"]
       }
     ]
   },
@@ -5887,9 +5887,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does 하지만 mean?",
         options: [
-          "But / however",
-          "And",
           "Because",
+          "And",
+          "But / however",
           "Then"
         ],
         answer: "But / however"
@@ -5899,17 +5899,17 @@ const LESSONS = {
         type: "fill",
         prompt: "한국어는 어려워요. ___ 재미있어요.",
         answer: "하지만",
-        options: ["하지만", "그리고", "그래서", "또"]
+        options: ["또", "그리고", "그래서", "하지만"]
       },
 
       {
         type: "mc",
         prompt: "Which sentence correctly shows contrast?",
         options: [
-          "비싸요. 하지만 사고 싶어요.",
+          "비싸요. 또 하지만 사고 싶어요.",
           "비싸요. 그리고 사고 싶어요.",
           "비싸요. 그래서 하지만 사고 싶어요.",
-          "비싸요. 또 하지만 사고 싶어요."
+          "비싸요. 하지만 사고 싶어요."
         ],
         answer: "비싸요. 하지만 사고 싶어요."
       },
@@ -5925,8 +5925,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which connector should be used for contrasting ideas?",
         options: [
-          "하지만",
           "그리고",
+          "하지만",
           "그래서",
           "그러면"
         ],
@@ -5949,8 +5949,8 @@ const LESSONS = {
         type: "mc",
         prompt: "What does 그래서 mean?",
         options: [
-          "So / therefore",
           "But",
+          "So / therefore",
           "And",
           "Although"
         ],
@@ -5987,9 +5987,9 @@ const LESSONS = {
         type: "mc",
         prompt: "Which connector introduces a consequence?",
         options: [
-          "그래서",
-          "하지만",
           "그리고",
+          "하지만",
+          "그래서",
           "또"
         ],
         answer: "그래서"
@@ -6011,9 +6011,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What can -(으)니까 express?",
         options: [
-          "A reason or cause",
-          "Only a location",
           "A noun",
+          "Only a location",
+          "A reason or cause",
           "A greeting"
         ],
         answer: "A reason or cause"
@@ -6023,7 +6023,7 @@ const LESSONS = {
         type: "fill",
         prompt: "늦었으___ 빨리 가세요.",
         answer: "니까",
-        options: ["니까", "면서", "려고", "지만"]
+        options: ["려고", "면서", "니까", "지만"]
       },
 
       {
@@ -6042,7 +6042,7 @@ const LESSONS = {
         type: "fill",
         prompt: "배가 고파___ 밥을 먹었어요.",
         answer: "서",
-        options: ["서", "니까", "지만", "면서"]
+        options: ["면서", "니까", "지만", "서"]
       },
 
       {
@@ -6073,8 +6073,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which connector means 'but'?",
         options: [
-          "하지만",
           "그래서",
+          "하지만",
           "그리고",
           "왜냐하면"
         ],
@@ -6097,14 +6097,14 @@ const LESSONS = {
         type: "fill",
         prompt: "비가 많이 왔어요. ___ 집에 있었어요.",
         answer: "그래서",
-        options: ["그래서", "하지만", "그리고", "또"]
+        options: ["또", "하지만", "그리고", "그래서"]
       },
 
       {
         type: "fill",
         prompt: "피곤했어요. ___ 숙제를 했어요.",
         answer: "하지만",
-        options: ["하지만", "그래서", "그리고", "왜냐하면"]
+        options: ["그래서", "하지만", "그리고", "왜냐하면"]
       },
 
       {
@@ -6150,9 +6150,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does the speaker do in the afternoon?",
         options: [
-          "Exercises with friends",
-          "Studies alone",
           "Goes home",
+          "Studies alone",
+          "Exercises with friends",
           "Works at a café"
         ],
         answer: "Exercises with friends"
@@ -6169,10 +6169,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What speech style is mainly used in the passage?",
         options: [
-          "Formal polite speech",
+          "Honorific commands only",
           "Casual speech",
           "Banmal",
-          "Honorific commands only"
+          "Formal polite speech"
         ],
         answer: "Formal polite speech"
       }
@@ -6193,7 +6193,7 @@ const LESSONS = {
         type: "reading",
         passage: "이번 주말에 친구와 같이 서울에 가려고 합니다. 토요일에는 박물관에 가고 맛있는 음식을 먹을 것입니다. 일요일에는 집에서 쉴 것 같습니다.",
         prompt: "Where does the speaker plan to go?",
-        options: ["서울", "부산", "제주도", "인천"],
+        options: ["수원", "부산", "제주도", "서울"],
         answer: "서울"
       },
 
@@ -6213,8 +6213,8 @@ const LESSONS = {
         type: "mc",
         prompt: "What does the speaker think about Sunday?",
         options: [
-          "They will probably rest at home.",
           "They will go to Seoul.",
+          "They will probably rest at home.",
           "They will study Korean.",
           "They will meet a teacher."
         ],
@@ -6225,17 +6225,17 @@ const LESSONS = {
         type: "fill",
         prompt: "토요일에는 ___에 갑니다.",
         answer: "박물관",
-        options: ["박물관", "학교", "회사", "병원"]
+        options: ["회사", "학교", "박물관", "병원"]
       },
 
       {
         type: "mc",
         prompt: "Which expression in the passage shows intention?",
         options: [
-          "가려고 합니다",
+          "맛있는 음식",
           "먹을 것입니다",
           "쉴 것 같습니다",
-          "맛있는 음식"
+          "가려고 합니다"
         ],
         answer: "가려고 합니다"
       }
@@ -6269,8 +6269,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Where does the speaker do assignments?",
         options: [
-          "At the library",
           "At home",
+          "At the library",
           "At a restaurant",
           "At school cafeteria"
         ],
@@ -6281,8 +6281,8 @@ const LESSONS = {
         type: "mc",
         prompt: "What does the speaker do when they have time?",
         options: [
-          "Meets a friend and eats dinner",
           "Goes to work",
+          "Meets a friend and eats dinner",
           "Studies alone",
           "Goes home immediately"
         ],
@@ -6325,10 +6325,10 @@ const LESSONS = {
         passage: "지난달에 가족과 함께 부산에 갔습니다. 날씨가 좋았지만 바람이 많이 불었습니다. 우리는 바닷가를 산책하고 맛있는 해산물을 먹었습니다. 저녁에는 호텔에서 쉬었습니다.",
         prompt: "When did the speaker visit Busan?",
         options: [
-          "Last month",
+          "Next month",
           "Yesterday",
           "This week",
-          "Next month"
+          "Last month"
         ],
         answer: "Last month"
       },
@@ -6337,8 +6337,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Who did the speaker travel with?",
         options: [
-          "Family",
           "Friends",
+          "Family",
           "Classmates",
           "Alone"
         ],
@@ -6349,9 +6349,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What was the weather like?",
         options: [
-          "It was nice, but windy.",
-          "It was rainy.",
           "It was snowy.",
+          "It was rainy.",
+          "It was nice, but windy.",
           "It was very cold."
         ],
         answer: "It was nice, but windy."
@@ -6361,7 +6361,7 @@ const LESSONS = {
         type: "fill",
         prompt: "우리는 바닷가를 ___했습니다.",
         answer: "산책",
-        options: ["산책", "공부", "운동", "요리"]
+        options: ["요리", "공부", "운동", "산책"]
       },
 
       {
@@ -6393,9 +6393,9 @@ const LESSONS = {
         passage: "민수 씨는 아침에 일찍 일어나서 운동을 합니다. 운동한 후에 샤워를 하고 아침을 먹습니다. 회사에 가기 전에 커피를 마십니다. 회사에서는 동료들과 한국어로 이야기합니다. 일이 끝나면 집에 돌아와서 저녁을 먹고 책을 읽습니다.",
         prompt: "What does Minsu do after exercising?",
         options: [
-          "Takes a shower and eats breakfast",
-          "Goes directly to work",
           "Reads a book",
+          "Goes directly to work",
+          "Takes a shower and eats breakfast",
           "Meets his friends"
         ],
         answer: "Takes a shower and eats breakfast"
@@ -6405,9 +6405,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does Minsu drink before going to work?",
         options: [
-          "Coffee",
-          "Tea",
           "Water",
+          "Tea",
+          "Coffee",
           "Juice"
         ],
         answer: "Coffee"
@@ -6417,8 +6417,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Who does Minsu speak Korean with at work?",
         options: [
-          "His coworkers",
           "His teacher",
+          "His coworkers",
           "His family",
           "His friends"
         ],
@@ -6429,10 +6429,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What does Minsu do after returning home?",
         options: [
-          "Eats dinner and reads a book",
+          "Drinks coffee",
           "Exercises",
           "Goes to school",
-          "Drinks coffee"
+          "Eats dinner and reads a book"
         ],
         answer: "Eats dinner and reads a book"
       },
@@ -6441,10 +6441,10 @@ const LESSONS = {
         type: "mc",
         prompt: "Which expression means 'before going to work'?",
         options: [
-          "회사에 가기 전에",
+          "회사에 가려고",
           "회사에 간 후에",
           "회사에 가면서",
-          "회사에 가려고"
+          "회사에 가기 전에"
         ],
         answer: "회사에 가기 전에"
       }
@@ -6466,8 +6466,8 @@ const LESSONS = {
         audioText: "오늘 아침에 뭐 했어요? 저는 아침 7시에 일어나서 아침을 먹었어요. 그리고 학교에 갔어요.",
         prompt: "What did the speaker do after waking up?",
         options: [
-          "Ate breakfast",
           "Went to work",
+          "Ate breakfast",
           "Went shopping",
           "Went back to sleep"
         ],
@@ -6504,10 +6504,10 @@ const LESSONS = {
         type: "mc",
         prompt: "Which connector is used to continue the sequence?",
         options: [
-          "그리고",
+          "왜냐하면",
           "하지만",
           "그래서",
-          "왜냐하면"
+          "그리고"
         ],
         answer: "그리고"
       }
@@ -6541,9 +6541,9 @@ const LESSONS = {
         type: "mc",
         prompt: "Who will the speaker watch the movie with?",
         options: [
-          "A friend",
-          "A teacher",
           "Family",
+          "A teacher",
+          "A friend",
           "A coworker"
         ],
         answer: "A friend"
@@ -6553,10 +6553,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What will they probably do after the movie?",
         options: [
-          "Eat dinner together",
+          "Go to school",
           "Go home immediately",
           "Study",
-          "Go to school"
+          "Eat dinner together"
         ],
         answer: "Eat dinner together"
       },
@@ -6565,7 +6565,7 @@ const LESSONS = {
         type: "fill",
         prompt: "영화를 ___고 해요.",
         answer: "보려고",
-        options: ["보려고", "보면서", "봤지만", "보니까"]
+        options: ["보니까", "보면서", "봤지만", "보려고"]
       },
 
       {
@@ -6597,9 +6597,9 @@ const LESSONS = {
         audioText: "어서 오세요. 무엇을 드릴까요? 아메리카노 한 잔하고 케이크 하나 주세요. 케이크는 어떤 것이 맛있어요? 딸기 케이크가 맛있습니다. 그러면 딸기 케이크 하나 주세요.",
         prompt: "What does the customer order first?",
         options: [
-          "An Americano and a cake",
-          "Tea and bread",
           "Juice and cookies",
+          "Tea and bread",
+          "An Americano and a cake",
           "Coffee only"
         ],
         answer: "An Americano and a cake"
@@ -6609,9 +6609,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What kind of cake does the customer choose?",
         options: [
-          "Strawberry cake",
-          "Chocolate cake",
           "Cheese cake",
+          "Chocolate cake",
+          "Strawberry cake",
           "Green tea cake"
         ],
         answer: "Strawberry cake"
@@ -6621,8 +6621,8 @@ const LESSONS = {
         type: "mc",
         prompt: "Which formal expression does the staff use?",
         options: [
-          "무엇을 드릴까요?",
           "뭐 먹어?",
+          "무엇을 드릴까요?",
           "뭐 줄까?",
           "뭐 먹어요?"
         ],
@@ -6633,17 +6633,17 @@ const LESSONS = {
         type: "fill",
         prompt: "아메리카노 한 ___하고 케이크 하나 주세요.",
         answer: "잔",
-        options: ["잔", "개", "명", "곳"]
+        options: ["개", "잔", "명", "곳"]
       },
 
       {
         type: "mc",
         prompt: "What does '그러면' mean in this context?",
         options: [
-          "Then / in that case",
+          "Although",
           "But",
           "Because",
-          "Although"
+          "Then / in that case"
         ],
         answer: "Then / in that case"
       }
@@ -6701,16 +6701,16 @@ const LESSONS = {
         type: "fill",
         prompt: "오전 ___시에 시작합니다.",
         answer: "9",
-        options: ["8", "9", "10", "11"]
+        options: ["8", "10", "12", "9"]
       },
 
       {
         type: "mc",
         prompt: "Which expression is a formal invitation?",
         options: [
-          "같이 공부하시겠습니까?",
-          "같이 공부할래?",
           "같이 공부해?",
+          "같이 공부할래?",
+          "같이 공부하시겠습니까?",
           "같이 공부하자."
         ],
         answer: "같이 공부하시겠습니까?"
@@ -6733,8 +6733,8 @@ const LESSONS = {
         audioText: "안녕하세요. 저는 지수입니다. 평일에는 학교에서 공부하고 주말에는 아르바이트를 합니다. 이번 주말에는 친구와 만나려고 합니다. 하지만 일이 끝나는 시간이 늦어서 저녁에 만날 것 같습니다. 친구를 만나면 같이 맛있는 음식을 먹고 싶습니다.",
         prompt: "What does Jisu do on weekdays?",
         options: [
-          "Studies at school",
           "Works part-time",
+          "Studies at school",
           "Travels",
           "Studies at home"
         ],
@@ -6745,10 +6745,10 @@ const LESSONS = {
         type: "mc",
         prompt: "What does Jisu do on weekends?",
         options: [
-          "Works part-time",
+          "Stays home",
           "Goes to school",
           "Travels",
-          "Stays home"
+          "Works part-time"
         ],
         answer: "Works part-time"
       },
@@ -6769,9 +6769,9 @@ const LESSONS = {
         type: "mc",
         prompt: "What does Jisu want to do with the friend?",
         options: [
-          "Eat delicious food",
-          "Study Korean",
           "Go shopping",
+          "Study Korean",
+          "Eat delicious food",
           "Watch a movie"
         ],
         answer: "Eat delicious food"
@@ -6807,11 +6807,11 @@ l76: {
 
     {
       type: "mc",
-      prompt: "다음 단어의 뜻으로 알맞은 것은? '약속'",
+      prompt: "다음 단어의 뜻으로 알맞은 것은? '가망성'",
       options: [
-        "약속",
-        "여행",
         "운동",
+        "여행",
+        "약속",
         "식사"
       ],
       answer: "약속"
@@ -6821,8 +6821,8 @@ l76: {
       type: "mc",
       prompt: "다음 중 '준비하다'와 가장 관계있는 것은?",
       options: [
-        "시험",
         "비",
+        "시험",
         "색깔",
         "계절"
       ],
@@ -6832,7 +6832,7 @@ l76: {
     {
       type: "fill",
       prompt: "저는 매일 아침에 학교에 ___.",
-      options: ["갑니다", "먹습니다", "잡니다", "만듭니다"],
+      options: ["먹습니다", "갑니다", "잡니다", "만듭니다"],
       answer: "갑니다"
     },
 
@@ -6840,9 +6840,9 @@ l76: {
       type: "mc",
       prompt: "'바쁘다'의 반대말은 무엇입니까?",
       options: [
-        "한가하다",
-        "빠르다",
         "어렵다",
+        "빠르다",
+        "한가하다",
         "멀다"
       ],
       answer: "한가하다"
@@ -6852,10 +6852,10 @@ l76: {
       type: "mc",
       prompt: "다음 중 장소를 나타내는 단어는 무엇입니까?",
       options: [
-        "병원",
+        "맛있다",
         "어제",
         "천천히",
-        "맛있다"
+        "병원"
       ],
       answer: "병원"
     }
@@ -6877,10 +6877,10 @@ l77: {
       type: "mc",
       prompt: "'값'과 관계있는 것은 무엇입니까?",
       options: [
-        "가격",
+        "주소",
         "날씨",
         "시간",
-        "주소"
+        "가격"
       ],
       answer: "가격"
     },
@@ -6920,8 +6920,8 @@ l77: {
       type: "mc",
       prompt: "물건을 넣어서 가지고 다니는 것은 무엇입니까?",
       options: [
-        "가방",
         "냉장고",
+        "가방",
         "의자",
         "우산"
       ],
@@ -6945,9 +6945,9 @@ l78: {
       type: "mc",
       prompt: "'수업'과 관계있는 것은 무엇입니까?",
       options: [
-        "학생",
-        "공항",
         "식당",
+        "공항",
+        "학생",
         "은행"
       ],
       answer: "학생"
@@ -6976,10 +6976,10 @@ l78: {
       type: "mc",
       prompt: "'숙제'는 언제 하는 것이 좋습니까?",
       options: [
-        "수업 후",
+        "병원에서",
         "공항에서",
         "식당에서",
-        "병원에서"
+        "수업 후"
       ],
       answer: "수업 후"
     },
@@ -6988,8 +6988,8 @@ l78: {
       type: "mc",
       prompt: "회사에 가서 일을 시작하는 시간을 무엇이라고 합니까?",
       options: [
-        "출근 시간",
         "취침 시간",
+        "출근 시간",
         "식사 시간",
         "휴일"
       ],
@@ -7013,8 +7013,8 @@ l79: {
       type: "mc",
       prompt: "비행기를 타고 다른 나라에 갈 때 가는 곳은 어디입니까?",
       options: [
-        "공항",
         "도서관",
+        "공항",
         "시장",
         "약국"
       ],
@@ -7036,7 +7036,7 @@ l79: {
     {
       type: "fill",
       prompt: "서울에서 부산까지 기차를 ___.",
-      options: ["탑니다", "먹습니다", "입습니다", "씁니다"],
+      options: ["먹습니다", "탑니다", "입습니다", "씁니다"],
       answer: "탑니다"
     },
 
@@ -7044,10 +7044,10 @@ l79: {
       type: "mc",
       prompt: "여행할 때 머무는 곳은 무엇입니까?",
       options: [
-        "호텔",
+        "병원",
         "학교",
         "은행",
-        "병원"
+        "호텔"
       ],
       answer: "호텔"
     },
@@ -7056,8 +7056,8 @@ l79: {
       type: "mc",
       prompt: "'출발하다'의 반대말은 무엇입니까?",
       options: [
-        "도착하다",
         "준비하다",
+        "도착하다",
         "기다리다",
         "예약하다"
       ],
@@ -7081,8 +7081,8 @@ l80: {
       type: "mc",
       prompt: "'현상'의 뜻과 가장 가까운 것은 무엇입니까?",
       options: [
-        "어떤 일이 나타나는 모습",
         "물건을 사는 행위",
+        "어떤 일이 나타나는 모습",
         "사람이 이동하는 장소",
         "하루의 일정"
       ],
@@ -7104,7 +7104,7 @@ l80: {
     {
       type: "fill",
       prompt: "인터넷의 발달은 사람들의 생활에 큰 ___을 미쳤습니다.",
-      options: ["영향", "약속", "여행", "식사"],
+      options: ["여행", "약속", "영향", "식사"],
       answer: "영향"
     },
 
@@ -7112,10 +7112,10 @@ l80: {
       type: "mc",
       prompt: "'증가하다'의 반대말은 무엇입니까?",
       options: [
-        "감소하다",
+        "해결하다",
         "발생하다",
         "유지하다",
-        "해결하다"
+        "감소하다"
       ],
       answer: "감소하다"
     },
@@ -7124,8 +7124,8 @@ l80: {
       type: "mc",
       prompt: "'문제를 해결하다'에서 '해결하다'의 의미는 무엇입니까?",
       options: [
-        "문제를 풀다",
         "문제를 만들다",
+        "문제를 풀다",
         "문제를 숨기다",
         "문제를 미루다"
       ],
@@ -7165,9 +7165,9 @@ l81: {
       type: "mc",
       prompt: "민수 씨는 학교에 무엇을 타고 갑니까?",
       options: [
-        "버스",
-        "기차",
         "택시",
+        "기차",
+        "버스",
         "자전거"
       ],
       answer: "버스"
@@ -7216,10 +7216,10 @@ l82: {
       type: "mc",
       prompt: "다음 글을 읽고 알맞은 답을 고르십시오.\n\n수진 씨는 오늘 백화점에 갔습니다. 여름 옷을 사고 싶어서 셔츠와 바지를 보았습니다. 셔츠는 삼만 원이고 바지는 오만 원이었습니다. 수진 씨는 셔츠를 샀습니다.\n\n수진 씨는 무엇을 샀습니까?",
       options: [
-        "셔츠",
+        "가방",
         "바지",
         "구두",
-        "가방"
+        "셔츠"
       ],
       answer: "셔츠"
     },
@@ -7228,10 +7228,10 @@ l82: {
       type: "mc",
       prompt: "셔츠는 얼마입니까?",
       options: [
-        "삼만 원",
+        "육만 원",
         "사만 원",
         "오만 원",
-        "육만 원"
+        "삼만 원"
       ],
       answer: "삼만 원"
     },
@@ -7251,7 +7251,7 @@ l82: {
     {
       type: "fill",
       prompt: "수진 씨는 셔츠를 ___.",
-      options: ["샀습니다", "팔았습니다", "빌렸습니다", "만들었습니다"],
+      options: ["빌렸습니다", "팔았습니다", "샀습니다", "만들었습니다"],
       answer: "샀습니다"
     },
 
@@ -7303,10 +7303,10 @@ l83: {
       type: "mc",
       prompt: "영화가 끝난 후에 무엇을 합니까?",
       options: [
-        "저녁을 먹습니다",
+        "집에서 잡니다",
         "학교에 갑니다",
         "운동을 합니다",
-        "집에서 잡니다"
+        "저녁을 먹습니다"
       ],
       answer: "저녁을 먹습니다"
     },
@@ -7354,8 +7354,8 @@ l84: {
       type: "mc",
       prompt: "민지 씨는 병원에서 무엇을 받았습니까?",
       options: [
-        "약",
         "책",
+        "약",
         "옷",
         "음식"
       ],
@@ -7366,9 +7366,9 @@ l84: {
       type: "mc",
       prompt: "집에 돌아온 후에 무엇을 했습니까?",
       options: [
-        "약을 먹고 쉬었습니다",
-        "학교에 갔습니다",
         "친구를 만났습니다",
+        "학교에 갔습니다",
+        "약을 먹고 쉬었습니다",
         "운동을 했습니다"
       ],
       answer: "약을 먹고 쉬었습니다"
@@ -7377,7 +7377,7 @@ l84: {
     {
       type: "fill",
       prompt: "민지 씨는 의사 선생님에게 ___을 받았습니다.",
-      options: ["진찰", "여행", "약속", "수업"],
+      options: ["수업", "여행", "약속", "진찰"],
       answer: "진찰"
     },
 
@@ -7405,9 +7405,9 @@ l85: {
       type: "mc",
       prompt: "다음 글을 읽고 알맞은 답을 고르십시오.\n\n최근에는 온라인으로 물건을 구매하는 사람들이 증가하고 있다. 온라인 쇼핑은 시간과 장소에 관계없이 이용할 수 있다는 장점이 있다. 그러나 직접 물건을 확인할 수 없다는 단점도 있다.\n\n이 글의 중심 내용은 무엇입니까?",
       options: [
-        "온라인 쇼핑의 장단점",
-        "온라인 쇼핑의 역사",
         "백화점의 변화",
+        "온라인 쇼핑의 역사",
+        "온라인 쇼핑의 장단점",
         "물건의 가격 비교"
       ],
       answer: "온라인 쇼핑의 장단점"
@@ -7429,8 +7429,8 @@ l85: {
       type: "mc",
       prompt: "온라인 쇼핑의 단점은 무엇입니까?",
       options: [
-        "물건을 직접 확인하기 어렵다",
         "이용 시간이 짧다",
+        "물건을 직접 확인하기 어렵다",
         "장소가 많지 않다",
         "상품의 종류가 적다"
       ],
@@ -7440,7 +7440,7 @@ l85: {
     {
       type: "fill",
       prompt: "온라인으로 물건을 구매하는 사람들이 ___하고 있다.",
-      options: ["증가", "감소", "출발", "도착"],
+      options: ["감소", "증가", "출발", "도착"],
       answer: "증가"
     },
 
@@ -7473,10 +7473,10 @@ l86: {
       audioText: "오늘 학교에 가요?",
       prompt: "남자는 오늘 무엇을 합니까?",
       options: [
-        "학교에 갑니다",
+        "운동을 합니다",
         "집에서 쉽니다",
         "친구를 만납니다",
-        "운동을 합니다"
+        "학교에 갑니다"
       ],
       answer: "학교에 갑니다"
     },
@@ -7486,8 +7486,8 @@ l86: {
       audioText: "오늘은 학교에 안 가요. 집에서 공부할 거예요.",
       prompt: "여자는 오늘 어디에서 공부합니까?",
       options: [
-        "집",
         "학교",
+        "집",
         "도서관",
         "카페"
       ],
@@ -7499,8 +7499,8 @@ l86: {
       audioText: "주말에 뭐 해요? 친구하고 영화를 봐요.",
       prompt: "남자는 주말에 무엇을 합니까?",
       options: [
-        "영화를 봅니다",
         "공부합니다",
+        "영화를 봅니다",
         "여행합니다",
         "운동합니다"
       ],
@@ -7565,8 +7565,8 @@ l87: {
       prompt: "셔츠를 얼마에 살 수 있습니까?",
       options: [
         "삼만 원",
-        "사만 원",
         "오만 원",
+        "사만 원",
         "육만 원"
       ],
       answer: "사만 원"
@@ -7590,10 +7590,10 @@ l87: {
       audioText: "이 신발은 조금 작아요. 더 큰 사이즈가 있나요? 네, 있습니다.",
       prompt: "남자는 어떤 신발을 원합니까?",
       options: [
-        "더 큰 신발",
+        "다른 색 신발",
         "더 작은 신발",
         "더 비싼 신발",
-        "다른 색 신발"
+        "더 큰 신발"
       ],
       answer: "더 큰 신발"
     },
@@ -7603,10 +7603,10 @@ l87: {
       audioText: "봉투 필요하세요? 네, 하나 주세요.",
       prompt: "손님은 무엇을 원합니까?",
       options: [
-        "봉투",
+        "우산",
         "영수증",
         "카드",
-        "우산"
+        "봉투"
       ],
       answer: "봉투"
     }
@@ -7643,8 +7643,8 @@ l88: {
       prompt: "부산행 기차는 몇 시에 출발합니까?",
       options: [
         "오후 두 시",
-        "오후 세 시",
         "오후 네 시",
+        "오후 세 시",
         "오후 다섯 시"
       ],
       answer: "오후 세 시"
@@ -7682,9 +7682,9 @@ l88: {
       prompt: "택시로 얼마나 걸립니까?",
       options: [
         "약 오 분",
-        "약 십 분",
+        "약 삼십 분",
         "약 이십 분",
-        "약 삼십 분"
+        "약 십 분"
       ],
       answer: "약 십 분"
     }
@@ -7746,10 +7746,10 @@ l89: {
       audioText: "점심시간에 뭐 먹어요? 회사 근처 식당에서 비빔밥을 먹어요.",
       prompt: "남자는 점심에 무엇을 먹습니까?",
       options: [
-        "비빔밥",
+        "냉면",
         "김밥",
         "라면",
-        "냉면"
+        "비빔밥"
       ],
       answer: "비빔밥"
     },
@@ -7759,9 +7759,9 @@ l89: {
       audioText: "내일 시험이 있어서 오늘 도서관에서 공부할 거예요.",
       prompt: "여자는 오늘 무엇을 할 예정입니까?",
       options: [
-        "도서관에서 공부합니다",
-        "친구를 만납니다",
         "영화를 봅니다",
+        "친구를 만납니다",
+        "도서관에서 공부합니다",
         "집에서 쉽니다"
       ],
       answer: "도서관에서 공부합니다"
@@ -7785,9 +7785,9 @@ l90: {
       audioText: "최근에는 온라인 수업을 이용하는 학생들이 많아졌습니다. 온라인 수업은 장소에 관계없이 참여할 수 있다는 장점이 있지만, 집중력이 떨어질 수 있다는 단점도 있습니다.",
       prompt: "온라인 수업의 장점과 단점으로 알맞은 것을 고르십시오.",
       options: [
-        "장소에 관계없이 참여할 수 있지만 집중력이 떨어질 수 있다",
-        "수업 시간이 짧지만 비용이 비싸다",
         "교사와 직접 만날 수 있지만 장소가 제한된다",
+        "수업 시간이 짧지만 비용이 비싸다",
+        "장소에 관계없이 참여할 수 있지만 집중력이 떨어질 수 있다",
         "학생 수가 적지만 교재가 부족하다"
       ],
       answer: "장소에 관계없이 참여할 수 있지만 집중력이 떨어질 수 있다"
@@ -7811,8 +7811,8 @@ l90: {
       audioText: "최근 한 조사에 따르면 사람들이 뉴스를 접하는 방법이 크게 달라졌습니다. 과거에는 텔레비전이나 신문을 이용하는 사람이 많았지만, 현재는 스마트폰을 통해 뉴스를 확인하는 사람이 증가하고 있습니다.",
       prompt: "사람들이 뉴스를 접하는 방법은 어떻게 변화했습니까?",
       options: [
-        "스마트폰을 이용하는 사람이 증가했습니다",
         "신문을 이용하는 사람이 증가했습니다",
+        "스마트폰을 이용하는 사람이 증가했습니다",
         "텔레비전을 이용하는 사람이 증가했습니다",
         "라디오를 이용하는 사람이 증가했습니다"
       ],
@@ -7824,10 +7824,10 @@ l90: {
       audioText: "이번 행사는 환경 보호의 중요성을 알리기 위해 마련되었습니다. 참가자들은 공원 주변의 쓰레기를 수거하고 재활용에 관한 교육도 받을 예정입니다.",
       prompt: "이번 행사의 목적으로 알맞은 것은 무엇입니까?",
       options: [
-        "환경 보호의 중요성을 알리기 위해",
+        "지역 축제를 준비하기 위해",
         "공원을 새로 만들기 위해",
         "운동 방법을 가르치기 위해",
-        "지역 축제를 준비하기 위해"
+        "환경 보호의 중요성을 알리기 위해"
       ],
       answer: "환경 보호의 중요성을 알리기 위해"
     },
@@ -7879,14 +7879,14 @@ l91: {
     {
       type: "fill",
       prompt: "저는 매일 한국어___ 공부합니다.",
-      options: ["를", "에", "가", "는"],
+      options: ["가", "에", "를", "는"],
       answer: "를"
     },
 
     {
       type: "fill",
       prompt: "친구___ 같이 영화를 봅니다.",
-      options: ["와", "를", "에", "가"],
+      options: ["를", "와", "에", "가"],
       answer: "와"
     },
 
@@ -7934,7 +7934,7 @@ l92: {
     {
       type: "fill",
       prompt: "주말에는 친구___ 영화를 봅니다.",
-      options: ["와", "를", "에", "가"],
+      options: ["가", "를", "에", "와"],
       answer: "와"
     },
 
@@ -7968,7 +7968,7 @@ l93: {
     {
       type: "fill",
       prompt: "학교___ 한국어를 공부합니다.",
-      options: ["에서", "에", "를", "가"],
+      options: ["에", "에서", "를", "가"],
       answer: "에서"
     },
 
@@ -7982,7 +7982,7 @@ l93: {
     {
       type: "fill",
       prompt: "주말에 공원___ 운동합니다.",
-      options: ["에서", "에", "를", "가"],
+      options: ["가", "에", "를", "에서"],
       answer: "에서"
     },
 
@@ -8016,7 +8016,7 @@ l94: {
     {
       type: "fill",
       prompt: "시간이 없___ 택시를 탔습니다.",
-      options: ["어서", "고", "는", "을"],
+      options: ["는", "고", "어서", "을"],
       answer: "어서"
     },
 
@@ -8030,7 +8030,7 @@ l94: {
     {
       type: "fill",
       prompt: "한국어가 재미있___ 매일 공부합니다.",
-      options: ["어서", "고", "는", "을"],
+      options: ["고", "어서", "는", "을"],
       answer: "어서"
     },
 
@@ -8078,7 +8078,7 @@ l95: {
     {
       type: "fill",
       prompt: "인터넷은 정보를 쉽게 얻을 수 있다는 ___이 있습니다.",
-      options: ["장점", "문제", "약속", "계획"],
+      options: ["계획", "문제", "약속", "장점"],
       answer: "장점"
     },
 
@@ -8110,10 +8110,10 @@ l96: {
       type: "mc",
       prompt: "다음 중 '학교'와 관계있는 것은 무엇입니까?",
       options: [
-        "학생",
+        "시장",
         "비행기",
         "병원",
-        "시장"
+        "학생"
       ],
       answer: "학생"
     },
@@ -8130,8 +8130,8 @@ l96: {
       audioText: "오늘은 날씨가 좋아서 친구와 공원에 갈 거예요.",
       prompt: "오늘 무엇을 할 예정입니까?",
       options: [
-        "친구와 공원에 갑니다",
         "학교에서 공부합니다",
+        "친구와 공원에 갑니다",
         "집에서 쉽니다",
         "병원에 갑니다"
       ],
@@ -8142,10 +8142,10 @@ l96: {
       type: "mc",
       prompt: "다음 글의 내용과 같은 것을 고르십시오.\n\n유나는 매일 아침 버스를 타고 회사에 갑니다. 회사는 집에서 멀기 때문에 보통 삼십 분 정도 걸립니다.",
       options: [
-        "유나는 버스를 타고 회사에 갑니다",
+        "유나는 회사에 가지 않습니다",
         "유나는 매일 걸어서 회사에 갑니다",
         "회사는 집에서 가깝습니다",
-        "유나는 회사에 가지 않습니다"
+        "유나는 버스를 타고 회사에 갑니다"
       ],
       answer: "유나는 버스를 타고 회사에 갑니다"
     },
@@ -8190,9 +8190,9 @@ l97: {
       type: "mc",
       prompt: "다음 글에서 언급된 변화로 알맞은 것은 무엇입니까?",
       options: [
-        "1인 가구가 증가하고 있다",
-        "가족의 규모가 커지고 있다",
         "소형 가전제품의 사용이 줄고 있다",
+        "가족의 규모가 커지고 있다",
+        "1인 가구가 증가하고 있다",
         "간편식 시장이 사라지고 있다"
       ],
       answer: "1인 가구가 증가하고 있다"
@@ -8201,7 +8201,7 @@ l97: {
     {
       type: "fill",
       prompt: "이러한 변화에 ___ 소형 가전제품 시장도 성장하고 있다.",
-      options: ["따라", "대해", "통해", "위해"],
+      options: ["대해", "따라", "통해", "위해"],
       answer: "따라"
     },
 
@@ -8209,10 +8209,10 @@ l97: {
       type: "mc",
       prompt: "'함께 성장하고 있다'와 의미가 가장 가까운 것은 무엇입니까?",
       options: [
-        "같이 발전하고 있다",
+        "빠르게 감소하고 있다",
         "서로 경쟁하고 있다",
         "점점 사라지고 있다",
-        "빠르게 감소하고 있다"
+        "같이 발전하고 있다"
       ],
       answer: "같이 발전하고 있다"
     },
@@ -8255,10 +8255,10 @@ l98: {
       audioText: "한 연구 결과에 따르면 충분한 수면을 취한 사람은 그렇지 않은 사람보다 집중력이 높게 나타났습니다. 연구진은 수면이 단순히 피로를 해소하는 것뿐만 아니라 학습 능력과 기억력에도 영향을 미친다고 설명했습니다.",
       prompt: "연구진은 수면이 무엇에 영향을 미친다고 설명했습니까?",
       options: [
-        "학습 능력과 기억력",
+        "경제 활동과 소비 습관",
         "식사 습관과 운동량",
         "출퇴근 시간과 업무량",
-        "경제 활동과 소비 습관"
+        "학습 능력과 기억력"
       ],
       answer: "학습 능력과 기억력"
     },
@@ -8281,8 +8281,8 @@ l98: {
       audioText: "이번 조사는 청년층의 취업에 대한 인식을 알아보기 위해 실시되었습니다. 조사 결과 응답자의 상당수가 높은 임금보다 안정적인 근무 환경과 개인의 성장 가능성을 중요하게 생각하는 것으로 나타났습니다.",
       prompt: "조사 결과 청년층이 중요하게 생각하는 것은 무엇입니까?",
       options: [
-        "안정적인 근무 환경과 성장 가능성",
         "높은 임금만을 중요하게 생각한다",
+        "안정적인 근무 환경과 성장 가능성",
         "짧은 근무 시간만을 중요하게 생각한다",
         "회사와의 거리를 가장 중요하게 생각한다"
       ],
@@ -8294,9 +8294,9 @@ l98: {
       audioText: "도시의 인구가 지속적으로 증가하면서 주거 공간 부족 문제가 심각해지고 있습니다. 이에 따라 지방자치단체에서는 빈 건물을 활용하거나 새로운 주거 시설을 공급하는 등 다양한 대책을 마련하고 있습니다.",
       prompt: "지방자치단체는 어떤 대책을 마련하고 있습니까?",
       options: [
-        "빈 건물을 활용하고 새로운 주거 시설을 공급하고 있다",
-        "도시의 인구를 증가시키고 있다",
         "주거 시설을 줄이고 있다",
+        "도시의 인구를 증가시키고 있다",
+        "빈 건물을 활용하고 새로운 주거 시설을 공급하고 있다",
         "빈 건물을 모두 철거하고 있다"
       ],
       answer: "빈 건물을 활용하고 새로운 주거 시설을 공급하고 있다"
@@ -8329,7 +8329,7 @@ l99: {
     {
       type: "fill",
       prompt: "최근에는 1인 가구가 증가함___ 따라 소비 형태도 변화하고 있다.",
-      options: ["에", "을", "이", "는"],
+      options: ["이", "을", "에", "는"],
       answer: "에"
     },
 
@@ -8343,7 +8343,7 @@ l99: {
     {
       type: "fill",
       prompt: "이 문제를 해결하기 위해서는 원인을 정확하게 ___ 필요가 있다.",
-      options: ["파악할", "파악하는", "파악해서", "파악하고"],
+      options: ["파악하고", "파악하는", "파악해서", "파악할"],
       answer: "파악할"
     },
 
@@ -8375,8 +8375,8 @@ l100: {
       type: "mc",
       prompt: "다음 단어의 뜻과 가장 가까운 것을 고르십시오. '지속되다'",
       options: [
-        "계속되다",
         "갑자기 시작되다",
+        "계속되다",
         "완전히 사라지다",
         "빠르게 변화하다"
       ],
@@ -8400,10 +8400,10 @@ l100: {
       audioText: "최근에는 환경 보호에 대한 관심이 높아지면서 일회용품 사용을 줄이려는 움직임이 확산되고 있습니다. 일부 기업에서는 다회용기를 도입하고 있으며 소비자들도 개인 컵이나 장바구니를 사용하는 등 일상생활에서 실천할 수 있는 방법을 찾고 있습니다.",
       prompt: "환경 보호를 위해 어떤 움직임이 확산되고 있습니까?",
       options: [
-        "일회용품 사용을 줄이려는 움직임",
+        "다회용기 사용을 줄이려는 움직임",
         "일회용품 생산을 늘리려는 움직임",
         "개인 컵 사용을 금지하려는 움직임",
-        "다회용기 사용을 줄이려는 움직임"
+        "일회용품 사용을 줄이려는 움직임"
       ],
       answer: "일회용품 사용을 줄이려는 움직임"
     },
@@ -8412,8 +8412,8 @@ l100: {
       type: "fill",
       prompt: "사회 문제를 해결하기 위해서는 개인의 노력뿐만 아니라 정부의 적극적인 ___도 필요하다.",
       options: [
-        "정책",
         "여행",
+        "정책",
         "약속",
         "취미"
       ],
