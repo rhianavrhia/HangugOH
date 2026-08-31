@@ -1680,7 +1680,10 @@ const GRAMMAR = [
   },
 ];
 
-/* Learning path sections */
+/* =========================================================
+   LEARNING PATH
+   ========================================================= */
+
 const PATH = [
   {
     section: "Foundation",
@@ -1827,1294 +1830,177 @@ const PATH = [
   }
 ];
 
-/* Full lesson definitions — at least 3 complete with rich question variety */
+
+/* =========================================================
+   LESSON DEFINITIONS
+   FOUNDATION — HANGUL
+   ========================================================= */
+
 const LESSONS = {
+
+  /* -------------------------------------------------------
+     HANGUL — LESSON 1
+     Basic consonants + vowels
+     ------------------------------------------------------- */
+
   l1: {
-    id: "l1", title: "Hangul Basics", unit: "u_hangul", xp: 20,
-    vocabIds: ["v16"],
-    questions: [
-      { type: "mc", prompt: "Which letter makes the 'ㅁ' sound (like 'm')?", options: ["ㅁ", "ㄴ", "ㅅ", "ㄹ"], answer: "ㅁ" },
-      { type: "mc", prompt: "What does 가 represent?", options: ["ga", "na", "da", "ma"], answer: "ga" },
-      { type: "translate_ko_en", prompt: "이름", answer: "name" },
-      { type: "fill", prompt: "저는 ___이에요. (name)", answer: "이름", options: ["이름", "학교", "친구", "사람"] },
-      { type: "match", prompt: "Match the Hangul to its romanization", pairs: [["가", "ga"], ["나", "na"], ["다", "da"], ["라", "ra"]] },
-    ],
-  },
-  l2: {
-    id: "l2", title: "Everyday Objects", unit: "u_basicvocab", xp: 20,
-    vocabIds: ["v10", "v19", "v20", "v18"],
-    questions: [
-      { type: "translate_ko_en", prompt: "책", answer: "book" },
-      { type: "translate_en_ko", prompt: "coffee", answer: "커피", options: ["커피", "물", "밥", "책"] },
-      { type: "mc", prompt: "'집' means:", options: ["house", "school", "friend", "money"], answer: "house" },
-      { type: "fill", prompt: "저는 ___에 있어요. (home)", answer: "집", options: ["집", "책", "돈", "커피"] },
-      { type: "match", prompt: "Match the word to its meaning", pairs: [["책", "book"], ["돈", "money"], ["집", "house"], ["커피", "coffee"]] },
-    ],
-  },
-  l3: {
-    id: "l3", title: "First Greetings", unit: "u_greetings", xp: 25,
-    vocabIds: ["v2", "v3", "v6"],
-    questions: [
-      { type: "translate_ko_en", prompt: "안녕하세요", answer: "hello" },
-      { type: "translate_en_ko", prompt: "thank you", answer: "감사합니다", options: ["감사합니다", "안녕하세요", "친구", "사람"] },
-      { type: "mc", prompt: "How do you politely say 'hello'?", options: ["안녕하세요", "감사합니다", "친구", "이름"], answer: "안녕하세요" },
-      { type: "arrange", prompt: "Arrange to form: 'Nice to meet you, friend.'", words: ["친구야,", "만나서", "반가워요"], answer: "친구야, 만나서 반가워요" },
-      { type: "listening", prompt: "Listen and choose what you hear", audioText: "감사합니다", options: ["감사합니다", "안녕하세요", "죄송합니다", "괜찮아요"], answer: "감사합니다" },
-    ],
-  },
-  l4: {
-    id: "l4", title: "Counting in Korean", unit: "u_numbers", xp: 20,
-    vocabIds: ["v8", "v9"],
-    questions: [
-      { type: "mc", prompt: "'하나' means:", options: ["one", "two", "three", "four"], answer: "one" },
-      { type: "translate_en_ko", prompt: "two", answer: "둘", options: ["하나", "둘", "셋", "넷"] },
-      { type: "fill", prompt: "사과 ___ 주세요. (one)", answer: "하나", options: ["하나", "둘", "셋", "넷"] },
-      { type: "match", prompt: "Match numbers to Hangul", pairs: [["1", "하나"], ["2", "둘"], ["3", "셋"], ["4", "넷"]] },
-    ],
-  },
-  l5: {
-    id: "l5", title: "Simple Sentences", unit: "u_sentence", xp: 25,
-    vocabIds: ["v1", "v14"],
-    questions: [
-      { type: "arrange", prompt: "Arrange to form: 'I go to school.'", words: ["저는", "학교에", "가요"], answer: "저는 학교에 가요" },
-      { type: "fill", prompt: "저는 학교___ 가요. (to)", answer: "에", options: ["에", "가", "을", "는"] },
-      { type: "translate_ko_en", prompt: "저는 학교에 가요.", answer: "I go to school." },
-      { type: "mc", prompt: "Basic Korean sentence order is:", options: ["Subject-Object-Verb", "Subject-Verb-Object", "Verb-Subject-Object", "Object-Verb-Subject"], answer: "Subject-Object-Verb" },
-    ],
-  },
-  l6: {
-    id: "l6", title: "Particles in Action", unit: "u_particles", xp: 25,
-    vocabIds: ["v7", "v11"],
-    questions: [
-      { type: "fill", prompt: "친구___ 와요. (subject)", answer: "가", options: ["가", "을", "는", "에"] },
-      { type: "fill", prompt: "물___ 마셔요. (object)", answer: "을", options: ["을", "가", "는", "에서"] },
-      { type: "mc", prompt: "은/는 is used to mark:", options: ["topic", "object", "location", "time"], answer: "topic" },
-      { type: "translate_en_ko", prompt: "today", answer: "오늘", options: ["오늘", "내일", "지금", "어제"] },
-    ],
-  },
-  l7: {
-    id: "l7", title: "Conjugating Verbs", unit: "u_verbconj", xp: 25,
-    vocabIds: ["v13", "v14", "v15"],
-    questions: [
-      { type: "mc", prompt: "Polite present of '가다' (to go) is:", options: ["가요", "가아요", "가해요", "간요"], answer: "가요" },
-      { type: "fill", prompt: "저는 사과를 ___. (eat, polite)", answer: "먹어요", options: ["먹어요", "먹아요", "먹해요", "먹다요"] },
-      { type: "translate_ko_en", prompt: "날씨가 좋아요.", answer: "The weather is good." },
-      { type: "listening", prompt: "Listen and choose what you hear", audioText: "먹어요", options: ["먹어요", "가요", "좋아요", "와요"], answer: "먹어요" },
-    ],
-  },
-  l8: {
-    id: "l8", title: "My Daily Routine", unit: "u_daily", xp: 25,
-    vocabIds: ["v5", "v13"],
-    questions: [
-      { type: "arrange", prompt: "Arrange: 'I ate a meal.'", words: ["저는", "밥을", "먹었어요"], answer: "저는 밥을 먹었어요" },
-      { type: "reading", prompt: "저는 아침에 밥을 먹어요. 그리고 학교에 가요.", question: "What does the person do in the morning first?", options: ["Eats a meal", "Goes to school", "Drinks coffee", "Reads a book"], answer: "Eats a meal" },
-      { type: "mc", prompt: "'먹었어요' means:", options: ["ate (past)", "eat (present)", "will eat (future)", "eating"], answer: "ate (past)" },
-    ],
-  },
-  l9: {
-    id: "l9", title: "Talking About Time", unit: "u_time", xp: 25,
-    vocabIds: ["v11", "v12", "v17"],
-    questions: [
-      { type: "translate_en_ko", prompt: "tomorrow", answer: "내일", options: ["내일", "오늘", "어제", "시간"] },
-      { type: "fill", prompt: "___ 만나요. (tomorrow)", answer: "내일", options: ["내일", "오늘", "친구", "학교"] },
-      { type: "mc", prompt: "'시간이 없어요' means:", options: ["I don't have time", "I have time", "I like time", "Time is good"], answer: "I don't have time" },
-    ],
-  },
-  l10: {
-    id: "l10", title: "Finding Your Way", unit: "u_places", xp: 25,
-    vocabIds: ["v1", "v10"],
-    questions: [
-      { type: "reading", prompt: "학교 옆에 집이 있어요.", question: "Where is the house?", options: ["Next to the school", "Inside the school", "Far from the school", "Behind the coffee shop"], answer: "Next to the school" },
-      { type: "translate_ko_en", prompt: "학교가 어디예요?", answer: "Where is the school?" },
-      { type: "mc", prompt: "'옆' means:", options: ["next to", "far", "inside", "behind"], answer: "next to" },
-    ],
-  },
-  l11: {
-    id: "l11", title: "Expressing Desire", unit: "u_intgram", xp: 30,
+    id: "l1",
+    title: "Hangul 1 — Basic Characters",
+    unit: "u_hangul",
+    xp: 20,
+
+    description:
+      "Learn the basic Korean consonants and vowels and how they are pronounced.",
+
     vocabIds: [],
-    questions: [
-      { type: "mc", prompt: "'~고 싶다' expresses:", options: ["wanting to do something", "having done something", "being able to do something", "not wanting to do something"], answer: "wanting to do something" },
-      { type: "fill", prompt: "한국에 가___ 싶어요. (want to go)", answer: "고", options: ["고", "면", "서", "은"] },
-      { type: "translate_en_ko", prompt: "I want to eat", answer: "먹고 싶어요", options: ["먹고 싶어요", "먹어 싶어요", "먹다 싶어요", "먹으 싶어요"] },
-    ],
-  },
-  l12: {
-    id: "l12", title: "Speaking Formally", unit: "u_formal", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "mc", prompt: "Formal version of '가요' (go) is:", options: ["갑니다", "가습니다", "가답니다", "가ㅂ습니다"], answer: "갑니다" },
-      { type: "translate_ko_en", prompt: "여기 있습니다.", answer: "Here it is." },
-      { type: "fill", prompt: "감사___. (formal thank you)", answer: "합니다", options: ["합니다", "해요", "하고", "한다"] },
-    ],
-  },
-  l13: {
-    id: "l13", title: "Connecting Ideas", unit: "u_connect", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "mc", prompt: "'~(으)면' means:", options: ["if / when", "after", "because", "but"], answer: "if / when" },
-      { type: "fill", prompt: "비가 ___ 집에 있어요. (if it rains)", answer: "오면", options: ["오면", "오고", "온 후에", "오지만"] },
-      { type: "arrange", prompt: "Arrange: 'If I have time, let's meet.'", words: ["시간이", "있으면,", "만나요"], answer: "시간이 있으면, 만나요" },
-    ],
-  },
-  l14: {
-    id: "l14", title: "Reading a Short Note", unit: "u_reading", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "reading", prompt: "민수: 오늘 시간 있어요? 저녁에 만나고 싶어요.\n지나: 네, 좋아요! 7시에 만나요.", question: "What do Minsu and Jina agree to do?", options: ["Meet at 7", "Meet tomorrow", "Study together", "Eat lunch"], answer: "Meet at 7" },
-      { type: "translate_ko_en", prompt: "저녁에 만나고 싶어요.", answer: "I want to meet in the evening." },
-      { type: "mc", prompt: "'좋아요!' in this context expresses:", options: ["agreement", "disagreement", "confusion", "apology"], answer: "agreement" },
-    ],
-  },
-  l15: {
-    id: "l15", title: "Listening in Context", unit: "u_listening", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "listening", prompt: "Listen and choose what you hear", audioText: "오늘 시간 있어요?", options: ["오늘 시간 있어요?", "내일 시간 있어요?", "오늘 뭐 해요?", "오늘 어디 가요?"], answer: "오늘 시간 있어요?" },
-      { type: "listening", prompt: "Listen and choose what you hear", audioText: "7시에 만나요.", options: ["7시에 만나요.", "8시에 만나요.", "7시에 가요.", "7시에 먹어요."], answer: "7시에 만나요." },
-      { type: "mc", prompt: "'시에' is used with:", options: ["clock time", "dates", "places", "people"], answer: "clock time" },
-    ],
-  },
-  l16: {
-    id: "l16", title: "TOPIK Vocabulary I", unit: "u_topikvocab", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "mc", prompt: "'경험' means:", options: ["experience", "environment", "exercise", "example"], answer: "experience" },
-      { type: "translate_ko_en", prompt: "노력하다", answer: "to make an effort" },
-      { type: "fill", prompt: "저는 매일 한국어를 ___. (study, polite)", answer: "공부해요", options: ["공부해요", "공부하다", "공부했다", "공부할"] },
-    ],
-  },
-  l17: {
-    id: "l17", title: "TOPIK Reading I", unit: "u_topikread", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "reading", prompt: "저는 매일 아침 공원에서 운동을 합니다. 운동을 하면 기분이 좋아집니다.", question: "Why does the writer feel good?", options: ["Because of exercising", "Because of eating", "Because of sleeping", "Because of studying"], answer: "Because of exercising" },
-      { type: "mc", prompt: "(Practice question, not an official TOPIK item) '기분이 좋아지다' means:", options: ["mood improves", "mood worsens", "gets tired", "gets hungry"], answer: "mood improves" },
-    ],
-  },
-  l18: {
-    id: "l18", title: "TOPIK Listening I", unit: "u_topiklisten", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "listening", prompt: "Listen and choose what you hear (practice item)", audioText: "공원에서 운동을 해요.", options: ["공원에서 운동을 해요.", "학교에서 공부를 해요.", "집에서 쉬어요.", "식당에서 밥을 먹어요."], answer: "공원에서 운동을 해요." },
-    ],
-  },
-  l19: {
-    id: "l19", title: "TOPIK Writing Basics", unit: "u_topikwrite", xp: 30,
-    vocabIds: [],
-    questions: [
-      { type: "arrange", prompt: "Arrange (practice item): 'I exercise at the park every morning.'", words: ["저는", "매일", "아침에", "공원에서", "운동을", "합니다"], answer: "저는 매일 아침에 공원에서 운동을 합니다" },
-      { type: "fill", prompt: "(practice item) 운동을 ___ 기분이 좋아져요. (if I exercise)", answer: "하면", options: ["하면", "하고", "한 후에", "하지만"] },
-    ],
-  },
-  l20: {
-    id: "l20", title: "TOPIK Mock Set", unit: "u_topikmock", xp: 40,
-    vocabIds: [],
-    questions: [
-      { type: "reading", prompt: "(practice item) 어제는 비가 왔지만 오늘은 날씨가 좋습니다.", question: "How was the weather yesterday?", options: ["It rained", "It was sunny", "It snowed", "It was windy"], answer: "It rained" },
-      { type: "listening", prompt: "Listen (practice item) and choose what you hear", audioText: "오늘 날씨가 좋습니다.", options: ["오늘 날씨가 좋습니다.", "오늘 날씨가 나쁩니다.", "어제 비가 왔습니다.", "내일 눈이 옵니다."], answer: "오늘 날씨가 좋습니다." },
-      { type: "mc", prompt: "(practice item) '~지만' means:", options: ["but", "and", "because", "if"], answer: "but" },
-    ],
-  },
-    /* ===================== TOPIK PRACTICE ===================== */
 
-  /* ---------- TOPIK I READING ---------- */
-
-  l21: {
-    id: "l21",
-    title: "TOPIK Reading I",
-    unit: "u_topik_reading_1",
-    xp: 35,
-    vocabIds: [],
-    questions: [
-      {
-        type: "reading",
-        prompt: "저는 아침마다 빵을 먹습니다. 그리고 우유를 마십니다.",
-        question: "What does the person drink?",
-        options: ["Coffee", "Water", "Milk", "Juice"],
-        answer: "Milk"
-      },
-      {
-        type: "reading",
-        prompt: "민수는 오늘 학교에 갑니다. 학교에서 친구를 만납니다.",
-        question: "Where does Minsu meet his friend?",
-        options: ["At home", "At school", "At a restaurant", "At the park"],
-        answer: "At school"
-      },
-      {
-        type: "mc",
-        prompt: "다음 중 '내일'의 뜻은 무엇입니까?",
-        options: ["today", "yesterday", "tomorrow", "morning"],
-        answer: "tomorrow"
-      },
-      {
-        type: "mc",
-        prompt: "다음 중 '공원'과 관계있는 것은 무엇입니까?",
-        options: ["운동", "학교", "비행기", "병원"],
-        answer: "운동"
-      },
-      {
-        type: "reading",
-        prompt: "오늘은 일요일입니다. 저는 집에서 책을 읽습니다.",
-        question: "What day is it?",
-        options: ["Monday", "Friday", "Saturday", "Sunday"],
-        answer: "Sunday"
-      },
-      {
-        type: "fill",
-        prompt: "저는 도서관___ 책을 읽습니다.",
-        answer: "에서",
-        options: ["에", "에서", "을", "는"]
-      },
-      {
-        type: "mc",
-        prompt: "'친구와 같이'에서 '와'는 어떤 의미입니까?",
-        options: ["with", "from", "to", "at"],
-        answer: "with"
-      },
-      {
-        type: "reading",
-        prompt: "수진 씨는 커피를 좋아합니다. 아침마다 커피를 마십니다.",
-        question: "What does Sujin like?",
-        options: ["Tea", "Coffee", "Milk", "Juice"],
-        answer: "Coffee"
-      },
-      {
-        type: "mc",
-        prompt: "'시간이 없습니다'의 뜻은 무엇입니까?",
-        options: [
-          "I have time.",
-          "I don't have time.",
-          "I like time.",
-          "Time is long."
-        ],
-        answer: "I don't have time."
-      },
-      {
-        type: "reading",
-        prompt: "학교가 집에서 가깝습니다. 그래서 매일 걸어서 학교에 갑니다.",
-        question: "How does the person go to school?",
-        options: ["By bus", "By car", "On foot", "By train"],
-        answer: "On foot"
-      }
-    ]
-  },
-
-
-  /* ---------- TOPIK I LISTENING ---------- */
-
-  l22: {
-    id: "l22",
-    title: "TOPIK Listening I",
-    unit: "u_topik_listening_1",
-    xp: 35,
-    vocabIds: [],
-    questions: [
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "오늘 학교에 가요.",
-        options: [
-          "오늘 학교에 가요.",
-          "내일 학교에 가요.",
-          "오늘 집에 가요.",
-          "오늘 학교에서 공부해요."
-        ],
-        answer: "오늘 학교에 가요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "커피 한 잔 주세요.",
-        options: [
-          "커피 한 잔 주세요.",
-          "물 한 잔 주세요.",
-          "커피 두 잔 주세요.",
-          "커피를 마셔요."
-        ],
-        answer: "커피 한 잔 주세요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "어디에 가요?",
-        options: [
-          "어디에 가요?",
-          "무엇을 먹어요?",
-          "누구를 만나요?",
-          "언제 와요?"
-        ],
-        answer: "어디에 가요?"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "저는 학생이에요.",
-        options: [
-          "저는 학생이에요.",
-          "저는 선생님이에요.",
-          "저는 친구예요.",
-          "저는 의사예요."
-        ],
-        answer: "저는 학생이에요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "토요일에 만나요.",
-        options: [
-          "금요일에 만나요.",
-          "토요일에 만나요.",
-          "일요일에 만나요.",
-          "월요일에 만나요."
-        ],
-        answer: "토요일에 만나요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "오늘 날씨가 추워요.",
-        options: [
-          "오늘 날씨가 더워요.",
-          "오늘 날씨가 추워요.",
-          "오늘 날씨가 좋아요.",
-          "오늘 비가 와요."
-        ],
-        answer: "오늘 날씨가 추워요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "책을 읽어요.",
-        options: [
-          "책을 읽어요.",
-          "책을 사요.",
-          "책을 써요.",
-          "책을 찾아요."
-        ],
-        answer: "책을 읽어요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "몇 시에 만나요?",
-        options: [
-          "몇 시에 만나요?",
-          "어디에서 만나요?",
-          "누구와 만나요?",
-          "왜 만나요?"
-        ],
-        answer: "몇 시에 만나요?"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "저녁에 영화를 봐요.",
-        options: [
-          "아침에 영화를 봐요.",
-          "점심에 영화를 봐요.",
-          "저녁에 영화를 봐요.",
-          "저녁에 책을 읽어요."
-        ],
-        answer: "저녁에 영화를 봐요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "한국어를 공부하고 있어요.",
-        options: [
-          "한국어를 공부하고 있어요.",
-          "한국어를 가르치고 있어요.",
-          "영어를 공부하고 있어요.",
-          "한국어를 읽고 있어요."
-        ],
-        answer: "한국어를 공부하고 있어요."
-      }
-    ]
-  },
-
-
-  /* ---------- TOPIK WRITING BASICS ---------- */
-
-  l23: {
-    id: "l23",
-    title: "TOPIK Writing Basics",
-    unit: "u_topik_writing",
-    xp: 35,
-    vocabIds: [],
-    questions: [
-      {
-        type: "arrange",
-        prompt: "Arrange the sentence.",
-        words: ["저는", "매일", "한국어를", "공부합니다"],
-        answer: "저는 매일 한국어를 공부합니다"
-      },
-      {
-        type: "fill",
-        prompt: "저는 학교에 ___ 갑니다.",
-        answer: "매일",
-        options: ["매일", "어제", "누구", "무엇"]
-      },
-      {
-        type: "arrange",
-        prompt: "Arrange: 'I went to the library yesterday.'",
-        words: ["저는", "어제", "도서관에", "갔습니다"],
-        answer: "저는 어제 도서관에 갔습니다"
-      },
-      {
-        type: "fill",
-        prompt: "날씨가 좋___ 공원에 갔습니다.",
-        answer: "아서",
-        options: ["아서", "지만", "으면", "고"]
-      },
-      {
-        type: "arrange",
-        prompt: "Arrange the sentence.",
-        words: ["친구와", "주말에", "영화를", "봤습니다"],
-        answer: "주말에 친구와 영화를 봤습니다"
-      },
-      {
-        type: "fill",
-        prompt: "시간이 있___ 같이 공부해요.",
-        answer: "으면",
-        options: ["으면", "지만", "고", "아서"]
-      },
-      {
-        type: "arrange",
-        prompt: "Arrange: 'Because I was tired, I stayed home.'",
-        words: ["피곤해서", "집에", "있었습니다"],
-        answer: "피곤해서 집에 있었습니다"
-      },
-      {
-        type: "fill",
-        prompt: "저는 한국어를 공부하___ 합니다.",
-        answer: "고",
-        options: ["고", "면", "지만", "서"]
-      },
-      {
-        type: "arrange",
-        prompt: "Arrange the sentence.",
-        words: ["한국에", "가고", "싶습니다"],
-        answer: "한국에 가고 싶습니다"
-      },
-      {
-        type: "fill",
-        prompt: "내일 친구를 만나___ 합니다.",
-        answer: "려고",
-        options: ["려고", "지만", "어서", "으면"]
-      }
-    ]
-  },
-
-
-  /* ---------- TOPIK II READING ---------- */
-
-  l24: {
-    id: "l24",
-    title: "TOPIK Reading II",
-    unit: "u_topik_reading_2",
-    xp: 40,
-    vocabIds: [],
-    questions: [
-      {
-        type: "reading",
-        prompt: "최근에는 온라인으로 물건을 구입하는 사람들이 많아지고 있다. 온라인 쇼핑은 시간과 장소에 관계없이 물건을 살 수 있다는 장점이 있다.",
-        question: "What is one advantage of online shopping mentioned in the passage?",
-        options: [
-          "It is always cheaper.",
-          "It can be used regardless of time and place.",
-          "It provides free delivery.",
-          "It sells only Korean products."
-        ],
-        answer: "It can be used regardless of time and place."
-      },
-      {
-        type: "reading",
-        prompt: "환경을 보호하기 위해서는 일회용품 사용을 줄이는 노력이 필요하다. 개인이 작은 습관을 바꾸는 것부터 시작할 수 있다.",
-        question: "What does the writer suggest?",
-        options: [
-          "Using more disposable products",
-          "Changing small personal habits",
-          "Avoiding all products",
-          "Buying expensive products"
-        ],
-        answer: "Changing small personal habits"
-      },
-      {
-        type: "mc",
-        prompt: "'증가하다'와 가장 가까운 뜻은?",
-        options: ["늘어나다", "줄어들다", "멈추다", "사라지다"],
-        answer: "늘어나다"
-      },
-      {
-        type: "reading",
-        prompt: "많은 학생들이 시험을 앞두고 늦게까지 공부한다. 그러나 충분한 수면을 취하는 것도 학습 효과를 높이는 데 중요하다.",
-        question: "What does the passage emphasize?",
-        options: [
-          "Studying all night",
-          "Taking enough sleep",
-          "Avoiding exams",
-          "Studying only in the morning"
-        ],
-        answer: "Taking enough sleep"
-      },
-      {
-        type: "mc",
-        prompt: "'그러나' is closest in meaning to:",
-        options: ["therefore", "however", "because", "also"],
-        answer: "however"
-      },
-      {
-        type: "reading",
-        prompt: "이 카페는 오전 8시에 문을 열고 오후 9시에 문을 닫는다. 주말에는 오후 10시까지 운영한다.",
-        question: "When does the cafe close on weekends?",
-        options: ["8 PM", "9 PM", "10 PM", "11 PM"],
-        answer: "10 PM"
-      },
-      {
-        type: "mc",
-        prompt: "'필요하다'의 반대 의미로 가장 적절한 것은?",
-        options: ["불필요하다", "가능하다", "중요하다", "충분하다"],
-        answer: "불필요하다"
-      },
-      {
-        type: "reading",
-        prompt: "한 조사에 따르면 운동을 규칙적으로 하는 사람은 그렇지 않은 사람보다 스트레스를 덜 느끼는 것으로 나타났다.",
-        question: "What did the survey find?",
-        options: [
-          "Exercise increases stress.",
-          "Regular exercise may reduce stress.",
-          "People dislike exercise.",
-          "Exercise has no effect."
-        ],
-        answer: "Regular exercise may reduce stress."
-      },
-      {
-        type: "mc",
-        prompt: "'규칙적으로' means:",
-        options: ["regularly", "rarely", "suddenly", "quietly"],
-        answer: "regularly"
-      },
-      {
-        type: "reading",
-        prompt: "회의는 오후 세 시에 시작될 예정이었지만 참석자들의 사정으로 한 시간 늦춰졌다.",
-        question: "What happened to the meeting?",
-        options: [
-          "It was canceled.",
-          "It started one hour earlier.",
-          "It was delayed by one hour.",
-          "It was moved to another day."
-        ],
-        answer: "It was delayed by one hour."
-      }
-    ]
-  },
-
-
-  /* ---------- TOPIK II LISTENING ---------- */
-
-  l25: {
-    id: "l25",
-    title: "TOPIK Listening II",
-    unit: "u_topik_listening_2",
-    xp: 40,
-    vocabIds: [],
-    questions: [
-      {
-        type: "listening",
-        prompt: "Listen and identify the main point.",
-        audioText: "최근에는 사람들이 건강을 위해 운동을 시작하는 경우가 많습니다.",
-        options: [
-          "People are exercising more for their health.",
-          "People dislike exercise.",
-          "Exercise is becoming more expensive.",
-          "People only exercise at school."
-        ],
-        answer: "People are exercising more for their health."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the reason.",
-        audioText: "오늘 회의가 오후 세 시로 변경되었습니다. 오전에 다른 일정이 있기 때문입니다.",
-        options: [
-          "There is another schedule in the morning.",
-          "The meeting room is closed.",
-          "The meeting was canceled.",
-          "The speaker is sick."
-        ],
-        answer: "There is another schedule in the morning."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the speaker's opinion.",
-        audioText: "저는 대중교통을 이용하는 것이 환경을 보호하는 데 도움이 된다고 생각합니다.",
-        options: [
-          "Public transportation helps protect the environment.",
-          "Public transportation is dangerous.",
-          "Cars are better for the environment.",
-          "Transportation is unnecessary."
-        ],
-        answer: "Public transportation helps protect the environment."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the main topic.",
-        audioText: "이번 주말에는 비가 올 가능성이 높기 때문에 야외 활동보다는 실내 활동을 하는 것이 좋겠습니다.",
-        options: [
-          "Weekend indoor activities",
-          "Summer vacation",
-          "Buying an umbrella",
-          "Going hiking"
-        ],
-        answer: "Weekend indoor activities"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the reason.",
-        audioText: "회의에 참석하지 못했습니다. 갑자기 일이 생겼기 때문입니다.",
-        options: [
-          "The speaker had unexpected work.",
-          "The speaker forgot the meeting.",
-          "The speaker was on vacation.",
-          "The meeting was canceled."
-        ],
-        answer: "The speaker had unexpected work."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify what will happen next.",
-        audioText: "보고서를 먼저 확인한 후에 팀장님께 보내겠습니다.",
-        options: [
-          "The speaker will check the report first.",
-          "The speaker will delete the report.",
-          "The speaker will leave work.",
-          "The speaker will call the customer."
-        ],
-        answer: "The speaker will check the report first."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the speaker's attitude.",
-        audioText: "처음에는 어려웠지만 계속 연습하다 보니 이제는 많이 익숙해졌습니다.",
-        options: [
-          "The speaker feels more comfortable now.",
-          "The speaker wants to quit.",
-          "The speaker dislikes practicing.",
-          "The speaker has never practiced."
-        ],
-        answer: "The speaker feels more comfortable now."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the problem.",
-        audioText: "버스를 타려고 했는데 교통이 너무 막혀서 늦게 도착했습니다.",
-        options: [
-          "Heavy traffic caused a delay.",
-          "The bus arrived early.",
-          "The speaker missed the train.",
-          "The road was closed."
-        ],
-        answer: "Heavy traffic caused a delay."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the purpose.",
-        audioText: "다음 주부터 도서관 이용 시간이 변경되오니 이용에 참고하시기 바랍니다.",
-        options: [
-          "To announce a change in library hours",
-          "To advertise a new library",
-          "To cancel library services",
-          "To introduce a new book"
-        ],
-        answer: "To announce a change in library hours"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the conclusion.",
-        audioText: "여러 가지 방법을 비교해 본 결과, 이번에는 온라인으로 신청하는 것이 가장 편리할 것 같습니다.",
-        options: [
-          "Applying online seems most convenient.",
-          "Applying in person is required.",
-          "The application was canceled.",
-          "There is no way to apply."
-        ],
-        answer: "Applying online seems most convenient."
-      }
-    ]
-  },
-    /* ===================== TOPIK I MOCK TEST ===================== */
-
-  l26: {
-    id: "l26",
-    title: "TOPIK I Mock Test",
-    unit: "u_topik_mock_1",
-    xp: 60,
-    vocabIds: [],
     questions: [
 
-      /* Reading 1–15 */
+      /* Set 1 — Basic consonants */
 
       {
-        type: "reading",
-        prompt: "저는 매일 아침 7시에 일어납니다. 그리고 아침을 먹고 학교에 갑니다.",
-        question: "What does the person do after waking up?",
-        options: ["Goes to school immediately", "Eats breakfast", "Goes to work", "Exercises"],
-        answer: "Eats breakfast"
-      },
-      {
         type: "mc",
-        prompt: "'아침' means:",
-        options: ["morning", "afternoon", "evening", "night"],
-        answer: "morning"
-      },
-      {
-        type: "reading",
-        prompt: "민지는 주말에 친구와 영화를 봤습니다. 영화를 본 후에는 식당에서 저녁을 먹었습니다.",
-        question: "What did Minji do after watching the movie?",
-        options: ["Went home", "Studied", "Ate dinner", "Met her teacher"],
-        answer: "Ate dinner"
-      },
-      {
-        type: "fill",
-        prompt: "학교___ 공부합니다.",
-        answer: "에서",
-        options: ["에서", "에", "을", "가"]
-      },
-      {
-        type: "mc",
-        prompt: "'저는 한국어를 공부하고 싶어요.' means:",
-        options: [
-          "I can study Korean.",
-          "I want to study Korean.",
-          "I studied Korean.",
-          "I don't study Korean."
-        ],
-        answer: "I want to study Korean."
-      },
-      {
-        type: "reading",
-        prompt: "오늘은 비가 옵니다. 그래서 우산을 가지고 갑니다.",
-        question: "Why does the person take an umbrella?",
-        options: ["It is hot.", "It is snowing.", "It is raining.", "It is windy."],
-        answer: "It is raining."
-      },
-      {
-        type: "mc",
-        prompt: "Which particle marks the object?",
-        options: ["은/는", "이/가", "을/를", "에"],
-        answer: "을/를"
-      },
-      {
-        type: "reading",
-        prompt: "수업은 오전 9시에 시작합니다. 오후 3시에 끝납니다.",
-        question: "When does the class start?",
-        options: ["8 AM", "9 AM", "2 PM", "3 PM"],
-        answer: "9 AM"
-      },
-      {
-        type: "mc",
-        prompt: "'없어요' means:",
-        options: ["there is / have", "there isn't / don't have", "go", "come"],
-        answer: "there isn't / don't have"
-      },
-      {
-        type: "fill",
-        prompt: "저는 커피___ 마셔요.",
-        answer: "를",
-        options: ["를", "가", "에", "는"]
-      },
-      {
-        type: "reading",
-        prompt: "영수는 오늘 시간이 없습니다. 그래서 친구를 만나지 않습니다.",
-        question: "Why doesn't Youngsu meet his friend?",
-        options: [
-          "He is sick.",
-          "He has no time.",
-          "He is traveling.",
-          "He doesn't like his friend."
-        ],
-        answer: "He has no time."
-      },
-      {
-        type: "mc",
-        prompt: "Which is the polite present form of 먹다?",
-        options: ["먹어요", "먹습니다만", "먹가요", "먹해요"],
-        answer: "먹어요"
-      },
-      {
-        type: "reading",
-        prompt: "저녁에는 가족과 함께 집에서 밥을 먹습니다.",
-        question: "Who does the person eat dinner with?",
-        options: ["A friend", "A teacher", "Family", "A coworker"],
-        answer: "Family"
-      },
-      {
-        type: "fill",
-        prompt: "친구___ 같이 영화를 봐요.",
-        answer: "와",
-        options: ["와", "를", "에", "가"]
-      },
-      {
-        type: "mc",
-        prompt: "'내일' is:",
-        options: ["today", "yesterday", "tomorrow", "now"],
-        answer: "tomorrow"
+        prompt: "Which Hangul character represents the 'g/k' sound?",
+        options: ["ㄱ", "ㄴ", "ㄷ", "ㅁ"],
+        answer: "ㄱ"
       },
 
-      /* Listening 16–30 */
-
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "오늘은 월요일입니다.",
-        options: ["Monday", "Tuesday", "Friday", "Sunday"],
-        answer: "Monday"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "학교에 가요.",
-        options: ["학교에 가요.", "학교에서 와요.", "집에 가요.", "학교를 봐요."],
-        answer: "학교에 가요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "물을 마셔요.",
-        options: ["물을 마셔요.", "밥을 먹어요.", "물을 사요.", "커피를 마셔요."],
-        answer: "물을 마셔요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "저녁 7시에 만나요.",
-        options: ["6 PM", "7 PM", "8 PM", "9 PM"],
-        answer: "7 PM"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "한국어를 공부해요.",
-        options: [
-          "한국어를 공부해요.",
-          "영어를 공부해요.",
-          "한국어를 가르쳐요.",
-          "한국어를 읽어요."
-        ],
-        answer: "한국어를 공부해요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "오늘은 날씨가 좋아요.",
-        options: ["The weather is good.", "It is raining.", "It is cold.", "It is snowing."],
-        answer: "The weather is good."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "친구를 만나요.",
-        options: ["친구를 만나요.", "친구가 와요.", "친구와 가요.", "친구를 불러요."],
-        answer: "친구를 만나요."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "내일 학교에 갈 거예요.",
-        options: ["Yesterday", "Today", "Tomorrow", "Tonight"],
-        answer: "Tomorrow"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "밥을 먹은 후에 공부해요.",
-        options: [
-          "Study after eating.",
-          "Eat after studying.",
-          "Study before eating.",
-          "Do not study."
-        ],
-        answer: "Study after eating."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "시간이 있으면 같이 가요.",
-        options: [
-          "If there is time, let's go together.",
-          "We went yesterday.",
-          "We cannot go.",
-          "We are studying together."
-        ],
-        answer: "If there is time, let's go together."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "커피 한 잔 주세요.",
-        options: [
-          "One cup of coffee, please.",
-          "Two cups of coffee, please.",
-          "One glass of water, please.",
-          "Coffee is good."
-        ],
-        answer: "One cup of coffee, please."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "오늘은 학교에 안 가요.",
-        options: [
-          "I go to school today.",
-          "I don't go to school today.",
-          "I went to school yesterday.",
-          "I want to go to school."
-        ],
-        answer: "I don't go to school today."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "어디에서 공부해요?",
-        options: [
-          "어디에서 공부해요?",
-          "어디에 가요?",
-          "무엇을 먹어요?",
-          "누구를 만나요?"
-        ],
-        answer: "어디에서 공부해요?"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose the correct answer.",
-        audioText: "저는 학생입니다.",
-        options: ["I am a student.", "I am a teacher.", "I am a doctor.", "I am a friend."],
-        answer: "I am a student."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and choose what you hear.",
-        audioText: "주말에 친구와 영화를 봤어요.",
-        options: [
-          "I watched a movie with a friend on the weekend.",
-          "I studied with a friend.",
-          "I watched a movie alone.",
-          "I went to school on the weekend."
-        ],
-        answer: "I watched a movie with a friend on the weekend."
-      }
-    ]
-  },
-
-
-  /* ===================== TOPIK II MOCK TEST ===================== */
-
-  l27: {
-    id: "l27",
-    title: "TOPIK II Mock Test",
-    unit: "u_topik_mock_2",
-    xp: 80,
-    vocabIds: [],
-    questions: [
-
-      /* Reading 1–15 */
-
-      {
-        type: "reading",
-        prompt: "최근에는 건강에 대한 관심이 높아지면서 규칙적으로 운동하는 사람들이 늘고 있다. 운동은 체력을 높일 뿐만 아니라 스트레스를 줄이는 데에도 도움이 된다.",
-        question: "What is one benefit of exercise mentioned in the passage?",
-        options: [
-          "It reduces stress.",
-          "It increases work hours.",
-          "It reduces sleep.",
-          "It makes food cheaper."
-        ],
-        answer: "It reduces stress."
-      },
       {
         type: "mc",
-        prompt: "'늘고 있다' is closest in meaning to:",
-        options: ["is increasing", "is disappearing", "is stopping", "is decreasing"],
-        answer: "is increasing"
-      },
-      {
-        type: "reading",
-        prompt: "환경 문제를 해결하기 위해서는 정부의 정책뿐만 아니라 시민들의 적극적인 참여도 필요하다.",
-        question: "What is necessary according to the passage?",
-        options: [
-          "Only government policies",
-          "Only individual action",
-          "Government policies and citizen participation",
-          "More factories"
-        ],
-        answer: "Government policies and citizen participation"
-      },
-      {
-        type: "mc",
-        prompt: "'뿐만 아니라' means:",
-        options: ["not only...but also", "because", "although", "instead of"],
-        answer: "not only...but also"
-      },
-      {
-        type: "reading",
-        prompt: "한 회사는 직원들의 편의를 위해 근무 시간을 자유롭게 선택할 수 있는 제도를 도입했다. 이 제도는 직원들의 만족도를 높이는 데 도움이 될 것으로 기대된다.",
-        question: "Why did the company introduce the system?",
-        options: [
-          "To reduce salaries",
-          "To increase employee convenience",
-          "To close the office",
-          "To increase working hours"
-        ],
-        answer: "To increase employee convenience"
-      },
-      {
-        type: "mc",
-        prompt: "'도입하다' means:",
-        options: ["to introduce", "to remove", "to refuse", "to repeat"],
-        answer: "to introduce"
-      },
-      {
-        type: "reading",
-        prompt: "처음에는 새로운 환경에 적응하는 것이 어려웠다. 하지만 시간이 지나면서 사람들과 친해졌고 생활에도 익숙해졌다.",
-        question: "What happened over time?",
-        options: [
-          "The person left immediately.",
-          "The person became accustomed to the new environment.",
-          "The person stopped meeting people.",
-          "The environment became worse."
-        ],
-        answer: "The person became accustomed to the new environment."
-      },
-      {
-        type: "mc",
-        prompt: "'적응하다' means:",
-        options: ["to adapt", "to forget", "to avoid", "to decide"],
-        answer: "to adapt"
-      },
-      {
-        type: "reading",
-        prompt: "이 제품은 가격이 저렴한 데 비해 성능이 뛰어나다는 평가를 받고 있다.",
-        question: "What is said about the product?",
-        options: [
-          "It is expensive and ineffective.",
-          "It is inexpensive but performs well.",
-          "It is difficult to use.",
-          "It is no longer available."
-        ],
-        answer: "It is inexpensive but performs well."
-      },
-      {
-        type: "mc",
-        prompt: "'뛰어나다' is closest in meaning to:",
-        options: ["excellent", "ordinary", "weak", "unnecessary"],
-        answer: "excellent"
-      },
-      {
-        type: "reading",
-        prompt: "회의 결과, 다음 달부터 새로운 교육 프로그램을 실시하기로 결정했다.",
-        question: "What was decided?",
-        options: [
-          "To cancel the program",
-          "To start a new training program next month",
-          "To change the meeting date",
-          "To hire new employees"
-        ],
-        answer: "To start a new training program next month"
-      },
-      {
-        type: "mc",
-        prompt: "'결정하다' means:",
-        options: ["to decide", "to explain", "to compare", "to cancel"],
-        answer: "to decide"
-      },
-      {
-        type: "reading",
-        prompt: "인터넷을 이용하면 필요한 정보를 빠르게 찾을 수 있지만, 정보의 정확성을 확인하는 과정도 필요하다.",
-        question: "What should people do when using information from the internet?",
-        options: [
-          "Believe everything immediately.",
-          "Check whether the information is accurate.",
-          "Avoid using the internet.",
-          "Share every piece of information."
-        ],
-        answer: "Check whether the information is accurate."
-      },
-      {
-        type: "mc",
-        prompt: "'정확성' means:",
-        options: ["accuracy", "speed", "difficulty", "popularity"],
-        answer: "accuracy"
-      },
-      {
-        type: "reading",
-        prompt: "시간을 효율적으로 사용하기 위해서는 해야 할 일을 미리 정리하고 우선순위를 정하는 것이 좋다.",
-        question: "What does the passage recommend?",
-        options: [
-          "Doing everything randomly",
-          "Planning tasks and setting priorities",
-          "Working without breaks",
-          "Avoiding difficult tasks"
-        ],
-        answer: "Planning tasks and setting priorities"
+        prompt: "Which Hangul character represents the 'n' sound?",
+        options: ["ㄹ", "ㄴ", "ㅂ", "ㅅ"],
+        answer: "ㄴ"
       },
 
-      /* Listening 16–25 */
-
       {
-        type: "listening",
-        prompt: "Listen and identify the main idea.",
-        audioText: "최근에는 출퇴근 시간을 줄이기 위해 재택근무를 선택하는 사람들이 많아지고 있습니다.",
-        options: [
-          "More people are choosing remote work to reduce commuting time.",
-          "People are commuting longer.",
-          "Remote work is becoming impossible.",
-          "People are changing jobs because of traffic."
-        ],
-        answer: "More people are choosing remote work to reduce commuting time."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the reason.",
-        audioText: "행사가 다음 주로 연기되었습니다. 이번 주에 비가 많이 올 것으로 예상되기 때문입니다.",
-        options: [
-          "Heavy rain is expected this week.",
-          "The venue is too small.",
-          "The event was canceled.",
-          "The organizers are on vacation."
-        ],
-        answer: "Heavy rain is expected this week."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the speaker's opinion.",
-        audioText: "저는 책을 읽는 습관이 새로운 지식을 얻는 데 큰 도움이 된다고 생각합니다.",
-        options: [
-          "Reading helps people gain knowledge.",
-          "Reading is unnecessary.",
-          "Books are too expensive.",
-          "Reading should be avoided."
-        ],
-        answer: "Reading helps people gain knowledge."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify what will happen next.",
-        audioText: "자료를 모두 정리한 다음에 보고서를 작성하겠습니다.",
-        options: [
-          "The speaker will organize the materials first.",
-          "The speaker will cancel the report.",
-          "The speaker will leave the office.",
-          "The speaker will call a friend."
-        ],
-        answer: "The speaker will organize the materials first."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the problem.",
-        audioText: "컴퓨터가 갑자기 작동하지 않아서 발표 자료를 열 수 없었습니다.",
-        options: [
-          "The computer stopped working.",
-          "The presentation was canceled in advance.",
-          "The speaker forgot the materials.",
-          "The internet was too fast."
-        ],
-        answer: "The computer stopped working."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the purpose.",
-        audioText: "이번 주 금요일까지 신청서를 제출해 주시기 바랍니다.",
-        options: [
-          "To request submission of an application by Friday",
-          "To cancel an application",
-          "To announce a holiday",
-          "To introduce a new employee"
-        ],
-        answer: "To request submission of an application by Friday"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the speaker's attitude.",
-        audioText: "처음에는 걱정했지만 실제로 해 보니 생각보다 어렵지 않았습니다.",
-        options: [
-          "The speaker found it easier than expected.",
-          "The speaker completely failed.",
-          "The speaker refuses to try.",
-          "The speaker is still worried."
-        ],
-        answer: "The speaker found it easier than expected."
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the cause.",
-        audioText: "교통이 혼잡해서 약속 시간보다 늦게 도착했습니다.",
-        options: [
-          "Heavy traffic",
-          "Bad weather",
-          "A missed train",
-          "A forgotten appointment"
-        ],
-        answer: "Heavy traffic"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the main topic.",
-        audioText: "요즘은 건강을 관리하기 위해 식습관을 바꾸는 사람들이 많습니다.",
-        options: [
-          "Changes in eating habits for health",
-          "Problems with restaurants",
-          "The cost of food",
-          "Cooking competitions"
-        ],
-        answer: "Changes in eating habits for health"
-      },
-      {
-        type: "listening",
-        prompt: "Listen and identify the conclusion.",
-        audioText: "여러 조건을 비교해 본 결과 이 방법이 가장 효율적인 것으로 보입니다.",
-        options: [
-          "This method appears to be the most efficient.",
-          "All methods failed.",
-          "The method should be canceled.",
-          "No comparison was made."
-        ],
-        answer: "This method appears to be the most efficient."
+        type: "mc",
+        prompt: "Which Hangul character represents the 'd/t' sound?",
+        options: ["ㄷ", "ㄱ", "ㅈ", "ㅎ"],
+        answer: "ㄷ"
       },
 
-      /* Writing 26–30 */
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'm' sound?",
+        options: ["ㅁ", "ㅂ", "ㅅ", "ㅇ"],
+        answer: "ㅁ"
+      },
 
       {
-        type: "arrange",
-        prompt: "Arrange the sentence naturally.",
-        words: ["환경을", "보호하기", "위해서는", "노력이", "필요합니다"],
-        answer: "환경을 보호하기 위해서는 노력이 필요합니다"
+        type: "mc",
+        prompt: "Which Hangul character represents the 'b/p' sound?",
+        options: ["ㅂ", "ㄷ", "ㄹ", "ㅈ"],
+        answer: "ㅂ"
       },
+
+      /* Set 2 — More consonants */
+
       {
-        type: "fill",
-        prompt: "시간이 부족하___ 계획을 세워야 합니다.",
-        answer: "기 때문에",
-        options: ["기 때문에", "지만", "으면", "고"]
+        type: "mc",
+        prompt: "Which character represents the 's' sound?",
+        options: ["ㅅ", "ㅈ", "ㅊ", "ㅎ"],
+        answer: "ㅅ"
       },
+
       {
-        type: "arrange",
-        prompt: "Arrange the sentence.",
-        words: ["새로운", "방법을", "찾기", "위해", "노력했습니다"],
-        answer: "새로운 방법을 찾기 위해 노력했습니다"
+        type: "mc",
+        prompt: "Which character represents the 'j' sound?",
+        options: ["ㅈ", "ㄱ", "ㄷ", "ㅂ"],
+        answer: "ㅈ"
       },
+
       {
-        type: "fill",
-        prompt: "비가 많이 왔___ 행사가 취소되었습니다.",
-        answer: "기 때문에",
-        options: ["기 때문에", "지만", "으면", "고"]
+        type: "mc",
+        prompt: "Which character represents the 'h' sound?",
+        options: ["ㅎ", "ㅅ", "ㅇ", "ㄹ"],
+        answer: "ㅎ"
       },
+
       {
-        type: "arrange",
-        prompt: "Arrange the sentence.",
-        words: ["앞으로", "더", "열심히", "공부할", "것입니다"],
-        answer: "앞으로 더 열심히 공부할 것입니다"
-      }
-    ]
-  },
-};
+        type: "mc",
+        prompt: "Which character represents the 'r/l' sound?",
+        options: ["ㄹ", "ㄴ", "ㅁ", "ㅂ"],
+        answer: "ㄹ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which character represents the 'ng' sound when used as a final consonant?",
+        options: ["ㅇ", "ㅎ", "ㅁ", "ㄴ"],
+        answer: "ㅇ"
+      },
+
+      /* Set 3 — Basic vowels */
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'a' sound?",
+        options: ["ㅏ", "ㅓ", "ㅗ", "ㅜ"],
+        answer: "ㅏ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'eo' sound?",
+        options: ["ㅓ", "ㅏ", "ㅗ", "ㅡ"],
+        answer: "ㅓ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'o' sound?",
+        options: ["ㅗ", "ㅜ", "ㅏ", "ㅣ"],
+        answer: "ㅗ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'u' sound?",
+        options: ["ㅜ", "ㅗ", "ㅓ", "ㅡ"],
+        answer: "ㅜ"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'eu' sound?",
+        options: ["ㅡ", "ㅣ", "ㅓ", "ㅏ"],
+        answer: "ㅡ"
+      },
+
+      /* Set 4 — Final basic vowel */
+
+      {
+        type: "mc",
+        prompt: "Which Hangul character represents the 'i' sound?",
+        options: ["ㅣ", "ㅡ", "ㅏ", "ㅓ"],
+        answer: "ㅣ"
+      },
+
+      {
+        type: "match",
+        prompt: "Match each basic vowel with its sound.",
+        pairs: [
+          ["ㅏ", "a"],
+          ["ㅓ", "eo"],
+          ["ㅗ", "o"],
+          ["ㅜ", "u"],
+          ["ㅡ", "eu"],
+          ["ㅣ", "i"]
+        ]
+      },
+
+      /* Set 5 — Character recognition */
+
+      {
+        type: "mc",
+        prompt: "Which of these is a Korean vowel?",
+        options: ["ㄱ", "ㄴ", "ㅏ", "ㅁ"],
+        answer: "ㅏ"
+      },
+
+      {
+        type: "mc",
+        prompt
 
 /* ===================== TOPIK PRACTICE SETS ===================== */
 
