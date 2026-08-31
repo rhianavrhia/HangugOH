@@ -3865,83 +3865,4506 @@ const LESSONS = {
         answer: "저는 커피를 마셔요"
       }
     ]
+  },
+
+    l26: {
+    id: "l26",
+    title: "Particles 1 — 은/는: Topic Marker",
+    unit: "u_particles",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 은/는 mainly mark?",
+        options: [
+          "The topic of a sentence",
+          "The object of a sentence",
+          "A location",
+          "A verb"
+        ],
+        answer: "The topic of a sentence"
+      },
+
+      {
+        type: "fill",
+        prompt: "저___ 학생이에요.",
+        answer: "는",
+        options: ["는", "를", "에", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "민수___ 친구예요.",
+        answer: "는",
+        options: ["는", "을", "에", "가"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly uses 는?",
+        options: [
+          "저는 학생이에요.",
+          "저를 학생이에요.",
+          "저에 학생이에요.",
+          "저가 학생이에요."
+        ],
+        answer: "저는 학생이에요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I am a student.'",
+        words: ["저는", "학생이에요"],
+        answer: "저는 학생이에요"
+      }
+    ]
+  },
+
+  l27: {
+    id: "l27",
+    title: "Particles 2 — 이/가: Subject Marker",
+    unit: "u_particles",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 이/가 mainly mark?",
+        options: [
+          "The subject",
+          "The topic",
+          "The object",
+          "The destination"
+        ],
+        answer: "The subject"
+      },
+
+      {
+        type: "fill",
+        prompt: "친구___ 와요.",
+        answer: "가",
+        options: ["가", "를", "는", "에"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학생___ 많아요.",
+        answer: "이",
+        options: ["이", "는", "을", "에"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly uses 이/가?",
+        options: [
+          "친구가 와요.",
+          "친구를 와요.",
+          "친구에 와요.",
+          "친구는 와요."
+        ],
+        answer: "친구가 와요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'My friend comes.'",
+        words: ["친구가", "와요"],
+        answer: "친구가 와요"
+      }
+    ]
+  },
+
+  l28: {
+    id: "l28",
+    title: "Particles 3 — 을/를: Object Marker",
+    unit: "u_particles",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 을/를 mark?",
+        options: [
+          "The object",
+          "The topic",
+          "The subject",
+          "The location"
+        ],
+        answer: "The object"
+      },
+
+      {
+        type: "fill",
+        prompt: "밥___ 먹어요.",
+        answer: "을",
+        options: ["을", "는", "에", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "커피___ 마셔요.",
+        answer: "를",
+        options: ["를", "이", "는", "에"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly uses 를?",
+        options: [
+          "커피를 마셔요.",
+          "커피가 마셔요.",
+          "커피에 마셔요.",
+          "커피는 마셔요."
+        ],
+        answer: "커피를 마셔요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I eat rice.'",
+        words: ["저는", "밥을", "먹어요"],
+        answer: "저는 밥을 먹어요"
+      }
+    ]
+  },
+
+  l29: {
+    id: "l29",
+    title: "Particles 4 — 에: Time & Destination",
+    unit: "u_particles",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What can 에 mark?",
+        options: [
+          "A destination or specific time",
+          "Only an object",
+          "Only a subject",
+          "A person's name"
+        ],
+        answer: "A destination or specific time"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 가요.",
+        answer: "에",
+        options: ["에", "를", "는", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "세 시___ 만나요.",
+        answer: "에",
+        options: ["에", "를", "가", "는"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly uses 에?",
+        options: [
+          "학교에 가요.",
+          "학교를 가요.",
+          "학교가 가요.",
+          "학교는 가요."
+        ],
+        answer: "학교에 가요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school at 8.'",
+        words: ["저는", "8시에", "학교에", "가요"],
+        answer: "저는 8시에 학교에 가요"
+      }
+    ]
+  },
+
+  l30: {
+    id: "l30",
+    title: "Particles 5 — Full Review",
+    unit: "u_particles",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle marks the topic?",
+        options: ["은/는", "이/가", "을/를", "에"],
+        answer: "은/는"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle marks the subject?",
+        options: ["은/는", "이/가", "을/를", "에"],
+        answer: "이/가"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle marks the object?",
+        options: ["은/는", "이/가", "을/를", "에"],
+        answer: "을/를"
+      },
+
+      {
+        type: "fill",
+        prompt: "저___ 한국어___ 공부해요.",
+        answer: "는, 를",
+        options: [
+          "는, 를",
+          "를, 는",
+          "가, 에",
+          "에, 가"
+        ]
+      },
+
+      {
+        type: "fill",
+        prompt: "친구___ 학교___ 가요.",
+        answer: "가, 에",
+        options: [
+          "가, 에",
+          "를, 는",
+          "는, 를",
+          "에, 가"
+        ]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study Korean at school.'",
+        words: ["저는", "학교에서", "한국어를", "공부해요"],
+        answer: "저는 학교에서 한국어를 공부해요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'My friend goes to school.'",
+        words: ["친구가", "학교에", "가요"],
+        answer: "친구가 학교에 가요"
+      }
+    ]
+  },
+
+
+  /* ===================== VERB CONJUGATION ===================== */
+
+  l31: {
+    id: "l31",
+    title: "Verb Conjugation 1 — 가다 & 오다",
+    unit: "u_verbconj",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the dictionary form of '가요'?",
+        options: ["가다", "오다", "먹다", "보다"],
+        answer: "가다"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 가다?",
+        options: ["가요", "가다요", "갑요", "가어요"],
+        answer: "가요"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교에 ___요. (go)",
+        answer: "가",
+        options: ["가", "오", "먹", "보"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 오다?",
+        options: ["와요", "오요", "옵니다", "오아요"],
+        answer: "와요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go home.'",
+        words: ["저는", "집에", "가요"],
+        answer: "저는 집에 가요"
+      }
+    ]
+  },
+
+  l32: {
+    id: "l32",
+    title: "Verb Conjugation 2 — 먹다 & 마시다",
+    unit: "u_verbconj",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 먹다?",
+        options: ["먹어요", "먹아요", "먹요", "먹습니다요"],
+        answer: "먹어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 마시다?",
+        options: ["마셔요", "마시어요", "마시요", "마십요"],
+        answer: "마셔요"
+      },
+
+      {
+        type: "fill",
+        prompt: "밥을 ___요. (eat)",
+        answer: "먹어",
+        options: ["먹어", "마셔", "가", "와"]
+      },
+
+      {
+        type: "fill",
+        prompt: "물을 ___요. (drink)",
+        answer: "마셔",
+        options: ["마셔", "먹어", "가", "봐"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I drink coffee.'",
+        words: ["저는", "커피를", "마셔요"],
+        answer: "저는 커피를 마셔요"
+      }
+    ]
+  },
+
+  l33: {
+    id: "l33",
+    title: "Verb Conjugation 3 — 보다 & 하다",
+    unit: "u_verbconj",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 보다?",
+        options: ["봐요", "보어요", "보요", "봅니다요"],
+        answer: "봐요"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 하다?",
+        options: ["해요", "하요", "하여요", "합니다요"],
+        answer: "해요"
+      },
+
+      {
+        type: "fill",
+        prompt: "영화를 ___요. (watch)",
+        answer: "봐",
+        options: ["봐", "해", "먹어", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "한국어를 공부___요.",
+        answer: "해",
+        options: ["해", "봐", "먹어", "와"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study Korean.'",
+        words: ["저는", "한국어를", "공부해요"],
+        answer: "저는 한국어를 공부해요"
+      }
+    ]
+  },
+
+  l34: {
+    id: "l34",
+    title: "Verb Conjugation 4 — Past Tense",
+    unit: "u_verbconj",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 먹었어요 mean?",
+        options: ["ate", "eat", "will eat", "am eating"],
+        answer: "ate"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the past form of 가다?",
+        options: ["갔어요", "가요", "갈 거예요", "가세요"],
+        answer: "갔어요"
+      },
+
+      {
+        type: "fill",
+        prompt: "어제 밥을 ___어요. (eat)",
+        answer: "먹었",
+        options: ["먹었", "먹어", "먹을", "먹는"]
+      },
+
+      {
+        type: "fill",
+        prompt: "어제 학교에 ___어요. (go)",
+        answer: "갔",
+        options: ["갔", "가", "갈", "가는"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I watched a movie yesterday.'",
+        words: ["저는", "어제", "영화를", "봤어요"],
+        answer: "저는 어제 영화를 봤어요"
+      }
+    ]
+  },
+
+  l35: {
+    id: "l35",
+    title: "Verb Conjugation 5 — Full Review",
+    unit: "u_verbconj",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 가다?",
+        options: ["가요", "갔어요", "갈 거예요", "가세요"],
+        answer: "가요"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the polite present form of 먹다?",
+        options: ["먹어요", "먹었어요", "먹을 거예요", "먹습니다만"],
+        answer: "먹어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the past form of 보다?",
+        options: ["봤어요", "봐요", "볼 거예요", "보세요"],
+        answer: "봤어요"
+      },
+
+      {
+        type: "fill",
+        prompt: "오늘 한국어를 공부___요.",
+        answer: "해",
+        options: ["해", "했", "할", "하"]
+      },
+
+      {
+        type: "fill",
+        prompt: "어제 친구를 만났___요.",
+        answer: "어요",
+        options: ["어요", "아요", "을", "는"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I ate rice yesterday.'",
+        words: ["저는", "어제", "밥을", "먹었어요"],
+        answer: "저는 어제 밥을 먹었어요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school.'",
+        words: ["저는", "학교에", "가요"],
+        answer: "저는 학교에 가요"
+      }
+    ]
+  },
+
+
+  /* ===================== DAILY ACTIVITIES ===================== */
+
+  l36: {
+    id: "l36",
+    title: "Daily Activities 1 — Waking Up & Sleeping",
+    unit: "u_daily",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 일어나다 mean?",
+        options: ["to wake up / get up", "to sleep", "to eat", "to study"],
+        answer: "to wake up / get up"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "자다",
+        answer: "to sleep"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "wake up",
+        answer: "일어나다",
+        options: ["일어나다", "자다", "먹다", "가다"]
+      },
+
+      {
+        type: "fill",
+        prompt: "아침 7시에 ___요. (wake up)",
+        answer: "일어나",
+        options: ["일어나", "자", "먹어", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I sleep at 11.'",
+        words: ["저는", "11시에", "자요"],
+        answer: "저는 11시에 자요"
+      }
+    ]
+  },
+
+  l37: {
+    id: "l37",
+    title: "Daily Activities 2 — Eating & Drinking",
+    unit: "u_daily",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 아침을 먹다 mean?",
+        options: [
+          "to eat breakfast",
+          "to eat lunch",
+          "to eat dinner",
+          "to drink breakfast"
+        ],
+        answer: "to eat breakfast"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which verb means 'to drink'?",
+        options: ["마시다", "먹다", "자다", "읽다"],
+        answer: "마시다"
+      },
+
+      {
+        type: "fill",
+        prompt: "아침에 밥을 ___요.",
+        answer: "먹어",
+        options: ["먹어", "자", "읽어", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "커피를 ___요.",
+        answer: "마셔",
+        options: ["마셔", "먹어", "자", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I drink coffee in the morning.'",
+        words: ["저는", "아침에", "커피를", "마셔요"],
+        answer: "저는 아침에 커피를 마셔요"
+      }
+    ]
+  },
+
+  l38: {
+    id: "l38",
+    title: "Daily Activities 3 — School & Study",
+    unit: "u_daily",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 공부하다 mean?",
+        options: ["to study", "to work", "to sleep", "to exercise"],
+        answer: "to study"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "학교에 가다",
+        answer: "to go to school"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교에서 한국어를 ___요.",
+        answer: "공부해",
+        options: ["공부해", "자", "먹어", "마셔"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Where does the person study in this sentence? '학교에서 공부해요.'",
+        options: ["At school", "At home", "At a restaurant", "At a park"],
+        answer: "At school"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study Korean at school.'",
+        words: ["저는", "학교에서", "한국어를", "공부해요"],
+        answer: "저는 학교에서 한국어를 공부해요"
+      }
+    ]
+  },
+
+  l39: {
+    id: "l39",
+    title: "Daily Activities 4 — Work, Exercise & Free Time",
+    unit: "u_daily",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 운동하다 mean?",
+        options: ["to exercise", "to study", "to sleep", "to eat"],
+        answer: "to exercise"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 일하다 mean?",
+        options: ["to work", "to rest", "to read", "to watch"],
+        answer: "to work"
+      },
+
+      {
+        type: "fill",
+        prompt: "매일 운동___요.",
+        answer: "해",
+        options: ["해", "가", "먹어", "자"]
+      },
+
+      {
+        type: "reading",
+        prompt: "저는 아침에 일하고 저녁에 운동해요.",
+        question: "When does the person exercise?",
+        options: ["In the morning", "In the afternoon", "In the evening", "At night"],
+        answer: "In the evening"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I exercise in the evening.'",
+        words: ["저는", "저녁에", "운동해요"],
+        answer: "저는 저녁에 운동해요"
+      }
+    ]
+  },
+
+  l40: {
+    id: "l40",
+    title: "Daily Activities 5 — Full Routine Review",
+    unit: "u_daily",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 일어나다 mean?",
+        options: ["to wake up", "to sleep", "to eat", "to work"],
+        answer: "to wake up"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 공부하다 mean?",
+        options: ["to study", "to drink", "to sleep", "to exercise"],
+        answer: "to study"
+      },
+
+      {
+        type: "reading",
+        prompt: "저는 아침 7시에 일어납니다. 아침을 먹고 학교에 갑니다. 학교에서 한국어를 공부합니다. 저녁에는 운동을 합니다.",
+        question: "What does the person do after eating breakfast?",
+        options: [
+          "Goes to school",
+          "Goes to sleep",
+          "Drinks coffee",
+          "Exercises"
+        ],
+        answer: "Goes to school"
+      },
+
+      {
+        type: "reading",
+        prompt: "저는 아침 7시에 일어납니다. 아침을 먹고 학교에 갑니다. 학교에서 한국어를 공부합니다. 저녁에는 운동을 합니다.",
+        question: "When does the person exercise?",
+        options: ["Morning", "Afternoon", "Evening", "Night"],
+        answer: "Evening"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I wake up at 7 and go to school.'",
+        words: ["저는", "7시에", "일어나고", "학교에", "가요"],
+        answer: "저는 7시에 일어나고 학교에 가요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study Korean at school.'",
+        words: ["저는", "학교에서", "한국어를", "공부해요"],
+        answer: "저는 학교에서 한국어를 공부해요"
+      }
+    ]
+  },
+
+
+  /* ===================== TIME & DATES ===================== */
+
+  l41: {
+    id: "l41",
+    title: "Time & Dates 1 — Basic Time",
+    unit: "u_time",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 시간 mean?",
+        options: ["time", "day", "week", "month"],
+        answer: "time"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "time",
+        answer: "시간",
+        options: ["시간", "오늘", "내일", "날짜"]
+      },
+
+      {
+        type: "fill",
+        prompt: "지금 몇 ___예요?",
+        answer: "시",
+        options: ["시", "일", "월", "년"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which word means 'hour / o'clock'?",
+        options: ["시", "분", "일", "월"],
+        answer: "시"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'What time is it now?'",
+        words: ["지금", "몇", "시예요?"],
+        answer: "지금 몇 시예요?"
+      }
+    ]
+  },
+
+  l42: {
+    id: "l42",
+    title: "Time & Dates 2 — Minutes & Clock Time",
+    unit: "u_time",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 분 mean?",
+        options: ["minute", "hour", "day", "month"],
+        answer: "minute"
+      },
+
+      {
+        type: "fill",
+        prompt: "3시 ___분",
+        answer: "30",
+        options: ["30", "3", "13", "300"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I meet at 3 o'clock'?",
+        options: [
+          "3시에 만나요.",
+          "3분에 만나요.",
+          "3일에 만나요.",
+          "3월에 만나요."
+        ],
+        answer: "3시에 만나요."
+      },
+
+      {
+        type: "fill",
+        prompt: "두 시 ___분에 만나요.",
+        answer: "30",
+        options: ["30", "2", "20", "12"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I meet at 7:30.'",
+        words: ["7시 30분에", "만나요"],
+        answer: "7시 30분에 만나요"
+      }
+    ]
+  },
+
+  l43: {
+    id: "l43",
+    title: "Time & Dates 3 — Days of the Week",
+    unit: "u_time",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 월요일 mean?",
+        options: ["Monday", "Tuesday", "Wednesday", "Sunday"],
+        answer: "Monday"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "금요일",
+        answer: "Friday"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which word means Sunday?",
+        options: ["토요일", "금요일", "일요일", "월요일"],
+        answer: "일요일"
+      },
+
+      {
+        type: "fill",
+        prompt: "___에 학교에 가요. (Monday)",
+        answer: "월요일",
+        options: ["월요일", "일요일", "토요일", "금요일"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I meet my friend on Saturday.'",
+        words: ["토요일에", "친구를", "만나요"],
+        answer: "토요일에 친구를 만나요"
+      }
+    ]
+  },
+
+  l44: {
+    id: "l44",
+    title: "Time & Dates 4 — Today, Tomorrow & Yesterday",
+    unit: "u_time",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 오늘 mean?",
+        options: ["today", "tomorrow", "yesterday", "now"],
+        answer: "today"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 내일 mean?",
+        options: ["today", "tomorrow", "yesterday", "morning"],
+        answer: "tomorrow"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 어제 mean?",
+        options: ["today", "tomorrow", "yesterday", "tonight"],
+        answer: "yesterday"
+      },
+
+      {
+        type: "fill",
+        prompt: "___ 친구를 만나요. (tomorrow)",
+        answer: "내일",
+        options: ["내일", "어제", "오늘", "지금"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I studied yesterday.'",
+        words: ["어제", "공부했어요"],
+        answer: "어제 공부했어요"
+      }
+    ]
+  },
+
+  l45: {
+    id: "l45",
+    title: "Time & Dates 5 — Full Review",
+    unit: "u_time",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which word means 'today'?",
+        options: ["오늘", "내일", "어제", "시간"],
+        answer: "오늘"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle is commonly used with clock time?",
+        options: ["에", "를", "은", "이"],
+        answer: "에"
+      },
+
+      {
+        type: "reading",
+        prompt: "민수는 내일 오후 3시에 친구를 만납니다.",
+        question: "When does Minsu meet his friend?",
+        options: [
+          "Today at 3 PM",
+          "Tomorrow at 3 PM",
+          "Yesterday at 3 PM",
+          "Tomorrow at 5 PM"
+        ],
+        answer: "Tomorrow at 3 PM"
+      },
+
+      {
+        type: "fill",
+        prompt: "토요일 ___ 오후 2시에 만나요.",
+        answer: "에",
+        options: ["에", "를", "가", "는"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I will meet my friend tomorrow at 5.'",
+        words: ["내일", "5시에", "친구를", "만나요"],
+        answer: "내일 5시에 친구를 만나요"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I studied Korean yesterday.'",
+        words: ["어제", "한국어를", "공부했어요"],
+        answer: "어제 한국어를 공부했어요"
+      }
+    ]
+  },
+
+
+  /* ===================== PLACES & DIRECTIONS ===================== */
+
+  l46: {
+    id: "l46",
+    title: "Places & Directions 1 — Common Places",
+    unit: "u_places",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 학교 mean?",
+        options: ["school", "hospital", "library", "restaurant"],
+        answer: "school"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "병원",
+        answer: "hospital"
+      },
+
+      {
+        type: "translate_en_ko",
+        prompt: "library",
+        answer: "도서관",
+        options: ["도서관", "학교", "병원", "식당"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 식당 mean?",
+        options: ["restaurant", "school", "library", "bank"],
+        answer: "restaurant"
+      },
+
+      {
+        type: "match",
+        prompt: "Match each place with its meaning.",
+        pairs: [
+          ["학교", "school"],
+          ["병원", "hospital"],
+          ["도서관", "library"],
+          ["식당", "restaurant"]
+        ]
+      }
+    ]
+  },
+
+  l47: {
+    id: "l47",
+    title: "Places & Directions 2 — Location Words",
+    unit: "u_places",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 앞 mean?",
+        options: ["front", "behind", "inside", "outside"],
+        answer: "front"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 뒤 mean?",
+        options: ["front", "behind", "next to", "between"],
+        answer: "behind"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 옆 mean?",
+        options: ["next to", "inside", "far", "under"],
+        answer: "next to"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교 ___에 집이 있어요. (next to)",
+        answer: "옆",
+        options: ["옆", "뒤", "앞", "안"]
+      },
+
+      {
+        type: "reading",
+        prompt: "학교 앞에 카페가 있어요.",
+        question: "Where is the cafe?",
+        options: [
+          "In front of the school",
+          "Behind the school",
+          "Inside the school",
+          "Far from the school"
+        ],
+        answer: "In front of the school"
+      }
+    ]
+  },
+
+  l48: {
+    id: "l48",
+    title: "Places & Directions 3 — 에서 & 에",
+    unit: "u_places",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle is commonly used for the place where an action happens?",
+        options: ["에서", "에", "를", "은"],
+        answer: "에서"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle is commonly used with a destination?",
+        options: ["에", "에서", "를", "가"],
+        answer: "에"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 공부해요.",
+        answer: "에서",
+        options: ["에서", "에", "를", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 가요.",
+        answer: "에",
+        options: ["에", "에서", "를", "는"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study at the library.'",
+        words: ["도서관에서", "공부해요"],
+        answer: "도서관에서 공부해요"
+      }
+    ]
+  },
+
+  l49: {
+    id: "l49",
+    title: "Places & Directions 4 — Asking for Directions",
+    unit: "u_places",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 어디 mean?",
+        options: ["where", "who", "what", "when"],
+        answer: "where"
+      },
+
+      {
+        type: "translate_ko_en",
+        prompt: "어디예요?",
+        answer: "Where is it?"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '어디에 가요?' mean?",
+        options: [
+          "Where are you going?",
+          "Where are you?",
+          "Who are you meeting?",
+          "What are you doing?"
+        ],
+        answer: "Where are you going?"
+      },
+
+      {
+        type: "fill",
+        prompt: "화장실이 ___예요?",
+        answer: "어디",
+        options: ["어디", "누구", "무엇", "언제"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Where is the hospital?'",
+        words: ["병원이", "어디예요?"],
+        answer: "병원이 어디예요?"
+      }
+    ]
+  },
+
+  l50: {
+    id: "l50",
+    title: "Places & Directions 5 — Full Review",
+    unit: "u_places",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which particle is used for a destination?",
+        options: ["에", "에서", "를", "는"],
+        answer: "에"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which particle is used for the place where an action happens?",
+        options: ["에서", "에", "를", "가"],
+        answer: "에서"
+      },
+
+      {
+        type: "reading",
+        prompt: "학교 옆에 도서관이 있습니다. 도서관에서 학생들이 공부합니다.",
+        question: "Where is the library?",
+        options: [
+          "Next to the school",
+          "Behind the school",
+          "Inside the school",
+          "In front of the hospital"
+        ],
+        answer: "Next to the school"
+      },
+
+      {
+        type: "reading",
+        prompt: "학교 옆에 도서관이 있습니다. 도서관에서 학생들이 공부합니다.",
+        question: "Where do the students study?",
+        options: [
+          "At the school",
+          "At the library",
+          "At the hospital",
+          "At the restaurant"
+        ],
+        answer: "At the library"
+      },
+
+      {
+        type: "fill",
+        prompt: "도서관___ 공부하고 학교___ 가요.",
+        answer: "에서, 에",
+        options: [
+          "에서, 에",
+          "에, 에서",
+          "를, 는",
+          "가, 를"
+        ]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Where is the library?'",
+        words: ["도서관이", "어디예요?"],
+        answer: "도서관이 어디예요?"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to the hospital.'",
+        words: ["저는", "병원에", "가요"],
+        answer: "저는 병원에 가요"
+      }
+    ]
+  },
+
+    l51: {
+    id: "l51",
+    title: "Intermediate Grammar 1 — -(으)ㄴ/는 것",
+    unit: "u_intermediate_grammar",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does -(으)ㄴ/는 것 generally do?",
+        options: [
+          "Turns a verb or adjective into a noun-like expression",
+          "Marks the location of an action",
+          "Shows possession",
+          "Marks the subject"
+        ],
+        answer: "Turns a verb or adjective into a noun-like expression"
+      },
+
+      {
+        type: "fill",
+        prompt: "한국어를 배우___ 재미있어요.",
+        answer: "는 것이",
+        options: ["는 것이", "을 에", "가 를", "에 는"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I like reading books.'?",
+        options: [
+          "책을 읽는 것을 좋아해요.",
+          "책이 읽는 것을 좋아해요.",
+          "책을 읽고를 좋아해요.",
+          "책에 읽는 것을 좋아해요."
+        ],
+        answer: "책을 읽는 것을 좋아해요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Learning Korean is fun.'",
+        words: ["한국어를", "배우는", "것이", "재미있어요"],
+        answer: "한국어를 배우는 것이 재미있어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which expression means 'I don't like waking up early'?",
+        options: [
+          "일찍 일어나는 것을 싫어해요.",
+          "일찍 일어나는 것이 싫어요.",
+          "Both A and B",
+          "일찍 일어나서 싫어해요."
+        ],
+        answer: "Both A and B"
+      }
+    ]
+  },
+
+  l52: {
+    id: "l52",
+    title: "Intermediate Grammar 2 — -(으)ㄹ 것 같다",
+    unit: "u_intermediate_grammar",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does -(으)ㄹ 것 같다 commonly express?",
+        options: [
+          "A guess or expectation",
+          "A past experience",
+          "A command",
+          "A location"
+        ],
+        answer: "A guess or expectation"
+      },
+
+      {
+        type: "fill",
+        prompt: "내일 비가 올 ___ 같아요.",
+        answer: "것",
+        options: ["것", "는", "을", "에"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '맛있을 것 같아요' mean?",
+        options: [
+          "It looks like it will be delicious.",
+          "It was delicious.",
+          "I ate something delicious.",
+          "Make it delicious."
+        ],
+        answer: "It looks like it will be delicious."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I think it will be difficult.'",
+        words: ["어려울", "것", "같아요"],
+        answer: "어려울 것 같아요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence expresses a prediction?",
+        options: [
+          "친구가 올 것 같아요.",
+          "친구가 왔어요.",
+          "친구가 와요.",
+          "친구가 오세요."
+        ],
+        answer: "친구가 올 것 같아요."
+      }
+    ]
+  },
+
+  l53: {
+    id: "l53",
+    title: "Intermediate Grammar 3 — -(으)면서",
+    unit: "u_intermediate_grammar",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does -(으)면서 express?",
+        options: [
+          "Two actions happening at the same time",
+          "A completed action",
+          "A future plan only",
+          "Possession"
+        ],
+        answer: "Two actions happening at the same time"
+      },
+
+      {
+        type: "fill",
+        prompt: "음악을 들으___ 공부해요.",
+        answer: "면서",
+        options: ["면서", "지만", "니까", "려고"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '걸으면서 전화해요' mean?",
+        options: [
+          "I make a phone call while walking.",
+          "I walk after making a phone call.",
+          "I cannot walk and call.",
+          "I called before walking."
+        ],
+        answer: "I make a phone call while walking."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study while listening to music.'",
+        words: ["음악을", "들으면서", "공부해요"],
+        answer: "음악을 들으면서 공부해요"
+      },
+
+      {
+        type: "fill",
+        prompt: "밥을 먹으___ 이야기를 했어요.",
+        answer: "면서",
+        options: ["면서", "니까", "지만", "으면"]
+      }
+    ]
+  },
+
+  l54: {
+    id: "l54",
+    title: "Intermediate Grammar 4 — -(으)려고 하다",
+    unit: "u_intermediate_grammar",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does -(으)려고 하다 express?",
+        options: [
+          "An intention or plan",
+          "A completed action",
+          "A comparison",
+          "A past habit"
+        ],
+        answer: "An intention or plan"
+      },
+
+      {
+        type: "fill",
+        prompt: "주말에 영화를 보___ 해요.",
+        answer: "려고",
+        options: ["려고", "지만", "면서", "니까"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '한국에 가려고 해요' mean?",
+        options: [
+          "I plan/intend to go to Korea.",
+          "I went to Korea.",
+          "I cannot go to Korea.",
+          "I have never been to Korea."
+        ],
+        answer: "I plan/intend to go to Korea."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I am planning to study tonight.'",
+        words: ["오늘", "밤에", "공부하려고", "해요"],
+        answer: "오늘 밤에 공부하려고 해요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence expresses intention?",
+        options: [
+          "친구를 만나려고 해요.",
+          "친구를 만났어요.",
+          "친구를 만나요.",
+          "친구를 만나지 않았어요."
+        ],
+        answer: "친구를 만나려고 해요."
+      }
+    ]
+  },
+
+  l55: {
+    id: "l55",
+    title: "Intermediate Grammar 5 — Grammar Review",
+    unit: "u_intermediate_grammar",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which grammar expresses a guess?",
+        options: [
+          "-(으)ㄹ 것 같다",
+          "-(으)면서",
+          "-(으)려고 하다",
+          "-는 것"
+        ],
+        answer: "-(으)ㄹ 것 같다"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which grammar connects two simultaneous actions?",
+        options: [
+          "-(으)면서",
+          "-(으)ㄹ 것 같다",
+          "-(으)려고 하다",
+          "-는 것"
+        ],
+        answer: "-(으)면서"
+      },
+
+      {
+        type: "fill",
+        prompt: "내일 친구를 만나___ 해요.",
+        answer: "려고",
+        options: ["려고", "면서", "것", "지만"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I think this movie will be fun.'",
+        words: ["이", "영화가", "재미있을", "것", "같아요"],
+        answer: "이 영화가 재미있을 것 같아요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I like studying Korean'?",
+        options: [
+          "한국어를 공부하는 것을 좋아해요.",
+          "한국어를 공부할 것 같아요.",
+          "한국어를 공부하면서 해요.",
+          "한국어를 공부하려고 좋아해요."
+        ],
+        answer: "한국어를 공부하는 것을 좋아해요."
+      }
+    ]
+  },
+
+  l56: {
+    id: "l56",
+    title: "Formal Speech 1 — -(스)ㅂ니다",
+    unit: "u_formal_speech",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is -(스)ㅂ니다 used for?",
+        options: [
+          "Formal and polite speech",
+          "Casual speech with friends",
+          "Only questions",
+          "Only past tense"
+        ],
+        answer: "Formal and polite speech"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 학생___.",
+        answer: "입니다",
+        options: ["입니다", "이에요", "있어요", "합니다"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 한국어를 공부___.",
+        answer: "합니다",
+        options: ["합니다", "이에요", "입니다", "있습니다"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which is the formal version of '먹어요'?",
+        options: [
+          "먹습니다",
+          "먹어요요",
+          "먹이습니다",
+          "먹습니다요"
+        ],
+        answer: "먹습니다"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I am a student.'",
+        words: ["저는", "학생입니다"],
+        answer: "저는 학생입니다"
+      }
+    ]
+  },
+
+  l57: {
+    id: "l57",
+    title: "Formal Speech 2 — Questions and Answers",
+    unit: "u_formal_speech",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which ending is commonly used for formal questions?",
+        options: [
+          "-ㅂ니까/습니까?",
+          "-아요?",
+          "-어?",
+          "-지?"
+        ],
+        answer: "-ㅂ니까/습니까?"
+      },
+
+      {
+        type: "fill",
+        prompt: "학생___?",
+        answer: "입니까",
+        options: ["입니까", "이에요", "있습니까요", "합니다"]
+      },
+
+      {
+        type: "fill",
+        prompt: "어디에 갑___?",
+        answer: "니까",
+        options: ["니까", "어요", "니다", "세요"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What is the formal question '어디에 갑니까?' asking?",
+        options: [
+          "Where are you going?",
+          "Where did you eat?",
+          "What are you studying?",
+          "Who are you meeting?"
+        ],
+        answer: "Where are you going?"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Do you study Korean?'",
+        words: ["한국어를", "공부합니까"],
+        answer: "한국어를 공부합니까"
+      }
+    ]
+  },
+
+  l58: {
+    id: "l58",
+    title: "Formal Speech 3 — Formal Past and Future",
+    unit: "u_formal_speech",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What is the formal past form of '갔어요'?",
+        options: [
+          "갔습니다",
+          "갑니다",
+          "가겠습니다",
+          "갔습니까요"
+        ],
+        answer: "갔습니다"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which form can express a formal future intention?",
+        options: [
+          "-겠습니다",
+          "-았어요",
+          "-는 것",
+          "-면서"
+        ],
+        answer: "-겠습니다"
+      },
+
+      {
+        type: "fill",
+        prompt: "내일 다시 오___.",
+        answer: "겠습니다",
+        options: ["겠습니다", "았습니다", "어요", "는"]
+      },
+
+      {
+        type: "fill",
+        prompt: "어제 학교에 갔___.",
+        answer: "습니다",
+        options: ["습니다", "어요", "겠습니다", "니까"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '도와드리겠습니다' communicate?",
+        options: [
+          "I will help you.",
+          "I helped you yesterday.",
+          "I cannot help you.",
+          "I am asking for help."
+        ],
+        answer: "I will help you."
+      }
+    ]
+  },
+
+  l59: {
+    id: "l59",
+    title: "Formal Speech 4 — Honorific Expressions",
+    unit: "u_formal_speech",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which verb is the honorific form of '먹다'?",
+        options: [
+          "드시다",
+          "먹으시다요",
+          "먹이다",
+          "먹는다"
+        ],
+        answer: "드시다"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which is a polite honorific expression for 'to be'?",
+        options: [
+          "계시다",
+          "먹다",
+          "가다",
+          "하다"
+        ],
+        answer: "계시다"
+      },
+
+      {
+        type: "fill",
+        prompt: "선생님께서 학교에 가___.",
+        answer: "십니다",
+        options: ["십니다", "습니다요", "어요", "는다"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence appropriately uses honorific speech?",
+        options: [
+          "선생님께서 오십니다.",
+          "선생님이 와.",
+          "선생님께서 와요요.",
+          "선생님을 옵니다."
+        ],
+        answer: "선생님께서 오십니다."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'The teacher is here.'",
+        words: ["선생님께서", "계십니다"],
+        answer: "선생님께서 계십니다"
+      }
+    ]
+  },
+
+  l60: {
+    id: "l60",
+    title: "Formal Speech 5 — Full Review",
+    unit: "u_formal_speech",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence is formal?",
+        options: [
+          "저는 학생입니다.",
+          "나는 학생이야.",
+          "저 학생이야.",
+          "학생이에요?"
+        ],
+        answer: "저는 학생입니다."
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 매일 운동합___.",
+        answer: "니다",
+        options: ["니다", "어요", "니까", "시다"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which ending is used in formal questions?",
+        options: [
+          "-ㅂ니까/습니까?",
+          "-자!",
+          "-어!",
+          "-지?"
+        ],
+        answer: "-ㅂ니까/습니까?"
+      },
+
+      {
+        type: "fill",
+        prompt: "내일 다시 만나___!",
+        answer: "겠습니다",
+        options: ["겠습니다", "았어요", "면서", "는 것"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Where are you going?' (formal)",
+        words: ["어디에", "갑니까"],
+        answer: "어디에 갑니까"
+      }
+    ]
+  },
+
+  l61: {
+    id: "l61",
+    title: "Connecting Sentences 1 — 그리고",
+    unit: "u_connecting",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 그리고 mean?",
+        options: [
+          "And / and then",
+          "But",
+          "Because",
+          "If"
+        ],
+        answer: "And / and then"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly uses 그리고?",
+        options: [
+          "밥을 먹었어요. 그리고 커피를 마셨어요.",
+          "밥을 먹었어요. 그리고를 커피를 마셨어요.",
+          "그리고 밥을 먹었어요 그리고를.",
+          "밥 그리고를 먹었어요."
+        ],
+        answer: "밥을 먹었어요. 그리고 커피를 마셨어요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I studied. And I watched a movie.'",
+        words: ["공부했어요", "그리고", "영화를", "봤어요"],
+        answer: "공부했어요 그리고 영화를 봤어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which word connects two similar or sequential ideas?",
+        options: [
+          "그리고",
+          "하지만",
+          "그래서",
+          "왜냐하면"
+        ],
+        answer: "그리고"
+      },
+
+      {
+        type: "fill",
+        prompt: "친구를 만났어요. ___ 같이 밥을 먹었어요.",
+        answer: "그리고",
+        options: ["그리고", "하지만", "그래서", "만약"]
+      }
+    ]
+  },
+
+  l62: {
+    id: "l62",
+    title: "Connecting Sentences 2 — 하지만",
+    unit: "u_connecting",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 하지만 mean?",
+        options: [
+          "But / however",
+          "And",
+          "Because",
+          "Then"
+        ],
+        answer: "But / however"
+      },
+
+      {
+        type: "fill",
+        prompt: "한국어는 어려워요. ___ 재미있어요.",
+        answer: "하지만",
+        options: ["하지만", "그리고", "그래서", "또"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly shows contrast?",
+        options: [
+          "비싸요. 하지만 사고 싶어요.",
+          "비싸요. 그리고 사고 싶어요.",
+          "비싸요. 그래서 하지만 사고 싶어요.",
+          "비싸요. 또 하지만 사고 싶어요."
+        ],
+        answer: "비싸요. 하지만 사고 싶어요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'It is difficult, but it is interesting.'",
+        words: ["어려워요", "하지만", "재미있어요"],
+        answer: "어려워요 하지만 재미있어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector should be used for contrasting ideas?",
+        options: [
+          "하지만",
+          "그리고",
+          "그래서",
+          "그러면"
+        ],
+        answer: "하지만"
+      }
+    ]
+  },
+
+  l63: {
+    id: "l63",
+    title: "Connecting Sentences 3 — 그래서",
+    unit: "u_connecting",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 그래서 mean?",
+        options: [
+          "So / therefore",
+          "But",
+          "And",
+          "Although"
+        ],
+        answer: "So / therefore"
+      },
+
+      {
+        type: "fill",
+        prompt: "비가 와요. ___ 우산을 가져가요.",
+        answer: "그래서",
+        options: ["그래서", "하지만", "그리고", "또"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly shows a result?",
+        options: [
+          "늦었어요. 그래서 택시를 탔어요.",
+          "늦었어요. 하지만 택시를 탔어요.",
+          "늦었어요. 그리고 택시를 탔어요.",
+          "늦었어요. 그래서 하지만 택시를 탔어요."
+        ],
+        answer: "늦었어요. 그래서 택시를 탔어요."
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I was tired, so I went home.'",
+        words: ["피곤했어요", "그래서", "집에", "갔어요"],
+        answer: "피곤했어요 그래서 집에 갔어요"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector introduces a consequence?",
+        options: [
+          "그래서",
+          "하지만",
+          "그리고",
+          "또"
+        ],
+        answer: "그래서"
+      }
+    ]
+  },
+
+  l64: {
+    id: "l64",
+    title: "Connecting Sentences 4 — -(으)니까 / -아/어서",
+    unit: "u_connecting",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What can -(으)니까 express?",
+        options: [
+          "A reason or cause",
+          "Only a location",
+          "A noun",
+          "A greeting"
+        ],
+        answer: "A reason or cause"
+      },
+
+      {
+        type: "fill",
+        prompt: "늦었으___ 빨리 가세요.",
+        answer: "니까",
+        options: ["니까", "면서", "려고", "지만"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'Because it is cold, wear a coat'?",
+        options: [
+          "추우니까 코트를 입으세요.",
+          "추우면서 코트를 입으세요.",
+          "추우려고 코트를 입으세요.",
+          "추웠지만 코트를 입으세요."
+        ],
+        answer: "추우니까 코트를 입으세요."
+      },
+
+      {
+        type: "fill",
+        prompt: "배가 고파___ 밥을 먹었어요.",
+        answer: "서",
+        options: ["서", "니까", "지만", "면서"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector can link a reason to a result?",
+        options: [
+          "-(으)니까 / -아/어서",
+          "-(으)면서",
+          "-(으)려고",
+          "-는 것"
+        ],
+        answer: "-(으)니까 / -아/어서"
+      }
+    ]
+  },
+
+  l65: {
+    id: "l65",
+    title: "Connecting Sentences 5 — Connector Review",
+    unit: "u_connecting",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which connector means 'but'?",
+        options: [
+          "하지만",
+          "그래서",
+          "그리고",
+          "왜냐하면"
+        ],
+        answer: "하지만"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector means 'so / therefore'?",
+        options: [
+          "그래서",
+          "하지만",
+          "그리고",
+          "또"
+        ],
+        answer: "그래서"
+      },
+
+      {
+        type: "fill",
+        prompt: "비가 많이 왔어요. ___ 집에 있었어요.",
+        answer: "그래서",
+        options: ["그래서", "하지만", "그리고", "또"]
+      },
+
+      {
+        type: "fill",
+        prompt: "피곤했어요. ___ 숙제를 했어요.",
+        answer: "하지만",
+        options: ["하지만", "그래서", "그리고", "왜냐하면"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I was hungry, so I ate.'",
+        words: ["배가", "고팠어요", "그래서", "먹었어요"],
+        answer: "배가 고팠어요 그래서 먹었어요"
+      }
+    ]
+  },
+
+  l66: {
+    id: "l66",
+    title: "Reading Practice 1 — Daily Routine",
+    unit: "u_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "reading",
+        passage: "저는 매일 아침 7시에 일어납니다. 그리고 아침을 먹고 학교에 갑니다. 학교에서 한국어를 공부합니다. 오후에는 친구들과 운동을 합니다.",
+        prompt: "What time does the speaker wake up?",
+        options: ["6 AM", "7 AM", "8 AM", "9 AM"],
+        answer: "7 AM"
+      },
+
+      {
+        type: "mc",
+        prompt: "Where does the speaker study Korean?",
+        options: [
+          "At school",
+          "At home",
+          "At a café",
+          "At the library"
+        ],
+        answer: "At school"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does the speaker do in the afternoon?",
+        options: [
+          "Exercises with friends",
+          "Studies alone",
+          "Goes home",
+          "Works at a café"
+        ],
+        answer: "Exercises with friends"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 매일 아침 ___시에 일어납니다.",
+        answer: "7",
+        options: ["6", "7", "8", "9"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What speech style is mainly used in the passage?",
+        options: [
+          "Formal polite speech",
+          "Casual speech",
+          "Banmal",
+          "Honorific commands only"
+        ],
+        answer: "Formal polite speech"
+      }
+    ]
+  },
+
+  l67: {
+    id: "l67",
+    title: "Reading Practice 2 — A Weekend Plan",
+    unit: "u_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "reading",
+        passage: "이번 주말에 친구와 같이 서울에 가려고 합니다. 토요일에는 박물관에 가고 맛있는 음식을 먹을 것입니다. 일요일에는 집에서 쉴 것 같습니다.",
+        prompt: "Where does the speaker plan to go?",
+        options: ["서울", "부산", "제주도", "인천"],
+        answer: "서울"
+      },
+
+      {
+        type: "mc",
+        prompt: "What will the speaker do on Saturday?",
+        options: [
+          "Visit a museum and eat delicious food",
+          "Stay home all day",
+          "Study at school",
+          "Go to work"
+        ],
+        answer: "Visit a museum and eat delicious food"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does the speaker think about Sunday?",
+        options: [
+          "They will probably rest at home.",
+          "They will go to Seoul.",
+          "They will study Korean.",
+          "They will meet a teacher."
+        ],
+        answer: "They will probably rest at home."
+      },
+
+      {
+        type: "fill",
+        prompt: "토요일에는 ___에 갑니다.",
+        answer: "박물관",
+        options: ["박물관", "학교", "회사", "병원"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which expression in the passage shows intention?",
+        options: [
+          "가려고 합니다",
+          "먹을 것입니다",
+          "쉴 것 같습니다",
+          "맛있는 음식"
+        ],
+        answer: "가려고 합니다"
+      }
+    ]
+  },
+
+  l68: {
+    id: "l68",
+    title: "Reading Practice 3 — University Life",
+    unit: "u_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "reading",
+        passage: "저는 대학생입니다. 평일에는 수업이 많아서 바쁩니다. 수업이 끝난 후에는 도서관에서 과제를 합니다. 시간이 있으면 친구를 만나서 같이 저녁을 먹습니다.",
+        prompt: "Why is the speaker busy on weekdays?",
+        options: [
+          "Because they have many classes",
+          "Because they work at a restaurant",
+          "Because they exercise",
+          "Because they travel"
+        ],
+        answer: "Because they have many classes"
+      },
+
+      {
+        type: "mc",
+        prompt: "Where does the speaker do assignments?",
+        options: [
+          "At the library",
+          "At home",
+          "At a restaurant",
+          "At school cafeteria"
+        ],
+        answer: "At the library"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does the speaker do when they have time?",
+        options: [
+          "Meets a friend and eats dinner",
+          "Goes to work",
+          "Studies alone",
+          "Goes home immediately"
+        ],
+        answer: "Meets a friend and eats dinner"
+      },
+
+      {
+        type: "fill",
+        prompt: "수업이 끝난 후에는 ___에서 과제를 합니다.",
+        answer: "도서관",
+        options: ["도서관", "회사", "병원", "공원"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '시간이 있으면' mean?",
+        options: [
+          "If there is time",
+          "Because there is time",
+          "After time",
+          "Before time"
+        ],
+        answer: "If there is time"
+      }
+    ]
+  },
+
+  l69: {
+    id: "l69",
+    title: "Reading Practice 4 — Travel",
+    unit: "u_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "reading",
+        passage: "지난달에 가족과 함께 부산에 갔습니다. 날씨가 좋았지만 바람이 많이 불었습니다. 우리는 바닷가를 산책하고 맛있는 해산물을 먹었습니다. 저녁에는 호텔에서 쉬었습니다.",
+        prompt: "When did the speaker visit Busan?",
+        options: [
+          "Last month",
+          "Yesterday",
+          "This week",
+          "Next month"
+        ],
+        answer: "Last month"
+      },
+
+      {
+        type: "mc",
+        prompt: "Who did the speaker travel with?",
+        options: [
+          "Family",
+          "Friends",
+          "Classmates",
+          "Alone"
+        ],
+        answer: "Family"
+      },
+
+      {
+        type: "mc",
+        prompt: "What was the weather like?",
+        options: [
+          "It was nice, but windy.",
+          "It was rainy.",
+          "It was snowy.",
+          "It was very cold."
+        ],
+        answer: "It was nice, but windy."
+      },
+
+      {
+        type: "fill",
+        prompt: "우리는 바닷가를 ___했습니다.",
+        answer: "산책",
+        options: ["산책", "공부", "운동", "요리"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Where did they rest in the evening?",
+        options: [
+          "At the hotel",
+          "At the beach",
+          "At a restaurant",
+          "At the airport"
+        ],
+        answer: "At the hotel"
+      }
+    ]
+  },
+
+  l70: {
+    id: "l70",
+    title: "Reading Practice 5 — Full Reading Review",
+    unit: "u_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "reading",
+        passage: "민수 씨는 아침에 일찍 일어나서 운동을 합니다. 운동한 후에 샤워를 하고 아침을 먹습니다. 회사에 가기 전에 커피를 마십니다. 회사에서는 동료들과 한국어로 이야기합니다. 일이 끝나면 집에 돌아와서 저녁을 먹고 책을 읽습니다.",
+        prompt: "What does Minsu do after exercising?",
+        options: [
+          "Takes a shower and eats breakfast",
+          "Goes directly to work",
+          "Reads a book",
+          "Meets his friends"
+        ],
+        answer: "Takes a shower and eats breakfast"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does Minsu drink before going to work?",
+        options: [
+          "Coffee",
+          "Tea",
+          "Water",
+          "Juice"
+        ],
+        answer: "Coffee"
+      },
+
+      {
+        type: "mc",
+        prompt: "Who does Minsu speak Korean with at work?",
+        options: [
+          "His coworkers",
+          "His teacher",
+          "His family",
+          "His friends"
+        ],
+        answer: "His coworkers"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does Minsu do after returning home?",
+        options: [
+          "Eats dinner and reads a book",
+          "Exercises",
+          "Goes to school",
+          "Drinks coffee"
+        ],
+        answer: "Eats dinner and reads a book"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which expression means 'before going to work'?",
+        options: [
+          "회사에 가기 전에",
+          "회사에 간 후에",
+          "회사에 가면서",
+          "회사에 가려고"
+        ],
+        answer: "회사에 가기 전에"
+      }
+    ]
+  },
+
+  l71: {
+    id: "l71",
+    title: "Listening Practice 1 — Daily Conversation",
+    unit: "u_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "listening",
+        audioText: "오늘 아침에 뭐 했어요? 저는 아침 7시에 일어나서 아침을 먹었어요. 그리고 학교에 갔어요.",
+        prompt: "What did the speaker do after waking up?",
+        options: [
+          "Ate breakfast",
+          "Went to work",
+          "Went shopping",
+          "Went back to sleep"
+        ],
+        answer: "Ate breakfast"
+      },
+
+      {
+        type: "mc",
+        prompt: "What time did the speaker wake up?",
+        options: ["6 AM", "7 AM", "8 AM", "9 AM"],
+        answer: "7 AM"
+      },
+
+      {
+        type: "mc",
+        prompt: "Where did the speaker go after breakfast?",
+        options: [
+          "School",
+          "Home",
+          "The library",
+          "The café"
+        ],
+        answer: "School"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 아침 7시에 ___났어요.",
+        answer: "일어",
+        options: ["일어", "먹", "가", "자"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector is used to continue the sequence?",
+        options: [
+          "그리고",
+          "하지만",
+          "그래서",
+          "왜냐하면"
+        ],
+        answer: "그리고"
+      }
+    ]
+  },
+
+  l72: {
+    id: "l72",
+    title: "Listening Practice 2 — Making Plans",
+    unit: "u_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "listening",
+        audioText: "이번 토요일에 뭐 할 거예요? 친구하고 영화를 보려고 해요. 영화가 끝난 후에는 같이 저녁을 먹을 것 같아요.",
+        prompt: "What does the speaker plan to do on Saturday?",
+        options: [
+          "Watch a movie with a friend",
+          "Study at home",
+          "Go shopping alone",
+          "Visit family"
+        ],
+        answer: "Watch a movie with a friend"
+      },
+
+      {
+        type: "mc",
+        prompt: "Who will the speaker watch the movie with?",
+        options: [
+          "A friend",
+          "A teacher",
+          "Family",
+          "A coworker"
+        ],
+        answer: "A friend"
+      },
+
+      {
+        type: "mc",
+        prompt: "What will they probably do after the movie?",
+        options: [
+          "Eat dinner together",
+          "Go home immediately",
+          "Study",
+          "Go to school"
+        ],
+        answer: "Eat dinner together"
+      },
+
+      {
+        type: "fill",
+        prompt: "영화를 ___고 해요.",
+        answer: "보려고",
+        options: ["보려고", "보면서", "봤지만", "보니까"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which expression shows uncertainty about the future?",
+        options: [
+          "먹을 것 같아요",
+          "먹으려고 해요",
+          "먹었어요",
+          "먹습니다"
+        ],
+        answer: "먹을 것 같아요"
+      }
+    ]
+  },
+
+  l73: {
+    id: "l73",
+    title: "Listening Practice 3 — At a Café",
+    unit: "u_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "listening",
+        audioText: "어서 오세요. 무엇을 드릴까요? 아메리카노 한 잔하고 케이크 하나 주세요. 케이크는 어떤 것이 맛있어요? 딸기 케이크가 맛있습니다. 그러면 딸기 케이크 하나 주세요.",
+        prompt: "What does the customer order first?",
+        options: [
+          "An Americano and a cake",
+          "Tea and bread",
+          "Juice and cookies",
+          "Coffee only"
+        ],
+        answer: "An Americano and a cake"
+      },
+
+      {
+        type: "mc",
+        prompt: "What kind of cake does the customer choose?",
+        options: [
+          "Strawberry cake",
+          "Chocolate cake",
+          "Cheese cake",
+          "Green tea cake"
+        ],
+        answer: "Strawberry cake"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which formal expression does the staff use?",
+        options: [
+          "무엇을 드릴까요?",
+          "뭐 먹어?",
+          "뭐 줄까?",
+          "뭐 먹어요?"
+        ],
+        answer: "무엇을 드릴까요?"
+      },
+
+      {
+        type: "fill",
+        prompt: "아메리카노 한 ___하고 케이크 하나 주세요.",
+        answer: "잔",
+        options: ["잔", "개", "명", "곳"]
+      },
+
+      {
+        type: "mc",
+        prompt: "What does '그러면' mean in this context?",
+        options: [
+          "Then / in that case",
+          "But",
+          "Because",
+          "Although"
+        ],
+        answer: "Then / in that case"
+      }
+    ]
+  },
+
+  l74: {
+    id: "l74",
+    title: "Listening Practice 4 — At the University",
+    unit: "u_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "listening",
+        audioText: "내일 수업이 몇 시에 시작합니까? 오전 9시에 시작합니다. 수업이 끝난 후에는 도서관에서 과제를 하려고 합니다. 같이 공부하시겠습니까?",
+        prompt: "What time does the class start?",
+        options: [
+          "8 AM",
+          "9 AM",
+          "10 AM",
+          "11 AM"
+        ],
+        answer: "9 AM"
+      },
+
+      {
+        type: "mc",
+        prompt: "Where does the speaker plan to study after class?",
+        options: [
+          "At the library",
+          "At a café",
+          "At home",
+          "At the classroom"
+        ],
+        answer: "At the library"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does the speaker plan to do?",
+        options: [
+          "Do an assignment",
+          "Eat lunch",
+          "Go shopping",
+          "Watch a movie"
+        ],
+        answer: "Do an assignment"
+      },
+
+      {
+        type: "fill",
+        prompt: "오전 ___시에 시작합니다.",
+        answer: "9",
+        options: ["8", "9", "10", "11"]
+      },
+
+      {
+        type: "mc",
+        prompt: "Which expression is a formal invitation?",
+        options: [
+          "같이 공부하시겠습니까?",
+          "같이 공부할래?",
+          "같이 공부해?",
+          "같이 공부하자."
+        ],
+        answer: "같이 공부하시겠습니까?"
+      }
+    ]
+  },
+
+  l75: {
+    id: "l75",
+    title: "Listening Practice 5 — Full Review",
+    unit: "u_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "listening",
+        audioText: "안녕하세요. 저는 지수입니다. 평일에는 학교에서 공부하고 주말에는 아르바이트를 합니다. 이번 주말에는 친구와 만나려고 합니다. 하지만 일이 끝나는 시간이 늦어서 저녁에 만날 것 같습니다. 친구를 만나면 같이 맛있는 음식을 먹고 싶습니다.",
+        prompt: "What does Jisu do on weekdays?",
+        options: [
+          "Studies at school",
+          "Works part-time",
+          "Travels",
+          "Studies at home"
+        ],
+        answer: "Studies at school"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does Jisu do on weekends?",
+        options: [
+          "Works part-time",
+          "Goes to school",
+          "Travels",
+          "Stays home"
+        ],
+        answer: "Works part-time"
+      },
+
+      {
+        type: "mc",
+        prompt: "Why will Jisu probably meet the friend in the evening?",
+        options: [
+          "Because work ends late",
+          "Because school starts late",
+          "Because the friend is busy",
+          "Because the restaurant opens late"
+        ],
+        answer: "Because work ends late"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does Jisu want to do with the friend?",
+        options: [
+          "Eat delicious food",
+          "Study Korean",
+          "Go shopping",
+          "Watch a movie"
+        ],
+        answer: "Eat delicious food"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I think I will meet my friend in the evening.'",
+        words: ["저녁에", "만날", "것", "같습니다"],
+        answer: "저녁에 만날 것 같습니다"
+      }
+    ]
+  },
+
+/* =========================================================
+   TOPIK PREPARATION — L76–L100
+   ========================================================= */
+
+
+/* =========================
+   TOPIK VOCABULARY
+   L76–L80
+   ========================= */
+
+  l76: {
+    id: "l76",
+    title: "TOPIK Vocabulary 1 — Everyday Words",
+    unit: "u_topik_vocab",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 학교 mean?",
+        options: [
+          "School",
+          "Hospital",
+          "Library",
+          "Restaurant"
+        ],
+        answer: "School"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 친구 mean?",
+        options: [
+          "Teacher",
+          "Friend",
+          "Family",
+          "Student"
+        ],
+        answer: "Friend"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 매일 ___에 가요. (school)",
+        answer: "학교",
+        options: ["학교", "병원", "은행", "공원"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 ___를 만나요. (friend)",
+        answer: "친구",
+        options: ["친구", "선생님", "의사", "학생"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to school every day.'",
+        words: ["저는", "매일", "학교에", "가요"],
+        answer: "저는 매일 학교에 가요"
+      }
+    ]
+  },
+
+
+  l77: {
+    id: "l77",
+    title: "TOPIK Vocabulary 2 — Places and People",
+    unit: "u_topik_vocab",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 병원 mean?",
+        options: [
+          "Hospital",
+          "School",
+          "Bank",
+          "Station"
+        ],
+        answer: "Hospital"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 의사 mean?",
+        options: [
+          "Teacher",
+          "Doctor",
+          "Student",
+          "Police officer"
+        ],
+        answer: "Doctor"
+      },
+
+      {
+        type: "fill",
+        prompt: "아파서 ___에 갔어요.",
+        answer: "병원",
+        options: ["병원", "학교", "시장", "도서관"]
+      },
+
+      {
+        type: "fill",
+        prompt: "___가 환자를 치료해요.",
+        answer: "의사",
+        options: ["의사", "학생", "친구", "요리사"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'The doctor works at the hospital.'",
+        words: ["의사는", "병원에서", "일해요"],
+        answer: "의사는 병원에서 일해요"
+      }
+    ]
+  },
+
+
+  l78: {
+    id: "l78",
+    title: "TOPIK Vocabulary 3 — Time and Daily Life",
+    unit: "u_topik_vocab",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 아침 mean?",
+        options: [
+          "Morning",
+          "Afternoon",
+          "Evening",
+          "Night"
+        ],
+        answer: "Morning"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 주말 mean?",
+        options: [
+          "Weekday",
+          "Weekend",
+          "Month",
+          "Holiday"
+        ],
+        answer: "Weekend"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 ___에 일어나요.",
+        answer: "아침",
+        options: ["아침", "밤", "주말", "월요일"]
+      },
+
+      {
+        type: "fill",
+        prompt: "___에는 친구를 만나요.",
+        answer: "주말",
+        options: ["주말", "어제", "아침", "밤"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I study on the weekend.'",
+        words: ["저는", "주말에", "공부해요"],
+        answer: "저는 주말에 공부해요"
+      }
+    ]
+  },
+
+
+  l79: {
+    id: "l79",
+    title: "TOPIK Vocabulary 4 — Common Verbs",
+    unit: "u_topik_vocab",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "What does 먹다 mean?",
+        options: [
+          "To eat",
+          "To drink",
+          "To sleep",
+          "To study"
+        ],
+        answer: "To eat"
+      },
+
+      {
+        type: "mc",
+        prompt: "What does 배우다 mean?",
+        options: [
+          "To learn",
+          "To meet",
+          "To buy",
+          "To walk"
+        ],
+        answer: "To learn"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 밥을 ___요.",
+        answer: "먹어",
+        options: ["먹어", "마셔", "자", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "한국어를 ___요.",
+        answer: "배워",
+        options: ["배워", "먹어", "만나", "사"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I learn Korean.'",
+        words: ["저는", "한국어를", "배워요"],
+        answer: "저는 한국어를 배워요"
+      }
+    ]
+  },
+
+
+  l80: {
+    id: "l80",
+    title: "TOPIK Vocabulary 5 — Vocabulary Review",
+    unit: "u_topik_vocab",
+    xp: 40,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which word means 'library'?",
+        options: [
+          "도서관",
+          "병원",
+          "은행",
+          "시장"
+        ],
+        answer: "도서관"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which word means 'to buy'?",
+        options: [
+          "사다",
+          "먹다",
+          "가다",
+          "자다"
+        ],
+        answer: "사다"
+      },
+
+      {
+        type: "fill",
+        prompt: "책을 읽으러 ___에 가요.",
+        answer: "도서관",
+        options: ["도서관", "병원", "학교", "시장"]
+      },
+
+      {
+        type: "fill",
+        prompt: "시장에 가서 과일을 ___요.",
+        answer: "사",
+        options: ["사", "먹", "자", "배워"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to the library to read a book.'",
+        words: ["저는", "책을", "읽으러", "도서관에", "가요"],
+        answer: "저는 책을 읽으러 도서관에 가요"
+      }
+    ]
+  },
+
+
+/* =========================
+   TOPIK READING
+   L81–L85
+   ========================= */
+
+  l81: {
+    id: "l81",
+    title: "TOPIK Reading 1 — Short Sentences",
+    unit: "u_topik_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Read: '민수는 매일 학교에 갑니다.' Where does 민수 go?",
+        options: [
+          "School",
+          "Hospital",
+          "Market",
+          "Library"
+        ],
+        answer: "School"
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '지수는 커피를 좋아합니다.' What does 지수 like?",
+        options: [
+          "Tea",
+          "Coffee",
+          "Milk",
+          "Juice"
+        ],
+        answer: "Coffee"
+      },
+
+      {
+        type: "fill",
+        prompt: "Read: '저는 아침에 밥을 먹습니다.' 저는 ___에 밥을 먹습니다.",
+        answer: "아침",
+        options: ["아침", "저녁", "밤", "주말"]
+      },
+
+      {
+        type: "fill",
+        prompt: "Read: '동생은 학교에서 공부합니다.' 동생은 학교에서 ___합니다.",
+        answer: "공부",
+        options: ["공부", "운동", "요리", "쇼핑"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange the sentence: 'Minji studies Korean at school.'",
+        words: ["민지는", "학교에서", "한국어를", "공부합니다"],
+        answer: "민지는 학교에서 한국어를 공부합니다"
+      }
+    ]
+  },
+
+
+  l82: {
+    id: "l82",
+    title: "TOPIK Reading 2 — Notices",
+    unit: "u_topik_reading",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "공지: '도서관은 월요일에 쉽니다.' When is the library closed?",
+        options: [
+          "Monday",
+          "Tuesday",
+          "Saturday",
+          "Sunday"
+        ],
+        answer: "Monday"
+      },
+
+      {
+        type: "mc",
+        prompt: "안내: '학생들은 9시까지 교실에 오세요.' What time should students arrive by?",
+        options: [
+          "8 o'clock",
+          "9 o'clock",
+          "10 o'clock",
+          "11 o'clock"
+        ],
+        answer: "9 o'clock"
+      },
+
+      {
+        type: "fill",
+        prompt: "도서관은 월요일에 ___니다.",
+        answer: "쉽",
+        options: ["쉽", "갑", "먹", "만"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학생들은 교실에 ___세요.",
+        answer: "오",
+        options: ["오", "가", "먹", "자"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Please come to the classroom by 9 o'clock.'",
+        words: ["9시까지", "교실에", "오세요"],
+        answer: "9시까지 교실에 오세요"
+      }
+    ]
+  },
+
+
+  l83: {
+    id: "l83",
+    title: "TOPIK Reading 3 — Short Passages",
+    unit: "u_topik_reading",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Read: '수진 씨는 주말마다 공원에 갑니다. 공원에서 운동을 합니다.' What does 수진 do at the park?",
+        options: [
+          "Studies",
+          "Exercises",
+          "Eats",
+          "Sleeps"
+        ],
+        answer: "Exercises"
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '영호 씨는 아침에 일어나서 커피를 마십니다.' What does 영호 drink?",
+        options: [
+          "Water",
+          "Tea",
+          "Coffee",
+          "Milk"
+        ],
+        answer: "Coffee"
+      },
+
+      {
+        type: "fill",
+        prompt: "수진 씨는 ___마다 공원에 갑니다.",
+        answer: "주말",
+        options: ["주말", "학교", "아침", "월요일"]
+      },
+
+      {
+        type: "fill",
+        prompt: "영호 씨는 아침에 커피를 ___니다.",
+        answer: "마십",
+        options: ["마십", "먹습", "가", "공부"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I go to the park every weekend.'",
+        words: ["저는", "주말마다", "공원에", "갑니다"],
+        answer: "저는 주말마다 공원에 갑니다"
+      }
+    ]
+  },
+
+
+  l84: {
+    id: "l84",
+    title: "TOPIK Reading 4 — Main Idea",
+    unit: "u_topik_reading",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Read: '저는 한국 음식을 좋아합니다. 특히 비빔밥과 김치를 좋아합니다.' What is the passage mainly about?",
+        options: [
+          "Korean food",
+          "Korean schools",
+          "Korean weather",
+          "Korean travel"
+        ],
+        answer: "Korean food"
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '오늘은 비가 옵니다. 그래서 집에서 책을 읽습니다.' Why does the person stay home?",
+        options: [
+          "Because it is raining",
+          "Because they are sick",
+          "Because they are studying",
+          "Because it is hot"
+        ],
+        answer: "Because it is raining"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 한국 ___을 좋아합니다.",
+        answer: "음식",
+        options: ["음식", "학교", "날씨", "공원"]
+      },
+
+      {
+        type: "fill",
+        prompt: "비가 ___ 집에서 책을 읽습니다.",
+        answer: "와서",
+        options: ["와서", "가서", "먹어서", "자서"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Because it is raining, I read a book at home.'",
+        words: ["비가", "와서", "집에서", "책을", "읽습니다"],
+        answer: "비가 와서 집에서 책을 읽습니다"
+      }
+    ]
+  },
+
+
+  l85: {
+    id: "l85",
+    title: "TOPIK Reading 5 — Reading Review",
+    unit: "u_topik_reading",
+    xp: 40,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Read: '민수는 토요일에 친구와 영화를 봅니다.' Who does 민수 watch a movie with?",
+        options: [
+          "His teacher",
+          "His friend",
+          "His family",
+          "His brother"
+        ],
+        answer: "His friend"
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '학교가 끝난 후에 도서관에 갑니다.' Where does the person go after school?",
+        options: [
+          "Home",
+          "Hospital",
+          "Library",
+          "Restaurant"
+        ],
+        answer: "Library"
+      },
+
+      {
+        type: "fill",
+        prompt: "민수는 ___에 친구와 영화를 봅니다.",
+        answer: "토요일",
+        options: ["토요일", "월요일", "아침", "밤"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학교가 끝난 ___에 도서관에 갑니다.",
+        answer: "후",
+        options: ["후", "전", "동안", "때문"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'After school ends, I go to the library.'",
+        words: ["학교가", "끝난", "후에", "도서관에", "갑니다"],
+        answer: "학교가 끝난 후에 도서관에 갑니다"
+      }
+    ]
+  },
+
+
+/* =========================
+   TOPIK LISTENING
+   L86–L90
+   ========================= */
+
+  l86: {
+    id: "l86",
+    title: "TOPIK Listening 1 — Everyday Conversations",
+    unit: "u_topik_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '안녕하세요. 어디에 가세요?' — '학교에 가요.' Where is the person going?",
+        options: [
+          "School",
+          "Home",
+          "Hospital",
+          "Market"
+        ],
+        answer: "School"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '뭐 먹어요?' — '김밥을 먹어요.' What is the person eating?",
+        options: [
+          "Rice",
+          "Kimchi",
+          "Kimbap",
+          "Bread"
+        ],
+        answer: "Kimbap"
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 가요.",
+        answer: "에",
+        options: ["에", "를", "는", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "김밥___ 먹어요.",
+        answer: "을",
+        options: ["을", "에", "는", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Where are you going?'",
+        words: ["어디에", "가세요"],
+        answer: "어디에 가세요"
+      }
+    ]
+  },
+
+
+  l87: {
+    id: "l87",
+    title: "TOPIK Listening 2 — Time and Schedules",
+    unit: "u_topik_listening",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '수업은 아홉 시에 시작합니다.' What time does class start?",
+        options: [
+          "8:00",
+          "9:00",
+          "10:00",
+          "11:00"
+        ],
+        answer: "9:00"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '영화는 세 시에 시작합니다.' What time does the movie start?",
+        options: [
+          "1:00",
+          "2:00",
+          "3:00",
+          "4:00"
+        ],
+        answer: "3:00"
+      },
+
+      {
+        type: "fill",
+        prompt: "수업은 ___ 시에 시작합니다.",
+        answer: "아홉",
+        options: ["아홉", "여덟", "열", "열한"]
+      },
+
+      {
+        type: "fill",
+        prompt: "영화는 ___ 시에 시작합니다.",
+        answer: "세",
+        options: ["세", "두", "네", "다섯"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Class starts at nine o'clock.'",
+        words: ["수업은", "아홉", "시에", "시작합니다"],
+        answer: "수업은 아홉 시에 시작합니다"
+      }
+    ]
+  },
+
+
+  l88: {
+    id: "l88",
+    title: "TOPIK Listening 3 — Shopping and Requests",
+    unit: "u_topik_listening",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '이 사과 얼마예요?' — '한 개에 천 원이에요.' How much is one apple?",
+        options: [
+          "500 won",
+          "1,000 won",
+          "1,500 won",
+          "2,000 won"
+        ],
+        answer: "1,000 won"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '이것 주세요.' What does the customer want?",
+        options: [
+          "That one",
+          "This one",
+          "A discount",
+          "A receipt"
+        ],
+        answer: "This one"
+      },
+
+      {
+        type: "fill",
+        prompt: "사과 한 개에 ___ 원이에요.",
+        answer: "천",
+        options: ["천", "백", "만", "십"]
+      },
+
+      {
+        type: "fill",
+        prompt: "이것 ___.",
+        answer: "주세요",
+        options: ["주세요", "가세요", "먹어요", "있어요"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'How much is this?'",
+        words: ["이것", "얼마예요"],
+        answer: "이것 얼마예요"
+      }
+    ]
+  },
+
+
+  l89: {
+    id: "l89",
+    title: "TOPIK Listening 4 — Daily Activities",
+    unit: "u_topik_listening",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '저는 아침 일곱 시에 일어나서 운동합니다.' What does the person do after waking up?",
+        options: [
+          "Studies",
+          "Exercises",
+          "Eats breakfast",
+          "Goes to school"
+        ],
+        answer: "Exercises"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '저녁에는 가족과 저녁을 먹습니다.' Who does the person eat dinner with?",
+        options: [
+          "Friends",
+          "Teachers",
+          "Family",
+          "Classmates"
+        ],
+        answer: "Family"
+      },
+
+      {
+        type: "fill",
+        prompt: "아침 일곱 시에 ___납니다.",
+        answer: "일어",
+        options: ["일어", "먹어", "공부", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저녁에는 가족과 저녁을 ___습니다.",
+        answer: "먹",
+        options: ["먹", "마시", "자", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I eat dinner with my family.'",
+        words: ["저는", "가족과", "저녁을", "먹습니다"],
+        answer: "저는 가족과 저녁을 먹습니다"
+      }
+    ]
+  },
+
+
+  l90: {
+    id: "l90",
+    title: "TOPIK Listening 5 — Listening Review",
+    unit: "u_topik_listening",
+    xp: 40,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '내일 친구하고 영화를 볼 거예요.' What will the person do tomorrow?",
+        options: [
+          "Study",
+          "Watch a movie",
+          "Go shopping",
+          "Visit school"
+        ],
+        answer: "Watch a movie"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '오늘은 날씨가 추워서 집에 있을 거예요.' Why will the person stay home?",
+        options: [
+          "Because it is raining",
+          "Because it is hot",
+          "Because it is cold",
+          "Because they are busy"
+        ],
+        answer: "Because it is cold"
+      },
+
+      {
+        type: "fill",
+        prompt: "내일 친구하고 영화를 ___ 거예요.",
+        answer: "볼",
+        options: ["볼", "보는", "봤", "봐"]
+      },
+
+      {
+        type: "fill",
+        prompt: "날씨가 ___ 집에 있을 거예요.",
+        answer: "추워서",
+        options: ["추워서", "더워서", "좋아서", "바빠서"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I will watch a movie with my friend tomorrow.'",
+        words: ["내일", "친구하고", "영화를", "볼", "거예요"],
+        answer: "내일 친구하고 영화를 볼 거예요"
+      }
+    ]
+  },
+
+
+/* =========================
+   TOPIK WRITING
+   L91–L95
+   ========================= */
+
+  l91: {
+    id: "l91",
+    title: "TOPIK Writing 1 — Sentence Completion",
+    unit: "u_topik_writing",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "fill",
+        prompt: "저는 학생___.",
+        answer: "입니다",
+        options: ["입니다", "있습니다", "갑니다", "먹습니다"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 학교___ 갑니다.",
+        answer: "에",
+        options: ["에", "를", "은", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 한국어___ 공부합니다.",
+        answer: "를",
+        options: ["를", "에", "은", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'I am a student.'",
+        words: ["저는", "학생입니다"],
+        answer: "저는 학생입니다"
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'I study Korean.'",
+        words: ["저는", "한국어를", "공부합니다"],
+        answer: "저는 한국어를 공부합니다"
+      }
+    ]
+  },
+
+
+  l92: {
+    id: "l92",
+    title: "TOPIK Writing 2 — Describing Daily Life",
+    unit: "u_topik_writing",
+    xp: 30,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I wake up at seven'?",
+        options: [
+          "저는 일곱 시에 일어납니다.",
+          "저는 일곱 시에 잡니다.",
+          "저는 일곱 시에 먹습니다.",
+          "저는 일곱 시에 공부합니다."
+        ],
+        answer: "저는 일곱 시에 일어납니다."
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I go to school at eight'?",
+        options: [
+          "저는 여덟 시에 학교에 갑니다.",
+          "저는 여덟 시에 학교에서 먹습니다.",
+          "저는 여덟 시에 학교를 만납니다.",
+          "저는 여덟 시에 학교에 잡니다."
+        ],
+        answer: "저는 여덟 시에 학교에 갑니다."
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 일곱 시에 ___납니다.",
+        answer: "일어",
+        options: ["일어", "먹", "가", "자"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 학교에서 한국어를 ___합니다.",
+        answer: "공부",
+        options: ["공부", "먹", "자", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'I wake up at seven and go to school at eight.'",
+        words: ["저는", "일곱", "시에", "일어나고", "여덟", "시에", "학교에", "갑니다"],
+        answer: "저는 일곱 시에 일어나고 여덟 시에 학교에 갑니다"
+      }
+    ]
+  },
+
+
+  l93: {
+    id: "l93",
+    title: "TOPIK Writing 3 — Describing People and Places",
+    unit: "u_topik_writing",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'My school is big'?",
+        options: [
+          "우리 학교는 커요.",
+          "우리 학교는 작아요.",
+          "우리 학교는 멀어요.",
+          "우리 학교는 바빠요."
+        ],
+        answer: "우리 학교는 커요."
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'My friend is kind'?",
+        options: [
+          "친구는 친절해요.",
+          "친구는 비싸요.",
+          "친구는 추워요.",
+          "친구는 작아요."
+        ],
+        answer: "친구는 친절해요."
+      },
+
+      {
+        type: "fill",
+        prompt: "우리 학교는 ___요. (big)",
+        answer: "커",
+        options: ["커", "작아", "멀어", "비싸"]
+      },
+
+      {
+        type: "fill",
+        prompt: "제 친구는 ___해요. (kind)",
+        answer: "친절",
+        options: ["친절", "비싸", "춥", "작"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'My school is big and clean.'",
+        words: ["우리", "학교는", "크고", "깨끗해요"],
+        answer: "우리 학교는 크고 깨끗해요"
+      }
+    ]
+  },
+
+
+  l94: {
+    id: "l94",
+    title: "TOPIK Writing 4 — Connecting Ideas",
+    unit: "u_topik_writing",
+    xp: 35,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which connector means 'because'?",
+        options: [
+          "그리고",
+          "하지만",
+          "그래서",
+          "때문에"
+        ],
+        answer: "때문에"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which connector means 'and'?",
+        options: [
+          "그리고",
+          "하지만",
+          "그래서",
+          "그러나"
+        ],
+        answer: "그리고"
+      },
+
+      {
+        type: "fill",
+        prompt: "비가 와요. ___ 우산을 가져가요.",
+        answer: "그래서",
+        options: ["그래서", "하지만", "그리고", "또"]
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 공부를 좋아해요. ___ 친구는 운동을 좋아해요.",
+        answer: "하지만",
+        options: ["하지만", "그래서", "때문에", "그리고"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'It is raining, so I take an umbrella.'",
+        words: ["비가", "와요", "그래서", "우산을", "가져가요"],
+        answer: "비가 와요 그래서 우산을 가져가요"
+      }
+    ]
+  },
+
+
+  l95: {
+    id: "l95",
+    title: "TOPIK Writing 5 — Writing Review",
+    unit: "u_topik_writing",
+    xp: 40,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence is grammatically correct?",
+        options: [
+          "저는 학교에 갑니다.",
+          "저는 학교를 갑니다.",
+          "저는 학교가 갑니다.",
+          "저는 학교는 갑니다."
+        ],
+        answer: "저는 학교에 갑니다."
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly says 'I eat lunch at school'?",
+        options: [
+          "학교에서 점심을 먹습니다.",
+          "학교에 점심을 먹습니다.",
+          "학교를 점심이 먹습니다.",
+          "학교는 점심에 먹습니다."
+        ],
+        answer: "학교에서 점심을 먹습니다."
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 친구___ 영화를 봅니다.",
+        answer: "와",
+        options: ["와", "에", "를", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 점심을 먹습니다.",
+        answer: "에서",
+        options: ["에서", "에", "를", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'Because I like Korean, I study Korean every day.'",
+        words: ["한국어를", "좋아해서", "매일", "한국어를", "공부합니다"],
+        answer: "한국어를 좋아해서 매일 한국어를 공부합니다"
+      }
+    ]
+  },
+
+
+/* =========================
+   TOPIK MOCK QUESTIONS
+   L96–L100
+   ========================= */
+
+  l96: {
+    id: "l96",
+    title: "TOPIK Mock Test 1 — Vocabulary",
+    unit: "u_topik_mock",
+    xp: 50,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which word means 'hospital'?",
+        options: [
+          "학교",
+          "병원",
+          "시장",
+          "도서관"
+        ],
+        answer: "병원"
+      },
+
+      {
+        type: "mc",
+        prompt: "Which word means 'to study'?",
+        options: [
+          "공부하다",
+          "먹다",
+          "자다",
+          "마시다"
+        ],
+        answer: "공부하다"
+      },
+
+      {
+        type: "fill",
+        prompt: "친구___ 만나요.",
+        answer: "를",
+        options: ["를", "에", "에서", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "학교___ 공부합니다.",
+        answer: "에서",
+        options: ["에서", "에", "를", "가"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I meet my friend at school.'",
+        words: ["저는", "학교에서", "친구를", "만납니다"],
+        answer: "저는 학교에서 친구를 만납니다"
+      }
+    ]
+  },
+
+
+  l97: {
+    id: "l97",
+    title: "TOPIK Mock Test 2 — Reading",
+    unit: "u_topik_mock",
+    xp: 50,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Read: '오늘은 일요일입니다. 저는 가족과 공원에 갑니다.' What day is it?",
+        options: [
+          "Monday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        answer: "Sunday"
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '민지는 도서관에서 책을 읽습니다.' Where does 민지 read a book?",
+        options: [
+          "At school",
+          "At the library",
+          "At home",
+          "At the park"
+        ],
+        answer: "At the library"
+      },
+
+      {
+        type: "fill",
+        prompt: "오늘은 ___요일입니다.",
+        answer: "일",
+        options: ["일", "월", "화", "금"]
+      },
+
+      {
+        type: "fill",
+        prompt: "민지는 도서관에서 책을 ___습니다.",
+        answer: "읽",
+        options: ["읽", "먹", "가", "자"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'Today I go to the park with my family.'",
+        words: ["오늘", "가족과", "공원에", "갑니다"],
+        answer: "오늘 가족과 공원에 갑니다"
+      }
+    ]
+  },
+
+
+  l98: {
+    id: "l98",
+    title: "TOPIK Mock Test 3 — Listening",
+    unit: "u_topik_mock",
+    xp: 50,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Listen: '오늘 저녁에 뭐 할 거예요? — 친구를 만날 거예요.' What will the person do?",
+        options: [
+          "Study",
+          "Meet a friend",
+          "Watch TV",
+          "Go to school"
+        ],
+        answer: "Meet a friend"
+      },
+
+      {
+        type: "mc",
+        prompt: "Listen: '몇 시에 만날까요? — 세 시에 만나요.' What time will they meet?",
+        options: [
+          "1 o'clock",
+          "2 o'clock",
+          "3 o'clock",
+          "4 o'clock"
+        ],
+        answer: "3 o'clock"
+      },
+
+      {
+        type: "fill",
+        prompt: "친구를 ___ 거예요.",
+        answer: "만날",
+        options: ["만날", "만난", "만나요", "만나"]
+      },
+
+      {
+        type: "fill",
+        prompt: "___ 시에 만나요.",
+        answer: "세",
+        options: ["세", "두", "네", "다섯"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Arrange: 'I will meet my friend at three.'",
+        words: ["세", "시에", "친구를", "만날", "거예요"],
+        answer: "세 시에 친구를 만날 거예요"
+      }
+    ]
+  },
+
+
+  l99: {
+    id: "l99",
+    title: "TOPIK Mock Test 4 — Writing",
+    unit: "u_topik_mock",
+    xp: 50,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence is correct?",
+        options: [
+          "저는 한국어를 공부합니다.",
+          "저는 한국어가 공부합니다.",
+          "저는 한국어에 공부합니다.",
+          "저는 한국어는 공부합니다."
+        ],
+        answer: "저는 한국어를 공부합니다."
+      },
+
+      {
+        type: "mc",
+        prompt: "Which sentence correctly means 'Because I am tired, I rest at home'?",
+        options: [
+          "피곤해서 집에서 쉽니다.",
+          "피곤하지만 집에서 쉽니다.",
+          "피곤하고 집에서 쉽니다.",
+          "피곤하면 집에서 쉽니다."
+        ],
+        answer: "피곤해서 집에서 쉽니다."
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 한국어를 ___합니다.",
+        answer: "공부",
+        options: ["공부", "공원", "학교", "친구"]
+      },
+
+      {
+        type: "fill",
+        prompt: "피곤___ 집에서 쉽니다.",
+        answer: "해서",
+        options: ["해서", "하지만", "그리고", "보다"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Write: 'I study Korean because I want to go to Korea.'",
+        words: ["한국에", "가고", "싶어서", "한국어를", "공부합니다"],
+        answer: "한국에 가고 싶어서 한국어를 공부합니다"
+      }
+    ]
+  },
+
+
+  l100: {
+    id: "l100",
+    title: "TOPIK Mock Test 5 — Final Mock Test",
+    unit: "u_topik_mock",
+    xp: 60,
+
+    vocabIds: [],
+
+    questions: [
+
+      {
+        type: "mc",
+        prompt: "Which sentence means 'I went to the library yesterday'?",
+        options: [
+          "어제 도서관에 갔습니다.",
+          "오늘 도서관에 갑니다.",
+          "어제 도서관에서 공부합니다.",
+          "내일 도서관에 갈 겁니다."
+        ],
+        answer: "어제 도서관에 갔습니다."
+      },
+
+      {
+        type: "mc",
+        prompt: "Read: '날씨가 좋아서 친구와 공원에 갔습니다.' Why did the person go to the park?",
+        options: [
+          "Because the weather was good",
+          "Because the weather was cold",
+          "Because they had class",
+          "Because they were sick"
+        ],
+        answer: "Because the weather was good"
+      },
+
+      {
+        type: "fill",
+        prompt: "저는 어제 친구___ 영화를 봤습니다.",
+        answer: "와",
+        options: ["와", "에", "를", "가"]
+      },
+
+      {
+        type: "fill",
+        prompt: "날씨가 ___ 공원에 갔습니다.",
+        answer: "좋아서",
+        options: ["좋아서", "좋지만", "좋고", "좋으면"]
+      },
+
+      {
+        type: "arrange",
+        prompt: "Final challenge: 'Yesterday, I went to the park with my friend because the weather was good.'",
+        words: [
+          "어제",
+          "날씨가",
+          "좋아서",
+          "친구와",
+          "공원에",
+          "갔습니다"
+        ],
+        answer: "어제 날씨가 좋아서 친구와 공원에 갔습니다"
+      }
+    ]
   }
 
 };
 
-/* ===================== TOPIK PRACTICE SETS ===================== */
+/* =========================================================
+   END OF TOPIK PREPARATION LESSONS
+   ========================================================= */
+
+/* ================================
+   TOPIK PRACTICE SETS
+   ================================ */
 
 const TOPIK_SETS = [
-  /* TOPIK I */
+
+  /* =========================
+     TOPIK I
+     ========================= */
 
   {
     id: "t1",
     level: "TOPIK I",
-    skill: "Reading",
-    title: "TOPIK Reading I",
-    lessonId: "l21"
+    skill: "Vocabulary",
+    title: "TOPIK I Vocabulary",
+    lessonId: "l76"
   },
 
   {
     id: "t2",
     level: "TOPIK I",
-    skill: "Listening",
-    title: "TOPIK Listening I",
-    lessonId: "l22"
+    skill: "Reading",
+    title: "TOPIK I Reading",
+    lessonId: "l81"
   },
 
   {
     id: "t3",
     level: "TOPIK I",
-    skill: "Writing Basics",
-    title: "TOPIK Writing Basics",
-    lessonId: "l23"
+    skill: "Listening",
+    title: "TOPIK I Listening",
+    lessonId: "l86"
   },
 
   {
     id: "t4",
     level: "TOPIK I",
+    skill: "Writing",
+    title: "TOPIK I Writing",
+    lessonId: "l91"
+  },
+
+  {
+    id: "t5",
+    level: "TOPIK I",
     skill: "Mock Test",
     title: "TOPIK I Mock Test",
-    lessonId: "l26",
+    lessonId: "l96",
     mock: true
   },
 
 
-  /* TOPIK II */
-
-  {
-    id: "t5",
-    level: "TOPIK II",
-    skill: "Reading",
-    title: "TOPIK Reading II",
-    lessonId: "l24"
-  },
+  /* =========================
+     TOPIK II
+     ========================= */
 
   {
     id: "t6",
     level: "TOPIK II",
-    skill: "Listening",
-    title: "TOPIK Listening II",
-    lessonId: "l25"
+    skill: "Vocabulary",
+    title: "TOPIK II Vocabulary",
+    lessonId: "l80"
   },
 
   {
     id: "t7",
     level: "TOPIK II",
-    skill: "Writing Basics",
-    title: "TOPIK Writing Basics",
-    lessonId: "l23"
+    skill: "Reading",
+    title: "TOPIK II Reading",
+    lessonId: "l85"
   },
 
   {
     id: "t8",
     level: "TOPIK II",
+    skill: "Listening",
+    title: "TOPIK II Listening",
+    lessonId: "l90"
+  },
+
+  {
+    id: "t9",
+    level: "TOPIK II",
+    skill: "Writing",
+    title: "TOPIK II Writing",
+    lessonId: "l95"
+  },
+
+  {
+    id: "t10",
+    level: "TOPIK II",
     skill: "Mock Test",
     title: "TOPIK II Mock Test",
-    lessonId: "l27",
+    lessonId: "l100",
     mock: true
   }
+
 ];
 
 function levelFromXP(xp) {
