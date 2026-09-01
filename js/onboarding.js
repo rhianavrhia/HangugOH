@@ -108,7 +108,7 @@ function maybeShowOnboarding() {
         el(
           "div",
           { class: "onboarding-mark" },
-          "한국"
+          "한"
         ),
 
         el(
