@@ -96,15 +96,15 @@ function unitTitle(unitId) {
 function findNextLesson() {
   const flat = [];
 
-  PATH.forEach((section) =>
-    section.units.forEach((u) =>
-      u.lessonIds.forEach((id) => flat.push(id))
-    )
-  );
+  PATH.forEach((section) => {
+    section.units.forEach((u) => {
+      u.lessonIds.forEach((id) => flat.push(id));
+    });
+  });
 
   /*
-   * If the learner has selected a starting level,
-   * begin searching from that level instead of l1.
+   * If the learner selected a starting lesson,
+   * begin searching from that lesson.
    */
   let startIndex = 0;
 
@@ -116,10 +116,6 @@ function findNextLesson() {
     }
   }
 
-  /*
-   * Find the first incomplete lesson starting from
-   * the learner's selected level.
-   */
   for (let i = startIndex; i < flat.length; i++) {
     const id = flat[i];
 
