@@ -13,9 +13,7 @@ A gamified, self-contained Korean language-learning web app for learners at diff
 
 This is a static site — no build step is required.
 
-- Open `index.html` directly in a browser, or
-- Serve the folder with any static server, e.g. `npx serve .`, or
-- Use the Netlify CLI: `netlify dev`
+- Deploy the static site through Vercel or another static hosting provider.
 
 All learner data and progress are stored in the browser's `localStorage`, including the learner's name, selected starting level, starting lesson, XP, streaks, completed lessons, vocabulary familiarity, and achievements. Data persists across refreshes but remains local to that browser/device.
 
