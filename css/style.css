@@ -1310,3 +1310,449 @@ input { font-family: inherit; }
 
   .hero-greeting { font-size: 22px; }
 }
+
+/* =========================================================
+   ONBOARDING — POLISHED OPTION CARDS
+   ========================================================= */
+
+.onboarding-description {
+  max-width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+
+/* ---------- Level selection ---------- */
+
+.onboarding-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+
+.onboarding-option {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 42px 14px 14px;
+
+  background: #fff;
+
+  border: 2px solid var(--line);
+
+  border-radius: 14px;
+
+  text-align: left;
+
+  color: var(--ink);
+
+  transition:
+    border-color 0.18s ease,
+    background 0.18s ease,
+    transform 0.15s ease,
+    box-shadow 0.18s ease;
+}
+
+
+.onboarding-option:hover {
+  border-color: var(--coral);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 16px rgba(58, 31, 45, 0.07);
+}
+
+
+.onboarding-option.selected {
+  border-color: var(--coral);
+  background: #fff0f3;
+
+  box-shadow:
+    0 5px 18px rgba(232, 117, 139, 0.14);
+}
+
+
+/* ---------- Icon ---------- */
+
+.onboarding-option-icon {
+  flex: 0 0 34px;
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+
+  background: #fff7f5;
+
+  border-radius: 10px;
+}
+
+
+/* ---------- Text container ---------- */
+
+.onboarding-option-content {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  flex: 1;
+}
+
+
+/* ---------- Title ---------- */
+
+.onboarding-option-title {
+  display: block;
+
+  font-size: 14px;
+  line-height: 1.35;
+
+  font-weight: 700;
+
+  color: var(--ink);
+}
+
+
+/* ---------- Description ---------- */
+
+.onboarding-option-description {
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.4;
+
+  font-weight: 400;
+
+  color: #9a7f8b;
+}
+
+
+/* ---------- Checkmark ---------- */
+
+.onboarding-option-check {
+  position: absolute;
+
+  right: 14px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1.5px solid var(--line);
+
+  color: transparent;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease;
+}
+
+
+.onboarding-option.selected
+.onboarding-option-check {
+  background: var(--coral);
+
+  border-color: var(--coral);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   SELF-ASSESSMENT SENTENCE CARDS
+   ========================================================= */
+
+.self-check-options {
+  gap: 9px;
+}
+
+
+.onboarding-sentence-option {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 5px;
+
+  padding: 15px 42px 15px 16px;
+}
+
+
+/* Korean sentence */
+
+.onboarding-sentence {
+  display: block;
+
+  width: 100%;
+
+  font-family: var(--font-ko);
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.5;
+
+  color: var(--ink);
+
+  word-break: keep-all;
+}
+
+
+/* English explanation */
+
+.onboarding-sentence-option
+.onboarding-option-description {
+  width: 100%;
+
+  font-size: 11.5px;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RESULT SCREEN
+   ========================================================= */
+
+.onboarding-result-title {
+  margin: 8px 0 8px;
+
+  font-family: var(--font-display);
+
+  font-size: 25px;
+}
+
+
+.onboarding-result-description {
+  max-width: 400px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  line-height: 1.55;
+}
+
+
+.onboarding-result-note {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  max-width: 400px;
+
+  margin: 18px auto 0;
+
+  padding: 12px 14px;
+
+  border-radius: 12px;
+
+  background: #fff0f3;
+
+  color: #806875;
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  text-align: left;
+}
+
+
+.onboarding-result-note > span:first-child {
+  flex: 0 0 22px;
+
+  width: 22px;
+  height: 22px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--coral);
+
+  color: #fff;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   LEARNING PATH — SKIPPED LESSONS
+   ========================================================= */
+
+.path-node-skipped {
+  opacity: 0.72;
+
+  background: #fffaf9;
+
+  border-color: #e5cbd0;
+
+  cursor: pointer;
+}
+
+
+.path-node-skipped:hover {
+  opacity: 1;
+
+  border-color: var(--coral);
+
+  transform: translateY(-3px);
+
+  box-shadow: var(--shadow-lift);
+}
+
+
+.path-node-skipped .path-node-icon {
+  opacity: 0.75;
+}
+
+
+.path-node-skipped .path-node-status {
+  color: #a27d89;
+}
+
+
+/* =========================================================
+   LEARNING PATH — STATUS LABELS
+   ========================================================= */
+
+.path-node-status {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+
+  color: #9a7f8b;
+}
+
+
+.path-node-available .path-node-status {
+  color: var(--coral-deep);
+}
+
+
+.path-node-completed .path-node-status {
+  color: var(--jade);
+}
+
+
+.path-node-locked .path-node-status {
+  color: #b6a5ab;
+}
+
+
+/* =========================================================
+   LEARNING PATH — LEVEL START INDICATOR
+   ========================================================= */
+
+.path-section-start {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  margin-left: 8px;
+
+  padding: 4px 9px;
+
+  border-radius: 999px;
+
+  background: #fff0f3;
+
+  color: var(--coral-deep);
+
+  font-family: var(--font-body);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  vertical-align: middle;
+}
+
+
+/* =========================================================
+   MOBILE ONBOARDING
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .modal-card {
+    padding: 24px 18px;
+  }
+
+
+  .onboarding-option {
+    padding: 13px 38px 13px 12px;
+  }
+
+
+  .onboarding-option-icon {
+    flex-basis: 30px;
+
+    width: 30px;
+    height: 30px;
+
+    font-size: 19px;
+  }
+
+
+  .onboarding-option-title {
+    font-size: 13px;
+  }
+
+
+  .onboarding-option-description {
+    font-size: 11px;
+  }
+
+
+  .onboarding-sentence {
+    font-size: 15px;
+  }
+
+
+  .onboarding-result-title {
+    font-size: 22px;
+  }
+
+}
