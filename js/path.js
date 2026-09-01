@@ -19,10 +19,57 @@ function renderPath(root) {
     class: "path-container"
   });
 
-  PATH.forEach((section) => {
+  PATH.forEach((section, sectionIndex) => {
+
+    /*
+     * Determine which level this section represents.
+     */
+    const sectionLevels = [
+      "foundation",
+      "beginner",
+      "intermediate",
+      "topik"
+    ];
+
+    const sectionLevel = sectionLevels[sectionIndex];
+
+    let sectionClass = "path-section";
+
+    /*
+     * If the learner selected a starting level,
+     * visually distinguish:
+     *
+     * - levels they skipped
+     * - their current level
+     * - levels after their current level
+     */
+    if (STATE.startingLevel) {
+
+      const order = {
+        foundation: 0,
+        beginner: 1,
+        intermediate: 2,
+        topik: 3
+      };
+
+      const currentOrder = order[STATE.startingLevel];
+      const thisOrder = order[sectionLevel];
+
+      if (thisOrder < currentOrder) {
+        sectionClass += " path-section-skipped";
+      } else if (thisOrder === currentOrder) {
+        sectionClass += " path-section-current";
+      } else {
+        sectionClass += " path-section-future";
+      }
+    }
+
     const sectionEl = el(
       "div",
-      { class: "path-section" },
+      {
+        class: sectionClass,
+        "data-level": sectionLevel
+      },
       [
         el(
           "h2",
@@ -45,7 +92,6 @@ function renderPath(root) {
 
   root.appendChild(container);
 }
-
 
 /* ===================== Unit Progress ===================== */
 
@@ -124,7 +170,6 @@ function unitStatus(unit) {
 
   const progress = getUnitProgress(unit);
 
-
   /*
    * Completely finished.
    */
@@ -132,17 +177,15 @@ function unitStatus(unit) {
     return "completed";
   }
 
-
-  /*
-   * Check whether the first lesson is unlocked.
-   */
   const firstLessonId = lessonIds[0];
 
-  const locked =
-    isLessonLocked(firstLessonId);
+  /*
+   * Use the centralized sequential-unlocking
+   * logic from storage.js.
+   */
+  const locked = isLessonLocked(firstLessonId);
 
-
-  if (locked && progress.completed === 0) {
+  if (locked) {
     return "locked";
   }
 
@@ -156,12 +199,9 @@ function renderUnitNode(unit) {
 
   const status = unitStatus(unit);
 
-  const lessonIds =
-    unit.lessonIds || [];
+  const lessonIds = unit.lessonIds || [];
 
-  const progress =
-    getUnitProgress(unit);
-
+  const progress = getUnitProgress(unit);
 
   /*
    * Find the first unfinished lesson.
@@ -172,17 +212,18 @@ function renderUnitNode(unit) {
         !STATE.lessonsCompleted.includes(id)
     ) || lessonIds[0];
 
-
   /*
    * Choose the icon based on status.
    */
-  const icon =
-    status === "completed"
-      ? "✓"
-      : status === "locked"
-      ? "🔒"
-      : unit.icon;
+  let icon;
 
+  if (status === "completed") {
+    icon = "✓";
+  } else if (status === "locked") {
+    icon = "🔒";
+  } else {
+    icon = unit.icon;
+  }
 
   /*
    * Create the lesson node.
@@ -191,14 +232,7 @@ function renderUnitNode(unit) {
     "button",
     {
       class: `path-node path-node-${status}`,
-
-      /*
-       * IMPORTANT:
-       * Use a boolean here rather than
-       * the string "true".
-       */
-      disabled:
-        status === "locked"
+      disabled: status === "locked"
     },
     [
 
@@ -220,51 +254,32 @@ function renderUnitNode(unit) {
         `${progress.completed}/5`
       ),
 
-      /*
-       * Visual progress bar.
-       */
       el(
         "div",
         {
           class: "path-node-progress-bar"
         },
         [
-
           el(
             "div",
             {
-              class:
-                "path-node-progress-fill",
-
-              style:
-                `width:${progress.percent}%`
+              class: "path-node-progress-fill",
+              style: `width:${progress.percent}%`
             }
           )
-
         ]
       )
-
     ]
   );
 
-
   /*
-   * Make available/completed lessons clickable.
+   * Available and completed units can be opened.
    */
-  if (
-    status !== "locked" &&
-    nextLessonId
-  ) {
-
-    node.addEventListener(
-      "click",
-      () => {
-        startLesson(nextLessonId);
-      }
-    );
-
+  if (status !== "locked" && nextLessonId) {
+    node.addEventListener("click", () => {
+      startLesson(nextLessonId);
+    });
   }
-
 
   return node;
 }
