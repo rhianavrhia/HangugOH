@@ -13,7 +13,7 @@
 - `js/app.js` — hash-based router (`#dashboard`, `#path`, `#vocab`, `#grammar`, `#topik`, `#stats`), a tiny `el()` DOM-builder helper used everywhere instead of template strings, and shared UI helpers (`toast`, achievement popups).
 - `js/dashboard.js`, `js/path.js`, `js/vocab.js`, `js/grammar.js`, `js/topik.js`, `js/stats.js` — one file per view; each exports a `render<View>(root)` function called by the router.
 - `js/lesson.js` — the lesson engine: a full-screen overlay that steps through a lesson's questions one at a time. Each question `type` (`mc`, `translate_ko_en`, `translate_en_ko`, `fill`, `arrange`, `match`, `reading`, `listening`) has its own renderer that returns a `checkFn` deciding correctness; scoring, XP, and the end-of-lesson summary are handled centrally in `finishLesson`.
-- `js/onboarding.js` — one-time name-capture modal shown before a name has been saved.
+- - `js/onboarding.js` — one-time onboarding flow that collects the learner's name, asks about their current Korean level, performs a short self-assessment, determines an appropriate starting level, and assigns the corresponding starting lesson.
 
 ## Conventions
 
