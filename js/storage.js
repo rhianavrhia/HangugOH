@@ -20,8 +20,204 @@ function defaultState() {
     topikSetsCompleted: 0,
     weeklyActivity: {},      // 'YYYY-MM-DD' -> xp earned
     lastLessonId: null,
+
+    /* =====================
+       ONBOARDING
+       ===================== */
+
     onboarded: false,
+
+    // Learner's selected starting level
+    // foundation | beginner | intermediate | topik
+    startingLevel: null,
+
+    // First lesson of the selected level
+    // foundation = l1
+    // beginner = l26
+    // intermediate = l51
+    // topik = l76
+    startingLesson: null,
   };
+}
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return defaultState();
+    const parsed = JSON.parse(raw);
+    return Object.assign(defaultState(), parsed);
+  } catch (e) {
+    return defaultState();
+  }
+}
+
+let STATE = loadState();
+
+function saveState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(STATE));
+}
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function dayDiff(a, b) {
+  const d1 = new Date(a), d2 = new Date(b);
+  return Math.round((d2 - d1) / 86400000);
+}
+
+/* Call once per app load to update streak logic */
+function touchDailyState() {
+  const today = todayStr();
+  if (STATE.todayDate !== today) {
+    STATE.todayDate = today;
+    STATE.todayXP = 0;
+  }
+  if (STATE.lastActiveDate) {
+    const diff = dayDiff(STATE.lastActiveDate, today);
+    if (diff === 1) {
+      // continues streak once XP earned today; no-op here
+    } else if (diff > 1) {
+      STATE.streak = 0;
+    }
+  }
+  saveState();
+}
+
+function registerActivityToday() {
+  const today = todayStr();
+  if (STATE.lastActiveDate !== today) {
+    const diff = STATE.lastActiveDate ? dayDiff(STATE.lastActiveDate, today) : null;
+    if (diff === 1 || diff === null) {
+      STATE.streak += 1;
+    } else if (diff !== 0) {
+      STATE.streak = 1;
+    }
+    STATE.lastActiveDate = today;
+  }
+  STATE.weeklyActivity[today] = (STATE.weeklyActivity[today] || 0);
+}
+
+function addXP(amount) {
+  registerActivityToday();
+  STATE.xp += amount;
+  STATE.todayXP += amount;
+  const today = todayStr();
+  STATE.weeklyActivity[today] = (STATE.weeklyActivity[today] || 0) + amount;
+  saveState();
+}
+
+function markVocabSeen(id, correct) {
+  const v = STATE.vocabProgress[id] || { seen: 0, correct: 0, familiarity: 0 };
+  v.seen += 1;
+  if (correct) {
+    v.correct += 1;
+    v.familiarity = Math.min(3, v.familiarity + 1);
+  } else {
+    v.familiarity = Math.max(0, v.familiarity - 1);
+  }
+  STATE.vocabProgress[id] = v;
+  saveState();
+}
+
+function completeLesson(lessonId, { xp, accuracy, correctCount, totalCount, newVocab, listeningCount }) {
+  if (!STATE.lessonsCompleted.includes(lessonId)) {
+    STATE.lessonsCompleted.push(lessonId);
+  }
+  STATE.lastLessonId = lessonId;
+  addXP(xp);
+  if (accuracy === 100) STATE.perfectLessons += 1;
+  STATE.listeningDone += (listeningCount || 0);
+  saveState();
+  return checkAchievements();
+}
+
+function completeGrammar(grammarId) {
+  if (!STATE.grammarCompleted.includes(grammarId)) {
+    STATE.grammarCompleted.push(grammarId);
+  }
+  saveState();
+  return checkAchievements();
+}
+
+function completeTopikSet() {
+  STATE.topikSetsCompleted += 1;
+  saveState();
+  return checkAchievements();
+}
+
+function checkAchievements() {
+  const newly = [];
+  ACHIEVEMENTS.forEach((a) => {
+    if (!STATE.achievementsUnlocked.includes(a.id) && a.check(STATE)) {
+      STATE.achievementsUnlocked.push(a.id);
+      newly.push(a);
+    }
+  });
+  if (newly.length) saveState();
+  return newly;
+}
+
+function isLessonLocked(lessonId) {
+  /*
+   * Sequential unlocking within the learner's chosen level.
+   *
+   * The learner starts at:
+   * Foundation       → l1
+   * Beginner         → l26
+   * Intermediate     → l51
+   * TOPIK Preparation → l76
+   *
+   * Lessons before the selected starting lesson are ignored.
+   */
+
+  const flat = [];
+
+  PATH.forEach((section) =>
+    section.units.forEach((u) =>
+      u.lessonIds.forEach((id) => flat.push(id))
+    )
+  );
+
+  const idx = flat.indexOf(lessonId);
+
+  if (idx <= 0) return false;
+
+  /*
+   * Before onboarding, preserve the original behavior.
+   */
+  if (!STATE.startingLesson) {
+    const prevId = flat[idx - 1];
+    return !STATE.lessonsCompleted.includes(prevId);
+  }
+
+  const startIdx = flat.indexOf(STATE.startingLesson);
+
+  /*
+   * If this lesson is before the learner's selected starting point,
+   * it is locked because it belongs to a level they chose to skip.
+   */
+  if (startIdx >= 0 && idx < startIdx) {
+    return true;
+  }
+
+  /*
+   * The selected starting lesson is always available.
+   */
+  if (idx === startIdx) {
+    return false;
+  }
+
+  /*
+   * After the starting lesson, lessons unlock sequentially.
+   */
+  const prevId = flat[idx - 1];
+  return !STATE.lessonsCompleted.includes(prevId);
+}
+
+function setUserName(name) {
+  STATE.name = name || "학습자";
+  saveState();
 }
 
 function loadState() {
